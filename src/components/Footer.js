@@ -7,21 +7,21 @@ class Footer extends React.Component {
       <div className="container-footer">
         <div className="footer-options">
           <h1>Nuestros Productos</h1>
-          <a href="">Res</a>
-          <a href="">Cerdo</a>
-          <a href="">Pollo</a>
+          {/* <a href="#">Res</a>
+          <a href="#">Cerdo</a>
+          <a href="#">Pollo</a> */}
         </div>
         <hr className="indicator-line" />
         <div className="footer-options">
           <h1>Acerca De Nosotros</h1>
-          <a href="">Nosotros</a>
-          <a href="">Preguntas Frecuentes</a>
-          <a href="">Terminos y Condiciones</a>
+          {/* <a href="#">Nosotros</a>
+          <a href="#">Preguntas Frecuentes</a>
+          <a href="#">Terminos y Condiciones</a> */}
         </div>
         <hr className="indicator-line" />
         <div className="footer-options">
           <h1>Contactos</h1>
-          <a href="">Contacto</a>
+          {/* <a href="#">Contacto</a> */}
           <p>
             900 103 282
             <br />

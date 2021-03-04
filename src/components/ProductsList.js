@@ -8,46 +8,46 @@ class ProductsList extends React.Component {
       <>
         <div className="list-container">
           <div className="row-container">
-            <div class="title-container">
-              <hr class="line-indicator-products" />
-              <h1 class="title-presentation-products">carne</h1>
-              <hr class="line-indicator-products" />
+            <div className="title-container">
+              <hr className="line-indicator-products" />
+              <h1 className="title-presentation-products">carne</h1>
+              <hr className="line-indicator-products" />
             </div>
             <div className="carousel-container">
-              <div class="articulo">
+              <div className="articulo">
                 <div className="img-container">
                   <img className="img-product" src={Product} alt="" />
                 </div>
                 <div className="description">
                   <p className="name-product">Lomo Fino</p>
                   <p className="product-weight">Cantidad: X500gr</p>
-                  <span class="price">$18.000</span>
+                  <span className="price">$18.000</span>
                   <div className="presentation">
                     <p>Presentation: Filete</p>
                   </div>
                 </div>
               </div>
-              <div class="articulo">
+              <div className="articulo">
                 <div className="img-container">
                   <img className="img-product" src={Product} alt="" />
                 </div>
                 <div className="description">
                   <p className="name-product">Lomo Fino</p>
                   <p className="product-weight">Cantidad: X500gr</p>
-                  <span class="price">$18.000</span>
+                  <span className="price">$18.000</span>
                   <div className="presentation">
                     <p>Pnpm stresentation: Filete</p>
                   </div>
                 </div>
               </div>
-              <div class="articulo">
+              <div className="articulo">
                 <div className="img-container">
                   <img className="img-product" src={Product} alt="" />
                 </div>
                 <div className="description">
                   <p className="name-product">Lomo Fino</p>
                   <p className="product-weight">Cantidad: X500gr</p>
-                  <span class="price">$18.000</span>
+                  <span className="price">$18.000</span>
                   <div className="presentation">
                     <p>Presentation: Filete</p>
                   </div>

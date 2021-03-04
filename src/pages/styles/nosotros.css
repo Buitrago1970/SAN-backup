@@ -1,0 +1,39 @@
+.main-container {
+  padding-top: 55px;
+}
+.main-title {
+  text-align: center;
+  margin: 20px 0;
+}
+.container {
+  border-radius: 12px;
+  background: #00000080;
+  padding: 18px;
+  margin-bottom: 25px;
+}
+.secondary-title {
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 89px;
+}
+.third-title {
+  font-size: 24px;
+  line-height: 1.16667;
+  font-weight: 600;
+  letter-spacing: 0.009em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
+}
+.vision {
+  color: #901111;
+}
+.separator-line {
+  border: 1px solid #e9e9e9;
+}
+.main-paragraph {
+  font-size: 20px;
+  line-height: 1.37;
+  letter-spacing: 0.06px;
+  margin-bottom: 70px;
+  color: var(--white-color);
+}
