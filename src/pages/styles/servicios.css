@@ -1,0 +1,51 @@
+.main-container {
+  margin: 25px 0;
+}
+.main-title {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 32px;
+}
+.fila-centrada {
+  border-radius: 12px;
+}
+.img-container {
+  background: var(--white-color);
+  flex: 2 1 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img {
+  max-width: 100%;
+}
+.container {
+  padding: 18px;
+}
+.container-midle {
+  margin: 50px 0;
+  padding: 10px;
+  background: #2020208a;
+}
+.secondary-title {
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 89px;
+}
+.parrafo-servicios {
+  font-size: 21px;
+  line-height: 1.4;
+  letter-spacing: 0.06px;
+  margin-bottom: 70px;
+  color: var(--white-color);
+}
+.tite-services {
+  margin: 36px 0;
+  color: rgba(79 166 255);
+  font-size: 50px;
+  line-height: 1.07143;
+  font-weight: 600;
+  text-align: initial;
+}
+.paragraph-midle {
+}

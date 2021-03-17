@@ -9,7 +9,9 @@ class Nosotros extends React.Component {
         <div className="main-container">
           <h1 className="main-title">NOSOTROS</h1>
           <div className="container">
+            {/* ***** */}
             <h2 className="secondary-title vision">vision</h2>
+            {/* ****** */}
             <h3 className="third-title">
               A veces una palabra dice más que mil imágenes.
             </h3>
