@@ -22,9 +22,12 @@ class ProductsList extends React.Component {
                   <p className="name-product">Lomo Fino</p>
                   <p className="product-weight">Cantidad: X500gr</p>
                   <span className="price">$18.000</span>
-                  <div className="presentation">
-                    <p>Presentation: Filete</p>
+                  <div className="presentation-container">
+                    <p className="presentation-paragraph">
+                      presentation: Filete
+                    </p>
                   </div>
+                  <button className="btn-shop">Añadir</button>
                 </div>
               </div>
               <div className="articulo">
@@ -35,9 +38,12 @@ class ProductsList extends React.Component {
                   <p className="name-product">Lomo Fino</p>
                   <p className="product-weight">Cantidad: X500gr</p>
                   <span className="price">$18.000</span>
-                  <div className="presentation">
-                    <p>Pnpm stresentation: Filete</p>
+                  <div className="presentation-container">
+                    <p className="presentation-paragraph">
+                      presentation: Filete
+                    </p>
                   </div>
+                  <button className="btn-shop">Añadir</button>
                 </div>
               </div>
               <div className="articulo">
@@ -48,10 +54,46 @@ class ProductsList extends React.Component {
                   <p className="name-product">Lomo Fino</p>
                   <p className="product-weight">Cantidad: X500gr</p>
                   <span className="price">$18.000</span>
-                  <div className="presentation">
-                    <p>Presentation: Filete</p>
+                  <div className="presentation-container">
+                    <p className="presentation-paragraph">
+                      presentation: Filete
+                    </p>
                   </div>
+                  <button className="btn-shop">Añadir</button>
                 </div>
+              </div>
+            </div>
+            <div className="title-container">
+              <hr className="line-indicator-products" />
+              <h1 className="title-presentation-products">pollo</h1>
+              <hr className="line-indicator-products" />
+            </div>
+            <div className="articulo">
+              <div className="img-container">
+                <img className="img-product" src={Product} alt="" />
+              </div>
+              <div className="description">
+                <p className="name-product">Lomo Fino</p>
+                <p className="product-weight">Cantidad: X500gr</p>
+                <span className="price">$18.000</span>
+                <div className="presentation-container">
+                  <p className="presentation-paragraph">presentation: Filete</p>
+                </div>
+                <button className="btn-shop">Añadir</button>
+              </div>
+            </div>
+            <div className="articulo">
+              <div className="img-container">
+                <img className="img-product" src={Product} alt="" />
+              </div>
+              <div className="description">
+                <p className="name-product">Lomo Fino</p>
+                <p className="product-weight">Cantidad: X500gr</p>
+                <span className="price">$18.000</span>
+                <div className="presentation-container">
+                  <p className="presentation-paragraph">presentation: Filete</p>
+                </div>
+                <button className="btn-shop">Añadir</button>
               </div>
             </div>
           </div>

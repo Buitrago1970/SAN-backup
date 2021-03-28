@@ -1,8 +1,15 @@
 .container-footer {
-  background: rgba(0, 0, 0, 0.3);
-  border-top: 1px solid rgba(225, 225, 225, 0.5);
+  background: rgb(255 255 255);
+  border-top: 1px solid rgb(119 119 119);
   text-transform: uppercase;
-  color: rgb(255, 255, 255);
+  color: rgb(0 0 0);
+  text-align: center;
+  font-size: 12px;
+}
+.footer-options {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 6px;
 }
 .container-footer a {
   font-size: 20.5px;
@@ -10,11 +17,9 @@
   text-transform: lowercase;
   text-decoration: none;
 }
-.footer-options {
-  display: grid;
-  width: 100%;
-  text-align: center;
-  font-size: 12px;
+.container-footer-options {
+  font-size: 7px;
 }
 .indicator-line {
+  margin: 0;
 }

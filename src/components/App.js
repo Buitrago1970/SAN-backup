@@ -6,6 +6,7 @@ import Home from "../pages/Home";
 import Nosotros from "../pages/Nosotros.js";
 import Servicios from "../pages/Servicios.js";
 import Contactos from "../pages/Contactos.js";
+import NotFound from "../pages/NotFound.js";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/nosotros" component={Nosotros} />
           <Route exact path="/servicios" component={Servicios} />
           <Route exact path="/contactos" component={Contactos} />
+          <Route component={NotFound} />
         </Switch>
       </Layout>
     </BrowserRouter>

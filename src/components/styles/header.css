@@ -2,14 +2,14 @@
   display: flex;
   padding: 10px;
   background-color: rgb(10 11 11);
-  font-size: 18px;
-  height: 30px;
-  align-items: center;
+  /* height: 30px; */
+  /* align-items: center; */
 }
 .container-button-hamburger {
   display: block;
   flex: 1 1 auto;
   line-height: 22px;
+  font-size: 18px;
 }
 .container-logo {
   text-align: center;
@@ -18,4 +18,74 @@
 .logo {
   width: 90px;
   text-decoration: none;
+}
+.container-options {
+  display: none;
+}
+.container-social-network {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 23px;
+    background: #0000008f;
+    flex-flow: row nowrap;
+    border-bottom: 1px solid rgba(225, 225, 225);
+  }
+
+  .container-button-hamburger {
+    display: none;
+  }
+
+  .container-logo {
+    flex: 1 1 auto;
+    margin: 0px 20px;
+    padding: 0px 5px;
+    text-align: inherit;
+  }
+
+  .logo {
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  .logo:hover {
+  }
+
+  .container-shopping-cart {
+    display: none;
+  }
+  .container-options {
+    flex: 6 1 auto;
+    display: block;
+  }
+  .options {
+    margin: 0px 15px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  .options:hover {
+    color: #000;
+  }
+  .icon-header {
+    margin-right: 2px;
+  }
+  .container-social-network {
+    display: block;
+    font-size: 15px;
+    margin: 0px 20px;
+    padding: 0px 5px;
+  }
+  .social-network {
+    margin: 0px 4px;
+  }
+  .social-network:hover {
+    color: rgb(0, 0, 0);
+  }
+  .carro_compras_responsive {
+    display: none;
+  }
 }
