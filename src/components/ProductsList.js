@@ -1,8 +1,22 @@
 import React from "react";
+
 import "./styles/productList.css";
 import Product from "../images/carne.jpg";
 
 class ProductsList extends React.Component {
+  state = {
+    data: [
+      {
+        nombre: "juan",
+      },
+      {
+        nombre: "luis",
+      },
+      {
+        nombre: "jinete",
+      },
+    ],
+  };
   render() {
     return (
       <>
@@ -10,7 +24,9 @@ class ProductsList extends React.Component {
           <div className="row-container">
             <div className="title-container">
               <hr className="line-indicator-products" />
-              <h1 className="title-presentation-products">carne</h1>
+              <h1 className="title-presentation-products">
+                {this.state.data.codigo}
+              </h1>
               <hr className="line-indicator-products" />
             </div>
 
@@ -20,7 +36,7 @@ class ProductsList extends React.Component {
                   <img className="img-product" src={Product} alt="" />
                 </div>
                 <div className="description">
-                  <h2 className="name-product">Lomo Fino</h2>
+                  <h2 className="name-product">xxxxxx</h2>
                   <div className="product-weight">
                     <p className="product-quantity">cantidad</p>
                     <p className="product-quantity weigth">X 500g</p>
