@@ -1,5 +1,9 @@
 body {
-  background: #e2e2e2;
+  /* background: #e2e2e2; */
+  background: rgb(38, 37, 39);
+  /* background: url(./images/Download\ Vertical\ Black\ Wood\ Beams\ iPhone\ 6\ Plus\ HD\ Wallpaper\ HD\ free.jpg); */
+  background-position: top;
+  background-attachment: scroll;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -13,4 +17,12 @@ a {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@media screen and (min-width: 768px) {
+  .main-container {
+    margin: 0% 0%;
+  }
+  .secondary-title {
+    margin-top: 25px;
+  }
 }

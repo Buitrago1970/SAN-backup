@@ -1,5 +1,5 @@
 .main-container {
-  margin: 25px 0;
+  margin: 0px 0;
 }
 .main-title {
   text-align: center;
@@ -20,7 +20,6 @@
   max-width: 100%;
 }
 .container {
-  padding: 18px;
 }
 .container-midle {
   margin: 50px 0;
@@ -31,7 +30,7 @@
 .secondary-title {
   font-size: 30px;
   margin-bottom: 0;
-  margin-top: 89px;
+  margin-top: 30px;
 }
 .parrafo-servicios {
   font-size: 21px;
