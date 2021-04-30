@@ -1,19 +1,60 @@
 import React from "react";
 
+//styles
 import "./styles/productList.css";
-import Product from "../images/carne.jpg";
-
+//components
+import ProductItem from "./ProductItem";
 class ProductsList extends React.Component {
   state = {
     data: [
       {
-        nombre: "juan",
+        id: "01",
+        name: "Lomo Limpio",
+        price: 38000,
+        uniti: "kilogramo",
+        amount: "500g",
+        presentation: "Filete",
+        img: "../images/carne.jpg",
       },
       {
-        nombre: "luis",
+        id: "02",
+        name: "Lomo Corriente",
+        price: 33000,
+        uniti: "kilogramo",
+        amount: "500g",
+        presentation: "Filete",
       },
       {
-        nombre: "jinete",
+        id: "03",
+        name: "Chatas En Posta",
+        price: "24.000",
+        uniti: "kilogramo",
+        amount: "500g",
+        presentation: "Filete",
+      },
+      {
+        id: "04",
+        name: "Churrasco",
+        price: 26000,
+        uniti: "kilogramo",
+        amount: "500g",
+        presentation: "Filete",
+      },
+      {
+        id: "05",
+        name: "PUNTA DE ANCA",
+        price: 26000,
+        uniti: "kilogramo",
+        amount: "500g",
+        presentation: "Filete",
+      },
+      {
+        id: "06",
+        name: "CADERA EN POSTA",
+        price: 20000,
+        uniti: "kilogramo",
+        amount: "500g",
+        presentation: "Filete",
       },
     ],
   };
@@ -21,61 +62,24 @@ class ProductsList extends React.Component {
     return (
       <>
         <div className="list-container">
-          <div className="row-container">
-            <div className="title-container">
-              <hr className="line-indicator-products" />
-              <h1 className="title-presentation-products">
-                {this.state.data.codigo}
-              </h1>
-              <hr className="line-indicator-products" />
-            </div>
-
+          <div className="categories-title-container">
+            <hr className="line-indicator-products" />
+            <h1 className="categories-title">carne </h1>
+            <hr className="line-indicator-products" />
+          </div>
+          <div className="carousel">
             <div className="carousel-container">
-              <div className="articulo">
-                <div className="img-container">
-                  <img className="img-product" src={Product} alt="" />
-                </div>
-                <div className="description">
-                  <h2 className="name-product">xxxxxx</h2>
-                  <div className="product-weight">
-                    <p className="product-quantity">cantidad</p>
-                    <p className="product-quantity weigth">X 500g</p>
-                  </div>
-
-                  <div className="preparation-container">
-                    <h3 className="preparation-product">
-                      Empaque: Vacio y Congelado -4°C
-                    </h3>
-                    <h3 className="presentation-product">
-                      Presentación: Filete
-                    </h3>
-                    <hr />
-                  </div>
-                  <div className="price-container">
-                    <span className="price">$18.000</span>
-                  </div>
-
-                  <div className="container-buttons">
-                    <a href="#" className="bt-">
-                      -
-                    </a>
-
-                    <div className="container-counter">
-                      <p className="counter-quantity-products">1</p>
-                    </div>
-                    <a href="#" className="bt- bt-mas">
-                      +
-                    </a>
-                  </div>
-
-                  <div className="presentation-container">
-                    <p className="presentation-paragraph">
-                      presentation: Filete
-                    </p>
-                  </div>
-                  <button className="btn-shop">Añadir</button>
-                </div>
-              </div>
+              <ProductItem product={this.state.data} />
+            </div>
+          </div>
+          <div className="categories-title-container">
+            <hr className="line-indicator-products" />
+            <h1 className="categories-title">Pollo </h1>
+            <hr className="line-indicator-products" />
+          </div>
+          <div className="carousel">
+            <div className="carousel-container">
+              <ProductItem product={this.state.data} />
             </div>
           </div>
         </div>

@@ -1,0 +1,51 @@
+@media screen and (min-width: 870px) {
+  .HeroServicios {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    max-width: 1340px;
+    margin: 15px 0;
+  }
+  .contaner-img-servicios {
+    padding: 15px 20px 0px 20px;
+    position: inherit;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-servicios {
+    width: 100%;
+  }
+  .text-servicios {
+    padding: 70px 20px 0px 20px;
+  }
+  .title-container-hero-servicios {
+    display: flex;
+    flex-flow: column;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+  .title {
+    line-height: 20px;
+    color: #01bf71;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+  }
+  .secondary-title {
+    text-transform: capitalize;
+    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #f7f8fa;
+  }
+  .text-container-servicios {
+    /* margin-top: 70px; */
+    /* margin-left: 80px;
+    max-width: 700px; */
+    font-size: 15px;
+    line-height: 30px;
+    color: #e7e7e7;
+  }
+}

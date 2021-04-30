@@ -18,6 +18,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+h2 {
+  color: #a8a8a8;
+  margin: 0;
+}
 @media screen and (min-width: 768px) {
   .main-container {
     margin: 0% 0%;

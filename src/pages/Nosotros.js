@@ -32,7 +32,7 @@ class Nosotros extends React.Component {
               </p>
             </div>
           </div>
-          {/* <h1 className="team-title">OUR TEAM</h1>
+          <h1 className="team-title">OUR TEAM</h1>
           <div className=" our-team ">
             <div className="out-team-container">
               <div className="container-img-our-team">
@@ -60,8 +60,8 @@ class Nosotros extends React.Component {
                 <h3 className="name-team">Juan Buitrago</h3>
                 <p>Cortador Profesional</p>
               </div>
-            </div> 
-          </div>*/}
+            </div>
+          </div>
         </div>
       </>
     );
