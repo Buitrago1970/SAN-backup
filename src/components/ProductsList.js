@@ -48,14 +48,6 @@ class ProductsList extends React.Component {
         amount: "500g",
         presentation: "Filete",
       },
-      {
-        id: "06",
-        name: "CADERA EN POSTA",
-        price: 20000,
-        uniti: "kilogramo",
-        amount: "500g",
-        presentation: "Filete",
-      },
     ],
   };
   render() {
@@ -65,16 +57,6 @@ class ProductsList extends React.Component {
           <div className="categories-title-container">
             <hr className="line-indicator-products" />
             <h1 className="categories-title">carne </h1>
-            <hr className="line-indicator-products" />
-          </div>
-          <div className="carousel">
-            <div className="carousel-container">
-              <ProductItem product={this.state.data} />
-            </div>
-          </div>
-          <div className="categories-title-container">
-            <hr className="line-indicator-products" />
-            <h1 className="categories-title">Pollo </h1>
             <hr className="line-indicator-products" />
           </div>
           <div className="carousel">

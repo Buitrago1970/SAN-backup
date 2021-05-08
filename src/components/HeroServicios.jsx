@@ -17,7 +17,7 @@ function HeroServicios() {
               Los mejores Cortes Del Mundo
             </span>
           </div>
-          <div className="text-container-servicios">
+          <div className="text-container">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dicta
               itaque officiis ex recusandae est harum! Optio, quidem! Pariatur

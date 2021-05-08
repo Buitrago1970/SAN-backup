@@ -8,12 +8,13 @@
   justify-content: center;
 }
 .line-indicator-products {
-  width: 30%;
+  width: 35%;
 }
 .categories-title {
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 600;
   letter-spacing: 1px;
+  color: #c60808;
 }
 .carousel {
 }
@@ -87,6 +88,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .line-indicator-products {
+    width: 46%;
+  }
   .carousel-container {
     justify-content: center;
   }

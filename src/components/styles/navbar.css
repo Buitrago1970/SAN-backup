@@ -40,7 +40,10 @@ nav {
 }
 .shopping-cart-nav {
   color: rgb(0, 0, 0);
-  font-size: 22px;
+  font-size: 24px;
+}
+.shopping-cart-nav:hover {
+  color: rgb(141, 141, 141);
 }
 @media screen and (max-width: 768px) {
   .container-shopping-cart-nav {

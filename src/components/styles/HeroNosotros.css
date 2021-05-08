@@ -2,7 +2,6 @@
 
 .HeroNosotros {
   max-width: 415px;
-  margin: 15px 0;
 }
 .contaner-img-nosotros {
   position: absolute;
@@ -30,6 +29,9 @@
   line-height: 28px;
   font-size: 15px;
 }
+.icon-container {
+  display: none;
+}
 @media screen and (min-width: 870px) {
   .HeroNosotros {
     display: grid;
@@ -45,7 +47,7 @@
   }
   .text-nosotros {
     margin-top: 40px;
-    color: rgb(219, 219, 219);
+    color: #060606;
     background: none;
     position: inherit;
   }
@@ -60,14 +62,22 @@
     right: 100px;
     font-family: "Lato", sans-serif;
   }
-  .text-container-nosotros {
+  .text-container {
     font-size: 16px;
     line-height: 30px;
-    color: #dfd5d5;
+    color: #060606;
   }
   .text-container-nosotros::first-letter {
     font-size: 65px;
     color: #b82c2e;
     padding-right: 2px;
+  }
+  .icon-container {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 50px;
+    /* color: rgb(146, 131, 45); */
+    color: rgb(211, 199, 29);
   }
 }

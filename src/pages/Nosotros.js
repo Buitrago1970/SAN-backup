@@ -15,12 +15,8 @@ class Nosotros extends React.Component {
         <div className="main-container">
           <HeroNosotros />
           <div className="container">
-            <div className="text-container">
-              <h2 className="secondary-title vision">vision</h2>
-              <h3 className="third-title">
-                A veces una palabra dice más que mil imágenes.
-              </h3>
-              <hr className="separator-line" />
+            <div className="text-container-vision  ">
+              <h2 className="vision">vision</h2>
               <p className="main-paragraph">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
                 quod deserunt accusamus? Expedita praesentium nemo eius quos

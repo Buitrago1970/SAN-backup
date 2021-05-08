@@ -1,3 +1,22 @@
+.HeroServicios {
+  max-width: 415px;
+}
+.contaner-img-servicios {
+  max-width: 415px;
+}
+.img-servicios {
+  width: 100%;
+}
+.title-container-hero-servicios {
+  display: flex;
+  flex-flow: column;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+.secondary-title {
+  margin-top: 0;
+}
 @media screen and (min-width: 870px) {
   .HeroServicios {
     display: grid;
@@ -13,21 +32,13 @@
     justify-content: center;
     align-items: center;
   }
-  .img-servicios {
-    width: 100%;
-  }
+
   .text-servicios {
     padding: 70px 20px 0px 20px;
   }
-  .title-container-hero-servicios {
-    display: flex;
-    flex-flow: column;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-  }
   .title {
     line-height: 20px;
-    color: #01bf71;
+    color: #c60808;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 1.4px;
@@ -38,14 +49,9 @@
     font-size: 40px;
     line-height: 1.1;
     font-weight: 600;
-    color: #f7f8fa;
+    color: #060606;
   }
-  .text-container-servicios {
-    /* margin-top: 70px; */
-    /* margin-left: 80px;
-    max-width: 700px; */
-    font-size: 15px;
-    line-height: 30px;
-    color: #e7e7e7;
+  .text-container {
+    text-align: initial;
   }
 }

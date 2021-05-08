@@ -5,6 +5,8 @@ import "./styles/HeroNosotros.css";
 
 //images
 import meat from "../images/6458.png";
+//icons
+import { BsBoxArrowDown } from "react-icons/bs";
 
 function HeroNosotros() {
   return (
@@ -19,7 +21,7 @@ function HeroNosotros() {
             <h1 className="title-hero-nosotros">PRODUCTION BY</h1>
             <h1 className="title-hero-nosotros">COLOMBIAN TECHNOLOGY</h1>
           </div>
-          <div className="text-container-nosotros">
+          <div className="text-container text-container-nosotros">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
               similique!
@@ -30,6 +32,9 @@ function HeroNosotros() {
               cum doloremque reiciendis nemo asperiores aliquid, itaque
               perspiciatis lo eaque fugiat fugit.
             </p>
+            <div className="icon-container">
+              <BsBoxArrowDown />
+            </div>
           </div>
         </div>
       </div>

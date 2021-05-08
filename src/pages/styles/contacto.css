@@ -1,7 +1,8 @@
-.contact-container{
-    padding: 18px;
+.contact-container {
+  padding: 18px;
+  text-align: inherit;
 }
-.mail-contact a{
-    color: #dd4c4c;
-    text-decoration: none;
+.mail-contact a {
+  color: #dd4c4c;
+  text-decoration: none;
 }

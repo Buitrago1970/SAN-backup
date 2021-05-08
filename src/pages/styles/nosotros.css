@@ -1,22 +1,14 @@
-.main-container {
-  margin: 1px auto;
-  align-items: center;
-  display: flex;
-  flex-flow: column;
-}
-.main-title {
-  text-align: center;
-  margin: 20px 0;
-}
 .container {
   border-radius: 5px;
-  background: #202020;
-  color: #e8e6e3;
+  background: #ffffff;
+  color: #060606;
   margin-bottom: 25px;
   max-width: 415px;
+  box-shadow: 0 2px 13px -4px #000000;
 }
-.text-container {
+.text-container-vision {
   padding: 20px;
+  text-align: center;
 }
 .third-title {
   font-size: 24px;
@@ -28,7 +20,7 @@
 }
 .vision {
   color: #e03939;
-  margin-top: 60px;
+  margin-top: 30px;
   font-size: 25px;
 }
 .separator-line {
@@ -48,7 +40,7 @@
   max-width: 415px;
 }
 .team-title {
-  color: #e9e9e9;
+  color: #060606;
   font-size: 50px;
   margin: 50px 0;
   font-size: 35pt;
@@ -56,7 +48,7 @@
   letter-spacing: 2px;
 }
 .our-team {
-  color: #e8e6e3;
+  color: #060606;
   margin-bottom: 80px;
 }
 .out-team-container {
