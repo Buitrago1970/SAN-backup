@@ -1,0 +1,9 @@
+.shopping-list {
+  width: 100%;
+}
+.secondary-title {
+  display: flex;
+  margin-top: 25px;
+  font-size: 27px;
+  font-weight: 300;
+}

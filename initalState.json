@@ -1,0 +1,205 @@
+
+{
+    "initalState": {
+      "mylist": [],
+      "res": [
+        {
+            "id": "01",
+            "name": "Lomo Limpio",
+            "price": 38.000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete",
+            "img": "../images/carne.jpg"
+          },
+          {
+            "id": "02",
+            "name": "Lomo Corriente",
+            "price": 33000,
+            "uniti": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          },
+          {
+            "id": "03",
+            "name": "Chatas En Posta",
+            "price": 24000,
+            "uniti": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          },
+          {
+            "id": "04",
+            "name": "CHURRASCO",
+            "price": 26000,
+            "uniti": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          },
+          {
+            "id": "05",
+            "name": "PUNTA DE ANCA",
+            "price": 26000,
+            "uniti": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          },
+          {
+            "id": "06",
+            "name": "CADERA EN POSTA",
+            "price": 20000,
+            "uniti": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          },
+          {
+            "id": "07",
+            "name": "CADERA TAJADA",
+            "price": 20000,
+            "uniti": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          },
+          {
+            "id": "08",
+            "name": "CENTRO DE PIERNA",
+            "price": 20000,
+            "uniti": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          },
+          {
+            "id": "09",
+            "name": "BOTA",
+            "price": 19500,
+            "uniti": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          },
+          {
+            "id": "10",
+            "name": "BOTA CON MUCHACHO",
+            "price": 20000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete"
+          }
+      ],
+      "chicken": [
+        {
+            "id": "56",
+            "name": "Pollo Entero",
+            "price": 7.600,
+            "measures": "kilogramo",
+            "amount": "x",
+            "presentation": "Entero" 
+        },
+        {
+            "id": "57",
+            "name": "Pechuga",
+            "price": 11.500,
+            "measures": "kilogramo",
+            "amount": "x",
+            "presentation": "Entera" 
+        },
+        {
+            "id": "58",
+            "name": "Filete De Pechuga",
+            "price": 16.000,
+            "measures": "kilogramo",
+            "amount": "x",
+            "presentation": "Filete" 
+        },
+        {
+            "id": "59",
+            "name": "Pierna Pernil",
+            "price": 8.000,
+            "measures": "kilogramo",
+            "amount": "x",
+            "presentation": "Entero" 
+        },
+        {
+            "id": "60",
+            "name": "Pierna Pernil Deshuesado",
+            "price": 9.000,
+            "measures": "kilogramo",
+            "amount": "x",
+            "presentation": "Entero (Sin Hueso)" 
+        },
+        {
+            "id": "61",
+            "name": "Colombina De Pierna",
+            "price": 9.000,
+            "measures": "kilogramo",
+            "amount": "x",
+            "presentation": "Entero" 
+        },
+        {
+            "id": "62",
+            "name": "Muslos Enteros",
+            "price": 9.000,
+            "measures": "kilogramo",
+            "amount": "x",
+            "presentation": "Entero" 
+        }
+      ],
+      "pig": [
+        {
+            "id": "36",
+            "name": "Pernil De Cerdo",
+            "price": 15.000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete" 
+        },
+        {
+            "id": "37",
+            "name": "Lomo De Cerdo",
+            "price": 18.000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete" 
+        },
+        {
+            "id": "38",
+            "name": "Lomo Almendra",
+            "price": 20.000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete" 
+        },
+        {
+            "id": "39",
+            "name": "Solomito",
+            "price": 22.000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete" 
+        },
+        {
+            "id": "40",
+            "name": "Chuleta",
+            "price": 19.000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete" 
+        },
+        {
+            "id": "41",
+            "name": "Brazo En Posta",
+            "price": 14.000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete" 
+        },
+        {
+            "id": "42",
+            "name": "Brazo Tajado",
+            "price": 14.000,
+            "measures": "kilogramo",
+            "amount": "500g",
+            "presentation": "Filete" 
+        }
+      ]
+    }
+  }

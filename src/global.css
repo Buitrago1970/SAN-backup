@@ -14,6 +14,9 @@ body {
 a {
   color: #f7f7f7;
 }
+p {
+  margin: 0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -22,10 +25,12 @@ h2 {
   color: #a8a8a8;
   margin: 0;
 }
+.main-container {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+}
 @media screen and (min-width: 768px) {
-  .main-container {
-    margin: 0% 0%;
-  }
   .secondary-title {
     margin-top: 25px;
   }

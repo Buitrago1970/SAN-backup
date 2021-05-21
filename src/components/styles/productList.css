@@ -50,6 +50,7 @@
   letter-spacing: 1px;
 }
 .product-weight {
+  display: flex;
   font-size: 11px;
   margin-top: 1px;
   font-weight: 500;

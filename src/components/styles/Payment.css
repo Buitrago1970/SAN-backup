@@ -1,0 +1,32 @@
+.payment {
+}
+.account {
+}
+.total-count {
+}
+.container-payment {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 10px 0px;
+}
+.envio {
+  color: #32b767;
+}
+.btn-payment {
+  margin-top: 20px;
+  width: 100%;
+  background: #dfc626;
+  border: 0;
+  height: 35px;
+  color: #000000;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.btn-payment:hover {
+  background: #d1ba24;
+}
+.a {
+  padding: 35px;
+}

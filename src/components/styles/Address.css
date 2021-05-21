@@ -1,0 +1,26 @@
+.container-address {
+  /* width: calc(100% - 250px); */
+}
+.title-container {
+}
+.addresscambiar {
+  background-color: rgb(226 226 226);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px;
+  /* box-shadow: 0 2px 13px -4px #000000; */
+}
+.address {
+}
+.cart-address-info {
+  margin: 0;
+}
+.cart-address-subtitle-info {
+  margin: 0;
+}
+.modify-address {
+}
+.modify {
+  text-decoration: none;
+  color: #3391ff;
+}

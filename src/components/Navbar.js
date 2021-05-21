@@ -20,7 +20,7 @@ class Navbar extends React.Component {
             </div>
           </div>
           <div className="container-shopping-cart-nav">
-            <Link to="#!">
+            <Link to="/carroCompras">
               <FiShoppingCart className="shopping-cart-nav" />
             </Link>
           </div>
