@@ -3,11 +3,13 @@ import React, { useState, useEffect } from "react";
 import "./styles/productList.css";
 //components
 import ProductItem from "./ProductItem";
+import Categories from "./Categories";
 
 function ProductsList() {
   const URL = "http://localhost:3000/initalState";
 
   const [item, setItem] = useState([]);
+
   useEffect(() => {
     const fetchItem = async () => {
       try {
@@ -23,16 +25,15 @@ function ProductsList() {
   return (
     <>
       <div className="list-container">
-        <div className="categories-title-container">
-          <hr className="line-indicator-products" />
-          <h1 className="categories-title">carne </h1>
-          <hr className="line-indicator-products" />
-        </div>
-        <div className="carousel">
-          <div className="carousel-container">
-            <ProductItem product={item} />
-          </div>
-        </div>
+        {item.res && item.res.length > 0 && (
+          <Categories>
+            <div className="carousel">
+              <div className="carousel-container">
+                <ProductItem />
+              </div>
+            </div>
+          </Categories>
+        )}
       </div>
     </>
   );
