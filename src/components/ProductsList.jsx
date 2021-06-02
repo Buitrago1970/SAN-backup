@@ -4,9 +4,10 @@ import "./styles/productList.css";
 //components
 import ProductItem from "./ProductItem";
 import Categories from "./Categories";
+import Carousel from "./Carousel";
 
 function ProductsList() {
-  const URL = "http://localhost:3000/initalState";
+  const URL = " http://localhost:3015/initalState";
 
   const [item, setItem] = useState([]);
 
@@ -14,7 +15,7 @@ function ProductsList() {
     const fetchItem = async () => {
       try {
         const response = await fetch(URL);
-        const data = await response.json;
+        const data = await response.json();
         return setItem(data);
       } catch (error) {
         console.log(error);
@@ -22,16 +23,32 @@ function ProductsList() {
     };
     fetchItem();
   }, []);
+
+  const RenderList = (item = []) => {
+    return (
+      <>
+        {item.map((items) => (
+          <ProductItem key={items.id} {...items} />
+        ))}
+      </>
+    );
+  };
   return (
     <>
       <div className="list-container">
+        {item.mylist && item.mylist.length > 0 && (
+          <Categories>
+            <Carousel>{RenderList(item.mylist)}</Carousel>
+          </Categories>
+        )}
         {item.res && item.res.length > 0 && (
           <Categories>
-            <div className="carousel">
-              <div className="carousel-container">
-                <ProductItem />
-              </div>
-            </div>
+            <Carousel>{RenderList(item.res)}</Carousel>
+          </Categories>
+        )}
+        {item.chicken && item.chicken.length > 0 && (
+          <Categories>
+            <Carousel>{RenderList(item.chicken)}</Carousel>
           </Categories>
         )}
       </div>

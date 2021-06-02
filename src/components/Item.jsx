@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/Item.css";
 import Product from "../images/7ad45b7e1d6d74dde087cd6f41f04f0b.png";
+import { BsTrash } from "react-icons/bs";
 export default function Item() {
   return (
     <>
@@ -26,7 +27,9 @@ export default function Item() {
                 +
               </a>
             </div>
-            <p className="p-item">eliminar</p>
+            <p className="btn-delete">
+              <BsTrash /> Borrar Item
+            </p>
           </div>
           <div className="total-price">
             <div className="values-product">
@@ -35,7 +38,6 @@ export default function Item() {
           </div>
         </div>
       </div>
-      ;
     </>
   );
 }

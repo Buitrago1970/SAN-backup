@@ -12,6 +12,8 @@ export default function ShoppingCart() {
         </div>
         <div className="List">
           <Item />
+          <Item />
+          <Item />
         </div>
       </div>
     </>

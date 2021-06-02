@@ -1,4 +1,3 @@
-
 {
     "initalState": {
       "mylist": [],
@@ -6,199 +5,218 @@
         {
             "id": "01",
             "name": "Lomo Limpio",
-            "price": 38.000,
+            "price": "38.000",
             "measures": "kilogramo",
             "amount": "500g",
             "presentation": "Filete",
-            "img": "../images/carne.jpg"
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
           },
           {
             "id": "02",
             "name": "Lomo Corriente",
-            "price": 33000,
+            "price": "33.000",
             "uniti": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          },
+            "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"},
           {
             "id": "03",
             "name": "Chatas En Posta",
-            "price": 24000,
+            "price": "24.000",
             "uniti": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          },
+            "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"},
           {
             "id": "04",
-            "name": "CHURRASCO",
-            "price": 26000,
+            "name": "Churrasco",
+            "price": "26.000",
             "uniti": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          },
+            "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"},
           {
             "id": "05",
-            "name": "PUNTA DE ANCA",
-            "price": 26000,
+            "name": "Punta De Anca",
+            "price": "26.000",
             "uniti": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          },
+            "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"},
           {
             "id": "06",
-            "name": "CADERA EN POSTA",
-            "price": 20000,
+            "name": "Cadera En Posta",
+            "price": "20.000",
             "uniti": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          },
+            "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"},
           {
             "id": "07",
-            "name": "CADERA TAJADA",
-            "price": 20000,
+            "name": "Cadera Tajada",
+            "price": "20.000",
             "uniti": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          },
+            "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"},
           {
             "id": "08",
-            "name": "CENTRO DE PIERNA",
-            "price": 20000,
+            "name": "Centro De Pierna",
+            "price": "20.000",
             "uniti": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          },
+             "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"},
           {
             "id": "09",
-            "name": "BOTA",
-            "price": 19500,
+            "name": "Bota",
+            "price": "19.500",
             "uniti": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          },
+            "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"},
           {
             "id": "10",
-            "name": "BOTA CON MUCHACHO",
-            "price": 20000,
+            "name": "Bota Con Muchacho",
+            "price": "20.000",
             "measures": "kilogramo",
             "amount": "500g",
-            "presentation": "Filete"
-          }
+            "presentation": "Filete",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"}
       ],
       "chicken": [
         {
             "id": "56",
             "name": "Pollo Entero",
-            "price": 7.600,
+            "price": "7.600",
             "measures": "kilogramo",
             "amount": "x",
-            "presentation": "Entero" 
-        },
+            "presentation": "Entero",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"}, 
         {
             "id": "57",
             "name": "Pechuga",
-            "price": 11.500,
+            "price": "11.500",
             "measures": "kilogramo",
             "amount": "x",
-            "presentation": "Entera" 
+            "presentation": "Entera",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "58",
             "name": "Filete De Pechuga",
-            "price": 16.000,
+            "price": "16.000",
             "measures": "kilogramo",
             "amount": "x",
             "presentation": "Filete" 
+            ,
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "59",
             "name": "Pierna Pernil",
-            "price": 8.000,
+            "price": "8.000",
             "measures": "kilogramo",
             "amount": "x",
-            "presentation": "Entero" 
-        },
+            "presentation": "Entero",
+                 "img": "http://dummyimage.com/800x600.png/99118E/ffffff"}, 
         {
             "id": "60",
             "name": "Pierna Pernil Deshuesado",
-            "price": 9.000,
+            "price": "9.000",
             "measures": "kilogramo",
             "amount": "x",
-            "presentation": "Entero (Sin Hueso)" 
+            "presentation": "Entero (Sin Hueso)", 
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "61",
             "name": "Colombina De Pierna",
-            "price": 9.000,
+            "price": "9.000",
             "measures": "kilogramo",
             "amount": "x",
-            "presentation": "Entero" 
-        },
+            "presentation": "Entero",
+                 "img": "http://dummyimage.com/800x600.png/99118E/ffffff"}, 
         {
             "id": "62",
             "name": "Muslos Enteros",
-            "price": 9.000,
+            "price": "9.000",
             "measures": "kilogramo",
             "amount": "x",
-            "presentation": "Entero" 
-        }
+            "presentation": "Entero",
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
+          }
       ],
       "pig": [
         {
             "id": "36",
             "name": "Pernil De Cerdo",
-            "price": 15.000,
+            "price": "15.000",
             "measures": "kilogramo",
             "amount": "500g",
             "presentation": "Filete" 
+            ,
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "37",
             "name": "Lomo De Cerdo",
-            "price": 18.000,
+            "price": "18.000",
             "measures": "kilogramo",
             "amount": "500g",
             "presentation": "Filete" 
+            ,
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "38",
             "name": "Lomo Almendra",
-            "price": 20.000,
+            "price": "20.000",
             "measures": "kilogramo",
             "amount": "500g",
             "presentation": "Filete" 
+            ,
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "39",
             "name": "Solomito",
-            "price": 22.000,
+            "price": "22.000",
             "measures": "kilogramo",
             "amount": "500g",
             "presentation": "Filete" 
+            ,
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "40",
             "name": "Chuleta",
-            "price": 19.000,
+            "price": "19.000",
             "measures": "kilogramo",
             "amount": "500g",
             "presentation": "Filete" 
+            ,
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "41",
             "name": "Brazo En Posta",
-            "price": 14.000,
+            "price": "14.000",
             "measures": "kilogramo",
             "amount": "500g",
             "presentation": "Filete" 
+            ,
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         },
         {
             "id": "42",
             "name": "Brazo Tajado",
-            "price": 14.000,
+            "price": "14.000",
             "measures": "kilogramo",
             "amount": "500g",
             "presentation": "Filete" 
+            ,
+            "img": "http://dummyimage.com/800x600.png/99118E/ffffff"
         }
       ]
     }

@@ -1,13 +1,15 @@
 .container-address {
   /* width: calc(100% - 250px); */
+  margin-left: 20px;
 }
 .title-container {
 }
 .addresscambiar {
-  background-color: rgb(226 226 226);
+  background: #d0d0d0;
   display: flex;
   justify-content: space-between;
   padding: 16px 32px;
+  align-items: center;
   /* box-shadow: 0 2px 13px -4px #000000; */
 }
 .address {

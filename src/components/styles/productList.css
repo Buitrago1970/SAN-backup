@@ -2,19 +2,20 @@
 }
 .categories-title-container {
   display: flex;
-  line-height: 1.2;
+  margin: 15px 0px;
   -webkit-align-items: center;
   align-items: center;
-  justify-content: center;
 }
 .line-indicator-products {
-  width: 35%;
+  width: 30%;
+  height: 1px;
+  border-width: 0;
+  background: #505050;
 }
 .categories-title {
   font-size: 25px;
   font-weight: 600;
   letter-spacing: 1px;
-  color: #c60808;
 }
 .carousel {
 }
