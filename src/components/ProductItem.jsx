@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./styles/productList.css";
-import Product from "../images/carne.jpg";
 const ProductItem = ({
   id,
   name,

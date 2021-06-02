@@ -5,8 +5,12 @@ import "./styles/productList.css";
 import ProductItem from "./ProductItem";
 import Categories from "./Categories";
 import Carousel from "./Carousel";
+import PageLoanding from "./PageLoanding";
 
 function ProductsList() {
+  const state = {
+    loanding: true,
+  };
   const URL = " http://localhost:3015/initalState";
 
   const [item, setItem] = useState([]);
@@ -33,6 +37,9 @@ function ProductsList() {
       </>
     );
   };
+  if (state.loanding) {
+    return <PageLoanding />;
+  }
   return (
     <>
       <div className="list-container">
