@@ -8,11 +8,8 @@ import Carousel from "./Carousel";
 import PageLoanding from "./PageLoanding";
 
 function ProductsList() {
-  const state = {
-    loanding: true,
-  };
   const URL = " http://localhost:3015/initalState";
-
+  const [loanding, setLoanding] = useState(true);
   const [item, setItem] = useState([]);
 
   useEffect(() => {
@@ -20,8 +17,10 @@ function ProductsList() {
       try {
         const response = await fetch(URL);
         const data = await response.json();
-        return setItem(data);
+
+        return setLoanding(false), setItem(data);
       } catch (error) {
+        setLoanding(false);
         console.log(error);
       }
     };
@@ -37,7 +36,7 @@ function ProductsList() {
       </>
     );
   };
-  if (state.loanding) {
+  if (loanding) {
     return <PageLoanding />;
   }
   return (

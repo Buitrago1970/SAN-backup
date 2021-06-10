@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles/ShoppingList.css";
 import Item from "./Item";
 
 export default function ShoppingCart() {
+  const [modal, setModal] = useState(false);
+
+  function handleOpenModal() {
+    setModal(true);
+    alert("si");
+  }
+  function handleCloseModal() {
+    setModal(false);
+    alert("no");
+  }
   return (
     <>
       <div className="shopping-list">
@@ -11,9 +21,13 @@ export default function ShoppingCart() {
           <p>Precio</p>
         </div>
         <div className="List">
-          <Item />
-          <Item />
-          <Item />
+          <Item
+            OpenModal={modal}
+            onOpenModal={handleOpenModal}
+            onCloseModal={handleCloseModal}
+          />
+          <Item onOpenModal={handleOpenModal} onCloseModal={handleCloseModal} />
+          <Item onOpenModal={handleOpenModal} onCloseModal={handleCloseModal} />
         </div>
       </div>
     </>

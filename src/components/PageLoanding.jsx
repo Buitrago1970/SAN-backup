@@ -11,9 +11,9 @@ class PageLoanding extends React.Component {
           <div className="list-container">
             <div className="carousel">
               <div className="carousel-container">
-                <div className="articulo">
+                <div className=" articulo articulo-page-loanding">
                   {/* imagen */}
-                  <div className="img-container">
+                  <div className="img-container img-container-page-loanding">
                     <Skeleton width={230} height={105} />
                   </div>
                   {/* texto */}
@@ -65,9 +65,9 @@ class PageLoanding extends React.Component {
                     {/* boton añadir */} <Skeleton height={30} />
                   </div>
                 </div>
-                <div className="articulo">
+                <div className=" articulo articulo-page-loanding">
                   {/* imagen */}
-                  <div className="img-container">
+                  <div className="img-container img-container-page-loanding">
                     <Skeleton width={230} height={105} />
                   </div>
                   {/* texto */}
@@ -119,9 +119,9 @@ class PageLoanding extends React.Component {
                     {/* boton añadir */} <Skeleton height={30} />
                   </div>
                 </div>
-                <div className="articulo">
+                <div className=" articulo articulo-page-loanding">
                   {/* imagen */}
-                  <div className="img-container">
+                  <div className="img-container img-container-page-loanding">
                     <Skeleton width={230} height={105} />
                   </div>
                   {/* texto */}
@@ -173,9 +173,9 @@ class PageLoanding extends React.Component {
                     {/* boton añadir */} <Skeleton height={30} />
                   </div>
                 </div>
-                <div className="articulo">
+                <div className=" articulo articulo-page-loanding">
                   {/* imagen */}
-                  <div className="img-container">
+                  <div className="img-container img-container-page-loanding">
                     <Skeleton width={230} height={105} />
                   </div>
                   {/* texto */}
@@ -227,9 +227,9 @@ class PageLoanding extends React.Component {
                     {/* boton añadir */} <Skeleton height={30} />
                   </div>
                 </div>
-                <div className="articulo">
+                <div className=" articulo articulo-page-loanding">
                   {/* imagen */}
-                  <div className="img-container">
+                  <div className="img-container img-container-page-loanding">
                     <Skeleton width={230} height={105} />
                   </div>
                   {/* texto */}
