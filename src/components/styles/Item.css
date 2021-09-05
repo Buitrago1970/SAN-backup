@@ -33,12 +33,31 @@
   text-align: end;
 }
 .values-product {
+  display: none;
 }
 .price {
-  font-size: 24px;
 }
 .btn-delete {
   color: rgb(231, 24, 24);
   font-size: 14px;
   cursor: pointer;
+}
+.values-product-small {
+  display: flex;
+  font-size: 17px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.price-cart-shopping-small {
+  color: #930202;
+  font-size: 17px;
+  margin-left: 5px;
+}
+@media screen and (min-width: 500px) {
+  .values-product-small {
+    display: none;
+  }
+  .values-product {
+    display: block;
+  }
 }

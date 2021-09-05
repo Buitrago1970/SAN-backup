@@ -89,7 +89,7 @@
   border-radius: 2px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 785px) {
   .line-indicator-products {
     width: 46%;
   }

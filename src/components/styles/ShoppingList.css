@@ -9,3 +9,12 @@
   margin-left: 15px;
   margin-right: 15px;
 }
+
+.title-price {
+  display: none;
+}
+@media screen and (min-width: 500px) {
+  .title-price {
+    display: block;
+  }
+}

@@ -16,7 +16,7 @@ class Navbar extends React.Component {
                   <AiOutlineSearch />
                 </i>
               </span>
-              <input type="search" id="search" placeholder="Buscar..." />
+              <input type="text" id="search" placeholder="Buscar..." />
             </div>
           </div>
           <div className="container-shopping-cart-nav">

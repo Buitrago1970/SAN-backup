@@ -1,4 +1,5 @@
 import React from "react";
+
 // import Logo from "../Images/logo San Diego.svg";
 
 import "./styles/header.css";
@@ -12,29 +13,29 @@ import { ImTruck } from "react-icons/im";
 import { TiGroup } from "react-icons/ti";
 import { HiMail } from "react-icons/hi";
 class Header extends React.Component {
+  showSettings(event) {
+    event.preventDefault();
+  }
   render() {
     return (
       <>
         <div className="header">
-          <div className="container-button-hamburger">
-            <Link to="">
-              <GiHamburgerMenu />
-            </Link>
-          </div>
+          {/* <div className="container-button-hamburger">
+            <GiHamburgerMenu />
+          </div> */}
           <div className="container-logo">
             <Link className="header__brand-logo" to="">
               <img className="logo" src="#" alt="Logo San Diego" />
             </Link>
           </div>
 
-          <div className="container-options">
+          <div className="container-options menu">
             <Link to="/" className="options">
               <AiFillHome className="icon-header" />
               Inicio
             </Link>
             <Link to="/Nosotros" className="options">
               <TiGroup className="icon-header" />
-              {/* <HiUserGroup /> */}
               Nosotros
             </Link>
             <Link to="/Servicios" className="options">

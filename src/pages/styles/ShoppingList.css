@@ -1,5 +1,18 @@
 .hero-shopping-cart {
   width: 100%;
-  display: grid;
-  grid-template-columns: 2.5fr 1fr;
+}
+.secondary-title {
+  margin-bottom: 15px;
+  font-size: 21px;
+}
+@media screen and (min-width: 785px) {
+  .hero-shopping-cart {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+  }
+  .secondary-title {
+    margin-bottom: 15px;
+    font-size: 27px;
+  }
 }

@@ -13,7 +13,7 @@ class Servicios extends React.Component {
         <div className="main-container">
           <HeroSection />
           <QualityDetails />
-          <HeroSection />
+          {/* <HeroSection /> */}
         </div>
       </>
     );

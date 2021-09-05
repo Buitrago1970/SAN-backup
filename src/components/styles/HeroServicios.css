@@ -1,57 +1,72 @@
 .HeroServicios {
   max-width: 415px;
 }
-.contaner-img-servicios {
-  max-width: 415px;
+.contaner-img-Servicios {
 }
-.img-servicios {
+.img-Servicios {
   width: 100%;
 }
-.title-container-hero-servicios {
-  display: flex;
-  flex-flow: column;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-  margin-top: 15px;
+.text-Servicios {
+  color: #e8e6e3;
+  position: relative;
+  background: #0000007d;
+  padding: 15px 10px 70px 15px;
+  box-sizing: border-box;
+  position: absolute;
+  max-width: 415px;
+  /* max-height: ; */
 }
-.secondary-title {
-  margin-top: 0;
+.title-container-hero-Servicios {
+  margin-bottom: 80px;
+}
+.title-hero-Servicios {
+  font-size: 30pt;
+  margin: 0;
+  line-height: 50px;
+}
+.text-container-Servicios {
+  margin-top: 35px;
+  line-height: 28px;
+  font-size: 15px;
+}
+.icon-container {
+  display: none;
 }
 @media screen and (min-width: 870px) {
   .HeroServicios {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 2fr 1fr;
     max-width: 1340px;
-    margin: 15px 0;
   }
-  .contaner-img-servicios {
-    padding: 15px 20px 0px 20px;
+  .contaner-img-Servicios {
     position: inherit;
     max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-
-  .text-servicios {
-    padding: 70px 20px 0px 20px;
+  .img-Servicios {
+    width: 100%;
   }
-  .title {
-    line-height: 20px;
-    color: #c60808;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 1.4px;
-  }
-  .secondary-title {
-    text-transform: capitalize;
-    margin-bottom: 24px;
-    font-size: 40px;
-    line-height: 1.1;
-    font-weight: 600;
+  .text-Servicios {
+    margin-top: 40px;
     color: #060606;
+    background: none;
+    position: inherit;
+    max-width: none;
+    padding: 15px 10px 100px 40px;
+  }
+  .title-container-hero-Servicios {
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+  }
+  .title-hero-Servicios {
+    margin: 15px 0;
+    font-size: 35pt;
+    font-family: "Lato", sans-serif;
   }
   .text-container {
-    text-align: initial;
+    font-size: 16px;
+    line-height: 30px;
+    color: #060606;
+    margin-left: 60px;
+    max-width: 650px;
   }
 }

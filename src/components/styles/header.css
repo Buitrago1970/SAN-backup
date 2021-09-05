@@ -6,10 +6,12 @@
   /* align-items: center; */
 }
 .container-button-hamburger {
+  cursor: pointer;
   display: block;
   flex: 1 1 auto;
   line-height: 22px;
   font-size: 18px;
+  user-select: none;
 }
 .container-logo {
   text-align: center;

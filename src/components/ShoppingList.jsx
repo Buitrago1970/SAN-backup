@@ -18,7 +18,7 @@ export default function ShoppingCart() {
       <div className="shopping-list">
         <div className="secondary-title">
           <div className="secondary-title">Opciones de envío a</div>
-          <p>Precio</p>
+          <p className="title-price">Precio</p>
         </div>
         <div className="List">
           <Item

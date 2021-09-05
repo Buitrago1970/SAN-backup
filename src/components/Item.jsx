@@ -29,6 +29,10 @@ export default function Item(props) {
                 +
               </a>
             </div>
+            <div className="values-product-small">
+              <p>Total: </p>
+              <p className="price-cart-shopping-small">$14.000</p>
+            </div>
             <p onClick={props.onOpenModal} className="btn-delete">
               <BsTrash /> Borrar Item
             </p>

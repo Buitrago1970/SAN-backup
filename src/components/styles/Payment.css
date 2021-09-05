@@ -1,10 +1,10 @@
 .payment {
 }
-.account {
+.container-account {
 }
 .total-count {
 }
-.container-payment {
+.account {
   display: flex;
   justify-content: space-between;
 
@@ -27,6 +27,11 @@
 .btn-payment:hover {
   background: #d1ba24;
 }
-.a {
-  padding: 35px;
+.container-payment {
+  padding: 20px;
+}
+@media screen and (min-width: 1000px) {
+  .container-payment {
+    padding: 35px;
+  }
 }
