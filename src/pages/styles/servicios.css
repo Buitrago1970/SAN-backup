@@ -1,58 +1,54 @@
-.main-container {
-  margin: 0px 0;
-}
-.main-title {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 32px;
-}
-.fila-centrada {
-  border-radius: 12px;
-}
-.img-container {
-  background: var(--white-color);
-  flex: 2 1 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.img {
-  max-width: 100%;
-}
-.container {
-}
-.container-midle {
-  margin: 50px 0;
-  padding: 10px;
-  background: #202020;
-  color: #e8e6e3;
-}
-.secondary-title {
-  font-size: 30px;
-  margin-bottom: 0;
-  margin-top: 30px;
-}
-.parrafo-servicios {
-  font-size: 21px;
-  line-height: 1.4;
-  letter-spacing: 0.06px;
-  margin-bottom: 70px;
-}
-.tite-services {
-  margin: 36px 0;
-  color: rgba(79 166 255);
-  font-size: 50px;
-  line-height: 1.07143;
+.line1 {
+  font-size: 40px;
+  line-height: 1.1;
   font-weight: 600;
-  text-align: initial;
+  letter-spacing: 0em;
 }
-.container-img-servicios-middle {
-  width: 100%;
+.line2 {
+  font-size: 19px;
+  line-height: 1.21053;
+  font-weight: 600;
+  letter-spacing: 0.012em;
+  margin-top: 26.8px;
 }
-.container-img-servicios-middle img {
-  width: 100%;
+.card-image {
+  background-image: url(https://www.apple.com/v/environment/m/images/overview/power__gehqvcdp1yuu_medium_2x.png);
+  width: 117px;
+  height: 216px;
+  background-size: 117px 216px;
+  background-repeat: no-repeat;
 }
-.text-section-middle {
-  position: relative;
-  bottom: 50%;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 50px 30px;
+  background: #1d1d1f;
+  border-radius: 20px;
+  text-align: center;
+  color: #f2f2f2;
+  margin: 10px 0;
+}
+.container-card {
+  display: grid;
+  max-width: 1129px;
+  grid-column-gap: 25px;
+  grid-row-gap: 25px;
+}
+@media screen and (min-width: 870px) {
+  .line1 {
+    font-size: 64px;
+  }
+  .line2 {
+    max-width: 373px;
+  }
+  .card-image {
+    margin: 22px 0;
+  }
+}
+@media screen and (min-width: 670px) {
+  .container-card {
+    grid-template-columns: 1fr 1fr;
+  }
 }

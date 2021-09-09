@@ -1,7 +1,6 @@
 body {
   background: #e2e2e2;
-  /* background: rgb(38, 37, 39); */
-  /* background: url(./images/Download\ Vertical\ Black\ Wood\ Beams\ iPhone\ 6\ Plus\ HD\ Wallpaper\ HD\ free.jpg); */
+
   background-position: top;
   background-attachment: scroll;
   margin: 0;
@@ -29,6 +28,7 @@ h2 {
   align-items: center;
   display: flex;
   flex-flow: column;
+  padding: 12px 12px;
 }
 li {
   list-style: none;
@@ -38,8 +38,11 @@ ul {
   font-size: 15px;
   color: #292929;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 870px) {
   .secondary-title {
     margin-top: 25px;
+  }
+  .main-container {
+    padding: 0;
   }
 }

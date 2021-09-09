@@ -5,16 +5,16 @@ import "./styles/HeroServicios.css";
 
 //images
 // import cortador from "../images/Vajilla de Diseño - Aji.jpg";
-import cortador from "../images/ce5588446d1bf9d11d1ee22e25519200.jpg";
+import cortador from "../images/db3c672ad9d0d24c6035129f5b994553.jpg";
 
 function HeroServicios() {
   return (
     <>
       <div className="HeroServicios">
-        <div className="contaner-img-Servicios">
-          <img className="img-Servicios" src={cortador} alt="" />
+        <div className="contaner-img-nosotros">
+          <img className="img-nosotros" src={cortador} alt="" />
         </div>
-        <div className="text-Servicios">
+        <div className="text-nosotros text-servicios">
           <div className="title-container-hero-Servicios">
             <h1 className="title-hero-Servicios">The Best Service</h1>
           </div>

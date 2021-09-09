@@ -6,20 +6,15 @@ hr {
 }
 .HeroServicios {
   max-width: 415px;
+  margin-bottom: 80px;
 }
 .contaner-img-Servicios {
 }
 .img-Servicios {
   width: 100%;
 }
-.text-Servicios {
-  color: #e8e6e3;
-  position: relative;
-  background: #0000007d;
-  padding: 15px 10px 70px 15px;
-  box-sizing: border-box;
-  position: absolute;
-  max-width: 415px;
+.text-servicios {
+  color: #cecece;
 }
 .title-container-hero-Servicios {
   margin: 0;
@@ -49,13 +44,8 @@ hr {
   .img-Servicios {
     width: 100%;
   }
-  .text-Servicios {
-    color: #060606;
-    margin: auto 0;
-    background: none;
-    position: inherit;
-    max-width: none;
-    padding: 15px 10px 100px 40px;
+  .text-servicios {
+    color: #1d1d1d;
   }
   .title-container-hero-Servicios {
     letter-spacing: 2px;

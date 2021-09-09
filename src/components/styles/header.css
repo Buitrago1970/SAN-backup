@@ -28,7 +28,7 @@
   display: none;
 }
 
-@media screen and (min-width: 785px) {
+@media screen and (min-width: 870px) {
   .header {
     padding: 20px;
     background-color: rgb(29, 29, 29);

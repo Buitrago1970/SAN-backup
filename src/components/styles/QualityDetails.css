@@ -1,25 +1,20 @@
+.section-badges {
+  width: 100%;
+}
 .container-badges {
-  margin: 40px 0;
+  margin: 100px 0;
   text-align: center;
 }
 .badges {
   color: #121212;
-  display: flex;
-  justify-content: space-between;
-}
-.badges {
-  margin: 100px 60px;
-}
-.badges-item {
-  max-width: 150px;
+  display: block;
+  margin: 10px 0px;
+  padding: 0;
 }
 .number-badge {
   font-size: 40px;
-  color: #ff9800;
+  color: #ffc400;
   margin-bottom: 15px;
-}
-.container-img {
-  width: 200px;
 }
 .container-img img {
   width: 100%;
@@ -27,4 +22,25 @@
 .stars {
   display: flex;
   align-items: center;
+}
+.imgs {
+  width: 73px;
+  position: relative;
+  right: 81px;
+  top: 136px;
+}
+.img-reverse {
+  width: 73px;
+  position: relative;
+  left: 82px;
+  bottom: 79px;
+  transform: scaleX(-1);
+}
+
+@media screen and (min-width: 785px) {
+  .badges {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 48px;
+  }
 }

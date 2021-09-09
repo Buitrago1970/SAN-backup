@@ -8,7 +8,7 @@ function QualityDetails() {
     badges: [
       {
         number: "390",
-        title: " Title  Title  Title Title",
+        title: " Title  Title  Title Title Title",
       },
       {
         number: "296",
@@ -23,22 +23,23 @@ function QualityDetails() {
   const { badges } = initialState;
   return (
     <>
-      <section>
+      <section className="section-badges">
         <div className="container-badges">
           <span className="sub-title">Titulo De Logros/Metas</span>
           <div className="badges">
             {badges.map((item) => (
               <>
-                <div className="stars">✨</div>
                 <div className="badges-item">
+                  <img className="imgs" src={crow} alt="" />
                   <p className="number-badge">{item.number}</p>
                   <p>{item.title}</p>
+                  <img className="img-reverse" src={crow} alt="" />
                 </div>
-                <div className="stars">✨</div>
               </>
             ))}
           </div>
         </div>
+        <div className="">{/* <img src={butcher} alt="" /> */}</div>
       </section>
     </>
   );

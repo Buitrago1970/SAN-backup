@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Open+Sans:wght@600&family=Roboto&display=swap");
-
 .HeroNosotros {
   max-width: 415px;
 }
@@ -15,6 +13,7 @@
   position: relative;
   background: #0000007d;
   padding: 15px 10px 100px 15px;
+  border-radius: 10px;
 }
 .title-container-hero-nosotros {
   margin-bottom: 80px;
