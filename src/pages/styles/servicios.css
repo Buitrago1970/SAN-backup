@@ -46,5 +46,13 @@
   font-weight: 600;
   text-align: initial;
 }
-.paragraph-midle {
+.container-img-servicios-middle {
+  width: 100%;
+}
+.container-img-servicios-middle img {
+  width: 100%;
+}
+.text-section-middle {
+  position: relative;
+  bottom: 50%;
 }

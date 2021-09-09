@@ -17,9 +17,6 @@ import React from "react";
 import under_Construction from "../images/SAN Under_Construction(Black).png";
 
 function ProductsList() {
-  const style = {
-    with: "1010px",
-  };
   // const initialState = {
   //   res: [
   //     {

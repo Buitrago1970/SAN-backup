@@ -18,7 +18,7 @@ class Contactos extends React.Component {
                 {" "}
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Deleniti ipsum odio hic mollitia recusandae possimus asperiores
-                earum.ipsum odio.
+                earum.ipsum amor.
               </p>
               <div className="info-contact">
                 <div className="info info-messages">
