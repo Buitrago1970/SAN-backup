@@ -38,6 +38,27 @@ ul {
   font-size: 15px;
   color: #292929;
 }
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  margin: 50px;
+  padding: 10px;
+}
+/* fondo  */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.604);
+}
+/* color bar */
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+}
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d0d0d0;
+  box-shadow: 0 0 2px 1px #d0d0d0;
+}
+
 @media screen and (min-width: 870px) {
   .secondary-title {
     margin-top: 25px;

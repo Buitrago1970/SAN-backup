@@ -88,7 +88,6 @@
   color: #d4d4d4;
   border-radius: 2px;
 }
-
 @media screen and (min-width: 785px) {
   .line-indicator-products {
     width: 46%;
@@ -107,11 +106,10 @@
     margin: 10px 5px;
     border-radius: 10px;
   }
-  /* ------------------------------------- */
+
   .presentation-container {
     display: none;
   }
-  /* ------------------------ */
   .img-container {
     display: flex;
     justify-content: center;
