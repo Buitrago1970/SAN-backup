@@ -12,13 +12,13 @@ nav {
   position: relative;
 }
 .container-serch input#search {
+  background-color: #000000;
+  color: #c8c3bc;
   width: 95%;
-  height: 36px;
-  background: #ffffff;
-  border: 2px solid #505050;
+  height: 30px;
+  border: 2px solid #726a5d;
   font-size: 10pt;
   float: left;
-  color: #333333;
   padding-left: 45px;
   border-radius: 14px;
   outline: none;
@@ -29,7 +29,7 @@ nav {
   margin-left: 17px;
   margin-top: 7px;
   z-index: 1;
-  color: #636363;
+  color: #e8e6e3;
   font-size: 19px;
 }
 .container-shopping-cart-nav {
@@ -39,7 +39,8 @@ nav {
   width: 55px;
 }
 .shopping-cart-nav {
-  color: rgb(0, 0, 0);
+  color: #e8e6e3;
+
   font-size: 24px;
 }
 .shopping-cart-nav:hover {
@@ -48,5 +49,10 @@ nav {
 @media screen and (max-width: 870px) {
   .container-shopping-cart-nav {
     display: none;
+  }
+  .container-serch input#search {
+    width: 80%;
+
+    border-radius: 7px;
   }
 }

@@ -9,7 +9,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "02",
@@ -18,7 +18,7 @@ const initialState = {
       uniti: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "03",
@@ -27,7 +27,7 @@ const initialState = {
       uniti: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "04",
@@ -36,7 +36,7 @@ const initialState = {
       uniti: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "05",
@@ -45,7 +45,7 @@ const initialState = {
       uniti: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "06",
@@ -54,7 +54,7 @@ const initialState = {
       uniti: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "07",
@@ -63,7 +63,7 @@ const initialState = {
       uniti: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "08",
@@ -72,7 +72,7 @@ const initialState = {
       uniti: "kilogramo",
       amount: "500g",
       presentatio: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "09",
@@ -81,7 +81,7 @@ const initialState = {
       uniti: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "10",
@@ -90,7 +90,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
   ],
   chicken: [
@@ -101,7 +101,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "x",
       presentation: "Entero",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "57",
@@ -110,7 +110,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "x",
       presentation: "Entera",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "58",
@@ -119,7 +119,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "x",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "59",
@@ -128,7 +128,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "x",
       presentation: "Entero",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "60",
@@ -137,7 +137,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "x",
       presentation: "Entero (Sin Hueso)",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "61",
@@ -146,7 +146,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "x",
       presentation: "Entero",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "62",
@@ -155,7 +155,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "x",
       presentation: "Entero",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
   ],
   pig: [
@@ -166,7 +166,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "37",
@@ -175,7 +175,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "38",
@@ -184,7 +184,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "39",
@@ -193,7 +193,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "40",
@@ -202,7 +202,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "41",
@@ -211,7 +211,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
     {
       id: "42",
@@ -220,7 +220,7 @@ const initialState = {
       measues: "kilogramo",
       amount: "500g",
       presentation: "Filete",
-      img: "http://dummyimage.com/800x600.png/99118E/ffffff",
+      img: "https://dummyimage.com/600x400/ffffff/000000",
     },
   ],
 };

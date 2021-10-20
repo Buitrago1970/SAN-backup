@@ -4,15 +4,17 @@ import React from "react";
 import "./styles/HeroServicios.css";
 
 //images
-// import cortador from "../images/Vajilla de Diseño - Aji.jpg";
-import cortador from "../images/db3c672ad9d0d24c6035129f5b994553.jpg";
 
 function HeroServicios() {
   return (
     <>
       <div className="HeroServicios">
         <div className="contaner-img-nosotros">
-          <img className="img-nosotros" src={cortador} alt="" />
+          <img
+            className="img-Servicios"
+            src="https://dummyimage.com/650x800/ffffff/000000"
+            alt=""
+          />
         </div>
         <div className="text-nosotros text-servicios">
           <div className="title-container-hero-Servicios">

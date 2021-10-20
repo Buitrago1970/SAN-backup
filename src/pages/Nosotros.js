@@ -6,8 +6,6 @@ import HeroNosotros from "../components/HeroNosotros";
 import "./styles/nosotros.css";
 
 //img
-import xd from "../images/tattoome.jpg";
-import Nosotros2 from "../images/cortes.png";
 // import meat from "../images/6458.png";
 class Nosotros extends React.Component {
   render() {
@@ -34,7 +32,10 @@ class Nosotros extends React.Component {
                 </p>
               </div>
               <div className="img-nosotros2">
-                <img src={Nosotros2} alt="" />
+                <img
+                  src="https://dummyimage.com/570x400/ffffff/000000"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -61,7 +62,11 @@ class Nosotros extends React.Component {
             <div className=" our-team ">
               <div className="out-team-container">
                 <div className="container-img-our-team">
-                  <img className="img-our-team" src={xd} alt="" />
+                  <img
+                    className="img-our-team"
+                    src="https://dummyimage.com/500x650/ffffff/000000"
+                    alt=""
+                  />
                 </div>
                 <div className="text-container-our-team">
                   <h3 className="name-team">Juan Buitrago</h3>
@@ -70,7 +75,11 @@ class Nosotros extends React.Component {
               </div>
               <div className="out-team-container">
                 <div className="container-img-our-team">
-                  <img className="img-our-team" src={xd} alt="" />
+                  <img
+                    className="img-our-team"
+                    src="https://dummyimage.com/500x650/ffffff/000000"
+                    alt=""
+                  />
                 </div>
                 <div className="text-container-our-team">
                   <h3 className="name-team">Juan Buitrago</h3>
@@ -79,7 +88,11 @@ class Nosotros extends React.Component {
               </div>
               <div className="out-team-container">
                 <div className="container-img-our-team">
-                  <img className="img-our-team" src={xd} alt="" />
+                  <img
+                    className="img-our-team"
+                    src="https://dummyimage.com/500x650/ffffff/000000"
+                    alt=""
+                  />
                 </div>
                 <div className="text-container-our-team">
                   <h3 className="name-team">Juan Buitrago</h3>

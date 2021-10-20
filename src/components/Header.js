@@ -12,6 +12,8 @@ import { AiOutlineInstagram, AiFillFacebook, AiFillHome } from "react-icons/ai";
 import { ImTruck } from "react-icons/im";
 import { TiGroup } from "react-icons/ti";
 import { HiMail } from "react-icons/hi";
+
+import logo from "../images/logo.svg";
 class Header extends React.Component {
   showSettings(event) {
     event.preventDefault();
@@ -25,7 +27,7 @@ class Header extends React.Component {
           </div> */}
           <div className="container-logo">
             <Link className="header__brand-logo" to="">
-              <img className="logo" src="#" alt="Logo San Diego" />
+              <img className="logo" src={logo} alt="Logo San Diego" />
             </Link>
           </div>
 

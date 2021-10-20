@@ -30,7 +30,6 @@
 }
 @media screen and (min-width: 768px) {
   .container-footer {
-    margin-top: 50px;
     background-color: rgb(37, 37, 37);
     padding-bottom: 15px;
   }

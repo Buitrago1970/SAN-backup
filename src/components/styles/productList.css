@@ -26,6 +26,7 @@
   width: 100%;
 }
 .articulo {
+  color: #d0d0d0;
   margin-bottom: 20px;
   box-shadow: 0 2px 13px -4px #000000;
   width: 100%;
@@ -44,7 +45,6 @@
   width: auto;
 }
 .name-product {
-  color: #060606;
   margin: 0px 13px 2px 0px;
   font-weight: 600;
   font-size: 15px;
@@ -78,11 +78,10 @@
 }
 .price {
   font-size: 19px;
-  color: #820000;
 }
 .btn-shop {
   width: 98%;
-  background: #901111;
+  background: #820000;
   border: 0;
   height: 35px;
   color: #d4d4d4;
@@ -100,7 +99,7 @@
   }
   .articulo {
     display: block;
-    background: #fffffffa;
+    background: #040608;
     padding: 0px;
     max-width: 245px;
     margin: 10px 5px;
@@ -121,7 +120,7 @@
     margin: 0px 0px;
   }
   .name-product {
-    color: #060606;
+    color: #d0d0d0;
     text-align: center;
     font-size: 22px;
     margin: 16.5px 0;
@@ -152,7 +151,6 @@
     margin: 5px 4px;
   }
   .price {
-    color: #0c0c0c;
     font-size: 25px;
     font-weight: 400;
     margin: 16px 0;
@@ -172,7 +170,7 @@
     width: 19px;
     text-align: center;
     border-style: groove;
-    border: 1px groove #00000078;
+    border: 1px groove #8c827378;
     margin: 4px 0px;
     padding: 5px;
     font-size: 13px;
@@ -188,7 +186,7 @@
     margin: 4px 5px;
     background: #0000004f;
     border-radius: 2px;
-    color: rgb(0 0 0);
+
     text-decoration: none;
   }
   .bt-mas {

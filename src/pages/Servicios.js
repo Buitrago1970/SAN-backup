@@ -10,13 +10,13 @@ class Servicios extends React.Component {
   render() {
     const card = [
       {
-        title: "More power.",
+        title: "Lorem ipsum.",
         paragrahp:
-          "Since 2018, Apple’s stores, offices, and data centers have run on 100% renewable energy. Today all our operations are carbon neutral, too.",
+          "Since 2018, Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dicta itaque officiis ex recusandae est harum! Optio, quidem!.",
       },
       {
-        title: "Apple Inc. Officially in the green.",
-        paragrahp: "We’re investing in some wild ideas for carbon removal.",
+        title: "Lorem ipsum.",
+        paragrahp: "We’re investing in Lorem ipsum dolor sit amet consectetur.",
       },
     ];
     return (

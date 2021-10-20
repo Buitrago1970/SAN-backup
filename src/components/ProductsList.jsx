@@ -25,8 +25,6 @@ function ProductsList() {
 
   return (
     <>
-      <h1 className="principal-title">Carniceria Online</h1>
-      <h3 className="title-secondary">surticarnes san diego</h3>
       <div className="list-container">
         {item.mylist && item.mylist.length > 0 && (
           <Categories>

@@ -5,7 +5,7 @@ hr {
   background: #080707;
 }
 .HeroServicios {
-  max-width: 415px;
+  max-width: 100%;
   margin-bottom: 80px;
 }
 .contaner-img-Servicios {
@@ -27,6 +27,7 @@ hr {
 .text-container-Servicios {
   line-height: 28px;
   font-size: 15px;
+  max-width: 800px;
 }
 .icon-container {
   display: none;
