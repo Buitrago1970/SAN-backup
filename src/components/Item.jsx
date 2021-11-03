@@ -2,7 +2,6 @@ import React from "react";
 
 import "./styles/Item.css";
 import Product from "../images/7ad45b7e1d6d74dde087cd6f41f04f0b.png";
-import Modal from "./Modal.jsx";
 import { BsTrash } from "react-icons/bs";
 export default function Item(props) {
   return (
@@ -36,9 +35,7 @@ export default function Item(props) {
             <p onClick={props.onOpenModal} className="btn-delete">
               <BsTrash /> Borrar Item
             </p>
-            <Modal isOpen={false} onCloseModal={props.onCloseModal}>
-              yo estoy en mi peak
-            </Modal>
+           
           </div>
           <div className="total-price">
             <div className="values-product">

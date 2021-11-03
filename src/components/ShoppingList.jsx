@@ -8,6 +8,8 @@ export default function ShoppingCart() {
   function handleOpenModal() {
     setModal(true);
     alert("si");
+
+    
   }
   function handleCloseModal() {
     setModal(false);

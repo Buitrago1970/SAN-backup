@@ -1,14 +1,11 @@
 import React from "react";
 
-// import Logo from "../Images/logo San Diego.svg";
 
 import "./styles/header.css";
 
 import { Link } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineInstagram, AiFillFacebook, AiFillHome } from "react-icons/ai";
-// import { HiUserGroup } from "react-icons/hi";
 import { ImTruck } from "react-icons/im";
 import { TiGroup } from "react-icons/ti";
 import { HiMail } from "react-icons/hi";
@@ -22,9 +19,7 @@ class Header extends React.Component {
     return (
       <>
         <div className="header">
-          {/* <div className="container-button-hamburger">
-            <GiHamburgerMenu />
-          </div> */}
+    
           <div className="container-logo">
             <Link className="header__brand-logo" to="">
               <img className="logo" src={logo} alt="Logo San Diego" />

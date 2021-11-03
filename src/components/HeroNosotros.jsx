@@ -2,11 +2,10 @@ import React from "react";
 
 //styles
 import "./styles/HeroNosotros.css";
-
+import {AiOutlineDown} from 'react-icons/ai'
 //images
 import meat from "../images/6458.png";
 //icons
-import { BsBoxArrowDown } from "react-icons/bs";
 
 function HeroNosotros() {
   return (
@@ -33,7 +32,7 @@ function HeroNosotros() {
               perspiciatis lo eaque fugiat fugit.
             </p>
             <div className="icon-container">
-              <BsBoxArrowDown />
+            <AiOutlineDown/>
             </div>
           </div>
         </div>

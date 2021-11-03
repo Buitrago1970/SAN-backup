@@ -1,9 +1,10 @@
 .container-home {
   background: #151e1f;
   color: aliceblue;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .principal-title {
-  font-family: "Comfortaa";
   text-align: center;
   font-size: 30px;
   width: 100%;
@@ -11,7 +12,6 @@
   margin-bottom: 0;
 }
 .title-secondary {
-  font-family: "Comfortaa";
   text-align: center;
   font-size: 20px;
   width: 100%;

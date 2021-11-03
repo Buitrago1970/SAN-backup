@@ -1,5 +1,6 @@
 .HeroNosotros {
   max-width: 415px;
+  background: rgb(207 207 207);
 }
 .contaner-img-nosotros {
   position: absolute;
@@ -9,9 +10,7 @@
   width: 100%;
 }
 .text-nosotros {
-  color: #e8e6e3;
   position: relative;
-  background: #0000007d;
   padding: 15px 10px 100px 15px;
   border-radius: 10px;
 }
@@ -36,7 +35,6 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     max-width: 1440px;
-    background: #071819;
   }
   .contaner-img-nosotros {
     position: inherit;
@@ -47,7 +45,7 @@
   }
   .text-nosotros {
     margin-top: 40px;
-    color: rgb(233, 231, 227);
+
     background: none;
     position: inherit;
   }
@@ -65,18 +63,18 @@
   .text-container {
     font-size: 16px;
     line-height: 30px;
-    color: rgb(233, 231, 227);
+
   }
   .text-container-nosotros::first-letter {
-    font-size: 65px;
+    font-size: 50px;
     color: #b82c2e;
     padding-right: 2px;
   }
   .icon-container {
+    color: rgb(94, 94, 94);
     display: block;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 150px;
     font-size: 50px;
-    color: rgb(211, 199, 29);
   }
 }

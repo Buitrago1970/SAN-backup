@@ -8,29 +8,29 @@ import "./styles/HeroServicios.css";
 function HeroServicios() {
   return (
     <>
-      <div className="HeroServicios">
-        <div className="contaner-img-nosotros">
-          <img
-            className="img-Servicios"
-            src="https://dummyimage.com/650x800/ffffff/000000"
-            alt=""
-          />
-        </div>
-        <div className="text-nosotros text-servicios">
-          <div className="title-container-hero-Servicios">
-            <h1 className="title-hero-Servicios">The Best Service</h1>
+          <div class="parent">
+          <div class="div1">
+          <div className="title-SV"><h1>Lorem lorem</h1></div>
+          <div className="paragraph-container">
+            <p className="sub-title-SV">lorem ipsum.</p>
+            <p>texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto </p>
           </div>
-          <hr />
-          <div className="text-container-Servicios">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel dicta
-              itaque officiis ex recusandae est harum! Optio, quidem! Pariatur
-              cum doloremque reiciendis nemo asperiores aliquid, itaque
-              perspiciatis lo eaque fugiat fugit.
-            </p>
+          <div className="paragraph-container">
+            <p className="sub-title-SV"> lorem ipsum.</p>
+            <div className="second-paragraph-container paragraph-container">
+              <div className="icon-paragraph-SV">
+                <img src="../images/crow.png" alt="" />
+              </div>
+              <p>lorem lorem lorem lorem lorem loren lorem lorem loren .</p>
+            </div>
           </div>
-        </div>
-      </div>
+          </div>
+          <div class="div2">
+          <div className="container-img">
+            <img src="https://dummyimage.com/600x400" alt=""/>
+          </div>
+            </div> 
+          </div> 
     </>
   );
 }

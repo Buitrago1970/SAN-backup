@@ -1,4 +1,4 @@
-.line1 {
+/* .line1 {
   font-size: 40px;
   line-height: 1.1;
   font-weight: 600;
@@ -51,4 +51,21 @@
   .container-card {
     grid-template-columns: 1fr 1fr;
   }
+}
+ */
+
+.main-container {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0; */
+  /* background: #061314; */
+}
+.main-container-servicios {
+  max-width: 2526px;
+  margin: 0 auto;
 }

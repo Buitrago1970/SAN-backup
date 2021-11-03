@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./styles/productList.css";
+import "./styles/ProductItem.css";
 const ProductItem = ({
   id,
   name,

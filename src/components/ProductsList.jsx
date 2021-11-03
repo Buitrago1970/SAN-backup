@@ -1,18 +1,17 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 // components
 import ProductItem from "./ProductItem";
 import Categories from "./Categories";
 import Carousel from "./Carousel";
-import PageLoanding from "./PageLoanding";
 import Appcontext from "../context/Appcontext";
 
 // styles
 import "./styles/productList.css";
-import "./styles/navbar.css";
 
 function ProductsList() {
   const item = useContext(Appcontext);
+  
   const RenderList = (item = []) => {
     return (
       <>
@@ -22,7 +21,6 @@ function ProductsList() {
       </>
     );
   };
-
   return (
     <>
       <div className="list-container">

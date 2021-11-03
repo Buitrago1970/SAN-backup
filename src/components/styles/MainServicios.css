@@ -1,0 +1,76 @@
+.parent-main-servicios {
+  display: grid;
+  /* background-color: var(--mainWhite); */
+  background: #fff;
+  grid-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  padding: 100px 0;
+}
+.data-servicios {
+  width: 80%;
+  text-align: center;
+  background-color: var(--mainWhite);
+  border-bottom-width: 40px;
+}
+.module-content {
+  background: #fbfbfd;
+}
+.unit-wrapper {
+  height: 450px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  overflow: hidden;
+}
+.texto-module-main-servicios {
+  z-index: 4;
+}
+.headline {
+  color: #1d1d1f;
+  margin: 10px 0;
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 600;
+  letter-spacing: 0.002em;
+}
+.subhead {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.21053;
+  font-weight: 400;
+  letter-spacing: 0.012em;
+}
+.avail {
+  color: #86868b;
+  text-align: center;
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+}
+.image-module-main-servicios {
+}
+.unit-image {
+  width: 516px;
+  height: 490px;
+  background-size: 516px;
+  background-repeat: no-repeat;
+  background-image: url("https://www.apple.com/v/home/ag/images/promos/ipad-mini/promo_ipad_mini__spq4zjcuuaie_medium.jpg");
+  z-index: 1;
+  position: absolute;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  left: calc(50% + 0px);
+  right: auto;
+  bottom: 0px;
+  top: auto;
+  -webkit-transform: translatex(-50%);
+  transform: translatex(-50%);
+}

@@ -1,4 +1,6 @@
 import React from "react";
+
+import { Link } from "react-router-dom";
 import "./styles/footer.css";
 
 class Footer extends React.Component {
@@ -11,9 +13,9 @@ class Footer extends React.Component {
               <h1>Nuestros Productos</h1>
               <h1 className="plus-button">+</h1>
             </div>
-            <a href="#">Res</a>
-            <a href="#">Cerdo</a>
-            <a href="#">Pollo</a>
+            <Link to="#">Res</Link>
+            <Link to="#">Cerdo</Link>
+            <Link to="#">Pollo</Link>
           </div>
 
           <div className="container-footer-options">
@@ -21,9 +23,9 @@ class Footer extends React.Component {
               <h1>Acerca de Nosotros</h1>
               <h1 className="plus-button">+</h1>
             </div>
-            <a href="#">Nosotros</a>
-            <a href="#">Preguntas Frecuentes</a>
-            <a href="#">Terminos y Condiciones</a>
+            <Link to="/Nosotros">Nosotros</Link>
+            <Link to="/QyD">Preguntas Frecuentes</Link>
+            <Link to="/TyC">Terminos y Condiciones</Link>
           </div>
 
           <div className="container-footer-options">
@@ -31,16 +33,15 @@ class Footer extends React.Component {
               <h1>Contactos</h1>
               <h1 className="plus-button">+</h1>
             </div>
-            <a href="#">Contacto</a>
+            <Link to="/Contacto">Contacto</Link>
+            <p className="p-contact">
+              +57 314 230 2050
+              <br />
+              De 9:00 a 23:00 Lunes y viernes
+              <br />
+              De 9:00 a 21:00 Sábado
+            </p>
           </div>
-
-          <p className="p-contact">
-            +57 314 230 2050
-            <br />
-            De 9:00 a 23:00 Lunes y viernes
-            <br />
-            De 9:00 a 21: Sábado
-          </p>
         </div>
       </div>
     );
