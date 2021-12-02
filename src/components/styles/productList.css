@@ -6,3 +6,6 @@
   -webkit-align-items: center;
   align-items: center;
 }
+.list-container {
+  max-width: 1500px;
+}

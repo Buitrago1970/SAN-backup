@@ -9,15 +9,15 @@
 .div1 {
   padding: 10px;
 }
-.title-SV {
+.title-s-v {
   font-weight: 300;
   font-size: 40px;
   line-height: 56px;
 }
-.title-SV h1 {
+.title-s-v h1 {
   font-weight: 300;
 }
-.sub-title-SV {
+.sub-title-s-v {
   font-size: 20px;
   color: rgb(255, 0, 0);
   margin-bottom: 15px;
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
 }
-.icon-paragraph-SV {
+.icon-paragraph-s-v {
   margin-right: 15px;
 }
 .div2 {

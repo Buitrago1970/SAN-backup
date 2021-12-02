@@ -1,6 +1,5 @@
 import React from "react";
 
-
 import "./styles/header.css";
 
 import { Link } from "react-router-dom";
@@ -19,27 +18,26 @@ class Header extends React.Component {
     return (
       <>
         <div className="header">
-    
           <div className="container-logo">
-            <Link className="header__brand-logo" to="">
+            <Link className="header__brand-logo" title="A" to="">
               <img className="logo" src={logo} alt="Logo San Diego" />
             </Link>
           </div>
 
           <div className="container-options menu">
-            <Link to="/" className="options">
+            <Link to="/" title="E" className="options">
               <AiFillHome className="icon-header" />
               Inicio
             </Link>
-            <Link to="/Nosotros" className="options">
+            <Link to="/Nosotros" title="I" className="options">
               <TiGroup className="icon-header" />
               Nosotros
             </Link>
-            <Link to="/Servicios" className="options">
+            <Link to="/Servicios" title="O" className="options">
               <ImTruck className="icon-header" />
               Servicios
             </Link>
-            <Link to="/Contactos" className="options">
+            <Link to="/Contactos" title="U" className="options">
               <HiMail className="icon-header" />
               Contacto
             </Link>

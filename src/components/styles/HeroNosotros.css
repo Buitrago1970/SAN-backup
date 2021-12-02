@@ -1,6 +1,5 @@
-.HeroNosotros {
+.hero-nosotros {
   max-width: 415px;
-  background: rgb(207 207 207);
 }
 .contaner-img-nosotros {
   position: absolute;
@@ -31,7 +30,13 @@
   display: none;
 }
 @media screen and (min-width: 870px) {
-  .HeroNosotros {
+  .x {
+    background: #cfcfcf;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+  }
+  .hero-nosotros {
     display: grid;
     grid-template-columns: 1fr 2fr;
     max-width: 1440px;
@@ -63,7 +68,6 @@
   .text-container {
     font-size: 16px;
     line-height: 30px;
-
   }
   .text-container-nosotros::first-letter {
     font-size: 50px;

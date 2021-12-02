@@ -1,36 +1,37 @@
-import React from "react";
+import * as React from "react";
 
-//styles
 import "./styles/HeroServicios.css";
-
-//images
 
 function HeroServicios() {
   return (
     <>
-          <div class="parent">
-          <div class="div1">
-          <div className="title-SV"><h1>Lorem lorem</h1></div>
+      <h1 className="main-title-contact">Servicios</h1>
+      <div className="parent">
+        <div className="div1">
           <div className="paragraph-container">
-            <p className="sub-title-SV">lorem ipsum.</p>
-            <p>texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto texto </p>
+            <p className="sub-title-s-v">lorem ipsum.</p>
+            <p>
+              texto texto texto texto texto texto texto texto texto texto texto
+              texto texto texto texto texto texto texto texto texto texto texto
+              texto texto texto texto texto texto texto texto texto texto{" "}
+            </p>
           </div>
           <div className="paragraph-container">
-            <p className="sub-title-SV"> lorem ipsum.</p>
+            <p className="sub-title-s-v"> lorem ipsum.</p>
             <div className="second-paragraph-container paragraph-container">
-              <div className="icon-paragraph-SV">
+              <div className="icon-paragraph-s-v">
                 <img src="../images/crow.png" alt="" />
               </div>
               <p>lorem lorem lorem lorem lorem loren lorem lorem loren .</p>
             </div>
           </div>
-          </div>
-          <div class="div2">
+        </div>
+        <div className="div2">
           <div className="container-img">
-            <img src="https://dummyimage.com/600x400" alt=""/>
+            <img src="https://dummyimage.com/600x400" alt="" />
           </div>
-            </div> 
-          </div> 
+        </div>
+      </div>
     </>
   );
 }

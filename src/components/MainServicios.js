@@ -10,17 +10,17 @@ export default function MainServicios() {
       description: "Grande\u00A0en\u00A0poder. Mini\u00A0en\u00A0tamaño.",
     },
     {
-      id: 1,
+      id: 2,
       title: "iPad mini",
       description: "Grande\u00A0en\u00A0poder. Mini\u00A0en\u00A0tamaño.",
     },
     {
-      id: 1,
+      id: 3,
       title: "iPad mini",
       description: "Grande\u00A0en\u00A0poder. Mini\u00A0en\u00A0tamaño.",
     },
     {
-      id: 1,
+      id: 4,
       title: "iPad mini",
       description: "Grande\u00A0en\u00A0poder. Mini\u00A0en\u00A0tamaño.",
     },

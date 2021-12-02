@@ -1,44 +1,38 @@
 import React, { useContext } from "react";
 
-// components
-import ProductItem from "./ProductItem";
-import Categories from "./Categories";
-import Carousel from "./Carousel";
-import Appcontext from "../context/Appcontext";
-
-// styles
 import "./styles/productList.css";
 
+import ProductItem from "./ProductItem";
+import Categories from "./Categories";
+import Appcontext from "../context/Appcontext";
+import Usesearch from "../hooks/Usesearch";
+
 function ProductsList() {
-  const item = useContext(Appcontext);
-  
-  const RenderList = (item = []) => {
-    return (
-      <>
-        {item.map((items) => (
-          <ProductItem key={items.id} {...items} />
-        ))}
-      </>
-    );
-  };
+  const search = useContext(Appcontext);
+  console.log(search);
+
+  // const RenderList = (filterList) => {
+  //   return (
+  //     <>
+  //       {filterList.map((items) => (
+  //         <ProductItem key={items.id} {...items} />
+  //       ))}
+  //     </>
+  //   );
+  // };
   return (
     <>
       <div className="list-container">
-        {item.mylist && item.mylist.length > 0 && (
+        <h1>productliust</h1>
+        {/* {item.mylist && item.mylist.length > 0 && (
           <Categories>
             <Carousel>{RenderList(item.mylist)}</Carousel>
           </Categories>
+        )} */}
+        {/* {item.allProducts.res && item.allProducts.res.length > 0 && (
+          <Categories>{RenderList(item.allProducts.res)}</Categories>
         )}
-        {item.res && item.res.length > 0 && (
-          <Categories>
-            <Carousel>{RenderList(item.res)}</Carousel>
-          </Categories>
-        )}
-        {item.chicken && item.chicken.length > 0 && (
-          <Categories>
-            <Carousel>{RenderList(item.chicken)}</Carousel>
-          </Categories>
-        )}
+        {<Categories>{RenderList(filterList)}</Categories>} */}
       </div>
     </>
   );
