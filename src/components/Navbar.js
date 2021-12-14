@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
+import * as React from "react";
+import { useState } from "react";
 
-import "./styles/navbar.css";
-import { Link } from "react-router-dom";
-import { FiShoppingCart } from "react-icons/fi";
 import { AiOutlineSearch } from "react-icons/ai";
-import Appcontext from "../context/Appcontext";
+import ProductsList from "../components/ProductsList";
+import "./styles/navbar.css";
 
 function Navbar() {
-  const { setInitialState } = useContext(Appcontext);
+  const [search, setSearch] = useState("");
 
   return (
     <>
@@ -24,16 +23,17 @@ function Navbar() {
               className="form-control"
               placeholder="Buscar..."
               id="search"
-              onChange={(e) => setInitialState(e.target.value)}
+              onChange={(e) => setSearch(e.target.value)}
             />
           </div>
         </div>
-        <div className="container-shopping-cart-nav">
-          <Link to="/carroCompras">
-            <FiShoppingCart className="shopping-cart-nav" />
-          </Link>
-        </div>
       </nav>
+      <div className="title">
+        <h1 className="principal-title">Carniceria Online</h1>
+        <h3 className="title-secondary">surticarnes san diego</h3>
+      </div>
+
+      <ProductsList search={search} />
     </>
   );
 }

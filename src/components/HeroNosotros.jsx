@@ -17,9 +17,11 @@ function HeroNosotros() {
           </div>
           <div className="text-nosotros">
             <div className="title-container-hero-nosotros">
-              <h1 className="title-hero-nosotros">STEAKS</h1>
-              <h1 className="title-hero-nosotros">PRODUCTION BY</h1>
-              <h1 className="title-hero-nosotros">COLOMBIAN TECHNOLOGY</h1>
+              <h1 className="title-hero-nosotros">
+                Experimente La Conveniencia
+              </h1>
+
+              <h1 className="title-hero-nosotros">De Compra En Linea </h1>
             </div>
             <div className="text-container text-container-nosotros">
               <p>

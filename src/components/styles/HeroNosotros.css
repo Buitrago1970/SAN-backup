@@ -59,8 +59,9 @@
     margin-bottom: 30px;
   }
   .title-hero-nosotros {
+    font-weight: 600;
     margin: 15px 0;
-    font-size: 35pt;
+    font-size: 37pt;
     position: relative;
     right: 100px;
     font-family: "Lato", sans-serif;

@@ -70,8 +70,8 @@
     display: block;
     background: #040608;
     padding: 0px;
-    max-width: 245px;
-    margin: 10px 5px;
+    max-width: 240px;
+    margin: 18px 8px;
     border-radius: 10px;
   }
 
@@ -143,16 +143,25 @@
   .counter-quantity-products {
     margin: 0;
   }
-  .bt- {
+  .bt-menos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
     margin: 4px 5px;
-    background: #0000004f;
+    background: #ffffff4f;
     border-radius: 2px;
-    border: 0.0000000000000000000000000001px solid #ffffff;
-    text-decoration: none;
+    border: 1px solid #ffffff;
+  }
+  .bt-mas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    margin: 4px 5px;
+    background: #ffffff4f;
+    border-radius: 2px;
+    border: 1px solid #ffffff;
   }
   .btn-shop {
     margin: 6px 0px 2px 2px;

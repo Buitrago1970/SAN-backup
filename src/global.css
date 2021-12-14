@@ -34,10 +34,7 @@ ul {
   color: #292929;
 }
 ::-webkit-scrollbar {
-  width: 9px;
-  border-radius: 7px;
-  margin: 50px;
-  padding: 10px;
+  width: 5px;
 }
 /* fondo  */
 ::-webkit-scrollbar-track {
@@ -45,7 +42,7 @@ ul {
 }
 /* color bar */
 ::-webkit-scrollbar-thumb {
-  background: #606060;
+  background: #9e9e9e;
   border-radius: 4px;
 }
 /* hover */

@@ -1,37 +1,49 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./styles/ShoppingList.css";
 import Item from "./Item";
+import Appcontext from "../context/Appcontext";
+import { Link } from "react-router-dom";
 
 export default function ShoppingCart() {
-  const [modal, setModal] = useState(false);
+  const {
+    state: { cart },
+    removeFromCart,
+  } = useContext(Appcontext);
 
-  function handleOpenModal() {
-    setModal(true);
-    alert("si");
+  const handleRemoveFromCart = (product) => () => {
+    removeFromCart(product);
+  };
 
-    
-  }
-  function handleCloseModal() {
-    setModal(false);
-    alert("no");
-  }
   return (
     <>
-      <div className="shopping-list">
-        <div className="secondary-title">
-          <div className="secondary-title">Opciones de envío a</div>
-          <p className="title-price">Precio</p>
+      {cart.length > 0 ? (
+        <>
+          <h2>Shopping Cart</h2>
+          <br />
+          <div className="shopping-list">
+            <div className="secondary-title">
+              <p></p>
+              <p className="title-price">Precio</p>
+            </div>
+            <div>
+              {cart.map((item) => (
+                <Item
+                  key={item.id}
+                  item={item}
+                  handleRemoveFromCart={handleRemoveFromCart}
+                />
+              ))}
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="empty-cart-button">
+          <h3>Tu carrito está vacío. </h3>{" "}
+          <Link className="link-home" to="/">
+            Ir al Home
+          </Link>
         </div>
-        <div className="List">
-          <Item
-            OpenModal={modal}
-            onOpenModal={handleOpenModal}
-            onCloseModal={handleCloseModal}
-          />
-          <Item onOpenModal={handleOpenModal} onCloseModal={handleCloseModal} />
-          <Item onOpenModal={handleOpenModal} onCloseModal={handleCloseModal} />
-        </div>
-      </div>
+      )}
     </>
   );
 }

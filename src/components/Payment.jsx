@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./styles/Payment.css";
+import Appcontext from "../context/Appcontext";
+import { handleSumTotal } from "../utils/index";
 
 export default function Payment() {
+  const {
+    state: { cart },
+  } = useContext(Appcontext);
+
   return (
     <>
       <div className="payment">
@@ -11,7 +17,7 @@ export default function Payment() {
           <div className="container-account">
             <div className="account">
               <p>Productos(2)</p>
-              <p>$14.000</p>
+              <p>{new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
             </div>
             <div className="account">
               <p>Envio</p>
@@ -22,7 +28,7 @@ export default function Payment() {
           <div className="total-count">
             <div className="account">
               <p>Total</p>
-              <p>$ 199.000</p>
+              <p>$ {new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
             </div>
           </div>
           <button className="button btn-payment">Proceder al pago</button>

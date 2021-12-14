@@ -9,9 +9,10 @@ import Contactos from "../pages/Contactos.js";
 import NotFound from "../pages/NotFound.js";
 import ShoppingCart from "../pages/ShoppingCart";
 import Appcontext from "../context/Appcontext";
-import initialState from "../initialState";
+import useInitialState from "../hooks/useInitialState";
 
 function App() {
+  const initialState = useInitialState();
   return (
     <Appcontext.Provider value={initialState}>
       <BrowserRouter>
@@ -21,7 +22,7 @@ function App() {
             <Route exact path="/nosotros" component={Nosotros} />
             <Route exact path="/servicios" component={Servicios} />
             <Route exact path="/contactos" component={Contactos} />
-            <Route exact path="/carroCompras" component={ShoppingCart} />
+            <Route exact path="/carrocompras" component={ShoppingCart} />
             <Route component={NotFound} />
           </Switch>
         </Layout>

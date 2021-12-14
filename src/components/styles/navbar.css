@@ -35,19 +35,10 @@ nav {
   color: #5e5e5e;
   font-size: 19px;
 }
-.container-shopping-cart-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 55px;
+.title {
+  margin: 25px 0;
 }
-.shopping-cart-nav {
-  color: #e8e6e3;
-  font-size: 24px;
-}
-.shopping-cart-nav:hover {
-  color: rgb(141, 141, 141);
-}
+
 @media screen and (max-width: 870px) {
   .container-shopping-cart-nav {
     display: none;

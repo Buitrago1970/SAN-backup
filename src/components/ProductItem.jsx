@@ -1,31 +1,26 @@
-import React from "react";
+import * as React from "react";
+import { useState } from "react";
 
 import "./styles/ProductItem.css";
-const ProductItem = ({
-  id,
-  name,
-  price,
-  measures,
-  amount,
-  presentation,
-  img,
-}) => {
+
+const ProductItem = ({ product, handleAddToCart }) => {
+  const [count, setCount] = useState(0);
   return (
     <>
-      <div className="articulo" key={id}>
+      <div className="articulo">
         {/* imagen */}
         <div className="img-container">
-          <img className="img-product" src={img} alt="" />
+          <img className="img-product" src={product.img} alt="" />
         </div>
         {/* texto */}
         <div className="description">
           {/* nombre */}
-          <h2 className="name-product">{name}</h2>
+          <h2 className="name-product">{product.name}</h2>
 
           {/* peso */}
           <div className="product-weight">
             <p className="product-quantity">cantidad</p>
-            <p className="product-quantity weigth">x{amount}</p>
+            <p className="product-quantity weigth">x{product.amount}</p>
           </div>
           <br />
           {/* empaque */}
@@ -34,28 +29,38 @@ const ProductItem = ({
               Empaque: Vacio y Congelado -4°C
             </h3>
             <h3 className="presentation-product">
-              Presentación: {presentation}
+              Presentación: {product.presentation}
             </h3>
             <hr />
           </div>
 
           {/* precio */}
           <div className="price-container">
-            <span className="price">${price}</span>
+            <span className="price">
+              ${new Intl.NumberFormat().format(product.price)}
+            </span>
           </div>
 
           {/* botones */}
           <div className="container-buttons">
-            <a href="#" className="bt-">
+            <button
+              type="button"
+              className=" bt-menos"
+              onClick={() => setCount(count - 1)}
+            >
               -
-            </a>
+            </button>
 
             <div className="container-counter">
-              <p className="counter-quantity-products">1</p>
+              <p className="counter-quantity-products">{count}</p>
             </div>
-            <a href="#" className="bt- bt-mas">
+            <button
+              type="button"
+              className=" bt-mas"
+              onClick={() => setCount(count + 1)}
+            >
               +
-            </a>
+            </button>
           </div>
 
           {/* presentacion movile */}
@@ -64,7 +69,12 @@ const ProductItem = ({
           </div>
 
           {/* boton añadir */}
-          <button className="btn-shop">Añadir</button>
+          <button
+            className="btn-shop"
+            onClick={handleAddToCart(product, count)}
+          >
+            Añadir al carrito
+          </button>
         </div>
       </div>
     </>
