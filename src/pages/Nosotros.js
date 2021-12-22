@@ -17,18 +17,16 @@ class Nosotros extends React.Component {
             <div className="n">
               <div className="nosotros-container-text">
                 <div className="sub-title-container">
-                  <span>Street Smart.</span>
+                  <span>Nosotros</span>
                   <span className="sub-title-nosotros">
-                    Dirt-,rock and dune ready.
+                    lorem! ipsum dolor sit.
                   </span>
                 </div>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-                  dicta itaque officiis ex recusandae est harum! Optio, quidem!
-                  Pariatur cum doloremque reiciendis nemo asperiores aliquid,
-                  itaque perspiciatis lo eaque fugiat fugit. recusandae est
-                  harum! Optio, quidem! Pariatur cum doloremque lo eaque fugiat
-                  fugit.
+                  nuestro equipo son profesionales, bien capacitados para
+                  atender a nuestros clientes con el fin de resolver cualquier
+                  duda que tengan, y a la vez brindarles una solución a
+                  cualquier inconveniente que puedan.
                 </p>
               </div>
               <div className="img-nosotros2">
@@ -42,22 +40,20 @@ class Nosotros extends React.Component {
 
           <div className="container">
             <div className="text-container-vision  ">
-              <h2 className="vision">vision</h2>
+              <h2 className="vision">Vision</h2>
               <p className="main-paragraph">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis
-                quod deserunt accusamus? Expedita praesentium nemo eius quos
-                tempora Lorem ipsum dolor sit, amet consectetur adipisicing
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat
-                veniam minus aspernatur? Distinctio consequatur nemo cupiditate
-                vel quia necessitatibus qui quo voluptatibus, rerum cum veniam
-                animi aperiam quaerat iure ab. elit.
+                Carnes online colombia nace con la visión de ofrecer el mejor
+                producto y más fresco directamente al consumidor y a domicilio
+                sin intermediarios, venimos a llenar la necesidad que muchos de
+                nosotros tenemos, comprar la carne de la semana o el fin de
+                semana de parrillada, en un solo clic.
               </p>
             </div>
           </div>
 
           <div className="container-nosotros ">
             <div className="sub-title-container">
-              <span className="sub-title">Our Team</span>
+              <span className="sub-title">Nuestro Equipo</span>
             </div>
             <div className=" our-team ">
               <div className="out-team-container">

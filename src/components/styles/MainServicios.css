@@ -1,11 +1,13 @@
-.parent-main-servicios {
-  display: grid;
-  /* background-color: var(--mainWhite); */
+.container-main-servicios {
   background: #fff;
-  grid-gap: 40px;
-  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   padding: 100px 0;
+  width: 100%;
+}
+.main-servicios {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
 }
 .data-servicios {
   width: 80%;
@@ -53,8 +55,6 @@
   font-size: 12px;
   line-height: 1.33337;
   font-weight: 400;
-}
-.image-module-main-servicios {
 }
 .unit-image {
   width: 516px;

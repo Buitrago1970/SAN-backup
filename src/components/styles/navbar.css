@@ -2,9 +2,6 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 .search {
   flex: 10 1 auto;

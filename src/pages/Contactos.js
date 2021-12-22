@@ -11,12 +11,6 @@ const Contactos = () => {
             <img className="img-contact" src={contactImg} alt="" />
           </div>
           <div className="contact-text-container">
-            <p className="paragraph-contact">
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-              ipsum odio hic mollitia recusandae possimus asperiores earum.ipsum
-              amor.
-            </p>
             <div className="info-contact">
               <div className="info info-messages">
                 <h3 className="tittle-info">Contacto</h3>

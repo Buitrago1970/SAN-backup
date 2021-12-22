@@ -1,5 +1,26 @@
 const initialState = {
-  cart: [],
+  cart: [
+    {
+      id: "01",
+      name: "Lomo Limpio",
+      price: 38000,
+      measues: "kilogramo",
+      amount: 500,
+      presentation: "Filete",
+      img: "https://dummyimage.com/600x400/cccccc/fff",
+      totalAdd: 10,
+    },
+    {
+      id: "02",
+      name: "Lomo Corriente",
+      price: 33000,
+      uniti: "kilogramo",
+      amount: 500,
+      presentation: "Filete",
+      img: "https://dummyimage.com/600x400/cccccc/fff",
+      totalAdd: 9,
+    },
+  ],
   mylist: [],
   products: [
     {

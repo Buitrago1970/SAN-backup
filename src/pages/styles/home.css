@@ -2,7 +2,8 @@
   background: #151e1f;
   color: aliceblue;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 110vh;
+  padding-bottom: 50px;
 }
 .principal-title {
   text-align: center;

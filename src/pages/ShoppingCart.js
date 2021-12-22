@@ -9,10 +9,12 @@ export default function ShoppingCart() {
   return (
     <div className="main-container">
       <div className="hero-shopping-cart">
-        <Address />
-        <Payment />
+        <div>
+          <Address />
+          <ShoppingList />
+        </div>
+        <Payment data={"Proceder al pago"} />
       </div>
-      <ShoppingList />
     </div>
   );
 }

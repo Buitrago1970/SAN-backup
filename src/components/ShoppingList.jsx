@@ -18,12 +18,14 @@ export default function ShoppingCart() {
     <>
       {cart.length > 0 ? (
         <>
-          <h2>Shopping Cart</h2>
+          {/* <h2>Carro Compras</h2> */}
           <br />
           <div className="shopping-list">
+            <p className="cart-length-title">Carrito ({cart.length})</p>
+            {/* <hr /> */}
             <div className="secondary-title">
               <p></p>
-              <p className="title-price">Precio</p>
+              {/* <p className="title-price">Precio</p> */}
             </div>
             <div>
               {cart.map((item) => (

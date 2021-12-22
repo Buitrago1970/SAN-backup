@@ -1,13 +1,6 @@
-.payment {
-}
-.container-account {
-}
-.total-count {
-}
 .account {
   display: flex;
   justify-content: space-between;
-
   margin: 10px 0px;
 }
 .envio {

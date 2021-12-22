@@ -8,6 +8,7 @@ import Servicios from "../pages/Servicios.js";
 import Contactos from "../pages/Contactos.js";
 import NotFound from "../pages/NotFound.js";
 import ShoppingCart from "../pages/ShoppingCart";
+import Address from "../pages/Address";
 import Appcontext from "../context/Appcontext";
 import useInitialState from "../hooks/useInitialState";
 
@@ -23,6 +24,11 @@ function App() {
             <Route exact path="/servicios" component={Servicios} />
             <Route exact path="/contactos" component={Contactos} />
             <Route exact path="/carrocompras" component={ShoppingCart} />
+            <Route
+              exact
+              path="/carrocompras/{}/direccion"
+              component={Address}
+            />
             <Route component={NotFound} />
           </Switch>
         </Layout>

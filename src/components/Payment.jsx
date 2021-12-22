@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import "./styles/Payment.css";
+import { Link } from "react-router-dom";
+
 import Appcontext from "../context/Appcontext";
 import { handleSumTotal } from "../utils/index";
 
-export default function Payment() {
+export default function Payment({ data }) {
   const {
     state: { cart },
   } = useContext(Appcontext);
@@ -31,7 +33,9 @@ export default function Payment() {
               <p>$ {new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
             </div>
           </div>
-          <button className="button btn-payment">Proceder al pago</button>
+          <Link to="/carrocompras/{}/direccion">
+            <button className="button btn-payment">{data}</button>
+          </Link>
         </div>
       </div>
     </>

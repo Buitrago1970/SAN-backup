@@ -15,12 +15,12 @@ const ProductItem = ({ product, handleAddToCart }) => {
         {/* texto */}
         <div className="description">
           {/* nombre */}
-          <h2 className="name-product">{product.name}</h2>
+          <h2 className="name-product_">{product.name}</h2>
 
           {/* peso */}
           <div className="product-weight">
             <p className="product-quantity">cantidad</p>
-            <p className="product-quantity weigth">x{product.amount}</p>
+            <p className="product-quantity weigth">X {product.amount}g</p>
           </div>
           <br />
           {/* empaque */}

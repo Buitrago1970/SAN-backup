@@ -4,9 +4,12 @@
   background-color: rgb(37, 37, 37);
   height: 40px;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 .header a {
-  color: rgb(224, 224, 224);
+  color: rgb(212, 212, 212);
   text-decoration: none;
 }
 .header a:hover {
@@ -34,14 +37,14 @@
 }
 
 .container-shopping-cart {
-  width: 50px;
+  width: 45px;
 }
 .shopping-cart {
   display: flex;
   align-items: center;
 }
 .shopping-cart-icon {
-  font-size: 40px;
+  font-size: 35px;
 }
 .shopping-cart-length {
   color: #d1ba24;
@@ -67,7 +70,7 @@
     justify-content: center;
   }
   .options {
-    margin: 0px 20px;
+    padding: 0px 20px;
     text-decoration: none;
   }
 }

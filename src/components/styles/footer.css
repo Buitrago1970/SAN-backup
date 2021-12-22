@@ -17,12 +17,11 @@
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .container-footer {
-  }
   .plus-button {
     display: none;
   }
   .footer {
+    box-shadow: 2px 2px 11px 0 rgb(255 255 255 / 65%);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
@@ -40,7 +39,7 @@
     font-size: 8px;
   }
   .container-footer a:hover {
-    color: rgb(107, 107, 107);
+    filter: drop-shadow(rgb(0, 0, 0) 0 0 1px);
   }
   .p-contact {
     display: block;

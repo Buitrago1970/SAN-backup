@@ -1,5 +1,12 @@
 .shopping-list {
-  width: 100%;
+  /* width: 100%; */
+  background: #fff;
+  padding: 10px;
+  margin: 12px 12px 12px 20px;
+}
+.cart-length-title {
+  margin-left: 12px;
+  font-size: 18px;
 }
 .empty-cart-button {
   height: 50vh;
