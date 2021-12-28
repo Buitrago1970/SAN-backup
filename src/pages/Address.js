@@ -15,13 +15,14 @@ export default function Adress() {
           <form action="">
             <div className="form-child-div">
               <span></span>
-              <label className="andes-form-control andes-form-control-long">
-                <span className="andes-form-control__label">
+              <label className="andes-form-control andes-form-control-long" >
+                <span className="andes-form-control__label" >
                   Nombre y apellido
                 </span>
-                <div className="andes-form-control__control">
+                <div className="andes-form-control__control" >
                   <input className="xd" type="text" name="name"></input>
                 </div>
+                <p className="andes-form-coactiventrol_bottom">Tal cual figure en el documento.</p>
               </label>
 
               <span></span>
@@ -60,7 +61,7 @@ export default function Adress() {
                   <input className="xd" type="text" name="name"></input>
                 </div>
               </label>
-              <label className="andes-form-control">
+              <label className="andes-form-control andes-form-control-long">
                 <span className="andes-form-control__label">
                   Teléfono de contacto
                 </span>
@@ -72,8 +73,9 @@ export default function Adress() {
                     placeholder="Llamarán a este numero si hay algun problema con el envio. "
                   ></input>
                 </div>
+                <p className="andes-form-coactiventrol_bottom"> Llamaran a este numero si hay algun problema en el envio.</p>
               </label>
-              <label className="andes-form-control andes-form-control-long">
+              <label className="andes-form-control andes-form-control-to-long">
                 <span className="andes-form-control__label" maxlength="128">
                   Referencias adicionales para las entregas en esta dirección
                 </span>
@@ -82,7 +84,7 @@ export default function Adress() {
                     className="xd"
                     type="text"
                     name="name"
-                    placeholder="Descripción de la fachada, número de puerta, etc."
+                    placeholder="Descripcion de la fachada, puntos de referencia para encontrarla, indicaciones de seguridad, etc."
                   ></input>
                 </div>
               </label>
