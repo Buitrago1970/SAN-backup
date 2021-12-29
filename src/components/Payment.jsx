@@ -18,7 +18,7 @@ export default function Payment({ data }) {
           <hr />
           <div className="container-account">
             <div className="account">
-              <p>Productos(2)</p>
+              <p>Productos ({cart.length})</p>
               <p>{new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
             </div>
             <div className="account">
@@ -34,7 +34,8 @@ export default function Payment({ data }) {
             </div>
           </div>
           <Link to="/carrocompras/{}/direccion">
-            <button className="button btn-payment">{data}</button>
+            {data && <button className="button btn-payment">{data}</button>}
+            
           </Link>
         </div>
       </div>

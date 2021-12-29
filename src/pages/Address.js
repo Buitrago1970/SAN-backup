@@ -3,7 +3,7 @@ import React from "react";
 import "./styles/Address.css";
 import { Link } from "react-router-dom";
 import Payment from "../components/Payment";
-import { Formik,useFormik } from "formik";
+import { useFormik } from "formik";
 import * as Yup from 'yup'
 
 export default function Adress() {
@@ -177,18 +177,21 @@ export default function Adress() {
                   ></input>
                 </div>
               </label>
-              <button type="submit">enviar</button>
-            </div>
+              <div>
+
+              <button type="submit" className="btn-address">enviar</button>
+              <Link to="/carrocompras">
+            <button className="btn-address btn-address-back">Regresar</button>
+          </Link>
+              </div>
+           
+            </div> 
             
           </form>
         </div>
-        <div className="information-buttons">
-          <Link to="/carrocompras">
-            <div className="information-back">Regresar</div>
-          </Link>
-        </div>
+      
       </div>
-      <Payment data={"Continuar"} />
+      <Payment />
     </div>
   );
 }

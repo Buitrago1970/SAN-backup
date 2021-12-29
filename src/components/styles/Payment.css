@@ -22,6 +22,8 @@
 }
 .container-payment {
   padding: 20px;
+  border-radius: 4px;
+  background: #ffffff;
 }
 @media screen and (min-width: 1000px) {
   .container-payment {

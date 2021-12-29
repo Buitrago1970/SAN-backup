@@ -1,5 +1,4 @@
 import * as React from "react";
-import { BsTrash } from "react-icons/bs";
 import "./styles/Item.css";
 
 const Item = ({ item, handleRemoveFromCart }) => {
@@ -17,12 +16,10 @@ const Item = ({ item, handleRemoveFromCart }) => {
               <h2 className="name-product p-item">{name}</h2>
             </a>
             <p className="p-item">Presentación: {presentation}</p>
-            <p className="kilo-value p-item">
+            <p className="kilo-value">
               Valor Kilo: $ {new Intl.NumberFormat().format(price)}
             </p>
-            <div className="container-buttons p-item">
-              <h3>cant. {totalAdd}</h3>
-            </div>
+         
             <div className="values-product-small">
               <p>Total: </p>
               <p className="price-cart-shopping-small">${price}</p>
@@ -32,7 +29,7 @@ const Item = ({ item, handleRemoveFromCart }) => {
               className="btn-delete"
               onClick={handleRemoveFromCart(item)}
             >
-              <BsTrash /> Borrar Item
+              Eliminar
             </button>
           </div>
           <div className="total-price">

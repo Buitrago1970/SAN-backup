@@ -2,7 +2,7 @@ const initialState = {
   cart: [
     {
       id: "01",
-      name: "Lomo Limpio",
+      name: "Lomo Limpio De Res",
       price: 38000,
       measues: "kilogramo",
       amount: 500,
@@ -12,7 +12,7 @@ const initialState = {
     },
     {
       id: "02",
-      name: "Lomo Corriente",
+      name: "Lomo Corriente De Res",
       price: 33000,
       uniti: "kilogramo",
       amount: 500,
