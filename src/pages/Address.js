@@ -3,7 +3,7 @@ import React from "react";
 import "./styles/Address.css";
 import { Link } from "react-router-dom";
 import Payment from "../components/Payment";
-import { Formik,useFormik } from "formik";
+import { useFormik } from "formik";
 import * as Yup from 'yup'
 
 export default function Adress() {
