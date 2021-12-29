@@ -9,6 +9,7 @@ import Contactos from "../pages/Contactos.js";
 import NotFound from "../pages/NotFound.js";
 import ShoppingCart from "../pages/ShoppingCart";
 import Address from "../pages/Address";
+import Checkout from "../pages/Checkout";
 import Appcontext from "../context/Appcontext";
 import useInitialState from "../hooks/useInitialState";
 
@@ -28,6 +29,12 @@ function App() {
               exact
               path="/carrocompras/{}/direccion"
               component={Address}
+            />
+            <Route component={NotFound} />
+            <Route
+              exact
+              path="/carrocompras/{}/checkout"
+              component={Checkout}
             />
             <Route component={NotFound} />
           </Switch>

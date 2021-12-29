@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import Appcontext from "../context/Appcontext";
 import { handleSumTotal } from "../utils/index";
 
-export default function Payment({ data }) {
+export default function Payment({ data, route }) {
   const {
     state: { cart },
   } = useContext(Appcontext);
+  debugger
+  console.log(route);
 
   return (
     <>

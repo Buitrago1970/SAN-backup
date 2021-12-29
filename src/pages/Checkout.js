@@ -13,7 +13,7 @@ export default function ShoppingCart() {
           <Address />
           <ShoppingList />
         </div>
-        <Payment data={"Proceder al pago"} />
+        <Payment data={"Proceder al pago"} route={"/carrocompras/{}/direccion"} />
       </div>
     </div>
   );

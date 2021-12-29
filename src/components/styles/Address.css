@@ -3,6 +3,7 @@
 }
 
 .address-contrainer-info {
+  border-radius: 4px;
   background: #d0d0d0;
   padding: 16px 32px;
   align-items: center;
