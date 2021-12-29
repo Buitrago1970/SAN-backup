@@ -1,12 +1,13 @@
 import React from "react";
 
 import "./styles/Address.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Payment from "../components/Payment";
 import { useFormik } from "formik";
 import * as Yup from 'yup'
 
 export default function Adress() {
+  const history = useHistory();
   const formik = useFormik({
     initialValues:{
       name:'',
@@ -20,40 +21,40 @@ export default function Adress() {
       phone:'',
       descriptionHouse:''
     },
-    validationSchema: Yup.object({
-      name: Yup.string().required(),
-      department: Yup.string().required(),
-      locality: Yup.string().required(),
-      neighborhood: Yup.string().required(),
-      address: Yup.string().required(),
-      mail: Yup.string().required(),
-      password: Yup.string().required(),
-      repeatPassword: Yup.string().required(),
-      phone: Yup.string().required(),
-    }),
-    validate:(formData) =>{
-      let errores ={}
-      // Validacion nombre
-    if(!formData.name){
-      errores.name = 'por favor ingrese un nombre'
-    }else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(formData.name)){
-      errores.name = 'El nombre solo puede contener letras y espacios'
-    }
-    // Validacion correo
-    if(!formData.mail){
-      errores.mail = 'Por favor ingresa un correo electronico'
-    } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(formData.mail)){
-      errores.mail = 'El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.'
-    } //validacion RepetePassword
-    if( formData.password !== formData.repeatPassword){
-      errores.repeatPassword = 'Las contraseñas No coinciden.'
-    }
-    // Validacion general
-    if( !formData.phone || !formData.department || !formData.locality || !formData.neighborhood || !formData.address){
-      errores.general = 'Por favor llena todos los campos'
-    }
-      return errores;
-    } ,
+    // validationSchema: Yup.object({
+    //   name: Yup.string().required(),
+    //   department: Yup.string().required(),
+    //   locality: Yup.string().required(),
+    //   neighborhood: Yup.string().required(),
+    //   address: Yup.string().required(),
+    //   mail: Yup.string().required(),
+    //   password: Yup.string().required(),
+    //   repeatPassword: Yup.string().required(),
+    //   phone: Yup.string().required(),
+    // }),
+    // validate:(formData) =>{
+    //   let errores ={}
+    //   // Validacion nombre
+    // if(!formData.name){
+    //   errores.name = 'por favor ingrese un nombre'
+    // }else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(formData.name)){
+    //   errores.name = 'El nombre solo puede contener letras y espacios'
+    // }
+    // // Validacion correo
+    // if(!formData.mail){
+    //   errores.mail = 'Por favor ingresa un correo electronico'
+    // } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(formData.mail)){
+    //   errores.mail = 'El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.'
+    // } //validacion RepetePassword
+    // if( formData.password !== formData.repeatPassword){
+    //   errores.repeatPassword = 'Las contraseñas No coinciden.'
+    // }
+    // // Validacion general
+    // if( !formData.phone || !formData.department || !formData.locality || !formData.neighborhood || !formData.address){
+    //   errores.general = 'Por favor llena todos los campos'
+    // }
+    //   return errores;
+    // } ,
     onSubmit: (values) => {
       console.log(values);
       // enviar valores a la base de datos
@@ -68,6 +69,7 @@ export default function Adress() {
     //   .then(data => console.log(data))
     // }
     // });
+    history.push('/carrocompras/{}/checkout');
     }
     });
     return (

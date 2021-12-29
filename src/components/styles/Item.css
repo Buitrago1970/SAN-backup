@@ -50,6 +50,7 @@
   border:none;
   margin-top: 25px;
   padding: 0;
+  background: none;
 }
 .values-product-small {
   display: flex;

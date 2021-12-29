@@ -10,6 +10,7 @@ import NotFound from "../pages/NotFound.js";
 import ShoppingCart from "../pages/ShoppingCart";
 import Address from "../pages/Address";
 import Checkout from "../pages/Checkout";
+import Payment from "../pages/PaymentPage.js";
 import Appcontext from "../context/Appcontext";
 import useInitialState from "../hooks/useInitialState";
 
@@ -30,11 +31,16 @@ function App() {
               path="/carrocompras/{}/direccion"
               component={Address}
             />
-            <Route component={NotFound} />
+            
             <Route
               exact
               path="/carrocompras/{}/checkout"
               component={Checkout}
+            />
+            <Route
+              exact
+              path="/carrocompras/payment"
+              component={Payment}
             />
             <Route component={NotFound} />
           </Switch>

@@ -1,0 +1,18 @@
+.container-send-date{
+margin: 20px 12px 20px 20px;
+
+}
+.send-date-data{
+    background: #fff;
+    border-radius: 4px;
+    padding: 25px 32px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.send-data-p{
+
+}
+.send-data-p-cost{
+color: #32b767;
+}

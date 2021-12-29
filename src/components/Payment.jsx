@@ -9,9 +9,6 @@ export default function Payment({ data, route }) {
   const {
     state: { cart },
   } = useContext(Appcontext);
-  debugger
-  console.log(route);
-
   return (
     <>
       <div className="payment">
@@ -35,9 +32,9 @@ export default function Payment({ data, route }) {
               <p>$ {new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
             </div>
           </div>
-          <Link to="/carrocompras/{}/direccion">
+          {console.log(route)}
+          <Link to={route}>
             {data && <button className="button btn-payment">{data}</button>}
-            
           </Link>
         </div>
       </div>

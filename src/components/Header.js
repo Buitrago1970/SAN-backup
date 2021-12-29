@@ -38,7 +38,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="container-shopping-cart">
-          <Link className="shopping-cart" to="/carroCompras">
+          <Link className="shopping-cart" to="/carrocompras">
             <FiShoppingCart className="shopping-cart-icon" />
             <div className="shopping-cart-length">
               {cart.length > 0 && cart.length}

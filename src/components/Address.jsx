@@ -18,7 +18,7 @@ export default function Address() {
             </p>
           </div>
           <div className="modify-address">
-            <Link to={"/address"} className="modify">
+            <Link to={"/carrocompras/{}/direccion"} className="modify">
               Modificar ubicación
             </Link>
           </div>
