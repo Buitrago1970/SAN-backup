@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin: 10px 0px;
+
 }
 .envio {
   color: #32b767;
@@ -22,6 +23,8 @@
 }
 .container-payment {
   padding: 20px;
+  border-radius: 4px;
+  background: #ffffff;
 }
 @media screen and (min-width: 1000px) {
   .container-payment {

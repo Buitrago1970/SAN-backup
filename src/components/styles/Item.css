@@ -2,18 +2,17 @@
 }
 .principal-product {
   display: flex;
-  margin: 0px 10px;
-  padding: 10px 0px;
+  margin: 15px 10px;
+  padding: 15px 0 30px 0;
   border-bottom: #7e7e7e 1px solid;
 }
 .img-container-shopping-car {
   width: 200px;
-  border: 1px solid #d4d4d4;
   border-radius: 7px;
 }
 .img {
-  width: 100%;
-  border-radius: 7px;
+  width: 95%;
+  border-radius: 4px;
 }
 .container-inf-product {
   margin-left: 15px;
@@ -24,9 +23,9 @@
   color: #7e7e7e;
 }
 .name-product {
-  margin: 0;
   font-size: 22px;
-  letter-spacing: 1px;
+  color: black;
+  margin-top: 0;
 }
 .kilo-value {
   font-size: 12px;
@@ -41,11 +40,16 @@
   display: none;
 }
 .price {
+  font-family: arial ;
+  font-size: 22px;
 }
 .btn-delete {
-  color: rgb(231, 24, 24);
+  color:#3483fa;
   font-size: 14px;
   cursor: pointer;
+  border: none;
+  margin-top: 25px;
+  padding: 0;
 }
 .values-product-small {
   display: flex;

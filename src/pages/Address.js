@@ -95,7 +95,7 @@ export default function Adress() {
           </Link>
         </div>
       </div>
-      <Payment data={"Continuar"} />
+      <Payment data={"Continuar"} route={"/carrocompras/{}/checkout"} />
     </div>
   );
 }

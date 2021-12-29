@@ -2,17 +2,17 @@ const initialState = {
   cart: [
     {
       id: "01",
-      name: "Lomo Limpio",
+      name: "Lomo Limpio Res",
       price: 38000,
       measues: "kilogramo",
       amount: 500,
       presentation: "Filete",
-      img: "https://dummyimage.com/600x400/cccccc/fff",
+      img: "https://as2.ftcdn.net/v2/jpg/00/84/21/73/1000_F_84217338_B2f5Yv72diqRbAmS2O51ImgITqPnQ5ZR.jpg",
       totalAdd: 10,
     },
     {
       id: "02",
-      name: "Lomo Corriente",
+      name: "Lomo Corriente Res",
       price: 33000,
       uniti: "kilogramo",
       amount: 500,
@@ -30,7 +30,7 @@ const initialState = {
       measues: "kilogramo",
       amount: 500,
       presentation: "Filete",
-      img: "https://dummyimage.com/600x400/cccccc/fff",
+      img: "https://as2.ftcdn.net/v2/jpg/00/84/21/73/1000_F_84217338_B2f5Yv72diqRbAmS2O51ImgITqPnQ5ZR.jpg",
       totalAdd: 0,
     },
     {

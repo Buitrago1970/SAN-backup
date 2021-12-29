@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import Appcontext from "../context/Appcontext";
 import { handleSumTotal } from "../utils/index";
 
-export default function Payment({ data }) {
+export default function Payment({ data, route }) {
   const {
     state: { cart },
   } = useContext(Appcontext);
+  debugger
+  console.log(route);
 
   return (
     <>
@@ -18,7 +20,7 @@ export default function Payment({ data }) {
           <hr />
           <div className="container-account">
             <div className="account">
-              <p>Productos(2)</p>
+              <p>Productos ({ cart.length})</p>
               <p>{new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
             </div>
             <div className="account">
@@ -33,7 +35,8 @@ export default function Payment({ data }) {
               <p>$ {new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
             </div>
           </div>
-          <Link to="/carrocompras/{}/direccion">
+
+          <Link to={route}>
             <button className="button btn-payment">{data}</button>
           </Link>
         </div>

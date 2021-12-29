@@ -1,8 +1,8 @@
 .shopping-list {
-  /* width: 100%; */
+  border-radius: 7px;
   background: #fff;
   padding: 10px;
-  margin: 12px 12px 12px 20px;
+  margin: 12px 12px 69px 20px;
 }
 .cart-length-title {
   margin-left: 12px;
@@ -14,6 +14,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
 }
 .link-home {
   color: black;
