@@ -1,8 +1,8 @@
 .header {
   display: flex;
   padding: 10px;
-  background-color: rgb(37, 37, 37);
-  height: 40px;
+  background-color: #000000cc;
+  height: 20px;
   align-items: center;
   position: sticky;
   top: 0;
