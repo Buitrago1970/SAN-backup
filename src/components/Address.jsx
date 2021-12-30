@@ -1,29 +1,28 @@
-import React from "react";
+import * as React from "react";
 import { Link } from "react-router-dom";
 import { GoLocation } from "react-icons/go";
 import "./styles/Address.css";
-export default function Address() {
+
+export default function Address({buyer}) {
   return (
     <>
-      <div className="container-address">
+     <div className="container-address">
         <div className="title-container">
           <div className="secondary-title">Opciones de envío a</div>
         </div>
         <div className="address-contrainer-info">
           <div className="address">
-            {/* <GoLocation /> */}
-            <p className="cart-address-info">Calle165 A #54c-95</p>
-            <p className="cart-address-subtitle-info">
-              Apartamento 401 - San cipriano - Suba, Bogotá D.C.
-            </p>
+            
+            {buyer && <><GoLocation /><p className="cart-address-info">{buyer.address}</p>
+              <p className="cart-address-subtitle-info">{buyer.descriptionHouse && buyer.descriptionHouse} - { buyer.neighborhood} - {buyer.locality}, Bogota D.c
+            </p></>}
           </div>
           <div className="modify-address">
-            <Link to={"/carrocompras/{}/direccion"} className="modify">
-              Modificar ubicación
-            </Link>
+            {buyer ? <Link to="/carrocompras/{}/direccion" className="modify">Modificar dirección</Link>: <Link to="/carrocompras/{}/direccion" className="modify">Agregar dirección</Link>}
           </div>
         </div>
-      </div>
+      </div> 
+      
     </>
   );
 }

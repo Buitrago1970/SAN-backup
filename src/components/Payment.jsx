@@ -9,6 +9,9 @@ export default function Payment({ data, route }) {
   const {
     state: { cart },
   } = useContext(Appcontext);
+  const numEnvioGratis = Intl.NumberFormat().format(50000);
+  const valorEnvio = Intl.NumberFormat().format(5000);
+  const total = new Intl.NumberFormat().format(handleSumTotal(cart));
   return (
     <>
       <div className="payment">
@@ -18,18 +21,19 @@ export default function Payment({ data, route }) {
           <div className="container-account">
             <div className="account">
               <p>Productos ({cart.length})</p>
-              <p>{new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
+              <p>{total}</p>
             </div>
             <div className="account">
               <p>Envio</p>
-              <p className="envio">Gratis</p>
+             {total >= numEnvioGratis ?  <p className="costo-envio-gratis">Gratis</p> : <p>$ {valorEnvio}</p> }
             </div>
             <hr />
           </div>
           <div className="total-count">
             <div className="account">
               <p>Total</p>
-              <p>$ {new Intl.NumberFormat().format(handleSumTotal(cart))}</p>
+              {total >= numEnvioGratis ? <p>$ {total}</p>   : <p className="costo-envio">$ {Intl.NumberFormat().format(parseInt(total) + parseInt(valorEnvio))}.000</p> }
+              
             </div>
           </div>
           {console.log(route)}

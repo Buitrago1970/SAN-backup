@@ -1,7 +1,6 @@
 .container-address {
   margin: 12px;
 }
-
 .address-contrainer-info {
   border-radius: 4px;
   background: #d0d0d0;
@@ -15,7 +14,9 @@
 .cart-address-subtitle-info {
   display: none;
 }
-
+.address{
+  display: flex;
+}
 .modify {
   text-decoration: none;
   color: #3391ff;

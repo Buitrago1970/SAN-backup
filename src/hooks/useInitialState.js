@@ -32,7 +32,15 @@ const useInitialState = () => {
       cart: state.cart.filter((item) => item.id !== product.id),
     });
   };
-  return { addToCart, removeFromCart, state };
+  const addToBuyer =(payload)=>{
+    
+    setState({
+      ...state,
+      buyer: [...state.buyer, payload]
+    })
+
+  }
+  return { addToCart, removeFromCart, addToBuyer, state };
 };
 
 export default useInitialState;
