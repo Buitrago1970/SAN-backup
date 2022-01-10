@@ -35,7 +35,7 @@ const Item = ({ item, handleRemoveFromCart }) => {
           <div className="total-price">
             <div className="values-product">
               <p className="price">
-                $ {new Intl.NumberFormat().format(price * totalAdd)}
+                $ {new Intl.NumberFormat().format(price * 1)}
               </p>
             </div>
           </div>

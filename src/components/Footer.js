@@ -13,9 +13,9 @@ class Footer extends React.Component {
               <h1>Nuestros Productos</h1>
               <h1 className="plus-button">+</h1>
             </div>
-            <Link to="#">Res</Link>
-            <Link to="#">Cerdo</Link>
-            <Link to="#">Pollo</Link>
+            <Link to="/">Res</Link>
+            <Link to="/">Cerdo</Link>
+            <Link to="/">Pollo</Link>
           </div>
 
           <div className="container-footer-options">
@@ -33,7 +33,7 @@ class Footer extends React.Component {
               <h1>Contactos</h1>
               <h1 className="plus-button">+</h1>
             </div>
-            <Link to="/Contacto">Contacto</Link>
+            <Link to="/Contactos">Contacto</Link>
             <p className="p-contact">
               +57 314 230 2050
               <br />

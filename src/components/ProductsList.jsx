@@ -5,30 +5,41 @@ import "./styles/productList.css";
 import ProductItem from "./ProductItem";
 import Categories from "./Categories";
 import Appcontext from "../context/Appcontext";
+import axios from "axios";
 
 function ProductsList({ search }) {
   const {
-    state: { products },
-    addToCart,
+    addToCart,    
   } = useContext(Appcontext);
 
+  const [products, setProducts] = useState();
   const [filterList, setFilterList] = useState(products);
 
-  const handleAddToCart = (product, count) => () => {
-    addToCart(product, count);
-  };
-
+  
+  //fetch the products from api
+   useEffect( () => {
+    const fetchProducts = async () => {
+     const response = await axios("http://localhost:1337/api/products");
+     debugger
+     setProducts(response.data.data)
+    };
+    fetchProducts();
+  }, []);
+  
+  //filter the products based on the search text
   useEffect(() => {
     if (search === "") {
       setFilterList(products);
     } else {
       setFilterList(
-        products.filter((item) =>
-          item.name.toLowerCase().includes(search.toLowerCase())
-        )
+        products.filter(item => item.attributes.name.toLowerCase().includes(search.toLowerCase())),
       );
     }
   }, [search, products]);
+
+  const handleAddToCart = (product, count) => () => {
+    addToCart(product, count);
+  };
 
   const RenderList = (List) => {
     return (
@@ -36,8 +47,8 @@ function ProductsList({ search }) {
         <div className="container-products">
           {List.map((product) => (
             <ProductItem
-              key={product.id}
-              product={product}
+              key={product.attributes.slug}
+              product={product.attributes}
               handleAddToCart={handleAddToCart}
             />
           ))}

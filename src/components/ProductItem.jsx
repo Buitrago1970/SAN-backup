@@ -2,15 +2,17 @@ import * as React from "react";
 import { useState } from "react";
 
 import "./styles/ProductItem.css";
+import { fromImageToUrl } from "../utils/urls";
+
 
 const ProductItem = ({ product, handleAddToCart }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   return (
     <>
       <div className="articulo">
         {/* imagen */}
         <div className="img-container">
-          <img className="img-product" src={product.img} alt="" />
+          <img className="img-product" src={fromImageToUrl(product.image)} alt="" />
         </div>
         {/* texto */}
         <div className="description">

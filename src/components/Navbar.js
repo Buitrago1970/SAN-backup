@@ -7,7 +7,6 @@ import "./styles/navbar.css";
 
 function Navbar() {
   const [search, setSearch] = useState("");
-
   return (
     <>
       <nav>

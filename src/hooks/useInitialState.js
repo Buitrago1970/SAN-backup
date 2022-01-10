@@ -5,13 +5,13 @@ const useInitialState = () => {
   const [state, setState] = useState(initialState);
 
   const addToCart = (product, count) => {
-    const productExists = state.cart.find((item) => item.id === product.id);
+    const productExists = state.cart.find((item) => item.slug === product.slug);
 
     if (productExists) {
       setState({
         ...state,
         cart: state.cart.map((item) =>
-          item.id === product.id
+          item.slug === product.slug
             ? { ...item, totalAdd: (item.totalAdd = item.totalAdd + count) }
             : item
         ),
@@ -33,7 +33,7 @@ const useInitialState = () => {
     });
   };
   const addToBuyer =(payload)=>{
-    
+  
     setState({
       ...state,
       buyer: [...state.buyer, payload]
