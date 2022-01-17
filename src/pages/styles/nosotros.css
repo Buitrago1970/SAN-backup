@@ -1,3 +1,4 @@
+
 .container {
   border-radius: 10px;
   background: #ffffff;
@@ -89,7 +90,14 @@
   margin: auto 0;
   text-align: center;
 }
+.p-our-team-nosotros{
+  font-size: 16px;
+  text-align: center;
+  line-height: 2.16667;
+  max-width: 1200px;
+  }
 @media screen and (min-width: 730px) {
+
   .nosotros-container-text {
     margin: auto 0;
     text-align: initial;
@@ -109,7 +117,6 @@
   }
 }
 @media screen and (min-width: 870px) {
-  /*  */
   .container {
     max-width: 1300px;
   }
@@ -126,6 +133,7 @@
   .our-team {
     display: flex;
     max-width: 1400px;
+    justify-content: center;
   }
   .out-team-container {
     width: 290px;

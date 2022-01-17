@@ -4,7 +4,7 @@ import Item from "./Item";
 import Appcontext from "../context/Appcontext";
 import { Link } from "react-router-dom";
 
-export default function ShoppingCart() {
+export default function ShoppingCart({hideButtons}) {
   const {
     state: { cart },
     removeFromCart,
@@ -30,9 +30,10 @@ export default function ShoppingCart() {
             <div>
               {cart.map((item) => (
                 <Item
-                  key={item.id}
+                  key={item.slug}
                   item={item}
                   handleRemoveFromCart={handleRemoveFromCart}
+                  hideButtons={hideButtons}
                 />
               ))}
             </div>

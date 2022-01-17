@@ -13,6 +13,7 @@
   text-decoration: none;
 }
 .header a:hover {
+  transition: all 0.2s ease-in;
   filter: drop-shadow(rgb(255, 255, 255) 0 0 1px);
   color: #fff;
 }

@@ -49,26 +49,26 @@
     width: auto;
   }
   .text-nosotros {
-    margin-top: 40px;
-
+    margin-top: 50px;
     background: none;
     position: inherit;
   }
   .title-container-hero-nosotros {
     letter-spacing: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
   }
   .title-hero-nosotros {
     font-weight: 600;
     margin: 15px 0;
-    font-size: 37pt;
+    font-size: 40pt;
     position: relative;
     right: 100px;
     font-family: "Lato", sans-serif;
   }
   .text-container {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 30px;
+    max-width: 700px;
   }
   .icon-container {
     color: rgb(94, 94, 94);

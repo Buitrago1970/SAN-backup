@@ -61,7 +61,9 @@
   font-family: "Montserrat";
   font-weight: 600;
 }
-
+.btn-shop:hover {
+  background: #6e0101;
+}
 @media screen and (min-width: 785px) {
   .description {
     padding: 10px;
@@ -145,6 +147,20 @@
   .counter-quantity-products {
     margin: 0;
   }
+  .bt-menos:active{
+    transition: all 0.1s ease-in;
+    background: #c76868;
+    color: #d4d4d4;
+  }
+  .bt-mas:active{
+  transition: all 0.01s ease-in;
+    background: #c76868;
+    color: #d4d4d4;
+  }
+  .btn-shop:active {
+    transition: all 0.01s ease-in;
+  background: #5a0000;
+  }
   .bt-menos {
     display: flex;
     justify-content: center;
@@ -153,9 +169,24 @@
     margin: 4px 5px;
     background: #ffffff4f;
     border-radius: 2px;
-    border: none;
+    border: none; 
+    cursor: pointer;
   }
+  .bt-menos:hover {
+  transition: all 0.3s ease-in;
+  font-weight: 900;
+
+  filter: drop-shadow(#ffffffb4 0 0 1px);
+  }
+
+  .bt-mas:hover {
+  transition: all 0.3s ease-in;
+  filter: drop-shadow(#ffffffb4 0 0 1px);
+  font-weight: 900;
+
+  } 
   .bt-mas {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;

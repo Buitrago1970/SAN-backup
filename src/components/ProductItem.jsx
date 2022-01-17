@@ -7,6 +7,16 @@ import { fromImageToUrl } from "../utils/urls";
 
 const ProductItem = ({ product, handleAddToCart }) => {
   const [count, setCount] = useState(1);
+
+  const handlesAddToCart = (valor) => {
+    if(valor === 'menos'){
+      if(count > 1){
+        setCount(count - 1);
+      }
+    }else if(valor === 'mas'){
+      setCount(count + 1);
+    }
+  }
   return (
     <>
       <div className="articulo">
@@ -47,8 +57,8 @@ const ProductItem = ({ product, handleAddToCart }) => {
           <div className="container-buttons">
             <button
               type="button"
-              className=" bt-menos"
-              onClick={() => setCount(count - 1)}
+              className="bt-menos"
+              onClick={() => handlesAddToCart("menos")}
             >
               -
             </button>
@@ -58,8 +68,8 @@ const ProductItem = ({ product, handleAddToCart }) => {
             </div>
             <button
               type="button"
-              className=" bt-mas"
-              onClick={() => setCount(count + 1)}
+              className="bt-mas"
+              onClick={() => handlesAddToCart("mas")}
             >
               +
             </button>

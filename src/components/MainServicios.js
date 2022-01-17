@@ -6,23 +6,26 @@ export default function MainServicios() {
   const data = [
     {
       id: 1,
-      title: "iPad mini",
-      description: "Grande\u00A0en\u00A0poder. Mini\u00A0en\u00A0tamaño.",
+      title: "Corte",
+      description: "Especializados en todo corte.",
+      image:"http://localhost:1337/uploads/1000_F_128943712_Gd_Tri_C_Hk_Nbe_LMNMI_Bcw8y_B_Fiq4_Hy_I53_P_4ed9876703.jpg?updated_at=2022-01-15T01:14:29.831Z"
     },
     {
       id: 2,
-      title: "iPad mini",
-      description: "Grande\u00A0en\u00A0poder. Mini\u00A0en\u00A0tamaño.",
-    },
+      title: "Empaque",  
+      description: "Empacado vacio, envase o papel de carnicero.",
+      image:"http://localhost:1337/uploads/Black_Tie_Box_014_1920px_1024x1024_05cbe83d33.jpg?updated_at=2022-01-15T01:31:54.778Z"    },
     {
       id: 3,
-      title: "iPad mini",
-      description: "Grande\u00A0en\u00A0poder. Mini\u00A0en\u00A0tamaño.",
+      title: "Envio",
+      description: "En menos de 24 horas recibiras tu pedido.",
+      image:"http://localhost:1337/uploads/jumpy_lateral_1_640x360_1_1_6c2d0c7bfc.png?updated_at=2022-01-15T01:14:29.798Z"
     },
     {
       id: 4,
-      title: "iPad mini",
-      description: "Grande\u00A0en\u00A0poder. Mini\u00A0en\u00A0tamaño.",
+      title: "Entrega",
+      description: "De nuestra casa a tu casa.",
+      image:"http://localhost:1337/uploads/repartidor_entregando_caja_cliente_23_2148669584_copia_1_5a0e80634e.png?updated_at=2022-01-15T01:14:29.831Z"
     },
   ];
   return (
@@ -44,7 +47,7 @@ export default function MainServicios() {
                   </p>
                 </div>
                 <div className="image-module-main-servicios">
-                  <figure class="unit-image unit-image-ipad-mini-promo-ipad-mini"></figure>
+                  <img class="unit-image unit-image-ipad-mini-promo-ipad-mini" src={item.image} alt="Foto"/>
                 </div>
               </div>
             </div>

@@ -13,3 +13,14 @@
   margin: 0px 10px;
   justify-content: center;
 }
+.container-search-not-found{
+  max-width: 1500px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 10px;
+  justify-content: center;
+}
+.text-not-found{
+  font-size: 22px;
+  
+}

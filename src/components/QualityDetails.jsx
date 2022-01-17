@@ -7,16 +7,16 @@ function QualityDetails() {
   const initialState = {
     badges: [
       {
-        number: "390",
-        title: " Title  Title  Title Title Title",
+        number: "1993",
+        title: "Desde el año 1993",
       },
       {
-        number: "296",
-        title: " Title  Title  Title Title Title",
+        number: "+ 500.000",
+        title: "Con mas de 500.000 pedidos",
       },
       {
-        number: "428",
-        title: " Title  Title  Title Title Title",
+        number: "+ 300",
+        title: "Contamos con más de 300 productos",
       },
     ],
   };
@@ -25,21 +25,23 @@ function QualityDetails() {
     <>
       <section className="section-badges">
         <div className="container-badges">
-          <span className="sub-title">Titulo De Logros/Metas</span>
+          <p className="sub-title-quality-details">Logros</p>
           <div className="badges">
             {badges.map((item) => (
               <>
                 <div className="badges-item">
                   <img className="imgs" src={crow} alt="" />
+                  <div>
                   <p className="number-badge">{item.number}</p>
-                  <p>{item.title}</p>
+                  <p className="p-quality-details">{item.title}</p>
+                  </div>
+            
                   <img className="img-reverse" src={crow} alt="" />
                 </div>
               </>
             ))}
           </div>
         </div>
-        <div className="">{/* <img src={butcher} alt="" /> */}</div>
       </section>
     </>
   );

@@ -4,26 +4,30 @@
 .address-contrainer-info {
   border-radius: 4px;
   background: #d0d0d0;
-  padding: 16px 32px;
+  padding: 25px 32px;
   align-items: center;
   font-size: 13px;
+  padding-left: 20px;
 }
 .cart-address-info {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 .cart-address-subtitle-info {
   display: none;
 }
 .address{
   display: flex;
+  align-items: center;
 }
+.address > svg{font-size: 27px;
+  margin-right: 5px;}
 .modify {
   text-decoration: none;
   color: #3391ff;
 }
 @media screen and (min-width: 785px) {
   .container-address {
-    
     margin-left: 20px;
   }
   .address-contrainer-info {

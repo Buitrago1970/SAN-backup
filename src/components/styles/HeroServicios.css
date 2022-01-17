@@ -3,7 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   align-items: center;
-  padding: 75px 120px 200px 120px;
+  padding: 100px 40px 100px 40px;
   margin: 0 auto;
 }
 .div1 {
@@ -18,13 +18,10 @@
   font-weight: 300;
 }
 .sub-title-s-v {
-  font-size: 20px;
-  color: rgb(218, 42, 42);
-  margin-bottom: 15px;
-  font-weight: 700;
+  font-size: 40px;
+  margin: 40px 0px;
 }
 .paragraph-container p {
-  font-size: 16px;
   line-height: 30px;
 }
 .second-paragraph-container {
@@ -44,6 +41,6 @@
   width: 100%;
 }
 .text-container-servicios {
-  font-size: 16px;
+
   line-height: 30px;
 }

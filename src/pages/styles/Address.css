@@ -9,6 +9,10 @@
   background: #fff;
   padding: 10px 30px;
 }
+.container-buttons{
+  display: flex;
+      justify-content: space-between;
+}
 
 .andes-form-coactiventrol_bottom{
   font-size: 13px;
@@ -79,3 +83,38 @@
   font-size: 13px;
   color: rgb(255, 49, 49);
 }
+
+ .btn-address{
+  display: flex;
+  height: 3em;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee4b;
+  border-radius: 3px;
+  letter-spacing: 1px;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  border: 1px solid rgb(241, 241, 241);
+  background: rgb(255, 255, 255);
+ }
+ .btn-address > svg {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: 20px;
+  transition: all 0.4s ease-in;
+
+ }
+ .btn-address:hover > svg {
+  font-size: 1.2em;
+  transform: translateX(-5px);
+ }
+ 
+ .btn-address:hover {
+  box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+  transform: translateY(-2px);
+  border: none;
+ }
+ .btn-address-invert:hover > svg {
+  transform: translateX(5px);
+ }

@@ -15,11 +15,8 @@
   background-color: var(--mainWhite);
   border-bottom-width: 40px;
 }
-.module-content {
-  background: #fbfbfd;
-}
 .unit-wrapper {
-  height: 450px;
+  height: 400px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,11 +54,9 @@
   font-weight: 400;
 }
 .unit-image {
-  width: 516px;
-  height: 490px;
-  background-size: 516px;
+  width: 430px;
+  height: 280px;
   background-repeat: no-repeat;
-  background-image: url("https://www.bing.com/images/blob?bcid=Tq8KyLcds6QDxA");
   z-index: 1;
   position: absolute;
   border: 0;

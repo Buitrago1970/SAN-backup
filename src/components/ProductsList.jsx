@@ -11,16 +11,13 @@ function ProductsList({ search }) {
   const {
     addToCart,    
   } = useContext(Appcontext);
+  const [products, setProducts] = useState([]);
+  const [filterList, setFilterList] = useState([]);
 
-  const [products, setProducts] = useState();
-  const [filterList, setFilterList] = useState(products);
-
-  
   //fetch the products from api
    useEffect( () => {
     const fetchProducts = async () => {
      const response = await axios("http://localhost:1337/api/products");
-     debugger
      setProducts(response.data.data)
     };
     fetchProducts();
@@ -59,7 +56,16 @@ function ProductsList({ search }) {
   return (
     <>
       <div className="list-container">
-        {filterList && <Categories>{RenderList(filterList)}</Categories>}
+        {filterList.length === 0 ? (
+        <div className="container-search-not-found">
+          <h3 className="text-not-found">
+          ⚠️ No se encontraron resultados para 
+          </h3>
+
+          <h3 className="text-not-found">
+           "{search}"
+          </h3>
+          </div>):(<Categories>{RenderList(filterList)}</Categories>)}
       </div>
     </>
   );

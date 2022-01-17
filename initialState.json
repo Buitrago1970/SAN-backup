@@ -1,6 +1,17 @@
 {
     "initalState": {
       "mylist": [],
+      "buyer":[
+        {
+          "name":"Juan Buitrago",
+          "email":"sopa@hotmail.com",
+          "phone":"+56912345678",
+          "address":"Calle falsa 123",
+          "city":"Santiago",
+          "country":"Chile",
+          "postalCode":"12345"
+        }
+      ],
       "res": [
         {
             "id": "01",

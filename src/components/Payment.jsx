@@ -7,11 +7,27 @@ import { handleSumTotal } from "../utils/index";
 
 export default function Payment({ data, route }) {
   const {
-    state: { cart },
+    state: { cart, buyer },
   } = useContext(Appcontext);
-  const numEnvioGratis = Intl.NumberFormat().format(50000);
-  const valorEnvio = Intl.NumberFormat().format(5000);
-  const total = new Intl.NumberFormat().format(handleSumTotal(cart));
+
+  // declarando variables para envio gratuito
+  const numEnvioGratis = 50000;
+  const valorEnvio = 5000;
+  const total = handleSumTotal(cart);
+  const totalPedido = total + valorEnvio;
+
+// pasando valores a enteros con coma para despues cambiar por punto
+  let valoEnvioPunto = valorEnvio;
+  let totalPunto = total;
+  let totalPedidoPunto = totalPedido;
+  new Intl.NumberFormat().format(valoEnvioPunto, totalPunto, totalPedidoPunto);
+
+  // remplazando por punto
+  valoEnvioPunto = valoEnvioPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  totalPunto = totalPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  totalPedidoPunto = totalPedidoPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
   return (
     <>
       <div className="payment">
@@ -21,25 +37,29 @@ export default function Payment({ data, route }) {
           <div className="container-account">
             <div className="account">
               <p>Productos ({cart.length})</p>
-              <p>{total}</p>
+              <p>$ {totalPunto}</p>
             </div>
             <div className="account">
               <p>Envio</p>
-             {total >= numEnvioGratis ?  <p className="costo-envio-gratis">Gratis</p> : <p>$ {valorEnvio}</p> }
+             {total >= numEnvioGratis ?  <p className="costo-envio-gratis">Gratis</p> : <p>$ {valoEnvioPunto}</p> }             
             </div>
             <hr />
           </div>
           <div className="total-count">
             <div className="account">
               <p>Total</p>
-              {total >= numEnvioGratis ? <p>$ {total}</p>   : <p className="costo-envio">$ {Intl.NumberFormat().format(parseInt(total) + parseInt(valorEnvio))}.000</p> }
-              
+              {total >= numEnvioGratis ? <p>$ {totalPunto}</p>   : <p className="costo-envio">$ {totalPedidoPunto}</p> }
             </div>
           </div>
-          {console.log(route)}
+          {buyer[0] ? (
+            <Link to={'/carrocompras/{}/checkout'}>
+              <button className="btn-payment">Continuar</button>
+            </Link>
+          ) : (
           <Link to={route}>
             {data && <button className="button btn-payment">{data}</button>}
-          </Link>
+          </Link>)
+          }
         </div>
       </div>
     </>

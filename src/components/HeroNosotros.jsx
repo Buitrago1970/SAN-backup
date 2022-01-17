@@ -25,15 +25,15 @@ function HeroNosotros() {
             </div>
             <div className="text-container text-container-nosotros">
               <p>
-                Carnes Online Colombia llegó para suplir la necesidad que muchos
-                tenemos, comprar la carne de la semana o de la parrillada del
-                fin de semana, a un solo clic.
+                Suplir la necesidad que
+                tenemos de comprar la carne de la semana o de la parrillada del
+                fin de semana a un solo click 🖱 de distancia.
               </p>
               <br />
               <p>
-                Se vende carne de corte online y los productos van desde carne
-                de res, carne de cerdo, carne de pollo, carne de cordero,
-                pescado y muchas otras. Para comprar carne no solo hay que tener
+               Los productos van desde carne
+                de res, carne de cerdo, carne de pollo, carne de cordero y
+                pescado. Para comprar carne no solo hay que tener
                 la necesidad de ello, sino que también hay que saber donde
                 hacerlo.
               </p>

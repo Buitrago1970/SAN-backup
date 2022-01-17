@@ -39,7 +39,8 @@
     font-size: 8px;
   }
   .container-footer a:hover {
-    filter: drop-shadow(rgb(0, 0, 0) 0 0 1px);
+    color: #929292;
+        transition: all 0.2s ease-in;
   }
   .p-contact {
     display: block;

@@ -26,14 +26,14 @@ export default function Adress() {
     },
     validationSchema: Yup.object({
       name: Yup.string().required(),
-      // department: Yup.string().required(),
-      // locality: Yup.string().required(),
-      // neighborhood: Yup.string().required(),
-      // address: Yup.string().required(),
-      // mail: Yup.string().required(),
-      // password: Yup.string().required(),
-      // repeatPassword: Yup.string().required(),
-      // phone: Yup.string().required(),
+       department: Yup.string().required(),
+     locality: Yup.string().required(),
+        neighborhood: Yup.string().required(),
+        address: Yup.string().required(),
+        mail: Yup.string().required(),
+        password: Yup.string().required(),
+        repeatPassword: Yup.string().required(),
+        phone: Yup.number().required(),
     }),
     validate:(formData) =>{
       let errores ={}
@@ -184,15 +184,16 @@ export default function Adress() {
                   ></input>
                 </div>
               </label>
-              <div>
-              <button type="submit" className="btn-address">enviar</button>
+              <div className="container-buttons">
               <Link to="/carrocompras">
-            <button className="btn-address btn-address-back">Regresar</button>
-          </Link>
+            <button className="btn-address"><svg height="16" width="16" id="Modo_de_aislamiento" data-name="Modo de aislamiento" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307.7 141.29"><path d="M178.81,419.56h1.56q137.34,0,274.67,0c3.11,0,5.61.76,6.9,3.86a6.3,6.3,0,0,1-5.81,8.94c-.58,0-1.16,0-1.74,0H178.7c2.13,2.24,4,4.24,5.92,6.22q15.24,15.87,30.51,31.73c4.9,5.11,9.82,10.2,14.65,15.37a6.21,6.21,0,0,1,0,9c-2.55,2.6-6.55,2.52-9.3-.29-4.42-4.52-8.79-9.09-13.17-13.65l-16-16.71-35.89-37.42c-.16-.17-.3-.35-.59-.7,2.1-2.21,4.19-4.43,6.3-6.62L198,380.91c7.48-7.77,14.92-15.58,22.4-23.35,2.26-2.36,4.67-2.85,7.39-1.61a6.45,6.45,0,0,1,3.81,6.46,7.85,7.85,0,0,1-1.89,3.94c-6.92,7.35-14,14.57-21,21.86q-14.7,15.3-29.38,30.65C179.23,419,179.11,419.18,178.81,419.56Z" transform="translate(-154.79 -355.29)"/></svg>Regresar</button>
+              </Link>
+              <button type="submit" className="btn-address btn-address-invert">
+                enviar
+                <svg height="16" width="16" id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 307.7 141.29"><path d="M438.47,432.3h-1.56q-137.34,0-274.67,0c-3.11,0-5.61-.76-6.9-3.85a6.3,6.3,0,0,1,5.81-8.94H438.58c-2.13-2.25-4-4.25-5.92-6.23q-15.24-15.87-30.51-31.73c-4.9-5.1-9.82-10.19-14.65-15.36a6.22,6.22,0,0,1,0-9c2.55-2.59,6.55-2.51,9.3.3,4.42,4.52,8.79,9.09,13.17,13.65q8,8.34,16,16.71,18,18.71,35.89,37.42c.16.16.3.35.59.69-2.1,2.21-4.19,4.43-6.3,6.63q-18.45,19.2-36.91,38.38c-7.48,7.78-14.92,15.58-22.4,23.36-2.26,2.35-4.67,2.85-7.39,1.61a6.45,6.45,0,0,1-3.81-6.46,7.92,7.92,0,0,1,1.89-3.95c6.92-7.34,14-14.57,21-21.85q14.7-15.32,29.38-30.65C438.05,432.86,438.17,432.68,438.47,432.3Z" transform="translate(-154.79 -355.29)"/></svg>
+              </button>
               </div>
-
             </div>
-
           </form>
         </div>
 
