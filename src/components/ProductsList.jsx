@@ -17,7 +17,8 @@ function ProductsList({ search }) {
   //fetch the products from api
    useEffect( () => {
     const fetchProducts = async () => {
-     const response = await axios("http://localhost:1337/api/products");
+     const response = await axios("http://localhost:1337/api/products?populate=image");
+     debugger
      setProducts(response.data.data)
     };
     fetchProducts();

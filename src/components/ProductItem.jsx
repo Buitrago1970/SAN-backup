@@ -22,7 +22,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
       <div className="articulo">
         {/* imagen */}
         <div className="img-container">
-          <img className="img-product" src={fromImageToUrl(product.image)} alt="" />
+          <img className="img-product" src={fromImageToUrl(product.image.data.attributes.formats.small)} alt="" />
         </div>
         {/* texto */}
         <div className="description">
