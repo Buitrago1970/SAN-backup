@@ -1,8 +1,10 @@
 import { useState } from "react";
+
 import initialState from "../initialState";
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
+
   const addToCart = (product, count) => {
     const productExists = state.cart.find((item) => item.slug === product.slug);
     if (productExists) {
@@ -69,15 +71,27 @@ const useInitialState = () => {
       cart: state.cart.filter((item) => item.slug !== product.slug),
     });
   };
-  const addToBuyer =(payload)=>{
-    setState({
-      ...state,
-      buyer: [...state.buyer, payload]
+  const loginUser =  (payload)=>{
+       setState({
+       ...state,
+       user: [...state.user, payload]
+     })
     }
-    )
 
-  }
-  return { addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, addToBuyer, state };
+  //   const logoutUser = async () => {
+  //     try {
+  //       await magic.auth.logout()
+  //     } catch (error) {
+  //        setState({
+  //       ...state,
+  //       user: [],
+  //     });
+  //     }
+  //  };
+   
+
+   
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, loginUser };
 };
 
 export default useInitialState;

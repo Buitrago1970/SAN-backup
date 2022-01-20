@@ -12,11 +12,11 @@ function QualityDetails() {
       },
       {
         number: "+ 500.000",
-        title: "Con mas de 500.000 pedidos",
+        title: "+ de 500.000 pedidos",
       },
       {
         number: "+ 300",
-        title: "Contamos con más de 300 productos",
+        title: "+ de 300 productos",
       },
     ],
   };

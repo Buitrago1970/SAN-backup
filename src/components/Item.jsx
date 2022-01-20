@@ -2,6 +2,8 @@ import * as React from "react";
 import { useState, useContext } from "react";
 import "./styles/Item.css";
 import Appcontext from "../context/Appcontext";
+import { fromImageToUrl } from "../utils/urls";
+
 
 
 const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
@@ -10,7 +12,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
     removeOneProuctCart, 
   } = useContext(Appcontext);
 
-  const { name, price, amount, presentation, img, totalAdd } = item;
+  const { name, price, amount, presentation, image, totalAdd } = item;
   const [count, setCount] = useState(totalAdd);
 
 
@@ -30,7 +32,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
       <div className="c">
         <div className="principal-product">
           <div className="img-container-shopping-car">
-            <img className="img" src={img} alt="img" />
+            <img className="img" src={fromImageToUrl(image.data.attributes.formats.small)} alt="img" />
           </div>
           <div className="container-inf-product">
             <div className="container-inf-product-title">

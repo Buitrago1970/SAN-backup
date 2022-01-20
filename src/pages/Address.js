@@ -1,17 +1,36 @@
-import React ,{useContext}from "react";
+import React ,{useContext, useEffect}from "react";
 
-import "./styles/Address.css";
 import { Link, useHistory } from "react-router-dom";
 import Payment from "../components/Payment";
 import { useFormik } from "formik";
+import {Magic} from 'magic-sdk'
+import { MAGIC_PUBLIC_KEY } from "../utils/urls"; 
+import "./styles/Address.css";
 import * as Yup from 'yup'
 import Appcontext from "../context/Appcontext";
 
 export default function Adress() {
+  let history = useHistory();
+  let magic
 
-  const { addToBuyer} = useContext(Appcontext)
-  const history = useHistory();
-  const formik = useFormik({
+  const { loginUser} = useContext(Appcontext)
+
+  const logUserMagic = async (payload)=>{
+    debugger
+    try {
+      await magic.auth.loginWithMagicLink({ email: payload.mail })
+      loginUser(payload)
+    history.push('/carrocompras/{}/checkout')
+
+    } catch (error) {
+      alert(error)
+    }
+  } 
+  useEffect(() => {
+    magic = new Magic(MAGIC_PUBLIC_KEY)} 
+    )
+
+  const formik  =  useFormik ({
     initialValues:{
       name:'',
       department:'',
@@ -59,8 +78,7 @@ export default function Adress() {
     }
       return errores;
     } ,
-    onSubmit: (values) => {
-    
+    onSubmit: (values)  => {
       // enviar valores a la base de datos
     //   fetch('http://localhost:3000/api/users',{
     //     method:'POST',
@@ -73,8 +91,7 @@ export default function Adress() {
     //    .then(data => console.log(data))
     //  }
     // });
-    addToBuyer(values)
-    history.push('/carrocompras/{}/checkout');
+    logUserMagic(values)
     }
     });
     return (

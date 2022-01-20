@@ -5,7 +5,7 @@ import { handleSumTotal } from "../utils/index";
 
 
 import "./styles/SendData.css"
-export default function SendData( {buyer}) {
+export default function SendData( {user}) {
   const {
     state: { cart },
   } = useContext(Appcontext);
@@ -16,7 +16,7 @@ export default function SendData( {buyer}) {
 
   return (
     <>
-    {buyer && <div className="container-send-date">
+    {user && <div className="container-send-date">
         <div className="send-date-data">   
             <p className="send-data-p">Llega el {'lunes'} a tu direccion</p>
         { total >= numEnvioGratis ? <p className="send-data-p send-data-p-cost">

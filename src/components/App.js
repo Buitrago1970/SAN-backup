@@ -16,6 +16,7 @@ import useInitialState from "../hooks/useInitialState";
 
 function App() {
   const initialState = useInitialState();
+
   return (
     <Appcontext.Provider value={initialState}>
       <BrowserRouter>
@@ -30,8 +31,7 @@ function App() {
               exact
               path="/carrocompras/{}/direccion"
               component={Address}
-            />
-            
+            /> 
             <Route
               exact
               path="/carrocompras/{}/checkout"

@@ -6,12 +6,12 @@ import Address from "../components/Address";
 import Payment from "../components/Payment";
 
 export default function PaymentPage() {
-  const {state:{buyer}} = useContext(Appcontext)
+  const {state:{user}} = useContext(Appcontext)
       return (
         <div className="main-container">
         <div className="hero-shopping-cart">
           <div>
-            <Address buyer={buyer[0]} />
+            <Address user={user[0]} />
             stripe
           </div>
           <Payment data={"Proceder al pago"} route={"/carrocompras/{}/direccion"}/>

@@ -10,9 +10,8 @@ import Appcontext from "../context/Appcontext";
 
 const Header = () => {
   const {
-    state: { cart },
+    state: { cart , user },
   } = useContext(Appcontext);
-
   return (
     <>
       <div className="header">
@@ -36,6 +35,11 @@ const Header = () => {
           <Link to="/Contactos" title="Contacto" className="options">
             Contacto
           </Link>
+        </div>
+        <div className="">
+          {user[0] ? ( <Link to="/login" title="Inicio" className="options">
+            {user[0].name}
+            </Link> ) : null}
         </div>
         <div className="container-shopping-cart">
           <Link className="shopping-cart" to="/carrocompras">

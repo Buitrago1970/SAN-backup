@@ -1,5 +1,5 @@
 const initialState = {
-  buyer:[],
+  user: [],
   cart: [],
   mylist: [],
   products: [

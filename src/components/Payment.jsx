@@ -7,7 +7,7 @@ import { handleSumTotal } from "../utils/index";
 
 export default function Payment({ data, route }) {
   const {
-    state: { cart, buyer },
+    state: { cart, user },
   } = useContext(Appcontext);
 
   // declarando variables para envio gratuito
@@ -51,7 +51,7 @@ export default function Payment({ data, route }) {
               {total >= numEnvioGratis ? <p>$ {totalPunto}</p>   : <p className="costo-envio">$ {totalPedidoPunto}</p> }
             </div>
           </div>
-          {buyer[0] ? (
+          {user[0] ? (
             <Link to={'/carrocompras/{}/checkout'}>
               <button className="btn-payment">Continuar</button>
             </Link>
