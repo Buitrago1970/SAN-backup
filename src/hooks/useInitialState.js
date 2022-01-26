@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { Magic } from "magic-sdk";
+import { MAGIC_PUBLIC_KEY } from "../utils/urls";
 
 import initialState from "../initialState";
 
 const useInitialState = () => {
+  let magic 
   const [state, setState] = useState(initialState);
 
   const addToCart = (product, count) => {
@@ -77,7 +80,6 @@ const useInitialState = () => {
        user: [...state.user, payload]
      })
     }
-
   //   const logoutUser = async () => {
   //     try {
   //       await magic.auth.logout()
@@ -88,10 +90,31 @@ const useInitialState = () => {
   //     });
   //     }
   //  };
-   
+  const ckeckUser = (payload) => {
+    setState({
+      ...state,
+      user: [...state.user, payload]
+    })
+  };
+  // const checkUserLoggedIn =  async () => {
+  //  try{
+  //   const isLoggedIn = await magic.user.isLoggedIn();
+    
+  //   if(isLoggedIn){
+  //     const {email} = await magic.user.getMetadata();
+  //     setState({
+  //       ...state,
+  //       user: [{email}]
+  //     })
+  //  }  
+  //   }catch(error){
+  //     alert(error,'error checkUserLoggedIn')
+  //   }
+  // }
+
 
    
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, loginUser };
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, loginUser,ckeckUser };
 };
 
 export default useInitialState;

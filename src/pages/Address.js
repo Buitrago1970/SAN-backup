@@ -1,34 +1,35 @@
-import React ,{useContext, useEffect}from "react";
+import React ,{useContext, useEffect, useRef}from "react";
 
 import { Link, useHistory } from "react-router-dom";
 import Payment from "../components/Payment";
 import { useFormik } from "formik";
 import {Magic} from 'magic-sdk'
 import { MAGIC_PUBLIC_KEY } from "../utils/urls"; 
+import axios from "axios";
 import "./styles/Address.css";
 import * as Yup from 'yup'
 import Appcontext from "../context/Appcontext";
 
 export default function Adress() {
   let history = useHistory();
-  let magic
+  let magic = useRef();
 
-  const { loginUser} = useContext(Appcontext)
+  const { loginUser, ckeckUser} = useContext(Appcontext)
 
   const logUserMagic = async (payload)=>{
-    debugger
     try {
-      await magic.auth.loginWithMagicLink({ email: payload.mail })
+      debugger
+      await magic.current.auth.loginWithMagicLink({ email: payload.mail })
       loginUser(payload)
     history.push('/carrocompras/{}/checkout')
-
     } catch (error) {
       alert(error)
     }
-  } 
+  }   
   useEffect(() => {
-    magic = new Magic(MAGIC_PUBLIC_KEY)} 
-    )
+       magic.current = new Magic(MAGIC_PUBLIC_KEY) 
+  }, [])
+    
 
   const formik  =  useFormik ({
     initialValues:{
@@ -38,8 +39,6 @@ export default function Adress() {
       neighborhood:"",
       address:'',
       mail:'',
-      password:'',
-      repeatPassword:'',
       phone:'',
       descriptionHouse:''
     },
@@ -50,8 +49,6 @@ export default function Adress() {
         neighborhood: Yup.string().required(),
         address: Yup.string().required(),
         mail: Yup.string().required(),
-        password: Yup.string().required(),
-        repeatPassword: Yup.string().required(),
         phone: Yup.number().required(),
     }),
     validate:(formData) =>{
@@ -68,10 +65,6 @@ export default function Adress() {
     } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(formData.mail)){
       errores.mail = 'El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.'
     }
-    // validacion RepetePassword
-    if( formData.password !== formData.repeatPassword){
-      errores.repeatPassword = 'Las contraseñas No coinciden.'
-    }
     // Validacion general
     if( !formData.phone || !formData.department || !formData.locality || !formData.neighborhood || !formData.address){
       errores.general = 'Por favor llena todos los campos'
@@ -80,20 +73,20 @@ export default function Adress() {
     } ,
     onSubmit: (values)  => {
       // enviar valores a la base de datos
-    //   fetch('http://localhost:3000/api/users',{
-    //     method:'POST',
-    //     headers:{
-    //       'Content-Type':'application/json'
-    //     },
-    //     body:JSON.stringify(values)
-    //   })
-    //    .then(res => res.json())
-    //    .then(data => console.log(data))
-    //  }
-    // });
-    logUserMagic(values)
-    }
-    });
+      // axios
+      // .post('http://localhost:1337/api/auth/local/register', {
+      //   username: values.name,
+      //   email: values.mail,
+      //   password: values.name,
+      // })
+      // .then(res => {
+      //   logUserMagic(values)
+      // })
+      // .catch(err => {
+      //   console.log(err)
+      // })
+  }
+  })
     return (
     <div className="hero-shopping-cart">
       <div className="Information">
@@ -155,20 +148,6 @@ export default function Adress() {
                   <input className="xd" type="text" name="mail"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
                 </div>
                 {formik.touched.mail && formik.errors.mail && <p className="errors-form">{formik.errors.mail}</p>}
-              </label>
-              <label className="andes-form-control">
-                <span className="andes-form-control__label">Contraseña</span>
-                <div className="andes-form-control__control">
-                  <input className="xd" type="password" name="password" onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
-                </div>
-                {formik.touched.password && formik.errors.password && <p className="errors-form">{formik.errors.general}</p>}
-              </label>
-              <label className="andes-form-control">
-                <span className="andes-form-control__label">Repetir Contraseña</span>
-                <div className="andes-form-control__control">
-                  <input className="xd" type="password" name="repeatPassword" onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
-                </div>
-                {formik.touched.repeatPassword && formik.errors.repeatPassword && <p className="errors-form">{formik.errors.repeatPassword}</p>}
               </label>
               <label className="andes-form-control andes-form-control-long">
                 <span className="andes-form-control__label">
