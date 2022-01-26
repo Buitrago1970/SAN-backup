@@ -1,35 +1,16 @@
-import React ,{useContext, useEffect, useRef}from "react";
+import React ,{useContext}from "react";
 
 import { Link, useHistory } from "react-router-dom";
 import Payment from "../components/Payment";
-import { useFormik } from "formik";
-import {Magic} from 'magic-sdk'
-import { MAGIC_PUBLIC_KEY } from "../utils/urls"; 
+import { useFormik } from "formik"; 
 import axios from "axios";
 import "./styles/Address.css";
 import * as Yup from 'yup'
 import Appcontext from "../context/Appcontext";
 
 export default function Adress() {
-  let history = useHistory();
-  let magic = useRef();
 
-  const { loginUser, ckeckUser} = useContext(Appcontext)
-
-  const logUserMagic = async (payload)=>{
-    try {
-      debugger
-      await magic.current.auth.loginWithMagicLink({ email: payload.mail })
-      loginUser(payload)
-    history.push('/carrocompras/{}/checkout')
-    } catch (error) {
-      alert(error)
-    }
-  }   
-  useEffect(() => {
-       magic.current = new Magic(MAGIC_PUBLIC_KEY) 
-  }, [])
-    
+  const { loginUser} = useContext(Appcontext)
 
   const formik  =  useFormik ({
     initialValues:{
@@ -80,11 +61,11 @@ export default function Adress() {
       //   password: values.name,
       // })
       // .then(res => {
-      //   logUserMagic(values)
       // })
       // .catch(err => {
       //   console.log(err)
       // })
+
   }
   })
     return (
