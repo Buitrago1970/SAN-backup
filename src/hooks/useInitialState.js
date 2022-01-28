@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Magic } from "magic-sdk";
-import { MAGIC_PUBLIC_KEY } from "../utils/urls";
+
 
 import initialState from "../initialState";
 
 const useInitialState = () => {
-  let magic 
   const [state, setState] = useState(initialState);
 
   const addToCart = (product, count) => {
@@ -67,21 +65,20 @@ const useInitialState = () => {
       });
     }
   };
-
   const removeFromCart = (product) => {
     setState({
       ...state,
       cart: state.cart.filter((item) => item.slug !== product.slug),
     });
   };
-  const loginUser =  (payload)=>{
-       setState({
-       ...state,
-       user: [...state.user, payload]
-     })
-    }
+  const registerUser =  (payload)=>{
+    setState({
+      ...state,
+      user: [ ...state.user, payload]
+    })
+  }
    
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, loginUser };
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser };
 };
 
 export default useInitialState;

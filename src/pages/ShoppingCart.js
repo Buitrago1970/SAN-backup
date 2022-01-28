@@ -9,13 +9,13 @@ import "./styles/ShoppingList.css";
 
 export default function ShoppingCart() {
   const {
-    state: { cart },
+    state: { cart, user },
   } = useContext(Appcontext);
   return (
     <div className="main-container">
       <div className="hero-shopping-cart">
         <div>
-          <Address />
+          <Address user={user[0]}/>
           <ShoppingList />
         </div>
         {!cart.length ? ( <br></br>) : ( <Payment data={"Proceder al pago"} route={"/carrocompras/{}/direccion"}/>)}

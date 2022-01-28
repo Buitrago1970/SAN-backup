@@ -10,8 +10,8 @@ import Appcontext from "../context/Appcontext";
 
 export default function Adress() {
 
-  const { loginUser} = useContext(Appcontext)
-
+  const history = useHistory();
+  const {registerUser} = useContext(Appcontext);
   const formik  =  useFormik ({
     initialValues:{
       name:'',
@@ -20,16 +20,20 @@ export default function Adress() {
       neighborhood:"",
       address:'',
       mail:'',
+    password:'',
+      repeatPassword:'',
       phone:'',
       descriptionHouse:''
     },
     validationSchema: Yup.object({
       name: Yup.string().required(),
        department: Yup.string().required(),
-     locality: Yup.string().required(),
+        locality: Yup.string().required(),
         neighborhood: Yup.string().required(),
         address: Yup.string().required(),
         mail: Yup.string().required(),
+        password: Yup.string().required(),
+        repeatPassword: Yup.string().required(),
         phone: Yup.number().required(),
     }),
     validate:(formData) =>{
@@ -46,25 +50,40 @@ export default function Adress() {
     } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(formData.mail)){
       errores.mail = 'El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.'
     }
+        // validacion RepetePassword
+    if( formData.password !== formData.repeatPassword){
+      errores.repeatPassword = 'Las contraseñas No coinciden.'
+    }
+
     // Validacion general
-    if( !formData.phone || !formData.department || !formData.locality || !formData.neighborhood || !formData.address){
+    if( !formData.phone || !formData.department || !formData.locality || !formData.neighborhood || !formData.address ){
       errores.general = 'Por favor llena todos los campos'
     }
       return errores;
     } ,
     onSubmit: (values)  => {
       // enviar valores a la base de datos
-      // axios
-      // .post('http://localhost:1337/api/auth/local/register', {
-      //   username: values.name,
-      //   email: values.mail,
-      //   password: values.name,
-      // })
-      // .then(res => {
-      // })
-      // .catch(err => {
-      //   console.log(err)
-      // })
+     axios
+     .post('http://localhost:1337/api/auth/local/register', {
+       username: values.name,
+       email: values.mail,
+       password: values.password,
+       phone: values.phone,
+      address: values.address,
+      neighborhood: values.neighborhood,
+      location: values.locality,
+      descriptionHouse: values.descriptionHouse,
+     })
+     .then(response => {
+    console.log('Well done!');
+    console.log('User profile', response.data.user);
+    console.log('User token', response.data.jwt);
+    registerUser(response.data.user);
+    history.push("/carrocompras/{}/checkout");
+     })
+     .catch(error => {
+        console.log('An error occurred:', error.response);
+     })
 
   }
   })
@@ -129,6 +148,20 @@ export default function Adress() {
                   <input className="xd" type="text" name="mail"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
                 </div>
                 {formik.touched.mail && formik.errors.mail && <p className="errors-form">{formik.errors.mail}</p>}
+              </label>
+               <label className="andes-form-control">
+                <span className="andes-form-control__label">Contraseña</span>
+                <div className="andes-form-control__control">
+                  <input className="xd" type="password" name="password" onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                </div>
+                {formik.touched.password && formik.errors.password && <p className="errors-form">{formik.errors.general}</p>}
+              </label>
+              <label className="andes-form-control">
+                <span className="andes-form-control__label">Repetir Contraseña</span>
+                <div className="andes-form-control__control">
+                  <input className="xd" type="password" name="repeatPassword" onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                </div>
+                {formik.touched.repeatPassword && formik.errors.repeatPassword && <p className="errors-form">{formik.errors.repeatPassword}</p>}
               </label>
               <label className="andes-form-control andes-form-control-long">
                 <span className="andes-form-control__label">

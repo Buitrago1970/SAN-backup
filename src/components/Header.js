@@ -12,6 +12,7 @@ const Header = () => {
   const {
     state: { cart , user },
   } = useContext(Appcontext);
+  debugger
   return (
     <>
       <div className="header">
@@ -38,7 +39,7 @@ const Header = () => {
         </div>
         <div className="">
           {user[0] ? ( <Link to="/login" title="Inicio" className="options">
-            {user[0].name}
+            {user[0].username}
             </Link> ) : null}
         </div>
         <div className="container-shopping-cart">
