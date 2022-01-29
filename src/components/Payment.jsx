@@ -1,14 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./styles/Payment.css";
 import { Link } from "react-router-dom";
 
 import Appcontext from "../context/Appcontext";
 import { handleSumTotal } from "../utils/index";
 
-export default function Payment({ data, route }) {
+import PopUpLogin from "../components/PopUpLogin";
+
+export default function Payment({ data }) {
   const {
     state: { cart, user },
   } = useContext(Appcontext);
+
+  // set poUp login
+  const [buttonPopUp , setButtonPopUp] = useState(false);
 
   // declarando variables para envio gratuito
   const numEnvioGratis = 50000;
@@ -56,9 +61,11 @@ export default function Payment({ data, route }) {
               <button className="btn-payment">Continuar</button>
             </Link>
           ) : (
-          <Link to={route}>
-            {data && <button className="button btn-payment">{data}</button>}
-          </Link>)
+            <>
+            <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>{data}</button>
+            <PopUpLogin trigger={buttonPopUp} closePopUp={setButtonPopUp}/>
+            </>
+            )
           }
         </div>
       </div>

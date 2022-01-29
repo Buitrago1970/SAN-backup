@@ -20,7 +20,7 @@ export default function Adress() {
       neighborhood:"",
       address:'',
       mail:'',
-    password:'',
+      password:'',
       repeatPassword:'',
       phone:'',
       descriptionHouse:''
@@ -75,11 +75,15 @@ export default function Adress() {
       descriptionHouse: values.descriptionHouse,
      })
      .then(response => {
-    console.log('Well done!');
+       if(response.data.jwt){
+            console.log('Well done!');
     console.log('User profile', response.data.user);
     console.log('User token', response.data.jwt);
     registerUser(response.data.user);
     history.push("/carrocompras/{}/checkout");
+        }else{
+          console.log('Something went wrong');
+        }
      })
      .catch(error => {
         console.log('An error occurred:', error.response);

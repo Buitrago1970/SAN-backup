@@ -1,0 +1,95 @@
+.popup-login{
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+    background: linear-gradient( 
+0deg
+ , rgb(175 175 175 / 70%) 0%, #1212122e 52%, rgb(174 174 175 / 67%) 100%);
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.popup-login-content{
+position: relative;
+    padding: 32px 32px;
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 14px -2px #7a7a7a;
+}
+.close-popup{display: flex;
+    justify-content: flex-end;
+height: 20px;    
+}
+    .close-popup-login{
+     border: none;
+    background: none;
+
+    }
+    .close-popup-login:hover{
+        cursor: pointer;
+        color: rgb(196, 61, 61);
+    }
+    .label-login{
+        font-size: 14px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 25px 0;
+    }
+    .input-login{
+        background: rgba(192, 192, 192, 0.452) !important;
+    }
+    .btn-login{
+        background: #1877f2;
+    color: #fff !important;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 104%;
+    }
+    .btn-login:hover{
+        background: rgb(19, 109, 228);}
+.link-reset-password{
+   margin-top: 20px;
+}
+.reset-password{
+    color: #1877f2;
+    font-size: 14px;
+    font-weight: 500;
+}
+.reset-password:hover{
+       text-decoration: underline;
+}
+.btn-register:hover{
+    background: #3eaa26;
+}
+.btn-register{
+        background: #42b729;
+        color: #fff !important;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+}
+.link-signup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

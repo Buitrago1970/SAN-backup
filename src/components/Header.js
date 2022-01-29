@@ -12,7 +12,6 @@ const Header = () => {
   const {
     state: { cart , user },
   } = useContext(Appcontext);
-  debugger
   return (
     <>
       <div className="header">
