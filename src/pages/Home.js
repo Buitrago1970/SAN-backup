@@ -1,11 +1,23 @@
-import React from "react";
+import * as React from "react";
+import {useContext ,useEffect} from "react";
+import { getMeApi } from '../api/user';
+import Appcontext from "../context/Appcontext";
 
 //styles
 import "./styles/home.css";
 
 import Navbar from "../components/Navbar";
-class Home extends React.Component {
-  render() {
+export default function Home() {
+
+  const { logoutUser ,loginUser} = useContext(Appcontext);
+
+   useEffect(()  => {
+    (async () =>{
+      const response = await getMeApi(logoutUser)
+      loginUser(response);
+    })()
+  },[]);
+
     return (
       <>
         <div className="container-home">
@@ -13,7 +25,4 @@ class Home extends React.Component {
         </div>
       </>
     );
-  }
 }
-
-export default Home;

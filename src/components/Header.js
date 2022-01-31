@@ -37,7 +37,7 @@ const Header = () => {
           </Link>
         </div>
         <div className="">
-          {user[0] ? ( <Link to="/login" title="Inicio" className="options">
+          {user[0] ? ( <Link to="/userprofile" title="Inicio" className="options">
             {user[0].username}
             </Link> ) : null}
         </div>

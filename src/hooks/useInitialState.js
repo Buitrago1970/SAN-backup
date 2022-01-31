@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-
 import initialState from "../initialState";
+import {removeToken} from '../utils/token'
+import {setToken} from '../utils/token'
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
@@ -71,14 +72,34 @@ const useInitialState = () => {
       cart: state.cart.filter((item) => item.slug !== product.slug),
     });
   };
+  //register user
   const registerUser =  (payload)=>{
+    setToken(payload.jwt)
     setState({
       ...state,
-      user: [ ...state.user, payload]
+      user: [ ...state.user, payload.user], 
     })
+    debugger
   }
-   
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser };
+  //login user
+
+ const loginUser =  (payload, idUSer)=>{
+   setState({
+    ...state,
+    user: [ ...state.user, payload],
+    idUser:[ ...state.idUser, idUSer]  
+   })
+ }
+  //logout user
+  const logoutUser = () => {
+    removeToken();
+    setState({
+      ...state,
+      user: [],
+      idUser:[]
+    });
+  };
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser };
 };
 
 export default useInitialState;

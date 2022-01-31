@@ -1,4 +1,5 @@
 const initialState = {
+  idUser:[],
   user: [],
   cart: [],
   mylist: [],

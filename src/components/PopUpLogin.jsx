@@ -1,11 +1,30 @@
-import React from 'react';
+import * as React from 'react';
+import { useContext, useEffect } from 'react';
+import jwt_decode from 'jwt-decode';
 
 import './styles/PopUpLogin.css';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { setToken, getToken } from '../utils/token';
+import axios from 'axios';
+import Appcontext from '../context/Appcontext';
 
 export default function PopUpLogin(props) {
+  const history = useHistory();
+  const {loginUser} = useContext(Appcontext);
+
+  //  useEffect(() => {
+  //    const token = getToken();
+  //    if (token) {
+  //     const decoded = jwt_decode(token);
+
+  //      loginUser(token, decoded);
+  //    }else{
+  //      loginUser(null, null);
+  //    }
+  //  },[]);
+
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
@@ -23,9 +42,19 @@ export default function PopUpLogin(props) {
     } 
     return errores
   },
-    onSubmit: (values) => {
-      debugger
-      console.log(values);
+    onSubmit: async  (values) => {
+  const { data } = await axios.post('http://localhost:1337/api/auth/local', {
+  identifier: values.mail,
+  password: values.password,
+});
+if(data.jwt){
+  const decoded = jwt_decode(data.jwt).id;
+  setToken(data.jwt);
+  loginUser(data.user, decoded);
+}else{
+  alert('Usuario o contraseña incorrectos');
+}
+ 
     }
   });
   return (props.trigger)?(

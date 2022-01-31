@@ -76,11 +76,8 @@ export default function Adress() {
      })
      .then(response => {
        if(response.data.jwt){
-            console.log('Well done!');
-    console.log('User profile', response.data.user);
-    console.log('User token', response.data.jwt);
-    registerUser(response.data.user);
-    history.push("/carrocompras/{}/checkout");
+          registerUser(response.data);
+          history.push("/carrocompras/{}/checkout");
         }else{
           console.log('Something went wrong');
         }
