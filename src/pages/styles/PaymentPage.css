@@ -1,0 +1,33 @@
+.payment{
+
+}
+.method-container{
+}
+.page-payment-title{
+  margin-bottom: 50px;
+}
+.payment-method{
+    display: flex;
+    margin: 40px 10px;
+    align-items: center;
+    border-bottom: 1px solid #b7b7b7;
+    padding-bottom: 35px;
+}
+
+.payment-method-icon{
+width: 45px;
+}
+.payment-method-icon img{
+width: 100%;
+}
+.payment-method-text{
+padding-left: 20px;
+}
+.payment-method-title{
+font-size: 17px;
+    margin-bottom: 3px;
+}
+.payment-method-description{
+font-size: 13px;
+    color: #424242;
+}

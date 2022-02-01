@@ -5,7 +5,6 @@ import "./styles/header.css";
 
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
-import logo from "../images/logo.png";
 import Appcontext from "../context/Appcontext";
 
 const Header = () => {

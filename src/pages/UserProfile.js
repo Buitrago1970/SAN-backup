@@ -1,10 +1,11 @@
 import * as React from 'react';
  import {   useContext } from 'react';
-// import { getMeApi } from '../api/user';
+ import { removeToken } from '../utils/token';
 import Appcontext from '../context/Appcontext';
 
 export default function UserProfile() { 
   const {logoutUser} = useContext(Appcontext);
+
   // const [user, setUser] = useState(undefined);
 
   // useEffect(()  => {
@@ -17,7 +18,7 @@ export default function UserProfile() {
   return (<>
   
   <div>
-      <button onClick={logoutUser}>
+      <button onClick={logoutUser ,removeToken}>
           Cerrar Sesion
       </button>
   </div>

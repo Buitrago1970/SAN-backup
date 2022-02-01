@@ -79,7 +79,6 @@ const useInitialState = () => {
       ...state,
       user: [ ...state.user, payload.user], 
     })
-    debugger
   }
   //login user
 

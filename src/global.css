@@ -33,6 +33,9 @@ ul {
   font-size: 15px;
   color: #292929;
 }
+hr{
+  margin: 0;
+}
 ::-webkit-scrollbar {
   width: 5px;
 }

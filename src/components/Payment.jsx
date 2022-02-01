@@ -7,7 +7,7 @@ import { handleSumTotal } from "../utils/index";
 
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({ data }) {
+export default function Payment({ data , route }) {
   const {
     state: { cart, user },
   } = useContext(Appcontext);
@@ -57,7 +57,7 @@ export default function Payment({ data }) {
             </div>
           </div>
           {user[0] ? (
-            <Link to={'/carrocompras/{}/checkout'}>
+            <Link to={route}>
               <button className="btn-payment">Continuar</button>
             </Link>
           ) : (
