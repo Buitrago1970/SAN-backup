@@ -15,6 +15,7 @@ import Payment from "../components/Payment";
 export default function PaymentPage() {
 
   const {state:{user}} = useContext(Appcontext)
+
     const PAYMENT_METHODS = [
     {
       id: 1,
@@ -34,6 +35,7 @@ export default function PaymentPage() {
       image: iconoTarjeDebito
     },
   ];
+
       return (
         <div className="main-container">
         <div className="hero-shopping-cart">
@@ -42,11 +44,16 @@ export default function PaymentPage() {
           <SendDate user={user[0]} />
            
 <div className='shopping-list'> 
-          <p class="cart-length-title page-payment-title">Formas de pago</p>
+          <p className="cart-length-title page-payment-title">Formas de pago</p>
           <div className="payment method-container">
              {PAYMENT_METHODS.map(payment => (
           <>
-            <div className="payment-method">
+            <div className="payment-method" key={payment.id}>
+              <label className="radio__label">
+                <input type="radio"  name="radio"/>
+                <span className='checkmark'></span>
+              </label>
+
               <div className="payment-method-icon">
                 <img src={payment.image} alt="Efectivo" />
                 </div>
