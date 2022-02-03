@@ -18,7 +18,7 @@ export default function ShoppingCart() {
           <Address user={user[0]}/>
           <ShoppingList />
         </div>
-        {!cart.length ? (null) : ( <Payment data={"Proceder al pago"} route={"/carrocompras/{}/checkout"}/>)}
+        {!cart.length ? (null) : ( <Payment data={"Continuar"} route={"/carrocompras/{}/checkout"}/>)}
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function ShoppingCart() {
           <SendDate user={user[0]} />
           <ShoppingList hideButtons={hideButtons}/>
         </div>
-        <Payment data={"Proceder al pago"} route={"/carrocompras/payment"} />
+        <Payment data={"Continuar"} route={"/carrocompras/payment"} />
       </div>
     </div>
   );

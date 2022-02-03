@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import Appcontext from '../context/Appcontext';
 import Address from "../components/Address";
+
 import SendDate from "../components/SendDate";
 
 import "./styles/PaymentPage.css"
@@ -12,9 +13,13 @@ import iconoTarjeDebito from "../images/icono_tarjeta_debito.svg"
 
 import Payment from "../components/Payment";
 
-export default function PaymentPage() {
 
+
+export default function PaymentPage() {
+  
   const {state:{user}} = useContext(Appcontext)
+  // esconder en boton de payment para mostar en boton de enviar pedido
+  const [paymentMethod, setPaymentMethod] = useState(true)
 
     const PAYMENT_METHODS = [
     {
@@ -41,39 +46,10 @@ export default function PaymentPage() {
         <div className="hero-shopping-cart">
           <div>
             <Address user={user[0]} />
-          <SendDate user={user[0]} />
-           
-<div className='shopping-list'> 
-          <p className="cart-length-title page-payment-title">Formas de pago</p>
-          <div className="payment method-container">
-             {PAYMENT_METHODS.map(payment => (
-          <>
-            <div className="payment-method" key={payment.id}>
-              <label className="radio__label">
-                <input type="radio"  name="radio"/>
-                <span className='checkmark'></span>
-              </label>
-
-              <div className="payment-method-icon">
-                <img src={payment.image} alt="Efectivo" />
-                </div>
-                <div className='payment-method-text'>
-             <div className="payment-method-title">
-                  <p>{payment.title}</p>
-                  </div>
-                  <div className="payment-method-description">
-                    <p>{payment.description}</p>
-                    </div>
-                  </div>
-                  </div>
-         
-                </>
-            ))}
-                </div>
+            stripe
           </div>
                     </div>
-          <Payment data={"Proceder al pago"} route={"#"}/>
+          <Payment data={"Proceder al Pago"} route={"/succes"} buttonSendOrder={paymentMethod}/>
         </div>
-      </div>
     )
 }

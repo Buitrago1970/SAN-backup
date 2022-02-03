@@ -36,6 +36,9 @@ ul {
 hr{
   margin: 0;
 }
+.hidden{
+  display: none;
+}
 ::-webkit-scrollbar {
   width: 5px;
 }

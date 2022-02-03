@@ -16,7 +16,7 @@ export default function Home() {
       const response = await getMeApi(logoutUser)
       loginUser(response);
     })()
-  },[]);
+    },[]);
 
     return (
       <>

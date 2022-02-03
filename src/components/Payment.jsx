@@ -1,17 +1,41 @@
 import React, { useContext, useState } from "react";
 import "./styles/Payment.css";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import Appcontext from "../context/Appcontext";
 import { handleSumTotal } from "../utils/index";
 
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({ data , route }) {
+export default function Payment({ data , route, buttonSendOrder }) {
   const {
-    state: { cart, user },
+    state: { cart, user,paymentMethods },
   } = useContext(Appcontext);
 
+  let hiden = "";
+  if(buttonSendOrder){
+    hiden += 'hidden'
+  }
+
+  //send order
+  const handleSendOrder = async () => {
+    await axios
+      .post('http://localhost:1337/api/orders', {
+        user: user[0],
+        cart: cart,
+        amount:30000,
+        // amount: handleSumTotal(cart),
+        paymentMethod:'sin pago',
+        idPayment: 1,
+      })
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
   // set poUp login
   const [buttonPopUp , setButtonPopUp] = useState(false);
 
@@ -56,11 +80,16 @@ export default function Payment({ data , route }) {
               {total >= numEnvioGratis ? <p>$ {totalPunto}</p>   : <p className="costo-envio">$ {totalPedidoPunto}</p> }
             </div>
           </div>
-          {user[0] ? (
-            <Link to={route}>
-              <button className="btn-payment">Continuar</button>
+          { buttonSendOrder ?(
+             <Link  onClick={handleSendOrder()}>
+              <button className="btn-payment">{data}</button>
             </Link>
-          ) : (
+          ) : (null)}
+          {user[0] ? (
+            <Link to={route} className={hiden}>
+              <button className="btn-payment">{data}</button>
+            </Link>
+          ) :  (
             <>
             <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>{data}</button>
             <PopUpLogin trigger={buttonPopUp} closePopUp={setButtonPopUp}/>
