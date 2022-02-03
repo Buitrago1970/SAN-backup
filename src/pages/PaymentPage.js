@@ -7,14 +7,12 @@ import SendDate from "../components/SendDate";
 
 import "./styles/PaymentPage.css"
 
-import iconoEfectivo from "../images/icono_billete.svg"
-import iconoTarjetaCredito from "../images/icono_tarjeta_credito.svg"
-import iconoTarjeDebito from "../images/icono_tarjeta_debito.svg"
 
 import Payment from "../components/Payment";
 
-
-
+import iconoEfectivo from '../images/icono_billete.svg';
+import iconoTarjetaCredito from "../images/icono_tarjeta_credito.svg";
+import iconoTarjeDebito from "../images/icono_tarjeta_debito.svg";
 export default function PaymentPage() {
   
   const {state:{user}} = useContext(Appcontext)
