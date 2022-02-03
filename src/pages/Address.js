@@ -61,8 +61,13 @@ export default function Adress() {
     }
       return errores;
     } ,
-    onSubmit: (values)  => {
+    onSubmit: async (values)  => {
       // enviar valores a la base de datos
+      const response = registerUser(values);
+      if(response){
+        history.push("/carrocompras/{}/checkout");
+      }else
+
      axios
      .post('http://localhost:1337/api/auth/local/register', {
        username: values.name,
