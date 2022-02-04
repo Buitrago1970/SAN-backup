@@ -2,9 +2,9 @@ import React from 'react';
 
 import "./styles/PaymentMethods.css";
 
-export default function PaymentMethods({data}) {
-    debugger;
-  return (
+export default function PaymentMethods({data, setPaymentMethodsData}) {
+
+    return (
       <>
      <br />
    <div className="shopping-list">
@@ -13,7 +13,7 @@ export default function PaymentMethods({data}) {
              <div className="payment-methods-container">
                     <ul className='badge-type-selection__list'>
                         {data.map((item, index) => (
-                        <li className='badge-type-selection__list-item' key={index}>
+                        <li className='badge-type-selection__list-item' key={index} onClick={()=>setPaymentMethodsData(item.name)}>
                                 <label className="badge-type-selection__label">
                                     <div className='ui-radio-element'>
                                         <input type='radio' name='radio' />

@@ -2,6 +2,6 @@ const initialState = {
   user: [],
   idUser:[],
   cart: [],
-  paymentMethods: [],
+  paymentMethod: [],
 };
 export default initialState;

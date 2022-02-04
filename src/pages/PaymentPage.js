@@ -16,10 +16,19 @@ import iconoTarjetaCredito from "../images/icono_tarjeta_credito.svg";
 import iconoTarjeDebito from "../images/icono_tarjeta_debito.svg";
 export default function PaymentPage() {
   
-  const {state:{user}} = useContext(Appcontext)
+  const {state:{user, setPaymentMethod}} = useContext(Appcontext)
   // esconder en boton de payment para mostar en boton de enviar pedido
-  const [paymentMethod, setPaymentMethod] = useState(true)
-
+  const [hideButton, setHideButton] = useState(true)
+  //estado de los metodos de pago
+  const [paymentMethodsData, setPaymentMethodsData] = useState()
+  // funcion guardar metodo de pago
+  const handlePaymentMethod = () => {
+  if(paymentMethodsData){
+    setPaymentMethod(paymentMethodsData)
+  }else{
+    alert("Seleccione un metodo de pago")
+  }
+  }
     const data_payment_methods = [
     {
       id: 1,
@@ -39,17 +48,15 @@ export default function PaymentPage() {
       image: iconoTarjeDebito
     },
   ];
-
       return (
         <div className="main-container">
         <div className="hero-shopping-cart">
           <div>
             <Address user={user[0]} />
            <SendDate user={user[0]} />
-
-             <PaymentMethods data={data_payment_methods}/>
+             <PaymentMethods data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
           </div>
-          <Payment data={"Proceder al Pago"} route={"/succes"} buttonSendOrder={paymentMethod}/>
+          <Payment data={"Proceder al Pago"} route={"/succes"} buttonSendOrder={hideButton} handlePaymentMethod={handlePaymentMethod}/>
 
                     </div>
         </div>

@@ -98,7 +98,15 @@ const useInitialState = () => {
       idUser:[]
     });
   };
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser };
+
+  //set payment method
+  const setPaymentMethod = (payload) => {
+    setState({
+      ...state,
+      paymentMethod: payload,
+    });
+  };
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,setPaymentMethod };
 };
 
 export default useInitialState;

@@ -1,39 +1,21 @@
 import React, { useContext, useState } from "react";
 import "./styles/Payment.css";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 import Appcontext from "../context/Appcontext";
 import { handleSumTotal } from "../utils/index";
 
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({ data , route, buttonSendOrder }) {
+export default function Payment({ data , route, buttonSendOrder, handlePaymentMethod }) {
   const {
-    state: { cart, user,paymentMethods },
+    state: { cart, user },
   } = useContext(Appcontext);
   // hide button payment 
   let hiden = "";
   if(buttonSendOrder){
     hiden += 'hidden'
   }
-
-  //send order
-  const handleSendOrder = async () => {
-    await axios
-      .post('http://localhost:1337/api/orders', {
-        user: user.id,
-        products: cart,
-        paymentMethod: paymentMethods.id,
-        j: 500
-      })
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
   // set poUp login
   const [buttonPopUp , setButtonPopUp] = useState(false);
 
@@ -79,9 +61,7 @@ export default function Payment({ data , route, buttonSendOrder }) {
             </div>
           </div>
           { buttonSendOrder ?(
-             <Link  onClick={handleSendOrder()}>
-              <button className="btn-payment">{data}</button>
-            </Link>
+              <button className="btn-payment" onClick={()=>handlePaymentMethod()}>button correcto</button>
           ) : (null)}
           {user[0] ? (
             <Link to={route} className={hiden}>
