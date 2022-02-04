@@ -18,7 +18,7 @@ export default function SendData( {user}) {
     <>
     {user && <div className="container-send-date">
         <div className="send-date-data">   
-            <p className="send-data-p">Llega el {'lunes'} a tu direccion</p>
+            <p className="send-data-p">Llega el {'dia x'} a tu direccion</p>
         { total >= numEnvioGratis ? <p className="send-data-p send-data-p-cost">
               Gratis
           </p> : <p>$ {valorEnvio}.000</p> }

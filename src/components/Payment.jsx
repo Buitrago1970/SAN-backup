@@ -12,7 +12,7 @@ export default function Payment({ data , route, buttonSendOrder }) {
   const {
     state: { cart, user,paymentMethods },
   } = useContext(Appcontext);
-
+  // hide button payment 
   let hiden = "";
   if(buttonSendOrder){
     hiden += 'hidden'
@@ -22,12 +22,10 @@ export default function Payment({ data , route, buttonSendOrder }) {
   const handleSendOrder = async () => {
     await axios
       .post('http://localhost:1337/api/orders', {
-        user: user[0],
-        cart: cart,
-        amount:30000,
-        // amount: handleSumTotal(cart),
-        paymentMethod:'sin pago',
-        idPayment: 1,
+        user: user.id,
+        products: cart,
+        paymentMethod: paymentMethods.id,
+        j: 500
       })
       .then(res => {
         console.log(res);

@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 
 import { AiOutlineSearch } from "react-icons/ai";
-import ProductsList from "../components/ProductsList";
+import ProductsList from "./ProductsList";
 import "./styles/navbar.css";
 
 function Navbar() {

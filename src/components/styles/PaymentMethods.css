@@ -1,0 +1,88 @@
+.payment-methods{
+
+}
+.cart-length-title{
+
+}
+.payment-methods-container{
+
+}
+.badge-type-selection__list{
+
+}
+.badge-type-selection__list-item{
+}
+.badge-type-selection__label{
+    display: flex;
+cursor: pointer;
+
+    align-items: center;
+    margin: 15px 10px;
+    padding: 15px 0 25px 0;
+    border-bottom: #7e7e7e 1px solid;
+}
+.ui-radio-element{
+margin: 0 24px;    
+    width: 16px;
+    box-sizing: border-box;
+    height: 16px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+.ui-radio-element input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.ui-radio-element__control{
+position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #eee;
+    border-radius: 50%;
+}
+.ui-radio-element input:checked ~ .ui-radio-element__control{
+    background: #3391ff;
+}
+.ui-radio-element__control:after{
+    content: '';
+    position: absolute;
+ display: none;
+
+}
+.ui-radio-element .ui-radio-element__control:after{
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ui-radio__text{
+    display: flex;
+    padding: 22px 0;
+}
+.ui-badge{
+margin: 0 12px;
+}
+.ui-badge img{
+    width: 45px;}
+.badge-type-selection__list-title{
+font-size: 18px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #333;
+    margin-bottom: 4px;
+}
+.badge-type-selection__list-description{
+font-size: 15px;
+}

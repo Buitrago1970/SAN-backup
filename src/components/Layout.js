@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./Footer.js";
+import Footer from "./Footer";
 import Header from "./Header";
 
 function Layout(props) {

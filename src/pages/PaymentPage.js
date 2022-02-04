@@ -4,6 +4,7 @@ import Appcontext from '../context/Appcontext';
 import Address from "../components/Address";
 
 import SendDate from "../components/SendDate";
+import PaymentMethods from "../components/PaymentMethods";
 
 import "./styles/PaymentPage.css"
 
@@ -19,21 +20,21 @@ export default function PaymentPage() {
   // esconder en boton de payment para mostar en boton de enviar pedido
   const [paymentMethod, setPaymentMethod] = useState(true)
 
-    const PAYMENT_METHODS = [
+    const data_payment_methods = [
     {
       id: 1,
-      title: "Efectivo",
+      name: "Efectivo",
       description: "Paga el pedido en efectivo al momento de recibirlo.",
       image:iconoEfectivo
     },
     {
       id: 2,
-      title: "Tarjeta de crédito",
+      name: "Tarjeta de crédito",
       description: "Paga el pedido con tarjeta de crédito al momento de recibirlo.",
       image: iconoTarjetaCredito},
     {
       id: 3,
-      title: "Tarjeta de débito",
+      name: "Tarjeta de débito",
       description: "Paga el pedido con tarjeta de débito al momento de recibirlo.",
       image: iconoTarjeDebito
     },
@@ -44,10 +45,13 @@ export default function PaymentPage() {
         <div className="hero-shopping-cart">
           <div>
             <Address user={user[0]} />
-            stripe
+           <SendDate user={user[0]} />
+
+             <PaymentMethods data={data_payment_methods}/>
           </div>
-                    </div>
           <Payment data={"Proceder al Pago"} route={"/succes"} buttonSendOrder={paymentMethod}/>
+
+                    </div>
         </div>
     )
 }
