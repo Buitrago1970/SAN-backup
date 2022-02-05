@@ -93,10 +93,10 @@ if(data.jwt){
           </div>
            <div className="form-group">
             <button type="submit" className="btn btn-primary btn-login">Inicia sesión</button>
-            <div className='link-reset-password'>
+            {/* <div className='link-reset-password'>
               <a href="#" className='reset-password'>¿Olvidaste tu contraseña?</a>
 
-            </div>
+            </div> */}
             </div>
           </form>
          

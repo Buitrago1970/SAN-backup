@@ -18,7 +18,6 @@ export default function ShoppingCart({hideButtons}) {
     <>
       {cart.length > 0 ? (
         <>
-         
           <br />
           <div className="shopping-list">
             <p className="cart-length-title">Carrito ({cart.length})</p>

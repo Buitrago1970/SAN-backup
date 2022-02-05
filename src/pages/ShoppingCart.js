@@ -15,7 +15,7 @@ export default function ShoppingCart() {
     <div className="main-container">
       <div className="hero-shopping-cart">
         <div>
-          <Address user={user[0]}/>
+          <Address user={user[0]} cart={cart}/>
           <ShoppingList />
         </div>
         {!cart.length ? (null) : ( <Payment data={"Continuar"} route={"/carrocompras/{}/checkout"}/>)}

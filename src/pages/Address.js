@@ -15,9 +15,8 @@ export default function Adress() {
   const formik  =  useFormik ({
     initialValues:{
       name:'',
-      department:'',
+      department:'cundinamarca',
       locality:'',
-      neighborhood:"",
       address:'',
       mail:'',
       password:'',
@@ -29,7 +28,6 @@ export default function Adress() {
       name: Yup.string().required(),
        department: Yup.string().required(),
         locality: Yup.string().required(),
-        neighborhood: Yup.string().required(),
         address: Yup.string().required(),
         mail: Yup.string().required(),
         password: Yup.string().required(),
@@ -56,7 +54,7 @@ export default function Adress() {
     }
 
     // Validacion general
-    if( !formData.phone || !formData.department || !formData.locality || !formData.neighborhood || !formData.address ){
+    if( !formData.phone || !formData.department || !formData.locality  || !formData.address ){
       errores.general = 'Por favor llena todos los campos'
     }
       return errores;
@@ -67,7 +65,6 @@ export default function Adress() {
       if(response){
         history.push("/carrocompras/{}/checkout");
       }else
-
      axios
      .post('http://localhost:1337/api/auth/local/register', {
        username: values.name,
@@ -75,7 +72,6 @@ export default function Adress() {
        password: values.password,
        phone: values.phone,
       address: values.address,
-      neighborhood: values.neighborhood,
       location: values.locality,
       descriptionHouse: values.descriptionHouse,
      })
@@ -121,9 +117,12 @@ export default function Adress() {
                     Departamento
                   </span>
                   <div className="andes-form-control__control">
-                    <input className="xd" type="text" name="department" onChange={formik.handleChange} onBlur={formik.handleBlur}></input>
+                      {/*input not editable for the time being*/}
+                    <input className="xd input_departamento" type="text" name="department" onChange={formik.handleChange} onBlur={formik.handleBlur} value={'Cundinamarca'} readonly="readonly"></input>
                   </div>
                   {formik.touched.department && formik.errors.department && <p className="errors-form">{formik.errors.general}</p>}
+                   <p className="andes-form-coactiventrol_bottom">Por el momento solo tenemos servicio en este departamento.</p>
+
                 </label>
                 <label className="andes-form-control">
                   <span className="andes-form-control__label">Localidad</span>
@@ -133,13 +132,6 @@ export default function Adress() {
                   {formik.touched.locality && formik.errors.locality && <p className="errors-form">{formik.errors.general}</p>}
                 </label>
               </div>
-              <label className="andes-form-control">
-                <span className="andes-form-control__label">Barrio</span>
-                <div className="andes-form-control__control">
-                  <input className="xd" type="text" name="neighborhood"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
-                </div>
-                {formik.touched.neighborhood && formik.errors.neighborhood && <p className="errors-form">{formik.errors.general}</p>}
-              </label>
               <label className="andes-form-control">
                 <span className="andes-form-control__label">Direccion</span>
                 <div className="andes-form-control__control">
@@ -151,7 +143,7 @@ export default function Adress() {
               <label className="andes-form-control">
                 <span className="andes-form-control__label">Correo</span>
                 <div className="andes-form-control__control">
-                  <input className="xd" type="text" name="mail"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                  <input className="xd" type="text" name="mail"onChange={formik.handleChange}onBlur={formik.handleBlur}      placeholder="Correo Electronico"></input>
                 </div>
                 {formik.touched.mail && formik.errors.mail && <p className="errors-form">{formik.errors.mail}</p>}
               </label>
@@ -184,7 +176,7 @@ export default function Adress() {
                   ></input>
                 </div>
                 {formik.touched.phone && formik.errors.phone && <p className="errors-form">{formik.errors.department}</p>}
-                <p className="andes-form-coactiventrol_bottom"> Llamaran a este numero si hay algun problema en el envio.</p>
+                
               </label>
               <label className="andes-form-control andes-form-control-to-long">
                 <span className="andes-form-control__label" maxLength="128">

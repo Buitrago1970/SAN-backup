@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { GoLocation } from "react-icons/go";
 import "./styles/Address.css";
 
-export default function Address({user}) {
+export default function Address({user, cart }) {
+  debugger
   return (
     <>
    {
-      user && <div className="container-address">
+      user &&  cart.length > 0 ? <div className="container-address">
       <div className="title-container">
         <div className="secondary-title">Opciones de envío a</div>
       </div>
@@ -24,7 +25,8 @@ export default function Address({user}) {
       {user ? <Link to="/carrocompras/{}/direccion" className="modify">Modificar dirección</Link>: <Link to="/carrocompras/{}/direccion" className="modify">Agregar dirección</Link>}
 
     </div> 
-    </div>
+    </div> : 
+    null
     }
     </>
   );
