@@ -5,7 +5,7 @@ const Contactos = () => {
   return (
     <>
       <div className="main-container">
-        <h1 className="main-title-contact">Contacto</h1>
+        <h1 className="main-title-contact">Contactos</h1>
         <div className="contact-container">
           <div className="contaner-img-contact" align="center">
             <img className="img-contact" src={contactImg} alt="" />

@@ -3,7 +3,8 @@ import { useState } from "react";
 import initialState from "../initialState";
 import {removeToken} from '../utils/token'
 import {setToken} from '../utils/token'
-import axios from 'axios'
+import {getToken} from '../utils/token'
+import { handleSumTotal } from "../utils";
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
@@ -109,23 +110,31 @@ const useInitialState = () => {
   };
 
   //send order to server
-   const sendOrder =  (payload) => {
-     axios 
-     .post('http://localhost:1337/api/orders', {
-        user: '5f4c9f8b8b9e7a0f8c8b8b8b',
-        products: 'xd',
-        total: 5,
-        paymentMethod: payload,
-        status: 'pending',
-     })
-      .then(res => {
-        console.log(res);
-      })
-      .catch(err => {
-        console.log(err);
-      }
-      );
+   const sendOrder = async (payload) => {
+     debugger 
+      const token = getToken();
+      const url = "http://localhost:1337/api/orders"
+      const data = { "data": {
+                 "user": state.user[0],
+                 "products": state.cart.map(item => item.slug),
+                 "total": handleSumTotal(state.cart) ,
+                 "paymentMethod": state.paymentMethod[0],
+                 "status": "pending",
    }
+}
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${token}`,
+          },
+          body: JSON.stringify(data),
+      })
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
+   }
+
 
   return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,setPaymentMethod,sendOrder };
 };

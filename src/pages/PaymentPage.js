@@ -20,11 +20,11 @@ export default function PaymentPage() {
   //estado de los metodos de pago
   const [paymentMethodsData, setPaymentMethodsData] = useState()
   // funcion guardar metodo de pago
-  const handlePaymentMethod = () => {
+  const handlePaymentMethod =() => {
   if(paymentMethodsData){
     setPaymentMethod(paymentMethodsData)
     //send data to server
-    debugger
+
     sendOrder(paymentMethodsData)
     //redireccionar a la pagina de confirmacion
 

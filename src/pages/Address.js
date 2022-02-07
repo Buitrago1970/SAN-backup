@@ -122,7 +122,6 @@ export default function Adress() {
                   </div>
                   {formik.touched.department && formik.errors.department && <p className="errors-form">{formik.errors.general}</p>}
                    <p className="andes-form-coactiventrol_bottom">Por el momento solo tenemos servicio en este departamento.</p>
-
                 </label>
                 <label className="andes-form-control">
                   <span className="andes-form-control__label">Localidad</span>
@@ -130,6 +129,8 @@ export default function Adress() {
                     <input className="xd" type="text" name="locality"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
                   </div>
                   {formik.touched.locality && formik.errors.locality && <p className="errors-form">{formik.errors.general}</p>}
+                <p className="andes-form-coactiventrol_bottom">solo pedidos dentro de la dirección calle 200 con autopista hasta la 85.</p>
+              
                 </label>
               </div>
               <label className="andes-form-control">
