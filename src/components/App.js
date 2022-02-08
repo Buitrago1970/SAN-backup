@@ -12,6 +12,7 @@ import ShoppingCart from "../pages/ShoppingCart";
 import Address from "../pages/Address";
 import Checkout from "../pages/Checkout";
 import Payment from "../pages/PaymentPage.js";
+import Success from "../pages/Success";
 import UserProfile from "../pages/UserProfile";
 import Appcontext from "../context/Appcontext";
 import useInitialState from "../hooks/useInitialState";
@@ -50,6 +51,7 @@ function App() {
               path="/carrocompras/payment"
               component={Payment}
             />
+            <Route exact path="/success" component={Success} />
             <Route 
             exact
             path="/userprofile"

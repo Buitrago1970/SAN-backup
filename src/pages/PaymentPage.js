@@ -6,6 +6,8 @@ import Appcontext from '../context/Appcontext';
 import SendDate from "../components/SendDate";
 import Address from "../components/Address";
 import Payment from "../components/Payment";
+import Success from "./Success"; 
+import { useHistory } from "react-router-dom";
 
 import "./styles/PaymentPage.css"
 import iconoEfectivo from '../images/icono_billete.svg';
@@ -13,7 +15,9 @@ import iconoTarjetaCredito from "../images/icono_tarjeta_credito.svg";
 import iconoTarjeDebito from "../images/icono_tarjeta_debito.svg";
 
 export default function PaymentPage() {
-  
+  //useHistory
+  const history = useHistory();
+
   const {state:{user, cart},setPaymentMethod,sendOrder} = useContext(Appcontext)
   // esconder en boton de payment para mostar en boton de enviar pedido
   const [hideButton, setHideButton] = useState(true)
@@ -27,6 +31,7 @@ export default function PaymentPage() {
 
     sendOrder(paymentMethodsData)
     //redireccionar a la pagina de confirmacion
+    history.push("/success")
 
   }else{
     alert("Seleccione un metodo de pago")
