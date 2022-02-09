@@ -72,7 +72,7 @@ export default function Adress() {
        password: values.password,
        phone: values.phone,
       address: values.address,
-      location: values.locality,
+      locality: values.locality,
       descriptionHouse: values.descriptionHouse,
      })
      .then(response => {

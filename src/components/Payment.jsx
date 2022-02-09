@@ -11,14 +11,14 @@ export default function Payment({ data , route, buttonSendOrder, handlePaymentMe
   const {
     state: { cart, user },
   } = useContext(Appcontext);
+  // set poUp login
+  const [buttonPopUp , setButtonPopUp] = useState(false);
+
   // hide button payment 
   let hiden = "";
   if(buttonSendOrder){
     hiden += 'hidden'
   }
-  // set poUp login
-  const [buttonPopUp , setButtonPopUp] = useState(false);
-
   // declarando variables para envio gratuito
   const numEnvioGratis = 50000;
   const valorEnvio = 5000;
@@ -61,11 +61,11 @@ export default function Payment({ data , route, buttonSendOrder, handlePaymentMe
             </div>
           </div>
           { buttonSendOrder ?(
-              <button className="btn-payment" onClick={()=>handlePaymentMethod()}>button correcto</button>
+              <button className="btn-payment" onClick={()=>handlePaymentMethod(total)}>Enviar pedido</button>
           ) : (null)}
           {user[0] ? (
             <Link to={route} className={hiden}>
-              <button className="btn-payment">{data}</button>
+              <button className="btn-payment" >{data}</button>
             </Link>
           ) :  (
             <>

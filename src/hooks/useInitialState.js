@@ -4,7 +4,7 @@ import initialState from "../initialState";
 import {removeToken} from '../utils/token'
 import {setToken} from '../utils/token'
 import {getToken} from '../utils/token'
-import { handleSumTotal } from "../utils";
+import axios from 'axios';
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
@@ -99,44 +99,55 @@ const useInitialState = () => {
       user: [],
       idUser:[]
     });
+    
   };
-
-  //set payment method
-  const setPaymentMethod = (payload) => {
-    setState({
-      ...state,
-      paymentMethod: [...state.paymentMethod, payload],
-    });
-  };
+  //set oder data
+  // const setDataForReceipt =  (toatalPedido, paymentMethod,creationDate) => {
+  //   setState({
+  //     ...state,
+  //     receipt: {
+  //       ...state.receipt,
+  //       toatalPedido: toatalPedido,
+  //       paymentMethod: paymentMethod,
+  //       creationDate: creationDate,
+  //     },
+  //   });
+  // };
 
   //send order to server
-   const sendOrder = async (payload) => {
-     debugger 
+   const sendOrder =  async (toatalPedido, paymentMethod,creationDate) => {
+     setState({
+      ...state,
+      receipt: {
+        ...state.receipt,
+        toatalPedido: toatalPedido,
+        paymentMethod: paymentMethod,
+        creationDate: creationDate,
+      },
+    });
       const token = getToken();
       const url = "http://localhost:1337/api/orders"
       const data = { "data": {
                  "user": state.user[0],
-                 "products": state.cart.map(item => item.slug),
-                 "total": handleSumTotal(state.cart) ,
-                 "paymentMethod": state.paymentMethod[0],
+                 "products": state.cart.map(item => item.slug ),
+                 "total": toatalPedido,
+                 "paymentMethod": paymentMethod,
+                "creationDate": creationDate,
                  "status": "pending",
    }
 }
-      fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`,
-          },
-          body: JSON.stringify(data),
-      })
-      .then(res => res.json())
-      .then(data => console.log(data))
-      .catch(err => console.log(err))
+try {
+   const respuesta = await axios.post(url, data, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    return respuesta;
+} catch (error) {
+  return false;
+}
    }
-
-
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,setPaymentMethod,sendOrder };
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder };
 };
 
 export default useInitialState;

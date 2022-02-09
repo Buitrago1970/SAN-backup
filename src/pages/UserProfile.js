@@ -6,14 +6,14 @@ import Appcontext from '../context/Appcontext';
 export default function UserProfile() { 
   const {logoutUser} = useContext(Appcontext);
 
-  // const [user, setUser] = useState(undefined);
+  //  const [user, setUser] = useState(undefined);
 
-  // useEffect(()  => {
-  //   (async () =>{
-  //     const response = await getMeApi(logoutUser)
-  //     console.log(response);
-  //   })()
-  // },[]);
+  //  useEffect(()  => {
+  //    (async () =>{
+  //      const response = await logoutUser();
+  //      console.log(response);
+  //    })()
+  //  },[]);
   
   return (<>
   

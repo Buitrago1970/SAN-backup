@@ -1,12 +1,11 @@
 import * as React from 'react'
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 
 import PaymentMethods from "../components/PaymentMethods";
 import Appcontext from '../context/Appcontext';
 import SendDate from "../components/SendDate";
 import Address from "../components/Address";
 import Payment from "../components/Payment";
-import Success from "./Success"; 
 import { useHistory } from "react-router-dom";
 
 import "./styles/PaymentPage.css"
@@ -18,24 +17,31 @@ export default function PaymentPage() {
   //useHistory
   const history = useHistory();
 
-  const {state:{user, cart},setPaymentMethod,sendOrder} = useContext(Appcontext)
+  let date = new Date();
+  const creationDate = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+
+  const {state:{user, cart},sendOrder} = useContext(Appcontext)
   // esconder en boton de payment para mostar en boton de enviar pedido
   const [hideButton, setHideButton] = useState(true)
   //estado de los metodos de pago
-  const [paymentMethodsData, setPaymentMethodsData] = useState()
+  const [paymentMethodsData, setPaymentMethodsData] = useState(null)
   // funcion guardar metodo de pago
-  const handlePaymentMethod =() => {
+  const handlePaymentMethod =  async (toatalPedido) => {
   if(paymentMethodsData){
-    setPaymentMethod(paymentMethodsData)
-    //send data to server
-
-    sendOrder(paymentMethodsData)
+    // set data for the receipt
+    // setDataForReceipt(toatalPedido, paymentMethodsData,creationDate )
+    //send order to server
+    const respuesta = await sendOrder(toatalPedido, paymentMethodsData, creationDate)
     //redireccionar a la pagina de confirmacion
-    history.push("/success")
 
+    if(respuesta){
+      history.push("/success")
+    }else{
+      alert("error al enviar pedido")
+    }
   }else{
-    alert("Seleccione un metodo de pago")
-  }
+      alert("Seleccione un metodo de pago")
+    }
   }
     const data_payment_methods = [
     {

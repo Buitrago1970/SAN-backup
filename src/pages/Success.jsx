@@ -1,9 +1,12 @@
-import React from 'react';
+import * as React from 'react';
+import { useContext } from 'react';
 
 import "./styles/Success.css";
+import Appcontext from '../context/Appcontext';
 
 import successIcon from "../images/Unknown.png"; 
 export default function Success() {
+    const {state:{ receipt }} = useContext(Appcontext);
   return (
       <>
       <div className='main-container main-container-success'>
@@ -18,11 +21,11 @@ export default function Success() {
                 <div className='info-container'>
                 
                     <h3>DETALLES DEL PEDIDO</h3>
-                    <p className='p-info-success-order'>Número de pedido: <span>#123456789</span></p>
-                    <p className='p-info-success-order'>Fecha de pedido: <span>12/12/2019</span></p>
+                    <p className='p-info-success-order'>Número de pedido: <span>#numero del pedido</span></p>
+                    <p className='p-info-success-order'>Fecha de pedido: <span>{receipt.creationDate}</span></p>
                     <p className='p-info-success-order'>Estado del pedido: <span>En proceso</span></p>
-                    <p className='p-info-success-order'>Total: <span>$100.00</span></p>
-                    <p className='p-info-success-order'>Entrega estimada: <span> 24 diciembre</span></p>
+                    <p className='p-info-success-order'>Total: <span>${receipt.toatalPedido}</span></p>
+                    <p className='p-info-success-order'>Entrega estimada: <span> Fecha estimada</span></p>
             </div>
 
             </div>
