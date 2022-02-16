@@ -93,6 +93,7 @@ const useInitialState = () => {
  }
   //logout user
   const logoutUser = () => {
+    debugger
      setState({
        ...state,
        user: [],

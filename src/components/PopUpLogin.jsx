@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import jwt_decode from 'jwt-decode';
 
 import './styles/PopUpLogin.css';
@@ -9,10 +9,12 @@ import * as Yup from 'yup';
 import { setToken } from '../utils/token';
 import axios from 'axios';
 import Appcontext from '../context/Appcontext';
+import { useHistory } from 'react-router-dom';
 
 export default function PopUpLogin(props) {
   const {loginUser} = useContext(Appcontext);
 
+  const history = useHistory();
   //  useEffect(() => {
   //    const token = getToken();
   //    if (token) {
@@ -42,18 +44,23 @@ export default function PopUpLogin(props) {
     return errores
   },
     onSubmit: async  (values) => {
-  const { data } = await axios.post('http://localhost:1337/api/auth/local', {
-  identifier: values.mail,
-  password: values.password,
-});
-if(data.jwt){
-  const decoded = jwt_decode(data.jwt).id;
-  setToken(data.jwt);
-  loginUser(data.user, decoded);
-}else{
-  alert('Usuario o contraseña incorrectos');
-}
- 
+      const url = 'http://localhost:1337/api/auth/local';
+      const data = {
+        identifier: values.mail,
+        password: values.password,
+      };
+      try {
+        const response = await axios.post(url, data);
+        const token = response.data.jwt;
+        const decoded = jwt_decode(token);
+        const userData = response.data.user;
+        setToken(token);
+        loginUser(userData, decoded);
+        props.closePopUp(false);
+        history.push("/carrocompras/{}/checkout");
+      } catch (error) {
+        alert('Usuario o contraseña incorrectos');
+      }
     }
   });
   return (props.trigger)?(

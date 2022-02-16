@@ -9,11 +9,11 @@ import "./styles/home.css";
 import Navbar from "../components/Navbar";
 export default function Home() {
 
-  const { logoutUser ,loginUser} = useContext(Appcontext);
+  const { loginUser} = useContext(Appcontext);
 
    useEffect(()  => {
     (async () =>{
-      const response = await getMeApi(logoutUser)
+      const response = await getMeApi();
       loginUser(response);
     })()
     },[]);
