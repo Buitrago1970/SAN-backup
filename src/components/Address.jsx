@@ -4,7 +4,6 @@ import { GoLocation } from "react-icons/go";
 import "./styles/Address.css";
 
 export default function Address({user, cart }) {
-  
   return (
     <>
    {

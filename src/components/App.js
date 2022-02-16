@@ -12,7 +12,6 @@ import Address from "../pages/Address";
 import Checkout from "../pages/Checkout";
 import Payment from "../pages/PaymentPage.js";
 import Success from "../pages/Success";
-import Error from "../pages/Error";
 import UserProfile from "../pages/UserProfile";
 import Appcontext from "../context/Appcontext";
 import useInitialState from "../hooks/useInitialState";
@@ -52,8 +51,6 @@ function App() {
               component={Payment}
             />
             <Route exact path="/success" component={Success} />
-            <Route exact path="/error" component={Error} />
-
             <Route 
             exact
             path="/userprofile"

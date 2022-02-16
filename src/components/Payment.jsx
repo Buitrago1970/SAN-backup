@@ -56,7 +56,7 @@ export default function Payment({ data , route, buttonSendOrder, handlePaymentMe
           </div>
           <div className="total-count">
             <div className="account">
-              <p>Total</p>
+              <p>Pagas</p>
               {total >= numEnvioGratis ? <p>$ {totalPunto}</p>   : <p className="costo-envio">$ {totalPedidoPunto}</p> }
             </div>
           </div>

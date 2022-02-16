@@ -71,7 +71,7 @@ class Nosotros extends React.Component {
                   />
                 </div>
                 <div className="text-container-our-team">
-                  <h3 className="name-team">Juan Buitrago</h3>
+                  <h3 className="name-team">lorem lorem</h3>
                   <p>Cortador Profesional</p>
                 </div>
               </div>
@@ -84,7 +84,7 @@ class Nosotros extends React.Component {
                   />
                 </div>
                 <div className="text-container-our-team">
-                  <h3 className="name-team">Juan Buitrago</h3>
+                  <h3 className="name-team">lorem lorem</h3>
                   <p>Cortador Profesional</p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ class Nosotros extends React.Component {
                   />
                 </div>
                 <div className="text-container-our-team">
-                  <h3 className="name-team">Juan Buitrago</h3>
+                  <h3 className="name-team">lorem lorem</h3>
                   <p>Cortador Profesional</p>
                 </div>
               </div>

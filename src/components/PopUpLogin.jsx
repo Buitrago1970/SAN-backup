@@ -3,15 +3,14 @@ import { useContext, useEffect } from 'react';
 import jwt_decode from 'jwt-decode';
 
 import './styles/PopUpLogin.css';
-import {Link, useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { setToken, getToken } from '../utils/token';
+import { setToken } from '../utils/token';
 import axios from 'axios';
 import Appcontext from '../context/Appcontext';
 
 export default function PopUpLogin(props) {
-  const history = useHistory();
   const {loginUser} = useContext(Appcontext);
 
   //  useEffect(() => {

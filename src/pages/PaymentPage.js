@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { useState, useContext, useEffect } from 'react';
+import { useState, useContext } from 'react';
 
 import PaymentMethods from "../components/PaymentMethods";
 import Appcontext from '../context/Appcontext';
-import SendDate from "../components/SendDate";
 import Address from "../components/Address";
+import SendDate from "../components/SendDatePicker";
 import Payment from "../components/Payment";
 import { useHistory } from "react-router-dom";
 
@@ -19,8 +19,10 @@ export default function PaymentPage() {
 
   let date = new Date();
   const creationDate = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+  const numero_pedido = date.getFullYear() +''+ date.getDate() + '' + (date.getMonth()+1) + '' + date.getHours()+''+date.getMinutes() + 'EC' +`${Math.floor(Math.random() * (9999 - 1000) + 1000)}`;
+  const hora = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
-  const {state:{user, cart},sendOrder} = useContext(Appcontext)
+  const {state:{user, cart},sendOrder,getOrder} = useContext(Appcontext)
   // esconder en boton de payment para mostar en boton de enviar pedido
   const [hideButton, setHideButton] = useState(true)
   //estado de los metodos de pago
@@ -31,11 +33,14 @@ export default function PaymentPage() {
     // set data for the receipt
     // setDataForReceipt(toatalPedido, paymentMethodsData,creationDate )
     //send order to server
-    const respuesta = await sendOrder(toatalPedido, paymentMethodsData, creationDate)
+    const respuestaPOST = await sendOrder(toatalPedido, paymentMethodsData, creationDate,numero_pedido, hora)
     //redireccionar a la pagina de confirmacion
 
-    if(respuesta){
-      history.push("/success")
+    if(respuestaPOST){
+      const respuestaGet = await getOrder()
+      if(respuestaGet){
+              history.push("/success")
+            }
     }else{
       alert("error al enviar pedido")
     }
@@ -67,7 +72,7 @@ export default function PaymentPage() {
           <div className="hero-shopping-cart">
             <div>
               <Address user={user[0]} cart={cart} />
-              <SendDate user={user[0]} />
+              <SendDate user={user[0]}  />
               <PaymentMethods data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
             </div>
               <Payment data={"Proceder al Pago"} route={"/succes"} buttonSendOrder={hideButton} handlePaymentMethod={handlePaymentMethod}/>

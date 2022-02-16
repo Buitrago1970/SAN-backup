@@ -1,6 +1,8 @@
 .section-badges {
   width: 100%;
-  padding: 100px 40px 200px 40px;
+  padding: 100px 0 200px 0;
+      background: black;
+    color: white;
 }
 .container-badges {
   text-align: center;
@@ -10,7 +12,7 @@
   margin-bottom: 60px;
 }
 .badges {
-  color: #121212;
+  color: #fffefe;
   display: block;
   margin: 10px 0px;
   padding: 0;
@@ -41,6 +43,6 @@ display: flex;
   .badges {
     display: flex;
     justify-content: space-between;
-    padding: 0 48px;
+    padding: 0 15px;
   }
 }

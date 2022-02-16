@@ -21,7 +21,7 @@
   height: 109px;
   position: relative;
   right: 21px;
-  width: 65px;
+      width: 300px;
 }
 .logo {
   width: 100px;
@@ -38,7 +38,12 @@
 }
 
 .container-shopping-cart {
-  width: 45px;
+  width: 300px;
+      display: flex;
+    align-items: center;
+}
+.name-user{
+  width: 160px;
 }
 .shopping-cart {
   display: flex;

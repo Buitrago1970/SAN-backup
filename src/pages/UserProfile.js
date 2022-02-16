@@ -1,24 +1,19 @@
 import * as React from 'react';
- import {   useContext } from 'react';
- import { removeToken } from '../utils/token';
+ import {   useContext, } from 'react';
 import Appcontext from '../context/Appcontext';
+import { useHistory } from 'react-router-dom';
 
 export default function UserProfile() { 
+  const history = useHistory();
   const {logoutUser} = useContext(Appcontext);
-
-  //  const [user, setUser] = useState(undefined);
-
-  //  useEffect(()  => {
-  //    (async () =>{
-  //      const response = await logoutUser();
-  //      console.log(response);
-  //    })()
-  //  },[]);
-  
+  const handleLogout = () => {
+    logoutUser();
+    history.push('/');
+  }
   return (<>
   
   <div>
-      <button onClick={logoutUser ,removeToken}>
+      <button onClick={()=>{handleLogout()}}>
           Cerrar Sesion
       </button>
   </div>

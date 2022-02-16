@@ -7,13 +7,14 @@ import Appcontext from '../context/Appcontext';
 import successIcon from "../images/Unknown.png"; 
 export default function Success() {
     const {state:{ receipt }} = useContext(Appcontext);
-  return (
+    
+    return (
       <>
       <div className='main-container main-container-success'>
           <div className='success-container'>
             <div className='info-success-order'>
                 <div className='image-title'>
-                    <div className='img-container'>
+                    <div className='img-container-success'>
                         <img src={successIcon} alt="" />
                     </div>
                     <h1>¡Gracias por tu compra!</h1>
@@ -21,7 +22,7 @@ export default function Success() {
                 <div className='info-container'>
                 
                     <h3>DETALLES DEL PEDIDO</h3>
-                    <p className='p-info-success-order'>Número de pedido: <span>#numero del pedido</span></p>
+                    <p className='p-info-success-order'>Número de pedido: <span>#{receipt.numero_pedido}</span></p>
                     <p className='p-info-success-order'>Fecha de pedido: <span>{receipt.creationDate}</span></p>
                     <p className='p-info-success-order'>Estado del pedido: <span>En proceso</span></p>
                     <p className='p-info-success-order'>Total: <span>${receipt.toatalPedido}</span></p>
@@ -34,10 +35,10 @@ export default function Success() {
                     <button className='btn-success'>
                         Ver mis pedidos
                     </button>
-                    <button className='btn-success'>
-                     
+                    <button className='btn-success' >
                         Descargar Recibo Compra
                     </button>    
+                   
             </div>
             </div>
 

@@ -93,29 +93,15 @@ const useInitialState = () => {
  }
   //logout user
   const logoutUser = () => {
+     setState({
+       ...state,
+       user: [],
+       idUser:[]
+     });
     removeToken();
-    setState({
-      ...state,
-      user: [],
-      idUser:[]
-    });
-    
   };
-  //set oder data
-  // const setDataForReceipt =  (toatalPedido, paymentMethod,creationDate) => {
-  //   setState({
-  //     ...state,
-  //     receipt: {
-  //       ...state.receipt,
-  //       toatalPedido: toatalPedido,
-  //       paymentMethod: paymentMethod,
-  //       creationDate: creationDate,
-  //     },
-  //   });
-  // };
-
   //send order to server
-   const sendOrder =  async (toatalPedido, paymentMethod,creationDate) => {
+   const sendOrder =  async (toatalPedido, paymentMethod,creationDate,numero_pedido, hora) => {
      setState({
       ...state,
       receipt: {
@@ -123,6 +109,8 @@ const useInitialState = () => {
         toatalPedido: toatalPedido,
         paymentMethod: paymentMethod,
         creationDate: creationDate,
+        numero_pedido: numero_pedido,
+        hora: hora,
       },
     });
       const token = getToken();
@@ -133,7 +121,9 @@ const useInitialState = () => {
                  "total": toatalPedido,
                  "paymentMethod": paymentMethod,
                 "creationDate": creationDate,
-                 "status": "pending",
+                "status": "pending",
+                "numero_pedido": numero_pedido,
+                "hora": hora
    }
 }
 try {
@@ -147,7 +137,29 @@ try {
   return false;
 }
    }
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder };
+  //get order from server
+  const getOrder = async () => {
+    const token = getToken();
+    const url = "http://localhost:1337/api/orders"
+    try {
+        const respuesta = await axios.get(url, {
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          return respuesta;
+    } catch (error) {
+      return false;
+    }
+  }
+  //Clear cart
+  const cleanCart = () => {
+    setState({
+      ...state,
+      cart: [],
+    });
+  };
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder, cleanCart};
 };
 
 export default useInitialState;

@@ -32,7 +32,7 @@ export default function MainServicios() {
     <div className="container-main-servicios">
       <div class="main-servicios">
         {data.map((item) => (
-          <div class="data-servicios div1">
+          <div class="data-servicios ">
             <div className="module-content">
               <div class="unit-wrapper">
                 <div className="texto-module-main-servicios">

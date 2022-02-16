@@ -1,15 +1,33 @@
-.container-send-date{
-margin: 20px 12px 20px 20px;
+.sandDate{
 
 }
-.send-date-data{
-    background: #fff;
+.sendDate-container{
+background: white;
+    margin: 12px 12px 12px 20px;
     border-radius: 4px;
-    padding: 25px 32px;
-    font-size: 16px;
+    box-shadow: 0 2px 13px -4px #636363;
+}
+
+.sendDate-list-item{
+border-bottom: 1px solid #a8a8a8;
+}
+.sendDate-label{
     display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin: 0px 10px;
+    margin-right: 25px;
+    padding: 10px 0 10px 0;
+    font-size: 17px;
+}
+.ui-radio__text-sendDate{
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
     justify-content: space-between;
 }
+
+
 .send-data-p{
 
 }

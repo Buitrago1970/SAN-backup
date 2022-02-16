@@ -61,20 +61,16 @@ export default function Adress() {
     } ,
     onSubmit: async (values)  => {
       // enviar valores a la base de datos
-      const response = registerUser(values);
-      if(response){
-        history.push("/carrocompras/{}/checkout");
-      }else
      axios
-     .post('http://localhost:1337/api/auth/local/register', {
-       username: values.name,
-       email: values.mail,
-       password: values.password,
-       phone: values.phone,
-      address: values.address,
-      locality: values.locality,
-      descriptionHouse: values.descriptionHouse,
-     })
+      .post('http://localhost:1337/api/auth/local/register', {
+        username: values.name,
+        email: values.mail,
+        password: values.password,
+        phone: values.phone,
+       address: values.address,
+       locality: values.locality,
+       descriptionHouse: values.descriptionHouse,
+      })
      .then(response => {
        if(response.data.jwt){
           registerUser(response.data);
@@ -118,7 +114,7 @@ export default function Adress() {
                   </span>
                   <div className="andes-form-control__control">
                       {/*input not editable for the time being*/}
-                    <input className="xd input_departamento" type="text" name="department" onChange={formik.handleChange} onBlur={formik.handleBlur} value={'Cundinamarca'} readonly="readonly"></input>
+                    <input className="xd input_departamento" type="text" name="department" onChange={formik.handleChange} onBlur={formik.handleBlur} value={'Cundinamarca'} readOnly="readonly"></input>
                   </div>
                   {formik.touched.department && formik.errors.department && <p className="errors-form">{formik.errors.general}</p>}
                    <p className="andes-form-coactiventrol_bottom">Por el momento solo tenemos servicio en este departamento.</p>

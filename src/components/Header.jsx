@@ -35,18 +35,20 @@ const Header = () => {
             Contacto
           </Link>
         </div>
-        <div className="">
+      
+        <div className="container-shopping-cart">
+            <div className="name-user">
           {user[0] ? ( <Link to="/userprofile" title="Inicio" className="options">
             {user[0].username}
             </Link> ) : null}
         </div>
-        <div className="container-shopping-cart">
           <Link className="shopping-cart" to="/carrocompras">
             <FiShoppingCart className="shopping-cart-icon" />
             <div className="shopping-cart-length">
               {cart.length > 0 && cart.length}
             </div>
           </Link>
+          
         </div>
       </div>
     </>

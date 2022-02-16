@@ -9,7 +9,7 @@ export function getToken () {
 }
 // remove user token from localStorage
 export function removeToken () {
-  localStorage.removeItem('token');
+    localStorage.removeItem('token');
 }
 // check if user token is valid
 export function hasTokenExpired (token) {

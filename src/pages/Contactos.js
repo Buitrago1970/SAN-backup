@@ -1,4 +1,3 @@
-import * as react from "react";
 import "./styles/contacto.css";
 import contactImg from "../images/hand.gif";
 const Contactos = () => {
@@ -26,14 +25,7 @@ const Contactos = () => {
                   <ul className="mail">sandiego.carears@sandiego.com</ul>
                 </li>
               </div>
-              <div className="info info-social-media">
-                <h3 className="tittle-info">Social Media</h3>
-                <li>
-                  <ul>Instagram</ul>
-                  <ul>Facebook</ul>
-                  <ul>Youtube</ul>
-                </li>
-              </div>
+              
             </div>
           </div>
         </div>
