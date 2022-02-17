@@ -7,7 +7,6 @@ import Appcontext from '../context/Appcontext';
 import successIcon from "../images/Unknown.png"; 
 export default function Success() {
     const {state:{ receipt }} = useContext(Appcontext);
-    
     return (
       <>
       <div className='main-container main-container-success'>
@@ -26,7 +25,7 @@ export default function Success() {
                     <p className='p-info-success-order'>Fecha de pedido: <span>{receipt.creationDate}</span></p>
                     <p className='p-info-success-order'>Estado del pedido: <span>En proceso</span></p>
                     <p className='p-info-success-order'>Total: <span>${receipt.toatalPedido}</span></p>
-                    <p className='p-info-success-order'>Entrega estimada: <span> Fecha estimada</span></p>
+                    <p className='p-info-success-order'>Entrega estimada: <span> {receipt.dateSend}</span></p>
             </div>
 
             </div>

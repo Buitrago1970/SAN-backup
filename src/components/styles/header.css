@@ -5,6 +5,7 @@
   height: 20px;
   align-items: center;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   z-index: 10;
 }

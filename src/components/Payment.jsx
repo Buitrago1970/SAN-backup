@@ -7,7 +7,7 @@ import { handleSumTotal } from "../utils/index";
 
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({ data , route, buttonSendOrder, handlePaymentMethod }) {
+export default function Payment({ data , route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate }) {
   const {
     state: { cart, user },
   } = useContext(Appcontext);
@@ -36,7 +36,10 @@ export default function Payment({ data , route, buttonSendOrder, handlePaymentMe
   totalPunto = totalPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   totalPedidoPunto = totalPedidoPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-
+  // si path viene de checkout esconder el boton de checkout
+  if(PATH){
+    hiden += 'hidden'
+  }
   return (
     <>
       <div className="payment">
@@ -60,15 +63,23 @@ export default function Payment({ data , route, buttonSendOrder, handlePaymentMe
               {total >= numEnvioGratis ? <p>$ {totalPunto}</p>   : <p className="costo-envio">$ {totalPedidoPunto}</p> }
             </div>
           </div>
+          {PATH === 'checkout'?
+        (
+          <button className="btn-payment" onClick={handleSendDate}>{data}</button>
+        )  :(null)
+        }
+          {/* boton enviar pedido */}
           { buttonSendOrder ?(
               <button className="btn-payment" onClick={()=>handlePaymentMethod(total)}>Enviar pedido</button>
           ) : (null)}
+          {/* boton  para pasar al checkout*/}
           {user[0] ? (
             <Link to={route} className={hiden}>
               <button className="btn-payment" >{data}</button>
             </Link>
           ) :  (
             <>
+            {/* boton para logear usuario */}
             <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>{data}</button>
             <PopUpLogin trigger={buttonPopUp} closePopUp={setButtonPopUp}/>
             </>

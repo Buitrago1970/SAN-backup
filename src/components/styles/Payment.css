@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   margin: 10px 0px;
-
 }
 .costo-envio-gratis{
   color: #32b767;
@@ -27,6 +26,12 @@
   padding: 20px;
   border-radius: 4px;
   background: #ffffff;
+
+      position: sticky;
+  position: -webkit-sticky;
+
+    top: 0;
+    z-index: 9;
 }
 @media screen and (min-width: 1000px) {
   .container-payment {

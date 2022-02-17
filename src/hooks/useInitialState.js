@@ -93,13 +93,22 @@ const useInitialState = () => {
  }
   //logout user
   const logoutUser = () => {
-    debugger
+    removeToken();
      setState({
        ...state,
        user: [],
        idUser:[]
      });
-    removeToken();
+  };
+  //set date send
+  const setDateSend = (date) => {
+    setState({
+      ...state,
+      receipt:{
+        ...state.receipt,
+        dateSend: date
+      }
+    });
   };
   //send order to server
    const sendOrder =  async (toatalPedido, paymentMethod,creationDate,numero_pedido, hora) => {
@@ -112,6 +121,7 @@ const useInitialState = () => {
         creationDate: creationDate,
         numero_pedido: numero_pedido,
         hora: hora,
+        
       },
     });
       const token = getToken();
@@ -124,7 +134,8 @@ const useInitialState = () => {
                 "creationDate": creationDate,
                 "status": "pending",
                 "numero_pedido": numero_pedido,
-                "hora": hora
+                "hora": hora,
+                "dateSend": state.receipt.dateSend
    }
 }
 try {
@@ -160,7 +171,7 @@ try {
       cart: [],
     });
   };
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder, cleanCart};
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder, cleanCart,setDateSend};
 };
 
 export default useInitialState;

@@ -29,7 +29,7 @@ function QualityDetails() {
           <div className="badges">
             {badges.map((item) => (
               <>
-                <div className="badges-item">
+                <div className="badges-item" >
                   <img className="imgs" src={crow} alt="" />
                   <div>
                   <p className="number-badge">{item.number}</p>

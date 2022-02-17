@@ -4,7 +4,6 @@ import { useState, useContext } from 'react';
 import PaymentMethods from "../components/PaymentMethods";
 import Appcontext from '../context/Appcontext';
 import Address from "../components/Address";
-import SendDate from "../components/SendDatePicker";
 import Payment from "../components/Payment";
 import { useHistory } from "react-router-dom";
 
@@ -22,7 +21,7 @@ export default function PaymentPage() {
   const numero_pedido = date.getFullYear() +''+ date.getDate() + '' + (date.getMonth()+1) + '' + date.getHours()+''+date.getMinutes() + 'EC' +`${Math.floor(Math.random() * (9999 - 1000) + 1000)}`;
   const hora = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
-  const {state:{user, cart},sendOrder,getOrder} = useContext(Appcontext)
+  const {state:{user, cart},sendOrder,getOrder, cleanCart} = useContext(Appcontext)
   // esconder en boton de payment para mostar en boton de enviar pedido
   const [hideButton, setHideButton] = useState(true)
   //estado de los metodos de pago
@@ -40,6 +39,7 @@ export default function PaymentPage() {
       const respuestaGet = await getOrder()
       if(respuestaGet){
               history.push("/success")
+        // cleanCart()
             }
     }else{
       alert("error al enviar pedido")
@@ -72,7 +72,6 @@ export default function PaymentPage() {
           <div className="hero-shopping-cart">
             <div>
               <Address user={user[0]} cart={cart} />
-              <SendDate user={user[0]}  />
               <PaymentMethods data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
             </div>
               <Payment data={"Proceder al Pago"} route={"/succes"} buttonSendOrder={hideButton} handlePaymentMethod={handlePaymentMethod}/>

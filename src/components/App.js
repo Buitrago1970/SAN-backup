@@ -22,8 +22,8 @@ function App() {
   //     useInitialState(),
   //   }),
   //   []
-  // )
   const initialState = useInitialState();
+
 
   return (
     <Appcontext.Provider value={initialState}>

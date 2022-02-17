@@ -30,24 +30,24 @@ export default function MainServicios() {
   ];
   return (
     <div className="container-main-servicios">
-      <div class="main-servicios">
+      <div className="main-servicios">
         {data.map((item) => (
-          <div class="data-servicios ">
+          <div className="data-servicios" key={item.id}>
             <div className="module-content">
-              <div class="unit-wrapper">
+              <div className="unit-wrapper">
                 <div className="texto-module-main-servicios">
-                  <h4 class="logo-image logo-image-ipad-mini-promo-logo-ipad-mini headline">
-                    <span class="visuallyhidden">{item.title}</span>
+                  <h4 className="logo-image logo-image-ipad-mini-promo-logo-ipad-mini headline">
+                    <span className="visuallyhidden">{item.title}</span>
                   </h4>
-                  <h5 class="subhead" role="presentation">
+                  <h5 className="subhead" role="presentation">
                     {item.description}
                   </h5>
-                  <p class="avail" role="text">
+                  <p className="avail" role="text">
                     Consulta la disponibilidad más adelante
                   </p>
                 </div>
                 <div className="image-module-main-servicios">
-                  <img class="unit-image unit-image-ipad-mini-promo-ipad-mini" src={item.image} alt="Foto"/>
+                  <img className="unit-image unit-image-ipad-mini-promo-ipad-mini" src={item.image} alt="Foto"/>
                 </div>
               </div>
             </div>
