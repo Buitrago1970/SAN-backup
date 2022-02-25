@@ -12,8 +12,8 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
     removeOneProuctCart, 
   } = useContext(Appcontext);
 
-  const { name, price, amount, presentation, image, totalAdd } = item;
-  const [count, setCount] = useState(totalAdd);
+  const { name, precio, cantidad,presentacion , total_anadidos_de_productos } = item;
+  const [count, setCount] = useState(total_anadidos_de_productos);
 
 
   const handlesAddToCart = (valor, product) => {
@@ -32,21 +32,21 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
       <div className="c">
         <div className="principal-product">
           <div className="img-container-shopping-car">
-            <img className="img" src={fromImageToUrl(image.data.attributes.formats.small)} alt="img" />
+            <img className="img" src={fromImageToUrl(item.image.data[0].attributes.formats.small)} alt="img" />
           </div>
           <div className="container-inf-product">
             <div className="container-inf-product-title">
               <p className="name-product p-item">{name}</p>
-              <p className="title-product-measues">{`(${amount} g)`}</p>
+              <p className="title-product-measues">{`(${cantidad} g)`}</p>
             </div>
    
-            <p className="p-item">Presentación: {presentation}</p>
+            <p className="p-item">Presentación: {presentacion}</p>
             <p className="kilo-value">
-              Valor Kilo: $ {new Intl.NumberFormat().format(price)}
+              Valor Kilo: $ {new Intl.NumberFormat().format(precio)}
             </p>
             <div className="values-product-small">
               <p>Total: </p>
-              <p className="price-cart-shopping-small">${price}</p>
+              <p className="price-cart-shopping-small">${precio}</p>
             </div>
             {hideButtons ? null : (  <button
               type="button"
@@ -82,7 +82,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
           <div className="total-price">
             <div className="values-product">
               <p className="price">
-                $ {new Intl.NumberFormat().format(price * totalAdd)}
+                $ {new Intl.NumberFormat().format(precio * total_anadidos_de_productos)}
               </p>
             </div>
           </div>

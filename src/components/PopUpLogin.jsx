@@ -44,7 +44,7 @@ export default function PopUpLogin(props) {
     return errores
   },
     onSubmit: async  (values) => {
-      const url = 'http://localhost:1337/api/auth/local';
+      const url = 'https://backendsan.herokuapp.com/api/auth/local';
       const data = {
         identifier: values.mail,
         password: values.password,

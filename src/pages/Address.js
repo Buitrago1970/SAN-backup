@@ -61,15 +61,16 @@ export default function Adress() {
     } ,
     onSubmit: async (values)  => {
       // enviar valores a la base de datos
+      debugger
      axios
-      .post('http://localhost:1337/api/auth/local/register', {
+      .post('https://backendsan.herokuapp.com/api/auth/local/register', {
         username: values.name,
         email: values.mail,
         password: values.password,
-        phone: values.phone,
-       address: values.address,
-       locality: values.locality,
-       descriptionHouse: values.descriptionHouse,
+        telefono: values.phone,
+       direccional: values.address,
+       localidad: values.locality,
+       descripcionCasa: values.descriptionHouse,
       })
      .then(response => {
        if(response.data.jwt){
@@ -165,7 +166,7 @@ export default function Adress() {
                 <div className="andes-form-control__control">
                   <input
                     className="xd"
-                    type="number"
+                    type="text"
                     name="phone"
                     placeholder="Llamarán a este numero si hay algun problema con el envio. "
                     onChange={formik.handleChange}

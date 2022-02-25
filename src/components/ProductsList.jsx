@@ -17,7 +17,8 @@ function ProductsList({ search }) {
   //fetch the products from api
    useEffect( () => {
     const fetchProducts = async () => {
-     const response = await axios("http://localhost:1337/api/products?populate=image");
+    //  const response = await axios("http://localhost:1337/api/products?populate=image");
+  const response = await axios("https://backendsan.herokuapp.com/api/products?populate=image");
      setProducts(response.data.data)
     };
     fetchProducts();

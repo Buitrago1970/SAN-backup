@@ -12,6 +12,7 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
     state: { cart, user },
   } = useContext(Appcontext);
   // set poUp login
+
   const [buttonPopUp , setButtonPopUp] = useState(false);
 
   // hide button payment 

@@ -4,6 +4,7 @@ import { GoLocation } from "react-icons/go";
 import "./styles/Address.css";
 
 export default function Address({user, cart }) {
+  debugger
   return (
     <>
    {
@@ -15,8 +16,8 @@ export default function Address({user, cart }) {
         <div className="address">
       <GoLocation />
           <div>
-             <p className="cart-address-info">{user.address} </p>
-            <p className="cart-address-subtitle-info"> { user.neighborhood} - {user.locality}, Bogota D.c - {user.descriptionHouse && user.descriptionHouse}</p>
+             <p className="cart-address-info">{user.direccional} </p>
+            <p className="cart-address-subtitle-info"> {user.localidad}, Bogota D.c - {user.descripcionCasa && user.descripcionCasa}</p>
         </div>
         <div className="modify-address">
         </div>

@@ -22,7 +22,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
       <div className="articulo">
         {/* imagen */}
         <div className="img-container">
-          <img className="img-product" src={fromImageToUrl(product.image.data.attributes.formats.small)} alt="" />
+          <img className="img-product" src={fromImageToUrl(product.image.data[0].attributes.formats.small)} alt="" />
         </div>
         {/* texto */}
         <div className="description">
@@ -32,7 +32,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
           {/* peso */}
           <div className="product-weight">
             <p className="product-quantity">cantidad</p>
-            <p className="product-quantity weigth">X {product.amount}g</p>
+            <p className="product-quantity weigth">X {product.cantidad}g</p>
           </div>
           <br />
           {/* empaque */}
@@ -41,7 +41,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
               Empaque: Vacio y Congelado -4°C
             </h3>
             <h3 className="presentation-product">
-              Presentación: {product.presentation}
+              Presentación: {product.presentacion}
             </h3>
             <hr />
           </div>
@@ -49,7 +49,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
           {/* precio */}
           <div className="price-container">
             <span className="price">
-              ${new Intl.NumberFormat().format(product.price)}
+              ${new Intl.NumberFormat().format(product.precio)}
             </span>
           </div>
 
@@ -79,7 +79,6 @@ const ProductItem = ({ product, handleAddToCart }) => {
           <div className="presentation-container">
             <p className="presentation-paragraph">presentation: Filete</p>
           </div>
-
           {/* boton añadir */}
           <button
             className="btn-shop"

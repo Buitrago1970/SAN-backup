@@ -29,17 +29,15 @@ export default function PaymentPage() {
   // funcion guardar metodo de pago
   const handlePaymentMethod =  async (toatalPedido) => {
   if(paymentMethodsData){
-    // set data for the receipt
-    // setDataForReceipt(toatalPedido, paymentMethodsData,creationDate )
     //send order to server
     const respuestaPOST = await sendOrder(toatalPedido, paymentMethodsData, creationDate,numero_pedido, hora)
+    
     //redireccionar a la pagina de confirmacion
-
     if(respuestaPOST){
       const respuestaGet = await getOrder()
       if(respuestaGet){
-              history.push("/success")
         // cleanCart()
+        history.push("/success")
             }
     }else{
       alert("error al enviar pedido")

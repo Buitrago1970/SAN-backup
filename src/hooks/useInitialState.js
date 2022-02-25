@@ -16,7 +16,7 @@ const useInitialState = () => {
         ...state,
         cart: state.cart.map((item) =>
           item.slug === product.slug
-            ? { ...item, totalAdd: (item.totalAdd = item.totalAdd + count) }
+            ? { ...item, total_anadidos_de_productos: (item.total_anadidos_de_productos = item.total_anadidos_de_productos + count) }
             : item
         ),
       });
@@ -25,7 +25,7 @@ const useInitialState = () => {
         ...state,
         cart: [
           ...state.cart,
-          { ...product, totalAdd: product.totalAdd + count  },
+          { ...product, total_anadidos_de_productos: product.total_anadidos_de_productos + count  },
         ],
       });
     }
@@ -39,20 +39,20 @@ const useInitialState = () => {
         ...state,
         cart: state.cart.map((item) =>
           item.slug === product.slug
-            ? { ...item, totalAdd: (item.totalAdd = item.totalAdd + 1) }
+            ? { ...item, total_anadidos_de_productos: (item.total_anadidos_de_productos = item.total_anadidos_de_productos + 1) }
             : item
         ),
       });
     } else {
       setState({
         ...state,
-        cart: [...state.cart, { ...product, totalAdd: 1 }],
+        cart: [...state.cart, { ...product, total_anadidos_de_productos: 1 }],
       });
     }
   };
   const removeOneProuctCart = (product) => {
     const productExists = state.cart.find((item) => item.slug === product.slug);
-    if (productExists.totalAdd === 1) {
+    if (productExists.total_anadidos_de_productos === 1) {
       setState({
         ...state,
         cart: state.cart.filter((item) => item.slug !== product.slug),
@@ -62,7 +62,7 @@ const useInitialState = () => {
         ...state,
         cart: state.cart.map((item) =>
           item.slug === product.slug
-            ? { ...item, totalAdd: (item.totalAdd = item.totalAdd - 1) }
+            ? { ...item, total_anadidos_de_productos: (item.total_anadidos_de_productos = item.total_anadidos_de_productos - 1) }
             : item
         ),
       });
@@ -125,17 +125,17 @@ const useInitialState = () => {
       },
     });
       const token = getToken();
-      const url = "http://localhost:1337/api/orders"
+      const url = "https://backendsan.herokuapp.com/api/orders"
       const data = { "data": {
                  "user": state.user[0],
                  "products": state.cart.map(item => item.slug ),
                  "total": toatalPedido,
-                 "paymentMethod": paymentMethod,
-                "creationDate": creationDate,
+                 "metodo_de_pago": paymentMethod,
+                "fecha_de_creacion": creationDate,
                 "status": "pending",
-                "numero_pedido": numero_pedido,
+                "numero_de_pedido": numero_pedido,
                 "hora": hora,
-                "dateSend": state.receipt.dateSend
+                "fecha_de_envio": state.receipt.dateSend
    }
 }
 try {
@@ -151,8 +151,9 @@ try {
    }
   //get order from server
   const getOrder = async () => {
+
     const token = getToken();
-    const url = "http://localhost:1337/api/orders"
+    const url = `https://backendsan.herokuapp.com/api/orders?filters[numero_de_pedido]=${state.receipt.numero_pedido}`
     try {
         const respuesta = await axios.get(url, {
             headers: {
@@ -168,7 +169,7 @@ try {
   const cleanCart = () => {
     setState({
       ...state,
-      cart: [],
+      cart: [], 
     });
   };
   return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder, cleanCart,setDateSend};
