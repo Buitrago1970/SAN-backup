@@ -8,24 +8,24 @@ export default function MainServicios() {
       id: 1,
       title: "Corte",
       description: "Especializados en todo corte.",
-      image:"http://localhost:1337/uploads/1000_F_128943712_Gd_Tri_C_Hk_Nbe_LMNMI_Bcw8y_B_Fiq4_Hy_I53_P_4ed9876703.jpg?updated_at=2022-01-15T01:14:29.831Z"
+      image:"https://san-ecommerce.s3.amazonaws.com/AdobeStock_128943712_Preview+copia.png"
     },
     {
       id: 2,
       title: "Empaque",  
       description: "Empacado vacio, envase o papel de carnicero.",
-      image:"http://localhost:1337/uploads/Black_Tie_Box_014_1920px_1024x1024_05cbe83d33.jpg?updated_at=2022-01-15T01:31:54.778Z"    },
+      image:"https://san-ecommerce.s3.amazonaws.com/BlackTieBox_014_1920px+copia+2.png"    },
     {
       id: 3,
       title: "Envio",
       description: "En menos de 24 horas recibiras tu pedido.",
-      image:"http://localhost:1337/uploads/jumpy_lateral_1_640x360_1_1_6c2d0c7bfc.png?updated_at=2022-01-15T01:14:29.798Z"
+      image:"https://san-ecommerce.s3.amazonaws.com/proace-meister-tcm-17-1623631+copia.png"
     },
     {
       id: 4,
       title: "Entrega",
       description: "De nuestra casa a tu casa.",
-      image:"http://localhost:1337/uploads/repartidor_entregando_caja_cliente_23_2148669584_copia_1_5a0e80634e.png?updated_at=2022-01-15T01:14:29.831Z"
+      image:"https://san-ecommerce.s3.amazonaws.com/3238046+copia.png"
     },
   ];
   return (

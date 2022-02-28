@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import Appcontext from "../context/Appcontext";
 import Address from "../components/Address";
 import ShoppingList from "../components/ShoppingList";
@@ -13,13 +14,21 @@ export default function ShoppingCart() {
   } = useContext(Appcontext);
   return (
     <div className="main-container">
-      <div className="hero-shopping-cart">
+      {cart.length > 0 ? (<div className="hero-shopping-cart">
         <div>
           <Address user={user[0]} cart={cart}/>
           <ShoppingList />
         </div>
-        {!cart.length ? (null) : ( <Payment data={"Continuar"} route={"/carrocompras/{}/checkout"}/>)}
-      </div>
+        <Payment data={"Continuar"} route={"/carrocompras/{}/checkout"}/>
+      </div>) :
+      (<div className="empty-cart-button">
+          <h3>🛒Tu carrito está vacío. </h3>{" "}
+          <Link className="link-home" to="/">
+            Ir al Home
+          </Link>
+        </div>)
+        }
+      
     </div>
   );
 }

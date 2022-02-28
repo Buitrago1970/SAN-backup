@@ -1,6 +1,7 @@
 import * as React from "react";
 import {  useState,useContext } from "react";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import Address from "../components/Address";
 import ShoppingList from "../components/ShoppingList";
@@ -30,14 +31,22 @@ export default function ShoppingCart() {
   const hideButtons = true
   return (
     <div className="main-container">
-      <div className="hero-shopping-cart">
+     {cart.length > 0 ? ( <div className="hero-shopping-cart">
+       
         <div>
           <Address user={user[0] } cart={cart}  />
           <SendDate user={user[0]}  setSendDateData={setSendDateData}/>
           <ShoppingList hideButtons={hideButtons}/>
         </div>
         <Payment data={"Continuar"} PATH={PATH} handleSendDate={handleSendDate}/>
-      </div>
+      </div>) :
+      (<div className="empty-cart-button">
+          <h3>🛒Tu carrito está vacío. </h3>{" "}
+          <Link className="link-home" to="/">
+            Ir al Home
+          </Link>
+        </div>)
+        }
     </div>
   );
 }

@@ -16,8 +16,6 @@ export default function ShoppingCart({hideButtons}) {
 
   return (
     <>
-      {cart.length > 0 ? (
-        <>
           <br />
           <div className="shopping-list">
             <p className="cart-length-title">Carrito ({cart.length})</p>
@@ -32,15 +30,6 @@ export default function ShoppingCart({hideButtons}) {
               ))}
             </div>
           </div>
-        </>
-      ) : (
-        <div className="empty-cart-button">
-          <h3>Tu carrito está vacío. </h3>{" "}
-          <Link className="link-home" to="/">
-            Ir al Home
-          </Link>
-        </div>
-      )}
     </>
   );
 }

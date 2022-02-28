@@ -6,6 +6,7 @@ import Appcontext from '../context/Appcontext';
 import Address from "../components/Address";
 import Payment from "../components/Payment";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./styles/PaymentPage.css"
 import iconoEfectivo from '../images/icono_billete.svg';
@@ -46,6 +47,7 @@ export default function PaymentPage() {
       alert("Seleccione un metodo de pago")
     }
   }
+  // data metodos de pago tarjeta (credito, debito) efectivo, nequi
     const data_payment_methods = [
     {
       id: 1,
@@ -64,16 +66,34 @@ export default function PaymentPage() {
       description: "Paga el pedido con tarjeta de débito al momento de recibirlo.",
       image: iconoTarjeDebito
     },
+    {
+      id: 4,
+      name: "Nequi",
+      description: "Paga el pedido con Nequi al momento de recibirlo.",
+      image: "https://www.nequi.com.co/wp-content/themes/nequi/img/logo_nequi_header.svg"
+    }
   ];
+
       return (
         <div className="main-container">
-          <div className="hero-shopping-cart">
+          {cart.length ? (
+                  <div className="hero-shopping-cart">
             <div>
               <Address user={user[0]} cart={cart} />
-              <PaymentMethods data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
+              <PaymentMethods title={'formas de pago'} data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
             </div>
-              <Payment data={"Proceder al Pago"} route={"/succes"} buttonSendOrder={hideButton} handlePaymentMethod={handlePaymentMethod}/>
+              <Payment data={"Proceder al Pago"} buttonSendOrder={hideButton} handlePaymentMethod={handlePaymentMethod}/>
           </div>
+          ) : (
+                 <div className="empty-cart-button">
+          <h3>🛒Tu carrito está vacío. </h3>{" "}
+          <Link className="link-home" to="/">
+            Ir al Home
+          </Link>
+        </div>
+            )
+            }
+    
         </div>
     )
 }

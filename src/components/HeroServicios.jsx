@@ -19,7 +19,7 @@ function HeroServicios() {
         </div>
         <div className="div2">
           <div className="container-img">
-            <img src="https://dummyimage.com/600x400" alt="" />
+            <img src="https://san-ecommerce.s3.amazonaws.com/AdobeStock_415583574_Preview+copia.png" alt="" />
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import "./styles/contacto.css";
 import contactImg from "../images/hand.gif";
+
+
 const Contactos = () => {
   return (
     <>
@@ -12,7 +14,7 @@ const Contactos = () => {
           <div className="contact-text-container">
             <div className="info-contact">
               <div className="info info-messages">
-                <h3 className="tittle-info">Contacto</h3>
+                <h3 className="tittle-info">✉️ Contacto</h3>
                 <li>
                   <ul className="mail">sandiego@sandiego.com</ul>
                   <ul>555-889-635</ul>

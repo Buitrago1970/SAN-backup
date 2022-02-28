@@ -9,6 +9,7 @@
 }
 .img-contact {
   width: 62%;
+  border-radius: 5px;
   margin-bottom: 50px;
 }
 .contact-text-container {
@@ -31,12 +32,13 @@
   text-align: center;
 }
 .tittle-info {
-  font-size: 20px;
+  font-size: 25px;
   color: #313131;
 }
 
 .mail {
-  color: brown;
+  color: rgb(192, 51, 51);
+  font-weight: 600;
 }
 @media screen and (min-width: 870px) {
   .main-title-contact {

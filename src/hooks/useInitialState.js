@@ -10,17 +10,20 @@ const useInitialState = () => {
   const [state, setState] = useState(initialState);
 
   const addToCart = (product, count) => {
-    const productExists = state.cart.find((item) => item.slug === product.slug);
+    debugger
+    const productExists = state.cart.find((item) => item.Slug === product.Slug);
     if (productExists) {
+      console.log("productExists");
       setState({
         ...state,
         cart: state.cart.map((item) =>
-          item.slug === product.slug
+          item.Slug === product.Slug
             ? { ...item, total_anadidos_de_productos: (item.total_anadidos_de_productos = item.total_anadidos_de_productos + count) }
             : item
         ),
       });
     } else {
+      console.log("productExists no");
       setState({
         ...state,
         cart: [
@@ -32,13 +35,13 @@ const useInitialState = () => {
   };
   const addOneProductCart = (product) => {
     const productExists = state.cart.find(
-      (item) => item.slug === product.slug
+      (item) => item.Slug === product.Slug
     );
     if (productExists) {
       setState({
         ...state,
         cart: state.cart.map((item) =>
-          item.slug === product.slug
+          item.Slug === product.Slug
             ? { ...item, total_anadidos_de_productos: (item.total_anadidos_de_productos = item.total_anadidos_de_productos + 1) }
             : item
         ),
@@ -51,17 +54,17 @@ const useInitialState = () => {
     }
   };
   const removeOneProuctCart = (product) => {
-    const productExists = state.cart.find((item) => item.slug === product.slug);
+    const productExists = state.cart.find((item) => item.Slug === product.Slug);
     if (productExists.total_anadidos_de_productos === 1) {
       setState({
         ...state,
-        cart: state.cart.filter((item) => item.slug !== product.slug),
+        cart: state.cart.filter((item) => item.Slug !== product.Slug),
       });
     } else {
       setState({
         ...state,
         cart: state.cart.map((item) =>
-          item.slug === product.slug
+          item.Slug === product.Slug
             ? { ...item, total_anadidos_de_productos: (item.total_anadidos_de_productos = item.total_anadidos_de_productos - 1) }
             : item
         ),
@@ -71,7 +74,7 @@ const useInitialState = () => {
   const removeFromCart = (product) => {
     setState({
       ...state,
-      cart: state.cart.filter((item) => item.slug !== product.slug),
+      cart: state.cart.filter((item) => item.Slug !== product.Slug),
     });
   };
   //register user
@@ -128,7 +131,7 @@ const useInitialState = () => {
       const url = "https://backendsan.herokuapp.com/api/orders"
       const data = { "data": {
                  "user": state.user[0],
-                 "products": state.cart.map(item => item.slug ),
+                 "products": state.cart.map(item => item.Slug ),
                  "total": toatalPedido,
                  "metodo_de_pago": paymentMethod,
                 "fecha_de_creacion": creationDate,
