@@ -3,46 +3,35 @@
   padding: 100px 0 200px 0;
       background: black;
     color: white;
+    text-align: center;
 }
-.container-badges {
-  text-align: center;
-}
+
 .sub-title-quality-details{
   font-size: 45px;
   margin-bottom: 60px;
 }
-.badges {
-  color: #fffefe;
-  display: block;
-  margin: 10px 0px;
-  padding: 0;
+.badges-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.number-badge {
-  font-size: 40px;
-  color: #ffc400;
-  margin-bottom: 15px;
+.badges{
+  width: 350px;
 }
-.container-img img {
+.badges img{
   width: 100%;
 }
-.stars {
+@media screen and (max-width: 768px) {
+  .badges-container{
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.imgs {
-  width: 73px;
+  
 }
-.img-reverse {
-  width: 73px;
-  transform: scaleX(-1);
-}
-.badges-item{
-display: flex;
-}
-@media screen and (min-width: 785px) {
-  .badges {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 15px;
+@media screen and (max-width: 468px) {
+  .badges{
+    width: 300px;
   }
+  
 }
