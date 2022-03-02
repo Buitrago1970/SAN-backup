@@ -11,7 +11,8 @@
 .text-nosotros {
   position: relative;
   padding: 15px 10px 100px 15px;
-  border-radius: 10px;
+  background: #1f1f1f75;
+  color: #fff;
 }
 .title-container-hero-nosotros {
   margin-bottom: 80px;
@@ -24,11 +25,12 @@
 .text-container-nosotros {
   margin-top: 35px;
   line-height: 28px;
-  font-size: 15px;
+  font-size: 17px;
 }
 .icon-container {
   display: none;
 }
+
 @media screen and (min-width: 870px) {
   .x {
     background: #cfcfcf;
@@ -49,10 +51,17 @@
     width: auto;
   }
   .text-nosotros {
+  color: rgb(0, 0, 0);
     margin-top: 50px;
     background: none;
     position: inherit;
+  font-size: 15px;
   }
+  .text-container-nosotros{
+  line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
   .title-container-hero-nosotros {
     letter-spacing: 2px;
     margin-bottom: 70px;

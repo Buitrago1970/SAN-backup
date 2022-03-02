@@ -10,7 +10,6 @@ const useInitialState = () => {
   const [state, setState] = useState(initialState);
 
   const addToCart = (product, count) => {
-    debugger
     const productExists = state.cart.find((item) => item.Slug === product.Slug);
     if (productExists) {
       console.log("productExists");

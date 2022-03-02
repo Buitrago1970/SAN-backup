@@ -44,10 +44,6 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
             <p className="kilo-value">
               Valor Kilo: $ {new Intl.NumberFormat().format(precio)}
             </p>
-            <div className="values-product-small">
-              <p>Total: </p>
-              <p className="price-cart-shopping-small">${precio}</p>
-            </div>
             {hideButtons ? null : (  <button
               type="button"
               className="btn-delete"
@@ -77,8 +73,6 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
               +
             </button>
           </div>)}
-
-          
           <div className="total-price">
             <div className="values-product">
               <p className="price">

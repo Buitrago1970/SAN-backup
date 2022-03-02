@@ -44,3 +44,19 @@
 .text-container-servicios {
   line-height: 30px;
 }
+@media screen and (max-width: 768px) {
+  .parent{
+      grid-template-columns: repeat(1, 1fr);
+      padding: 100px 5px 150px 5px;
+  }
+  .sub-title-s-v{
+    font-size: 36px;
+    text-align: center;
+  }
+  .paragraph-container p{
+        line-height: 37px;
+  }
+  .container-img{
+    width: 300px;
+  }
+}
