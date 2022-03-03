@@ -21,6 +21,10 @@
   justify-content: center;
 }
 .text-not-found{
-  font-size: 22px;
-  
+  font-size: 22px; 
+}
+@media screen and (max-width: 768px) {
+  .container-products {
+  margin: 0px;
+}
 }
