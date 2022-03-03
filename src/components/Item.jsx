@@ -36,10 +36,11 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
           </div>
           <div className="container-inf-product">
             <div className="container-inf-product-title">
-              <p className="name-product p-item">{name}</p>
+              <p className="name-product">{name}</p>
               <p className="title-product-measues">{`(${cantidad} g)`}</p>
+             
             </div>
-   
+             <p className="p-item">Empaque: {presentacion}</p>
             <p className="p-item">Presentación: {presentacion}</p>
             <p className="kilo-value">
               Valor Kilo: $ {new Intl.NumberFormat().format(precio)}

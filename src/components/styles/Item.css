@@ -14,7 +14,7 @@
 }
 .container-inf-product {
   margin-left: 15px;
-  min-width: 300px;
+
 }
 .p-item {
   margin: 15px 0px;
@@ -69,8 +69,6 @@
 }
 .container-buttons-shoping-cart{
   display: flex;
-  max-height: 40px;
-  min-width: 110px;
   border: 1px solid #BFBFBF;
   border-radius: 5px;
   align-items: center;
@@ -87,11 +85,113 @@
     font-size: 13px;
 
 }
-@media screen and (min-width: 500px) {
-  .values-product-small {
-    display: none;
+@media screen and (max-width: 500px) {
+  .principal-product {
+    display: grid;
+    margin: 15px 0px;
+    padding: 15px 0 15px 0;
+    grid-template-areas:
+        "a b"
+        "c d"
+        "e e";
+    justify-items: center;
+    align-items: center;
+    gap: 15px 0px;
   }
-  .values-product {
-    display: block;
+  .img-container-shopping-car{
+    width: 100px;
+    border-radius: 7px;
   }
+}
+/* @media screen and (max-width: 500px) {
+  .principal-product {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-container-shopping-car {
+    margin-bottom: 15px;
+  }
+  .container-inf-product {
+    margin-left: 0;
+    margin-bottom: 15px;
+        text-align: center;
+  }
+  .container-inf-product-title{
+
+    justify-content: center;
+  }
+  .container-buttons-shoping-cart{
+    display: flex;
+    max-height: 40px;
+    min-width: 110px;
+    border: 1px solid #BFBFBF;
+    border-radius: 5px;
+    align-items: center;
+    margin: auto;
+  }
+  .container-counter-shoping-cart{
+    width: 19px;
+    text-align: center;
+    border-style: groove;
+    border: none;
+    margin: 4px 0px;
+    padding: 5px;
+    font-size: 13px;
+  }
+} */
+@media screen and (max-width: 500px) {
+  .name-product {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .p-item{
+    margin: 5px 0;
+  }
+  .kilo-value{
+    color: #7e7e7e;
+    font-size: 9px;
+  }
+  .container-inf-product {
+  margin-left: 10px;
+}
+.p-item {
+  margin: 5px 0px;
+  font-size: 9px;
+}
+.title-product-measues {
+    font-size: 12px;
+}
+.values-product {
+  display: block;
+}
+.container-buttons-shoping-cart {
+    display: grid;
+    border: 1px solid #BFBFBF;
+    border-radius: 9px;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    width: 93px;
+    height: 32px;
+}
+.bt-menos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 5px;
+    background: #ffffff00;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+.bt-mas{
+      background: white;
+    border: none;
+}
+
+.total-price{    grid-area: d;}
+.price{
+      font-size: 22px;
+    font-family: Arial;
+}
 }

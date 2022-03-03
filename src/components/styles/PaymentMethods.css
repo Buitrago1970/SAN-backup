@@ -54,9 +54,10 @@ position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.ui-radio__text{
+.ui-radio__text {
     display: flex;
     padding: 22px 0;
+    align-items: center;
 }
 .ui-badge{
 margin: 0 12px;
@@ -72,4 +73,28 @@ font-size: 18px;
 }
 .badge-type-selection__list-description{
 font-size: 15px;
+}
+@media screen and (max-width: 767px){
+    .badge-type-selection__label{
+margin: 0;
+padding: 15px 0 15px 0;
+    }
+    .badge-type-selection__list-title{
+font-size: 14px;
+    }
+    .badge-type-selection__list-description{
+font-size: 11px;
+color: #7e7e7e;
+    }
+    .ui-radio-element{
+        width: 28px;
+    height: 18px;
+    margin: 0 20px;
+    }
+    .ui-badge {
+    margin: 0 10px;
+}
+.ui-badge img{
+    width: 34px;
+}
 }

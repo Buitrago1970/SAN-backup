@@ -1,5 +1,5 @@
 .container-address {
-  margin: 12px;
+  margin: 10px;
 }
 .address-contrainer-info {
   border-radius: 4px;
@@ -10,8 +10,7 @@
   padding-left: 20px;
 }
 .cart-address-info {
-  margin-bottom: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .cart-address-subtitle-info {
   display: none;
@@ -20,11 +19,15 @@
   display: flex;
   align-items: center;
 }
-.address > svg{font-size: 27px;
-  margin-right: 5px;}
+.address > svg{
+  font-size: 30px;
+  margin-right: 5px;
+}
 .modify {
   text-decoration: none;
   color: #3391ff;
+  font-size: 12px;
+  margin-left: 35px;
 }
 @media screen and (min-width: 785px) {
   .container-address {
@@ -34,7 +37,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
   }
   .cart-address-subtitle-info {
     margin: 0;

@@ -1,6 +1,3 @@
-.sandDate{
-
-}
 .sendDate-container{
 background: white;
     margin: 12px 12px 12px 20px;
@@ -26,11 +23,19 @@ border-bottom: 1px solid #a8a8a8;
     padding: 15px 0;
     justify-content: space-between;
 }
-
-
-.send-data-p{
-
-}
 .send-data-p-cost{
 color: #32b767;
+}
+@media screen and (max-width: 768px) {
+  .sendDate-container{
+    margin: 12px 0px 12px 0px;
+}
+.sendDate-label {
+    font-size: 14px;
+    margin: 0 10px;
+}
+.ui-radio-element {
+margin: 0 15px;
+}
+    
 }

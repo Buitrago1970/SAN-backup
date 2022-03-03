@@ -11,29 +11,32 @@ class Footer extends React.Component {
           <div className="container-footer-options">
             <div className="footer-options">
               <h1>Nuestros Productos</h1>
-              <h1 className="plus-button">+</h1>
-            </div>
-            <Link to="/">Res</Link>
+          <div className="cotainer-links-footer">
+ <Link to="/">Res</Link>
             <Link to="/">Cerdo</Link>
             <Link to="/">Pollo</Link>
+          </div>
+            </div>
+           
           </div>
 
           <div className="container-footer-options">
             <div className="footer-options">
               <h1>Acerca de Nosotros</h1>
-              <h1 className="plus-button">+</h1>
-            </div>
-            <Link to="/Nosotros">Nosotros</Link>
+          <div className="cotainer-links-footer"> 
+<Link to="/Nosotros">Nosotros</Link>
             <Link to="/QyD">Preguntas Frecuentes</Link>
             <Link to="/TyC">Terminos y Condiciones</Link>
+          </div>
+            </div>
+            
           </div>
 
           <div className="container-footer-options">
             <div className="footer-options">
               <h1>Contactos</h1>
-              <h1 className="plus-button">+</h1>
-            </div>
-            <Link to="/Contactos">Contacto</Link>
+          <div className="cotainer-links-footer">
+<Link to="/Contactos">Contacto</Link>
             <p className="p-contact">
               +57 314 230 2050
               <br />
@@ -41,6 +44,9 @@ class Footer extends React.Component {
               <br />
               De 9:00 a 21:00 Sábado
             </p>
+          </div>
+            </div>
+            
           </div>
         </div>
       </div>

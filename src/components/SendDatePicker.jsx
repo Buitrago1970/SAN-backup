@@ -50,7 +50,7 @@ export default function SendData( {user,setSendDateData }) {
                     <span className="ui-radio-element__control"></span>
                   </div>
                   <div className="ui-radio__text-sendDate">
-                    <p className="send-data-p">Llega el {item.date} a tu direccion</p>    
+                    <p className="send-data-p">Llega el {item.date}</p>    
                     { total >= numEnvioGratis ? <p className="send-data-p send-data-p-cost">
                         Gratis
                           </p> : <p>$ {valorEnvio}.000</p> }

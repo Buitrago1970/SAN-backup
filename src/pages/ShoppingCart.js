@@ -18,8 +18,10 @@ export default function ShoppingCart() {
         <div>
           <Address user={user[0]} cart={cart}/>
           <ShoppingList />
+        <Payment data={"Continuar"} route={"/carrocompras/{}/checkout"}/>
         </div>
         <Payment data={"Continuar"} route={"/carrocompras/{}/checkout"}/>
+
       </div>) :
       (<div className="empty-cart-button">
           <h3>🛒Tu carrito está vacío. </h3>{" "}

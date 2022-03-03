@@ -6,7 +6,7 @@
       box-shadow: 0 2px 13px -4px #636363;
 }
 .cart-length-title {
-  margin-left: 12px;
+  text-align: center;
   font-size: 20px;
 }
 .empty-cart-button {
@@ -23,8 +23,8 @@
   border: 1px solid black;
   border-radius: 10px;
 }
-@media screen and (min-width: 500px) {
-  .title-price {
-    display: block;
+@media screen and (max-width: 500px) {
+   .shopping-list{
+    margin: 12px 0px 69px 0px;
   }
 }
