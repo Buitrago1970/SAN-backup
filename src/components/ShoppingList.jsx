@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import "./styles/ShoppingList.css";
 import Item from "./Item";
 import Appcontext from "../context/Appcontext";
-import { Link } from "react-router-dom";
 
 export default function ShoppingCart({hideButtons}) {
   const {
