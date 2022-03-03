@@ -156,5 +156,9 @@
    }
      .articulo {
           color: #d0d0d0;
+              max-width: 300px;
+  }
+  .img-container{
+        width: 100%;
   }
   }
