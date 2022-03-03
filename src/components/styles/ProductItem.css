@@ -156,9 +156,18 @@
    }
      .articulo {
           color: #d0d0d0;
-              max-width: 300px;
+              max-width: 250px;
   }
   .img-container{
         width: 100%;
+        padding: 20px;
+  }
+  .img-product{
+      width: 80%;}
+  .container-buttons{
+    margin: 7px 0px;
+  }
+  .btn-shop{
+        margin: 10px 0px 5px 0px;
   }
   }
