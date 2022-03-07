@@ -6,8 +6,15 @@ import ProductItem from "./ProductItem";
 import Categories from "./Categories";
 import Appcontext from "../context/Appcontext";
 import axios from "axios";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 function ProductsList({ search }) {
+const INITIAL_PAGE = 1;
+const [page, setPage] = useState(INITIAL_PAGE);
+const [hasMore , setHasMore] = useState(true);
+const qs = require('qs');
+
+
   const {
     addToCart,    
   } = useContext(Appcontext);
@@ -16,14 +23,18 @@ function ProductsList({ search }) {
 
   //fetch the products from api
    useEffect( () => {
+   const query = qs.stringify({
+        pagination: {
+         page: page,
+        },
+    });
     const fetchProducts = async () => {
-    //  const response = await axios("http://localhost:1337/api/products?populate=image");
-  const response = await axios("https://backendsan.herokuapp.com/api/products?populate=image");
-     setProducts(response.data.data)
+      const response = await axios(`https://backendsan.herokuapp.com/api/products?populate=image&${query}`);
+       setHasMore(response.data.meta.pagination.pageCount > page);
+        setProducts(products.concat(response.data.data));
     };
     fetchProducts();
-  }, []);
-  
+  }, [page, qs]);
   //filter the products based on the search text
   useEffect(() => {
     if (search === "") {
@@ -42,15 +53,17 @@ function ProductsList({ search }) {
   const RenderList = (List) => {
     return (
       <>
+      <InfiniteScroll dataLength={products.length} hasMore={hasMore} next={()=>setPage( (prevPage)=>  prevPage + 1 )}>
         <div className="container-products">
-          {List.map((product) => (
-            <ProductItem
-              key={product.attributes.slug}
-              product={product.attributes}
-              handleAddToCart={handleAddToCart}
-            />
-          ))}
+            {List.map((product) => (
+             <ProductItem
+               key={product.attributes.Slug}
+               product={product.attributes}
+                handleAddToCart={handleAddToCart}
+              />
+            ))}
         </div>
+      </InfiniteScroll>
       </>
     );
   };
@@ -66,7 +79,9 @@ function ProductsList({ search }) {
           <h3 className="text-not-found">
            "{search}"
           </h3>
-          </div>):(<Categories>{RenderList(filterList)}</Categories>)}
+          </div>):(
+          <Categories>{RenderList(filterList)}</Categories>
+          )}
       </div>
     </>
   );
