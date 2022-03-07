@@ -6,6 +6,7 @@ import "./styles/header.css";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import Appcontext from "../context/Appcontext";
+import logo from "../images/TORO 1.png"
 
 const Header = () => {
   const {
@@ -16,9 +17,7 @@ const Header = () => {
       <div className="header">
         <div className="container-logo">
           <Link className="header__brand-logo" title="" to="">
-            {/* <img className="logo" src={logo} alt="Logo San Diego" /> */}
-            <p>twenty</p>
-          </Link>
+            <img className="logo" src={logo} alt="Logo San Diego" />          </Link>
         </div>
 
         <div className="container-options menu">
