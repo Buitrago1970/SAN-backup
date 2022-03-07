@@ -114,6 +114,8 @@ const useInitialState = () => {
   };
   //send order to server
    const sendOrder =  async (toatalPedido, paymentMethod,creationDate,numero_pedido, hora) => {
+     debugger
+     console.log('1');
      setState({
       ...state,
       receipt: {
@@ -123,9 +125,10 @@ const useInitialState = () => {
         creationDate: creationDate,
         numero_pedido: numero_pedido,
         hora: hora,
-        
       },
     });
+     debugger
+
       const token = getToken();
       const url = "https://backendsan.herokuapp.com/api/orders"
       const data = { "data": {
@@ -162,11 +165,23 @@ try {
               Authorization: `Bearer ${token}`,
             },
           })
-          return respuesta;
+          let data = respuesta.data.data[0].attributes;
+          return data;
     } catch (error) {
       return false;
     }
   }
+  //save order response data
+  const saveOrder = (data) => {
+    setState({
+      ...state,
+      receipt: {
+        ...state.receipt,
+        data: data,
+      },
+    });
+  }
+
   //Clear cart
   const cleanCart = () => {
     setState({
@@ -174,7 +189,7 @@ try {
       cart: [], 
     });
   };
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder, cleanCart,setDateSend};
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder, cleanCart,setDateSend,saveOrder};
 };
 
 export default useInitialState;

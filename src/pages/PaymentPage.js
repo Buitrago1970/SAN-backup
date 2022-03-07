@@ -22,7 +22,7 @@ export default function PaymentPage() {
   const numero_pedido = date.getFullYear() +''+ date.getDate() + '' + (date.getMonth()+1) + '' + date.getHours()+''+date.getMinutes() + 'EC' +`${Math.floor(Math.random() * (9999 - 1000) + 1000)}`;
   const hora = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
-  const {state:{user, cart},sendOrder,getOrder, cleanCart} = useContext(Appcontext)
+  const {state:{user, cart},sendOrder,getOrder, cleanCart, saveOrder} = useContext(Appcontext)
   // esconder en boton de payment para mostar en boton de enviar pedido
   const [hideButton, setHideButton] = useState(true)
   //estado de los metodos de pago

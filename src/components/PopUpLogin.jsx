@@ -52,6 +52,7 @@ export default function PopUpLogin(props) {
       try {
         const response = await axios.post(url, data);
         const token = response.data.jwt;
+        console.log(token);
         const decoded = jwt_decode(token);
         const userData = response.data.user;
         setToken(token);

@@ -37,7 +37,6 @@ export default function SendData( {user,setSendDateData }) {
   if(user){
  return (
     <>
-
       <div className="sendDate">
         <p className="cart-length-title">Recibir compra</p>
         <div className="sendDate-container">

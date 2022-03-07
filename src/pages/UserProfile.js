@@ -16,6 +16,14 @@ export default function UserProfile() {
       <button onClick={()=>{handleLogout()}}>
           Cerrar Sesion
       </button>
+      <div className="orders">
+          <h1>Ordenes</h1>
+          <div className="orders-title">Mis pedidos</div>
+          <div className="orders-data">
+            <p>Lista de pedidos</p>
+          </div>
+        </div>                
+
   </div>
   </>);
 }
