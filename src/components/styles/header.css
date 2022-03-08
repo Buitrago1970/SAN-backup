@@ -2,12 +2,13 @@
   display: flex;
   padding: 10px;
   background-color: #000000cc;
-  height: 20px;
+  height: 45px;
   align-items: center;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   z-index: 10;
+
 }
 .header a {
   color: rgb(212, 212, 212);
@@ -20,12 +21,10 @@
 }
 .container-logo {
     position: relative;
-    right: 22px;
-    width: 150px;
-    top: 17px;
+    top: 2px;
 }
 .logo {
-  width: 80px;
+  width: 70px;
   text-decoration: none;
 }
 .container-options {
@@ -44,6 +43,8 @@
     align-items: center;
         margin-right: 5px;
     justify-content: space-between;
+        flex-direction: column;
+
 }
 .name-user{
   width: 110px;
@@ -65,15 +66,22 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header{
+    height: 20px;
+    margin: 0;
+  }
   .container-logo {
     min-width: 50px;
     margin: 0px 20px;
     padding: 0px 5px;
     text-align: inherit;
+        top: 14px;
+        width: 300px;
+
   }
-  .logo {
-    font-size: 20px;
-  }
+ .logo {
+  width: 80px;
+}
   .container-options {
     display: flex;
     justify-content: center;
@@ -84,5 +92,6 @@
   }
   .container-shopping-cart{
         width: 300px;
+        flex-direction: row;
   }
 }

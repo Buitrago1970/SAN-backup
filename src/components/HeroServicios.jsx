@@ -9,7 +9,7 @@ function HeroServicios() {
       <div className="parent">
         <div className="div1">
           <div className="paragraph-container">
-            <p className="sub-title-s-v">Carnes Online Colombia </p>
+            <p className="sub-title-s-v"> Surticarnes San-Diego </p>
             <p className="text-container-servicios">
               Te ofrecemos acceder a una gama amplia de carnes de varias marcas. Para ello, solo tienes
               que registrarte, elegir los productos que consideres de tu interés

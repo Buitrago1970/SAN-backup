@@ -114,8 +114,6 @@ const useInitialState = () => {
   };
   //send order to server
    const sendOrder =  async (toatalPedido, paymentMethod,creationDate,numero_pedido, hora) => {
-     debugger
-     console.log('1');
      setState({
       ...state,
       receipt: {
@@ -127,8 +125,6 @@ const useInitialState = () => {
         hora: hora,
       },
     });
-     debugger
-
       const token = getToken();
       const url = "https://backendsan.herokuapp.com/api/orders"
       const data = { "data": {
@@ -165,8 +161,7 @@ try {
               Authorization: `Bearer ${token}`,
             },
           })
-          let data = respuesta.data.data[0].attributes;
-          return data;
+          return respuesta;
     } catch (error) {
       return false;
     }

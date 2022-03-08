@@ -39,10 +39,11 @@
     margin: 0px 0px;
   }
   .name-product_ {
-    text-align: center;
+  text-align: center;
     font-size: 22px;
     color: #f3f3f3;
     margin: 16.5px 0;
+    min-height: 55px;
   }
   .product-weight {
     display: flex;

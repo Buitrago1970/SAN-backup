@@ -25,7 +25,7 @@ function HeroNosotros() {
             </div>
             <div className="text-container text-container-nosotros">
               <p>
-                Suplir la necesidad que
+                Surticarnes San-Diego nace para suplir la necesidad que
                 tenemos de comprar la carne de la semana o de la parrillada del
                 fin de semana a un solo click 🖱 de distancia.
               </p>

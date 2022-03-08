@@ -26,12 +26,11 @@
   padding: 20px;
   border-radius: 4px;
   background: #ffffff;
-
       position: sticky;
   position: -webkit-sticky;
-
     top: 0;
     z-index: 9;
+    margin-bottom: 50px;
 }
 @media screen and (min-width: 1000px) {
   .container-payment {

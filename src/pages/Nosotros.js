@@ -44,7 +44,7 @@ class Nosotros extends React.Component {
             <div className="text-container-vision  ">
               <h2 className="vision">Vision</h2>
               <p className="main-paragraph">
-                Carnes online colombia nace con la visión de ofrecer el mejor
+                Surticarnes San-Diego nace con la visión de ofrecer el mejor
                 producto y más fresco directamente al consumidor y a domicilio
                 sin intermediarios. Que nuestros clientes
                 reciban una gran variedad de comida saludable y de gran sabor.
