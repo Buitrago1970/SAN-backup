@@ -1,17 +1,21 @@
 import * as React from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 
 import "./styles/header.css";
 
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
+import {AiOutlineUser} from 'react-icons/ai'
 import Appcontext from "../context/Appcontext";
+import PopUpLogin from "../components/PopUpLogin";
 import logo from "../images/TORO 1.png"
 
 const Header = () => {
   const {
     state: { cart , user },
   } = useContext(Appcontext);
+
+  const [buttonPopUp , setButtonPopUp] = useState(false);
   return (
     <>
       <div className="header">
@@ -39,9 +43,13 @@ const Header = () => {
             <div className="name-user">
           {user[0] ? ( <Link to="/userprofile" title="Inicio" className="options">
             {user[0].username}
-            </Link> ) : null}
+            </Link> ) : <>
+        <button className="btn-login-header" onClick={()=>setButtonPopUp(true)}>   <AiOutlineUser />
+            Iniciar Sesión   </button>  
+        <PopUpLogin trigger={buttonPopUp} closePopUp={setButtonPopUp} loginEnHeader={true}/>        
+            </>}
         </div>
-          <Link className="shopping-cart" to="/carrocompras">
+         <Link className="shopping-cart" to="/carrocompras">
             <FiShoppingCart className="shopping-cart-icon" />
             <div className="shopping-cart-length">
               {cart.length > 0 && cart.length}

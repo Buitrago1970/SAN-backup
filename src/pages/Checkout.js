@@ -12,6 +12,8 @@ import "./styles/ShoppingList.css";
 
 
 export default function ShoppingCart() {
+
+
   const {state:{user ,cart},setDateSend} = useContext(Appcontext)
   const [sendDateData, setSendDateData] = useState(null);
   const PATH = 'checkout'; 

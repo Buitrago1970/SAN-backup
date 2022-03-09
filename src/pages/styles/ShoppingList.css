@@ -1,5 +1,10 @@
 .hero-shopping-cart {
   width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "a"
+        "b";
 }
 .secondary-title {
   margin-bottom: 15px;

@@ -1,5 +1,5 @@
 .payment{
-
+    grid-area: a; 
 }
 .method-container{
 }
@@ -83,4 +83,10 @@ font-size: 17px;
 .payment-method-description{
 font-size: 13px;
     color: #424242;
+}
+@media screen and (min-width: 1000px) {
+.payment{
+    grid-area: auto; 
+  }
+    
 }

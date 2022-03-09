@@ -61,7 +61,6 @@ export default function Adress() {
     } ,
     onSubmit: async (values)  => {
       // enviar valores a la base de datos
-      // https://backendsan.herokuapp.com/api/auth/local/register
      axios
       .post('https://backendsan.herokuapp.com/api/auth/local/register', {
         username: values.name,

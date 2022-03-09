@@ -12,7 +12,7 @@ const useInitialState = () => {
   const addToCart = (product, count) => {
     const productExists = state.cart.find((item) => item.Slug === product.Slug);
     if (productExists) {
-      console.log("productExists");
+    
       setState({
         ...state,
         cart: state.cart.map((item) =>
@@ -22,7 +22,7 @@ const useInitialState = () => {
         ),
       });
     } else {
-      console.log("productExists no");
+  
       setState({
         ...state,
         cart: [
@@ -87,6 +87,14 @@ const useInitialState = () => {
   //login user
 
  const loginUser =  (payload, idUSer)=>{
+  //  debugger
+  //  if(payload && payload.jwt){
+  //   setToken(payload.jwt)
+  //   setState({
+  //     ...state,
+  //     user: [ ...state.user, payload.user], 
+  //   })
+  //  }
    setState({
     ...state,
     user: [ ...state.user, payload],
@@ -94,7 +102,7 @@ const useInitialState = () => {
    })
  }
   //logout user
-  const logoutUser = () => {
+  const logoutUser = ( ) => {
     removeToken();
      setState({
        ...state,

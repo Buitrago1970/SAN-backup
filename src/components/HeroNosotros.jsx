@@ -15,7 +15,8 @@ function HeroNosotros() {
           <div className="contaner-img-nosotros">
             <img className="img-nosotros" src={meat} alt="" />
           </div>
-          <div className="text-nosotros">
+
+                  <div className="text-nosotros">
             <div className="title-container-hero-nosotros">
               <h1 className="title-hero-nosotros">
                 Experimente La Conveniencia
@@ -27,7 +28,7 @@ function HeroNosotros() {
               <p>
                 Surticarnes San-Diego nace para suplir la necesidad que
                 tenemos de comprar la carne de la semana o de la parrillada del
-                fin de semana a un solo click 🖱 de distancia.
+                fin de semana a ahora a 1 solo click 🖱 de distancia.
               </p>
               <br />
               <p>

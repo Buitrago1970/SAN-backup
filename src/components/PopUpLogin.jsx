@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { useContext } from 'react';
-import jwt_decode from 'jwt-decode';
 
 import './styles/PopUpLogin.css';
 import {Link} from 'react-router-dom';
@@ -52,13 +51,16 @@ export default function PopUpLogin(props) {
       try {
         const response = await axios.post(url, data);
         const token = response.data.jwt;
-        console.log(token);
-        const decoded = jwt_decode(token);
         const userData = response.data.user;
         setToken(token);
-        loginUser(userData, decoded);
+        loginUser(userData);
         props.closePopUp(false);
+        if(props.loginEnHeader){
+          //recargar pagina
+          window.location.reload();
+        }else{
         history.push("/carrocompras/{}/checkout");
+        }
       } catch (error) {
         alert('Usuario o contraseña incorrectos');
       }
@@ -68,7 +70,7 @@ export default function PopUpLogin(props) {
     <div className="popup-login">
       <div className="popup-login-content">
         <div className='close-popup'>
-        <button className="close-popup-login" onClick={()=>props.closePopUp(false)}>X </button>
+        <button className="close-popup-login" onClick={()=> props.closePopUp(false)}>X </button>
         </div>
         <h3>Inicia sesión</h3>
         <hr />
@@ -111,7 +113,8 @@ export default function PopUpLogin(props) {
             <div className="form-group">
               <Link to='/carrocompras/{}/direccion' className='link-signup'>
             <button className="btn btn-primary btn-register">Crear cuenta nueva</button>
-              </Link>
+                            </Link>
+
             </div>
      </div>
      </div>

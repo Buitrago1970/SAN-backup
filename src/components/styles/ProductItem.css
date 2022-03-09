@@ -85,13 +85,15 @@
     display: flex;
   }
   .container-counter {
-    width: 19px;
+   width: 25px;
     text-align: center;
     border-style: groove;
-    border: 1px groove #8c827378;
+    border: 1px groove #bebebe;
     margin: 4px 0px;
     padding: 5px;
-    font-size: 13px;
+    font-size: 15px;
+    color: white;
+    border-radius: 3px;
   }
   .counter-quantity-products {
     margin: 0;
@@ -120,11 +122,12 @@
     border-radius: 2px;
     border: none; 
     cursor: pointer;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
   }
   .bt-menos:hover {
   transition: all 0.3s ease-in;
   font-weight: 900;
-
   filter: drop-shadow(#ffffffb4 0 0 1px);
   }
 
@@ -132,7 +135,6 @@
   transition: all 0.3s ease-in;
   filter: drop-shadow(#ffffffb4 0 0 1px);
   font-weight: 900;
-
   } 
   .bt-mas {
     cursor: pointer;
@@ -144,6 +146,8 @@
     background: #ffffff4f;
     border-radius: 2px;
     border: none;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
   }
   .btn-shop {
     margin: 6px 0px 2px 2px;
