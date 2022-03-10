@@ -87,14 +87,6 @@ const useInitialState = () => {
   //login user
 
  const loginUser =  (payload, idUSer)=>{
-  //  debugger
-  //  if(payload && payload.jwt){
-  //   setToken(payload.jwt)
-  //   setState({
-  //     ...state,
-  //     user: [ ...state.user, payload.user], 
-  //   })
-  //  }
    setState({
     ...state,
     user: [ ...state.user, payload],

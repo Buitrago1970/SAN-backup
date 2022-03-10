@@ -7,7 +7,7 @@ import { handleSumTotal } from "../utils/index";
 
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({ data , route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate }) {
+export default function Payment({ data , route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate, hideButton }) {
   const {
     state: { cart, user },
   } = useContext(Appcontext);
@@ -81,8 +81,11 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
           ) :  (
             <>
             {/* boton para logear usuario */}
-            <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>{data}</button>
+            {hideButton ? null:(<>
+              <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>{data}</button>
             <PopUpLogin trigger={buttonPopUp} closePopUp={setButtonPopUp}/>
+            </>) }
+            
             </>
             )
           }

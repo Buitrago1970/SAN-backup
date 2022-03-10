@@ -56,8 +56,7 @@ export default function PopUpLogin(props) {
         loginUser(userData);
         props.closePopUp(false);
         if(props.loginEnHeader){
-          //recargar pagina
-          window.location.reload();
+          history.push('/')
         }else{
         history.push("/carrocompras/{}/checkout");
         }

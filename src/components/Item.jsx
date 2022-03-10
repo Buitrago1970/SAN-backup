@@ -57,7 +57,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
           { hideButtons ? null : (          <div className="container-buttons-shoping-cart">
             <button
               type="button"
-              className="bt-menosSC bt-menos"
+              className="bt-menos bt-shopping-cart"
               onClick={() => handlesAddToCart('menos', item)}
               >
               -
@@ -68,7 +68,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
 
             <button
               type="button"
-              className="bt-mas"
+              className="bt-mas bt-shopping-cart"
               onClick={() => handlesAddToCart('mas', item)}
             >
               +

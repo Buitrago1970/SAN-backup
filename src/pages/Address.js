@@ -1,4 +1,5 @@
-import React ,{useContext}from "react";
+import * as React from "react";
+import {useContext, useState} from "react"
 
 import { Link, useHistory } from "react-router-dom";
 import Payment from "../components/Payment";
@@ -12,6 +13,7 @@ export default function Adress() {
 
   const history = useHistory();
   const {registerUser} = useContext(Appcontext);
+  const [hideButton , setHideButton] = useState(true)
   const formik  =  useFormik ({
     initialValues:{
       name:'',
@@ -76,11 +78,11 @@ export default function Adress() {
           registerUser(response.data);
           history.push("/carrocompras/{}/checkout");
         }else{
-          console.log('Something went wrong');
+          alert('ha ocurrido un error intenta nueva mente')
         }
      })
      .catch(error => {
-        console.log('An error occurred:', error.response);
+        alert('ha ocurrido un error intenta nueva mente' , error)
      })
 
   }
@@ -203,7 +205,7 @@ export default function Adress() {
         </div>
 
       </div>
-      <Payment />
+      <Payment hideButton={hideButton} />
     </div>
   );
 }

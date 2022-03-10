@@ -124,3 +124,24 @@
     color: #888888;
     cursor: auto;
  }
+ @media screen and (max-width: 600px) {
+  .container-andes-form-control { 
+    grid-template-columns: 1fr;
+  }
+  .andes-form-control{
+    width: 80%;
+    margin: 20px 9px;
+  }
+  .Information{
+    margin: 20px 0px 10px 0px;
+  }
+  .secondary-title {
+    text-align: center;
+}
+.form-child-div {
+  padding: 10px;
+}
+.andes-form-control-long {
+  width: 80%;
+}
+ }

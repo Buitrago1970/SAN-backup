@@ -71,6 +71,7 @@
     text-decoration: none;
     padding: 0 !important;
     display: flex;
+    justify-content:center;
     align-items: center;
     font-weight: 600;
     min-width: 150px;
