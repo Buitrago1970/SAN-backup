@@ -12,7 +12,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
     removeOneProuctCart, 
   } = useContext(Appcontext);
 
-  const { name, precio, cantidad,presentacion , total_anadidos_de_productos } = item;
+  const { name, precio, cantidad,presentacion , total_anadidos_de_productos,valor_kilo } = item;
   const [count, setCount] = useState(total_anadidos_de_productos);
 
 
@@ -43,7 +43,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
              <p className="p-item">Empaque: {presentacion}</p>
             <p className="p-item">Presentación: {presentacion}</p>
             <p className="kilo-value">
-              Valor Kilo: $ {new Intl.NumberFormat().format(precio)}
+              Valor Kilo: $ {new Intl.NumberFormat().format(valor_kilo)}
             </p>
             {hideButtons ? null : (  <button
               type="button"
