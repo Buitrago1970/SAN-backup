@@ -76,7 +76,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
           </div>)}
           <div className="total-price">
             <div className="values-product">
-              <p className="price">
+              <p className="price-shopping-cart">
                 $ {new Intl.NumberFormat().format(precio * total_anadidos_de_productos)}
               </p>
             </div>

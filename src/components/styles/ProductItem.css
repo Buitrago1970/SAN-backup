@@ -157,16 +157,43 @@
      background: white;
    }
      .articulo {
-          color: #d0d0d0;
-              
+      max-width: 151px;
+      margin: 18px 3px;
+          color: #d0d0d0;           
   }
   .img-container{
         width: 100%;
   }
+  .description{
+    padding: 10px 5px;
+  }
+  .name-product_ {
+    font-size: 14px;
+    min-height: 35px;}
+.product-weight {
+  font-size: 8.5px;
+}
+.preparation-container {
+  font-size: 8px;
+}
+.price {
+  font-size: 15px;
+}
   .container-buttons{
     margin: 7px 0px;
   }
+  .container-counter {
+    width: 13px;
+    text-align: center;
+    border-style: groove;
+    border: 1px groove #bebebe;
+    margin: 4px 0px;
+    padding: 5px;
+    font-size: 10px;
+}
   .btn-shop{
         margin: 10px 0px 5px 0px;
+
+      font-size: 10px;
   }
   }

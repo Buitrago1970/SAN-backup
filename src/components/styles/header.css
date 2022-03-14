@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  padding: 10px;
+  padding: 10px 0;
   background-color: #000000cc;
   height: 45px;
   align-items: center;
@@ -8,7 +8,6 @@
   position: -webkit-sticky;
   top: 0;
   z-index: 10;
-
 }
 .header a {
   color: rgb(212, 212, 212);
@@ -47,7 +46,7 @@
 
 }
 .name-user{
-  /* width: 110px; */
+  width: none;
 }
 .shopping-cart {
   display: flex;
@@ -83,6 +82,7 @@
     color: rgb(255, 255, 255);
 }
 
+
 @media screen and (min-width: 768px) {
   .header{
     height: 20px;
@@ -109,5 +109,8 @@
   .container-shopping-cart{
         width: 185px;
         flex-direction: row;
+  }
+  .user-name{
+    width:100%;
   }
 }

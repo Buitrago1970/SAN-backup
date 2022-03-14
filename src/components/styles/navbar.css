@@ -46,4 +46,10 @@ width: 80%;
     width: 80%;
     border-radius: 7px;
   }
+  nav {
+    justify-content: flex-start;
+   }
+   .search {
+    width: 100%;
+    }
 }

@@ -31,16 +31,12 @@ const qs = require('qs');
 
     
       const fetchProducts = async () => {
-        for(let i=1;i>2;i++){
-        const response = await axios(`https://backendsan.herokuapp.com/api/products?populate=image&${query}`);
-        setHasMore(response.data.meta.pagination.pageCount > page);
+        
+        const response = await axios(`https://backendsan.herokuapp.com/api/products?populate=image&${query}`);        setHasMore(response.data.meta.pagination.pageCount > page);
         setProducts(products.concat(response.data.data));
-       } 
+    
  }
  fetchProducts();
-
- console.log('prueba');
- debugger
   }, [page, qs]);
   //filter the products based on the search text
   useEffect(() => {
@@ -60,7 +56,7 @@ const qs = require('qs');
   const RenderList = (List) => {
     return (
       <>
-      <InfiniteScroll dataLength={products.length} hasMore={hasMore}>
+      <InfiniteScroll dataLength={products.length} hasMore={hasMore} next={()=>setPage( (prevPage)=>  prevPage + 1 )}>
         <div className="container-products">
             {List.map((product) => (
              <ProductItem

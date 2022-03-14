@@ -48,7 +48,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
 
           {/* precio */}
           <div className="price-container">
-            <span className="price">
+            <span className="prices">
               ${new Intl.NumberFormat().format(product.precio)}
             </span>
           </div>

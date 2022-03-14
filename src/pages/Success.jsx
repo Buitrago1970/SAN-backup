@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import "./styles/Success.css";
 import Appcontext from '../context/Appcontext';
 
-import successIcon from "../images/Unknown.png"; 
+import successIcon from "../images/ok.png"; 
 export default function Success() {
     const {state:{ receipt }} = useContext(Appcontext);
     return (
