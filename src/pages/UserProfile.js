@@ -1,7 +1,12 @@
 import * as React from 'react';
 
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
+import {getToken} from '../utils/token'
+
+import axios from 'axios';
+
+
 
 import "./styles/UserProfile.css"
 import Appcontext from '../context/Appcontext';
@@ -9,6 +14,25 @@ import Appcontext from '../context/Appcontext';
 export default function UserProfile() {
   const history = useHistory();
   const { logoutUser } = useContext(Appcontext);
+  const token = getToken();
+
+
+  const url = " "
+  useEffect(()  => {
+    (async () =>{
+      try {
+        const respuesta = await axios.post(url, {
+           headers: {
+             Authorization: `Bearer ${token}`,
+           },
+         })
+         return respuesta;
+     } catch (error) {
+       return false;
+     }
+    })()
+    },[]);
+
   const handleLogout = () => {
     logoutUser();
     history.push('/');

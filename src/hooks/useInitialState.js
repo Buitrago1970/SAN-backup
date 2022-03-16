@@ -101,6 +101,8 @@ const useInitialState = () => {
        user: [],
        idUser:[]
      });
+     //recaargar pagina
+      window.location.reload();
   };
   //set date send
   const setDateSend = (date) => {

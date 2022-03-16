@@ -1,15 +1,15 @@
 import {getToken, hasTokenExpired} from './token';
 
 
-export async function authFetch(url, params, logout){
+export async function authFetch(url, params, logoutUser){
     const token = getToken();
     if(!token){
         //usuario no logeado 
-        logout()
+        logoutUser()
     }else{
         if(hasTokenExpired(token)){
             //token expirado
-            logout()
+            logoutUser()
         }else{
             const paramsTemp ={
                 ...params,

@@ -31,9 +31,9 @@ export default function Success() {
             </div>
             <div className='buttons-mail-info'>
                 <div className='buttons-success'>
-                    <button className='btn-success'>
+                    {/* <button className='btn-success'>
                         Ver mis pedidos
-                    </button>
+                    </button> */}
                     <button className='btn-success' >
                         Descargar Recibo Compra
                     </button>    
@@ -41,7 +41,9 @@ export default function Success() {
             </div>
             </div>
 
-            <p className='p-info-end-succes-container'>❗️Le enviaremos por correo electronico una confirmacion del pedido con detalles e informacion de seguimiento.</p>
+            {/* <p className='p-info-end-succes-container'>❗️Le enviaremos por correo electronico una confirmacion del pedido con detalles e informacion de seguimiento.</p> */}
+            <p className='p-info-end-succes-container'>cell +57 310-570-6238 ⎮ tel 6746457 ⎮ correo juan@hotmail.com ⎮</p>
+            <p ></p>
             </div>
 
       </div>

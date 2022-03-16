@@ -54,4 +54,6 @@ display: flex;
 .p-info-end-succes-container{
 margin: 10px;
     text-align: center;
+    color: rgb(85, 85, 85);
+    font-size: 10px;
 }   

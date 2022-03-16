@@ -37,12 +37,12 @@
 }
 
 .container-shopping-cart {
-  width: 300px;
-      display: flex;
-    align-items: center;
-        margin-right: 5px;
-    justify-content: space-between;
-        flex-direction: column;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+  justify-content: space-between;
+  flex-direction: column;
 
 }
 .name-user{
@@ -87,13 +87,12 @@
   .header{
     height: 20px;
     margin: 0;
+    padding: 10px 20px;
   }
   .container-logo {
-    margin: 0px 20px;
-    padding: 0px 5px;
     text-align: inherit;
     top: 14px;
-    width: 185px;
+    width: 30%;
   }
  .logo {
   width: 80px;
@@ -107,7 +106,7 @@
     text-decoration: none;
   }
   .container-shopping-cart{
-        width: 185px;
+        width: 30%;
         flex-direction: row;
   }
   .user-name{
