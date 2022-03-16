@@ -56,6 +56,16 @@ hr{
   background: #b6b6b6;
   box-shadow: 0 0 2px 1px #d0d0d0;
 }
+/* loader */
+.loanding-container{
+ width: 100%;
+display: flex;
+}
+.loanding-container img{
+  width: 40%;
+  margin: auto;
+}
+
 
 @media screen and (min-width: 870px) {
   .secondary-title {
@@ -64,4 +74,11 @@ hr{
   .main-container {
     padding: 0;
   }
+
 }
+@media screen and (max-width: 870px) {
+  .loanding-container img{
+    width: 100%;
+  }
+}
+
