@@ -64,6 +64,14 @@
   .presentation-paragraph {
     margin: 0;
   }
+  .presentation-product{
+    margin-bottom: 0;
+  }
+  .container-valor-kilo{
+    display: flex;
+    font-size: 11px;
+    color: #b4b4b4;
+  }
   .content-purchase {
     padding: 1px;
   }
@@ -73,7 +81,7 @@
     margin: 5px 4px;
   }
   .price {
-    font-size: 25px;
+    font-size: 23px;
     font-weight: 400;
     margin: 16px 0;
   }
@@ -85,15 +93,15 @@
     display: flex;
   }
   .container-counter {
-   width: 25px;
+   width: 30px;
     text-align: center;
     border-style: groove;
     border: 1px groove #bebebe;
     margin: 4px 0px;
     padding: 5px;
-    font-size: 15px;
+    font-size: 14px;
     color: white;
-    border-radius: 3px;
+    border-radius: 2px;
   }
   .counter-quantity-products {
     margin: 0;

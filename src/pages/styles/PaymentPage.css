@@ -84,7 +84,7 @@ font-size: 17px;
 font-size: 13px;
     color: #424242;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 780px) {
 .payment{
     grid-area: auto; 
   }

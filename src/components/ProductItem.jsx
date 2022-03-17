@@ -31,7 +31,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
 
           {/* peso */}
           <div className="product-weight">
-            <p className="product-quantity">cantidad</p>
+            <p className="product-quantity">Cantidad</p>
             <p className="product-quantity weigth">X {product.cantidad}g</p>
           </div>
           <br />
@@ -40,12 +40,15 @@ const ProductItem = ({ product, handleAddToCart }) => {
             <h3 className="preparation-product">
               Empaque: Vacio y Congelado -4°C
             </h3>
-            <h3 className="presentation-product">
+            <h3 className="presentation-product ">
               Presentación: {product.presentacion}
             </h3>
+            <div className="container-valor-kilo">
+              <h3>Valor kilo: $</h3>
+              <h3>{new Intl.NumberFormat().format(product.valor_kilo)}</h3>
+            </div>
             <hr />
           </div>
-
           {/* precio */}
           <div className="price-container">
             <span className="price">
