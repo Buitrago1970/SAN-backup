@@ -32,9 +32,20 @@
     z-index: 9;
     margin: 10px 0;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 870px) {
   .container-payment {
-    padding: 35px;
+    padding: 20px 10px;
+    border-radius: 0;
+    text-align: center;
   }
-   
+   .container-payment hr{
+     display: none;
+   }
+   .products-length{
+     display: none;
+   }
+   .btn-payment {
+    border-radius: 5px;
+    font-size: 17px;
+  }
 }

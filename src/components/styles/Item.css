@@ -86,7 +86,8 @@
   color: #000;
   font-size: 12px;
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 870px) {
   .principal-product {
     display: grid;
     margin: 15px 0px;
@@ -101,7 +102,6 @@
     grid-template-columns: none;
   }
   .img-container-shopping-car{
-    width: 100px;
     border-radius: 7px;
   }
   .name-product {
@@ -113,7 +113,8 @@
     font-size: 9px;
   }
   .container-inf-product {
-  margin-left: 10px;
+  margin-left: 0;
+  width:80%;
 }
 .p-item {
   margin: 5px 0px;
@@ -138,12 +139,16 @@
 }
 .bt-shopping-cart{
     color: #000;
-  font-size: 2px;
-
 }
 .total-price{    grid-area: d;}
 .price-shopping-cart{
       font-size: 22px;
     font-family: Arial;
 }
+}
+
+@media screen and (max-width: 500px) {
+  .img-container-shopping-car{
+    width: 100px;
+  }
 }

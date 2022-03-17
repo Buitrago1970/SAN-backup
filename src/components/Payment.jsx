@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
+
 import "./styles/Payment.css";
+
+import { handleSumTotal } from "../utils/index";
 import { Link } from "react-router-dom";
 
 import Appcontext from "../context/Appcontext";
-import { handleSumTotal } from "../utils/index";
-
 import PopUpLogin from "../components/PopUpLogin";
 
 export default function Payment({ data , route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate, hideButton }) {
@@ -46,9 +47,9 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
       <div className="payment">
         <div className="container-payment">
           <h3>Resumen de Compra</h3>
-          <hr />
+          <hr/>
           <div className="container-account">
-            <div className="account">
+            <div className="account products-length">
               <p>Productos ({cart.length})</p>
               <p>$ {totalPunto}</p>
             </div>
@@ -60,7 +61,7 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
           </div>
           <div className="total-count">
             <div className="account">
-              <p>Pagas</p>
+              <p>Total</p>
               {total >= numEnvioGratis ? <p>$ {totalPunto}</p>   : <p className="costo-envio">$ {totalPedidoPunto}</p> }
             </div>
           </div>
@@ -76,7 +77,7 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
           {/* boton  para pasar al checkout*/}
           {user[0] ? (
             <Link to={route} className={hiden}>
-              <button className="btn-payment" >{data}</button>
+              <button className="btn-payment" >{`${data} (${cart.length} productos)`}</button>
             </Link>
           ) :  (
             <>

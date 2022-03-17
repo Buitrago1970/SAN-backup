@@ -20,8 +20,9 @@
   align-items: center;
 }
 .address > svg{
-  font-size: 30px;
   margin-right: 5px;
+  font-size: 25px;
+
 }
 .modify {
   text-decoration: none;
@@ -29,7 +30,7 @@
   font-size: 12px;
   margin-left: 35px;
 }
-@media screen and (min-width: 785px) {
+@media screen and (min-width: 780px) {
   .container-address {
     margin-left: 20px;
   }
@@ -42,4 +43,5 @@
     margin: 0;
     display: block;
   }
+
 }
