@@ -60,6 +60,8 @@ hr{
 .loanding-container{
  width: 100%;
 display: flex;
+align-items: flex-start;
+
 }
 .loanding-container img{
   width: 40%;

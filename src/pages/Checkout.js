@@ -40,7 +40,7 @@ export default function ShoppingCart() {
           <SendDate user={user[0]}  setSendDateData={setSendDateData}/>
           <ShoppingList hideButtons={hideButtons}/>
         </div>
-        <Payment data={"Continuar"} PATH={PATH} handleSendDate={handleSendDate}/>
+        <Payment data={"Proceder al pago"} PATH={PATH} handleSendDate={handleSendDate}/>
       </div>) :
       (<div className="empty-cart-button">
           <h3>🛒Tu carrito está vacío. </h3>{" "}

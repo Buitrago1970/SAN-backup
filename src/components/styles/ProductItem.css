@@ -181,6 +181,10 @@
 .product-weight {
   font-size: 8.5px;
 }
+.container-valor-kilo{
+  display: flex;
+  font-size: 8px;
+}
 .preparation-container {
   font-size: 8px;
 }

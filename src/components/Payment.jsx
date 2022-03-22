@@ -67,12 +67,12 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
           </div>
           {PATH === 'checkout'?
         (
-          <button className="btn-payment" onClick={handleSendDate}>{data}</button>
+          <button className="btn-payment" onClick={handleSendDate}>{`${data} (${cart.length} productos)`}</button>
         )  :(null)
         }
           {/* boton enviar pedido */}
           { buttonSendOrder ?(
-              <button className="btn-payment" onClick={()=>handlePaymentMethod(total)}>Enviar pedido</button>
+              <button className="btn-payment" onClick={()=>handlePaymentMethod(total)}> Enviar pedido</button>
           ) : (null)}
           {/* boton  para pasar al checkout*/}
           {user[0] ? (

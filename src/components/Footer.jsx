@@ -25,6 +25,8 @@ class Footer extends React.Component {
               <h1>Acerca de Nosotros</h1>
           <div className="cotainer-links-footer"> 
 <Link to="/Nosotros">Nosotros</Link>
+<Link to="/Nosotros">Servicios</Link>
+
             {/* <Link to="/QyD">Preguntas Frecuentes</Link>
             <Link to="/TyC">Terminos y Condiciones</Link> */}
           </div>
