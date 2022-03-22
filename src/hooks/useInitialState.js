@@ -153,10 +153,9 @@ try {
 }
    }
   //get order from server
-  const getOrder = async () => {
-
+  const getOrder = async (numero_pedido) => {
     const token = getToken();
-    const url = `https://backendsan.herokuapp.com/api/orders?filters[numero_de_pedido]=${state.receipt.numero_pedido}`
+    const url = `https://backendsan.herokuapp.com/api/orders?filters[numero_de_pedido]=${numero_pedido}`
     try {
         const respuesta = await axios.get(url, {
             headers: {
@@ -173,20 +172,14 @@ try {
     setState({
       ...state,
       receipt: {
-        ...state.receipt,
         data: data,
       },
+      user: [ ...state.user],
+      idUser:[ ...state.idUser],
+      cart:[]
     });
   }
-
-  //Clear cart
-  const cleanCart = () => {
-    setState({
-      ...state,
-      cart: [], 
-    });
-  };
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder, cleanCart,setDateSend,saveOrder};
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder,setDateSend,saveOrder};
 };
 
 export default useInitialState;

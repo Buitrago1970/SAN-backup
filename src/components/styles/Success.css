@@ -46,6 +46,7 @@ display: flex;
     margin: 10px 0;
     border-radius: 7px;
     font-size: 17px;
+    width: 100%;
 }
 .btn-success:hover{
     background: #2f78e6;

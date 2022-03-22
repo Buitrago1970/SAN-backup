@@ -35,9 +35,9 @@ export default function PaymentPage() {
     
     //redireccionar a la pagina de confirmacion
     if(respuestaPOST){
-      const respuestaGet = await getOrder()
+      const respuestaGet = await getOrder(numero_pedido)
+      saveOrder(respuestaGet.data.data[0].attributes)
       if(respuestaGet){
-        // cleanCart()
         history.push("/success")
             }
     }else{

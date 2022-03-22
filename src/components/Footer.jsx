@@ -25,8 +25,8 @@ class Footer extends React.Component {
               <h1>Acerca de Nosotros</h1>
           <div className="cotainer-links-footer"> 
 <Link to="/Nosotros">Nosotros</Link>
-            <Link to="/QyD">Preguntas Frecuentes</Link>
-            <Link to="/TyC">Terminos y Condiciones</Link>
+            {/* <Link to="/QyD">Preguntas Frecuentes</Link>
+            <Link to="/TyC">Terminos y Condiciones</Link> */}
           </div>
             </div>
             
@@ -38,11 +38,11 @@ class Footer extends React.Component {
           <div className="cotainer-links-footer">
 <Link to="/Contactos">Contacto</Link>
             <p className="p-contact">
-              +57 314 230 2050
+              +57 310 570 6238
               <br />
-              De 9:00 a 23:00 Lunes y viernes
+              De 9:00-AM a 9:00-PM Lunes y viernes
               <br />
-              De 9:00 a 21:00 Sábado
+              De 9:00-AM a 7:00-PM Sábado
             </p>
           </div>
             </div>

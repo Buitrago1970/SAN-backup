@@ -42,7 +42,7 @@ const Header = () => {
         <div className="container-shopping-cart">
             <div className="name-user">
           {user[0] ? ( <Link to="/" title="Inicio" className="options user-name">
-            {user[0].username}
+            {user[0].username}    
             </Link> ) : <>
         <button className="btn-login-header" onClick={()=>setButtonPopUp(true)}>   <AiOutlineUser />
             Iniciar Sesión   </button>  
