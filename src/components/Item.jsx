@@ -32,7 +32,7 @@ const Item = ({ item, handleRemoveFromCart , hideButtons}) => {
       <div className="c">
         <div className="principal-product">
           <div className="img-container-shopping-car">
-            <img className="img" src={fromImageToUrl(item.image.data[0].attributes.formats.small)} alt="img" />
+            <img className="img" src={fromImageToUrl(item.image.data[0])} alt="img" />
           </div>
           <div className="container-inf-product">
             <div className="container-inf-product-title">
