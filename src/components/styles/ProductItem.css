@@ -70,7 +70,7 @@
   .container-valor-kilo{
     display: flex;
     font-size: 11px;
-    color: #b4b4b4;
+    color: #dbdbdb;
   }
   .content-purchase {
     padding: 1px;
@@ -86,6 +86,7 @@
     margin: 16px 0;
   }
   .preparation-container {
+    color: white;
     display: block;
     font-size: 12px;
   }

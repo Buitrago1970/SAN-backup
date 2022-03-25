@@ -6,6 +6,10 @@ import { fromImageToUrl } from "../utils/urls";
 
 
 const ProductItem = ({ product, handleAddToCart }) => {
+
+  // if(product.image.data[0].attributes.formats.small === undefined){
+  //   debugger
+  // }
   const [count, setCount] = useState(1);
 
   const handlesAddToCart = (valor) => {
@@ -22,7 +26,7 @@ const ProductItem = ({ product, handleAddToCart }) => {
       <div className="articulo">
         {/* imagen */}
         <div className="img-container">
-          <img className="img-product" src={fromImageToUrl(product.image.data[0].attributes.formats.small)} alt="xd" />
+          <img className="img-product" src={fromImageToUrl(product.image.data[0])} alt="xd" />
         </div>
         {/* texto */}
         <div className="description">
