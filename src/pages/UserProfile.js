@@ -7,7 +7,6 @@ import {getToken} from '../utils/token'
 import axios from 'axios';
 
 
-
 import "./styles/UserProfile.css"
 import Appcontext from '../context/Appcontext';
 

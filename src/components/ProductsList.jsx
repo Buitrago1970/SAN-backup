@@ -59,7 +59,7 @@ const qs = require('qs');
   const RenderList = (List) => {
     return (
       <>
-      <InfiniteScroll dataLength={products.length} hasMore={hasMore} next={()=>setPage( (prevPage)=>  prevPage + 1 )}>
+      <InfiniteScroll dataLength={products.length} hasMore={hasMore} >
         <div className="container-products">
             {List.map((product) => (
              <ProductItem
