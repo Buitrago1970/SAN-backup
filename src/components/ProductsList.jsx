@@ -36,7 +36,7 @@ const qs = require('qs');
       const fetchProducts = async () => { 
         const response = await axios(`https://backendsan.herokuapp.com/api/products?populate=image&${query}`);        setHasMore(response.data.meta.pagination.pageCount > page);
         setProducts(products.concat(response.data.data));
-        setLoader(false)
+        setLoader(false) 
   }
  fetchProducts();
   }, [page, qs]);
