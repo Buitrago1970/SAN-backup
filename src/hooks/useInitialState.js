@@ -95,6 +95,7 @@ const useInitialState = () => {
  }
   //logout user
   const logoutUser = ( ) => {
+    debugger
     removeToken();
      setState({
        ...state,

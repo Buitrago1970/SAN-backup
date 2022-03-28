@@ -10,14 +10,14 @@
     display: block;
     margin: 18px 8px;
     padding: 0;
-    width: 270px;
+    width: 253px;
     border-radius: 10px;
 }
 .loading-img{
     background: linear-gradient(88deg, #252525, #323232);
     background-size: 400% 400%;
     animation: loadingAnimation 3s ease-in-out infinite;
-    width: 270px;
+    width: 253px;
     height: 150px;
     border-radius: 10px 10px 0px 0px;
 }

@@ -54,6 +54,13 @@ export default function Adress() {
     if( formData.password !== formData.repeatPassword){
       errores.repeatPassword = 'Las contraseñas No coinciden.'
     }
+        // validacion Contrseña
+    if(formData.password.length < 8){
+      errores.password = 'La contraseña debe tener 8 caracteres'
+    }
+    if ( formData.password.match(/[A-Z]/) ) {
+      errores.password = 'La contraseña debe tener 1 letra mayuscula'
+  }
 
     // Validacion general
     if( !formData.phone || !formData.department || !formData.locality  || !formData.address ){
@@ -82,7 +89,7 @@ export default function Adress() {
         }
      })
      .catch(error => {
-        alert('ha ocurrido un error intenta nueva mente' , error)
+        alert('ha ocurrido un error con el servidor porfavor intente nueva mente' , error)
      })
 
   }
@@ -151,7 +158,7 @@ export default function Adress() {
                 <div className="andes-form-control__control">
                   <input className="xd" type="password" name="password" onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
                 </div>
-                {formik.touched.password && formik.errors.password && <p className="errors-form">{formik.errors.general}</p>}
+                {formik.touched.password && formik.errors.password && <p className="errors-form">{formik.errors.password}</p>}
               </label>
               <label className="andes-form-control">
                 <span className="andes-form-control__label">Repetir Contraseña</span>

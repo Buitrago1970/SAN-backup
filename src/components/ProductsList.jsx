@@ -59,7 +59,7 @@ const qs = require('qs');
   const RenderList = (List) => {
     return (
       <>
-      <InfiniteScroll dataLength={products.length} hasMore={hasMore} >
+      <InfiniteScroll dataLength={products.length} hasMore={hasMore} next={()=>setPage( (prevPage)=>  prevPage + 1 )}>
         <div className="container-products">
             {List.map((product) => (
              <ProductItem
@@ -82,7 +82,7 @@ const qs = require('qs');
         {filterList.length === 0 ? (
         <div className="container-search-not-found">
           <h3 className="text-not-found">
-          ⚠️ No se encontraron resultados para 
+          😅 No se encontraron resultados para 
           </h3>
 
           <h3 className="text-not-found">
