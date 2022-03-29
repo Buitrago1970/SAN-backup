@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0 10px;
     max-width: 1500px;
 }
 .loanding-articulo{
