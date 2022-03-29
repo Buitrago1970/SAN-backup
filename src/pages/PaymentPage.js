@@ -14,6 +14,7 @@ import iconoTarjetaCredito from "../images/icono_tarjeta_credito.svg";
 import iconoTarjeDebito from "../images/icono_tarjeta_debito.svg";
 
 export default function PaymentPage() {
+  window.scrollTo(0, 0)
   //useHistory
   const history = useHistory();
 

@@ -9,6 +9,7 @@ import Payment from "../components/Payment";
 import "./styles/ShoppingList.css";
 
 export default function ShoppingCart() {
+  window.scrollTo(0, 0)
   const {
     state: { cart, user },
   } = useContext(Appcontext);

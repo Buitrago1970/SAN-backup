@@ -10,6 +10,7 @@ import * as Yup from 'yup'
 import Appcontext from "../context/Appcontext";
 
 export default function Adress() {
+  window.scrollTo(0, 0)
 
   const history = useHistory();
   const {registerUser} = useContext(Appcontext);

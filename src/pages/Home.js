@@ -16,6 +16,7 @@ export default function Home() {
        const response = await getMeApi();
        loginUser(response);
      })()
+     window.scrollTo(0, 0)  
      },[]);
 
     return (

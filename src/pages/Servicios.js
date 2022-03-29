@@ -9,6 +9,7 @@ import MainServicios from "../components/MainServicios";
 
 class Servicios extends React.Component {
   render() {
+    window.scrollTo(0, 0)
     return (
       <>
         <div className="main-container-servicios">
