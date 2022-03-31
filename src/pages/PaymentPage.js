@@ -29,8 +29,14 @@ export default function PaymentPage() {
   //estado de los metodos de pago
   const [paymentMethodsData, setPaymentMethodsData] = useState(null)
   // funcion guardar metodo de pago
+
+  const [btnAnimation, setBtnAnimation]  = useState('')
+
   const handlePaymentMethod =  async (toatalPedido) => {
+
   if(paymentMethodsData){
+    //set animation btn
+    setBtnAnimation('onclic')
     //send order to server
     const respuestaPOST = await sendOrder(toatalPedido, paymentMethodsData, creationDate,numero_pedido, hora)
     
@@ -83,7 +89,7 @@ export default function PaymentPage() {
               <Address user={user[0]} cart={cart} />
               <PaymentMethods title={'formas de pago'} data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
             </div>
-              <Payment data={"Proceder al Pago"} buttonSendOrder={hideButton} handlePaymentMethod={handlePaymentMethod}/>
+              <Payment data={"Proceder al Pago"} buttonSendOrder={hideButton} handlePaymentMethod={handlePaymentMethod} btnAnimation={btnAnimation}/>
           </div>
           ) : (
                  <div className="empty-cart-button">

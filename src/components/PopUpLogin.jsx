@@ -111,8 +111,8 @@ export default function PopUpLogin(props) {
             <hr />
             <div className="form-group">
               <Link to='/carrocompras/{}/direccion' className='link-signup'>
-            <button className="btn btn-primary btn-register">Crear cuenta nueva</button>
-                            </Link>
+            <button className="btn btn-primary btn-register" onClick={()=>props.closePopUp(false)}>Crear cuenta nueva</button>
+              </Link>
 
             </div>
      </div>

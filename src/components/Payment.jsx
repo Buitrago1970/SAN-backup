@@ -4,11 +4,11 @@ import "./styles/Payment.css";
 
 import { handleSumTotal } from "../utils/index";
 import { Link } from "react-router-dom";
-
+import {FaTelegramPlane} from "react-icons/fa"
 import Appcontext from "../context/Appcontext";
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({ data , route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate, hideButton }) {
+export default function Payment({ data , route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate, hideButton ,btnAnimation}) {
   const {
     state: { cart, user },
   } = useContext(Appcontext);
@@ -72,7 +72,7 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
         }
           {/* boton enviar pedido */}
           { buttonSendOrder ?(
-              <button className="btn-payment" onClick={()=>handlePaymentMethod(total)}> Enviar pedido</button>
+              <button className={ `btn-paymen btn-send-order ${btnAnimation}`} onClick={()=>handlePaymentMethod(total)}> Enviar pedido <FaTelegramPlane/></button>
           ) : (null)}
           {/* boton  para pasar al checkout*/}
           {user[0] ? (
