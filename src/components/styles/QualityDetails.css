@@ -9,6 +9,8 @@
 .sub-title-quality-details{
   font-size: 45px;
   margin-bottom: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .badges-container{
   display: flex;
