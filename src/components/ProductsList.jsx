@@ -34,7 +34,8 @@ const qs = require('qs');
         },
     });    
       const fetchProducts = async () => { 
-        const response = await axios(`https://backendsan.herokuapp.com/api/products?populate=image&${query}`);        setHasMore(response.data.meta.pagination.pageCount > page);
+        const response = await axios(`${process.env.REACT_APP_API_ULR}/api/products?populate=image&${query}`);       
+         setHasMore(response.data.meta.pagination.pageCount > page);
         setProducts(products.concat(response.data.data));
         setLoader(false) 
   }

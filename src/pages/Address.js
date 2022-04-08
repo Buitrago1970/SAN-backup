@@ -54,8 +54,8 @@ export default function Adress() {
       errores.repeatPassword = 'Las contraseñas No coinciden.'
     }
         // validacion Contrseña
-    if(formData.password.length < 8){
-      errores.password = 'La contraseña debe tener 8 caracteres'
+    if(formData.password.length < 6){
+      errores.password = 'La contraseña debe tener 6 caracteres'
     }
     if ( formData.password.match(/[A-Z]/) ) {
       errores.password = 'La contraseña debe tener 1 letra mayuscula'
@@ -70,7 +70,7 @@ export default function Adress() {
     onSubmit: async (values)  => {
       // enviar valores a la base de datos
      axios
-      .post('https://backendsan.herokuapp.com/api/auth/local/register', {
+      .post(process.env.REACT_APP_API_URL_USER_REGISTER, {
         username: values.name,
         email: values.mail,
         password: values.password,

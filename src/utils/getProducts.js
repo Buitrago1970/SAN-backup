@@ -1,7 +1,6 @@
-// import { API_URL} from '../.env';
 import axios from 'axios';
 
-const API_URL = 'https://backendsan.herokuapp.com';
+const API_URL = process.env.API_ULR;
 const qs = require('qs');
 const query = qs.stringify({
   pagination: {
@@ -15,14 +14,13 @@ export default async function getProducts({
     page = 0,
 } = {}) {
     const apiUrl = `${API_URL}/api/products`;
-debugger
     try {
         const response = await axios(`${apiUrl}`
         );
-        debugger;
+    ;
         return response.data;
     } catch (error) {
-        debugger;
+    ;
         return error;
     }
 }

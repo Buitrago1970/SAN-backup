@@ -47,7 +47,7 @@ export default function MainServicios() {
                   <h5 className="subhead" role="presentation">
                     {item.description}
                   </h5>
-                  <p className="avail" role="text">
+                  <p className="avail" >
                     {item.min_description}
                   </p>
                 </div>

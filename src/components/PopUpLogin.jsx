@@ -14,16 +14,6 @@ export default function PopUpLogin(props) {
   const {loginUser} = useContext(Appcontext);
 
   const history = useHistory();
-  //  useEffect(() => {
-  //    const token = getToken();
-  //    if (token) {
-  //     const decoded = jwt_decode(token);
-
-  //      loginUser(token, decoded);
-  //    }else{
-  //      loginUser(null, null);
-  //    }
-  //  },[]);
 
   const formik = useFormik({
     initialValues: initialValues(),
@@ -43,7 +33,8 @@ export default function PopUpLogin(props) {
     return errores
   },
     onSubmit: async  (values) => {
-      const url = 'https://backendsan.herokuapp.com/api/auth/local';
+      // console.log(process.env.REACT_APP_API_URL_USER_LOGIN);
+      const url = process.env.REACT_APP_API_URL_USER_LOGIN;
       const data = {
         identifier: values.mail,
         password: values.password,

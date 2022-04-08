@@ -129,7 +129,7 @@ const useInitialState = () => {
       },
     });
       const token = getToken();
-      const url = "https://backendsan.herokuapp.com/api/orders"
+      const url = process.env.REACT_APP_API_URL_SEND_ORDER
       const data = { "data": {
                  "user": state.user[0],
                  "products": state.cart.map(item => item.Slug ),
@@ -156,7 +156,7 @@ try {
   //get order from server
   const getOrder = async (numero_pedido) => {
     const token = getToken();
-    const url = `https://backendsan.herokuapp.com/api/orders?filters[numero_de_pedido]=${numero_pedido}`
+    const url = `${process.env.REACT_APP_API_URL_SEND_ORDER}[numero_de_pedido]=${numero_pedido}`
     try {
         const respuesta = await axios.get(url, {
             headers: {

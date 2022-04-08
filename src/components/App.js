@@ -17,11 +17,6 @@ import Appcontext from "../context/Appcontext";
 import useInitialState from "../hooks/useInitialState";
 
 function App() {
-  // const initialState = useMemo(
-  //   () => ({
-  //     useInitialState(),
-  //   }),
-  //   []
   const initialState = useInitialState();
   
 
