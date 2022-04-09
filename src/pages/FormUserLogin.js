@@ -22,10 +22,10 @@ export default function Adress() {
       repeatPassword:'',
     },
     validationSchema: Yup.object({
-        name: Yup.string(),
-        mail: Yup.string(),
-        password: Yup.string(),
-        repeatPassword: Yup.string(),
+        name: Yup.string().required,
+        mail: Yup.string().required,
+        password: Yup.string().required,
+        repeatPassword: Yup.string().required,
     }),
     validate:(formData) =>{
       let errores ={}
@@ -139,7 +139,7 @@ export default function Adress() {
               </div>
               <div className="container-text-bottom-login">
                 <p>Ya tienes cuenta?</p>
-                <Link to="/" className="link-login">iniciar secíon</Link>
+                <Link to="/" className="link-login">iniciar sesíon</Link>
               </div>
               {/* <div className="container-text-bottom-login">
               <p>Compras para trabajo?</p>

@@ -57,6 +57,10 @@
   border-radius: 3px;
   box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
   outline: 0;}
+  .input-form-login:focus{
+    -webkit-box-shadow: 1px 0px 9px 1px #FF883B; 
+box-shadow: 1px 0px 9px 1px #FF883B;
+  }
   .p-password{
     margin-bottom: 0;
     text-align: left;
@@ -90,13 +94,12 @@
   letter-spacing: 1px;
   transition: all 0.2s linear;
   cursor: pointer;
-  border: 1px solid rgb(241, 241, 241);
+  border: 1px solid rgb(0, 0, 0);
   background: #f3c552;
  }
  .btn-address:hover {
   box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
   transform: translateY(.5px);
-  border: none;
  }
  .container-text-bottom-login{
   font-size: 12px;
@@ -116,23 +119,22 @@
   padding-left: 4px;
  }
  @media screen and (max-width: 600px) {
-  .container-andes-form-control { 
-    grid-template-columns: 1fr;
+  .information-form{
+    padding: 10px 0;
   }
-  .andes-form-control{
-    width: 80%;
-    margin: 20px 9px;
+  .form-child-div{
+    width: 265px;
   }
-  .Information{
-    margin: 20px 0px 10px 0px;
+  .h2-register{
+    font-size: 20px;
   }
-  .secondary-title {
-    text-align: center;
-}
-.form-child-div {
-  padding: 10px;
-}
-.andes-form-control-long {
-  width: 80%;
-}
+  .andes-form-control__label{
+    font-size: 14px;
+  }
+  .container-label-form {
+    margin-bottom: 25px;
+  }
+  .input-form-login {
+    height: 36px; 
+  }
  }
