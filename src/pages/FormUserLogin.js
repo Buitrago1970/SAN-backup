@@ -22,35 +22,31 @@ export default function Adress() {
       repeatPassword:'',
     },
     validationSchema: Yup.object({
-        name: Yup.string().required,
-        mail: Yup.string().required,
-        password: Yup.string().required,
-        repeatPassword: Yup.string().required,
+        name: Yup.string().required(),
+        mail: Yup.string().required(),
+        password: Yup.string().required(),
+        repeatPassword: Yup.string().required(),
     }),
     validate:(formData) =>{
       let errores ={}
       
     if(!formData.name){
-      errores.name = 'por favor ingrese un nombre'
-    }else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(formData.name)){
-      errores.name = 'El nombre solo puede contener letras y espacios'
+      errores.name = '❗️Introduce tu nombre'
     }
-  
     if(!formData.mail){
-      errores.mail = 'Por favor ingresa un correo electronico'
+      errores.mail = '❗️Escriba su correo electrónico'
     } else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(formData.mail)){
       errores.mail = 'El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.'
     }
-   
-    if( formData.password !== formData.repeatPassword){
-      errores.repeatPassword = 'Las contraseñas No coinciden.'
-    }
     if(formData.password.length < 6){
-      errores.password = 'La contraseña debe tener 6 caracteres'
+      errores.password = '❗️La contraseña debe contener al menos seis caracteres.'
     }
-    if ( formData.password.match(/[A-Z]/) ) {
-      errores.password = 'La contraseña debe tener 1 letra mayuscula'
-  }
+    if( formData.password !== formData.repeatPassword){
+      errores.repeatPassword = '❗️Las contraseñas No coinciden'
+    }
+   
+   
+  return errores
     } ,
     onSubmit: async (values)  => {
       // enviar valores a la base de datos
@@ -69,7 +65,7 @@ export default function Adress() {
         }
      })
      .catch(error => {
-        alert('ha ocurrido un error con el servidor porfavor intente nueva mente' , error)
+        alert('ha ocurrido un error con el servidor revisar el correo electronico e intente nueva mente ')
      })
 
   }
@@ -87,7 +83,9 @@ export default function Adress() {
                   Tu nombre
                   </p>
                   <div className="andes-form-control__control" >
-                    <input className="input-form-login" type="text" name="name" onChange={formik.handleChange} onBlur={formik.handleBlur} ></input>
+                    {(formik.touched.name && formik.errors.name) ?  <input className="input-form-login errors-form-control " type="text" name="name" onChange={formik.handleChange} onBlur={formik.handleBlur} ></input>:
+                    <input className="input-form-login " type="text" name="name" onChange={formik.handleChange} onBlur={formik.handleBlur} ></input>
+                  }
                   </div>
                   {formik.touched.name && formik.errors.name && <p className="errors-form">{formik.errors.name}</p>}
                 </label>  
@@ -97,9 +95,11 @@ export default function Adress() {
                 <label className="andes-form-control">
                   <p className="andes-form-control__label">Correo electronico</p>
                   <div className="andes-form-control__control">
-                    <input className="input-form-login" type="text" name="mail"onChange={formik.handleChange}onBlur={formik.handleBlur}>
-
-                    </input>
+                    {(formik.touched.mail && formik.errors.mail)?
+                    <input className="input-form-login errors-form-control" type="text" name="mail"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                    :
+                    <input className="input-form-login" type="text" name="mail"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                    }
                   </div>
                   {formik.touched.mail && formik.errors.mail && <p className="errors-form">{formik.errors.mail}</p>}
                 </label>
@@ -110,7 +110,13 @@ export default function Adress() {
                 <label className="andes-form-control">
                 <p className="andes-form-control__label">Contraseña</p>
                 <div className="andes-form-control__control">
-                  <input className="input-form-login" type="password" name="password" onChange={formik.handleChange}onBlur={formik.handleBlur} placeholder="Como mínimo 6 caracteres"></input>
+                {(formik.touched.password && formik.errors.password)?
+                  <input className="input-form-login errors-form-control" type="password" name="password" onChange={formik.handleChange}onBlur={formik.handleBlur} placeholder="Como mínimo 6 caracteres"></input>
+
+                    :
+                    <input className="input-form-login" type="password" name="password" onChange={formik.handleChange}onBlur={formik.handleBlur} placeholder="Como mínimo 6 caracteres"></input>
+
+                    }
                 </div>
                 {formik.touched.password && formik.errors.password && <p className="errors-form">{formik.errors.password}</p>}
               </label>
@@ -124,14 +130,15 @@ export default function Adress() {
                 <label className="andes-form-control">
                   <p className="andes-form-control__label">Vuelve a escribir la contraseña</p>
                   <div className="andes-form-control__control">
+                  {(formik.touched.repeatPassword && formik.errors.repeatPassword)?
+                      <input className="input-form-login errors-form-control" type="password" name="repeatPassword" onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                    :
                     <input className="input-form-login" type="password" name="repeatPassword" onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                    }
                   </div>
                   {formik.touched.repeatPassword && formik.errors.repeatPassword && <p className="errors-form">{formik.errors.repeatPassword}</p>}
                 </label>
               </div>
-              
-
-
               <div className="container-buttons">
               <button type="submit" className="btn-address btn-address-invert">
                 Continuar

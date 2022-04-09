@@ -1,3 +1,4 @@
+
 .information-form{
   background-color: #ffffff;
   padding: 100px 0;
@@ -78,9 +79,9 @@ box-shadow: 1px 0px 9px 1px #FF883B;
     padding-right: 4px;
     font-size: 13px;
   }
-.errors-form{
-  font-size: 13px;
-  color: rgb(255, 49, 49);
+.errors-form-control{
+  border-color: #d00;
+  box-shadow: 0 0 0 3px rgb(221 0 0 / 10%) inset;
 }
 
  .btn-address{
@@ -118,6 +119,10 @@ box-shadow: 1px 0px 9px 1px #FF883B;
   color: #0066c0;
   padding-left: 4px;
  }
+ .errors-form{
+  color: #d00;
+  font-size: 12px;
+  }
  @media screen and (max-width: 600px) {
   .information-form{
     padding: 10px 0;
