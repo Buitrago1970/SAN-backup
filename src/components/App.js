@@ -9,6 +9,7 @@ import Contactos from "../pages/Contactos.js";
 import NotFound from "../pages/NotFound.js";
 import ShoppingCart from "../pages/ShoppingCart";
 import FormUserRegister from "../pages/FormUserRegister";
+import Address from "../pages/Address";
 import Checkout from "../pages/Checkout";
 import Payment from "../pages/PaymentPage.js";
 import Success from "../pages/Success";
@@ -34,8 +35,13 @@ function App() {
             <Route exact path="/carrocompras" component={ShoppingCart} />
             <Route
               exact
-              path="/carrocompras/{}/direccion"
+              path="/carrocompras/direccion"
               component={FormUserRegister}
+            /> 
+              <Route
+              exact
+              path="/carrocompras/address"
+              component={Address}
             /> 
             <Route
               exact
