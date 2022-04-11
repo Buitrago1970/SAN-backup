@@ -9,7 +9,7 @@ import "./styles/home.css";
 import Navbar from "../components/Navbar";
 export default function Home() {
 
-  const { loginUser } = useContext(Appcontext);
+  const { loginUser, logoutUser } = useContext(Appcontext);
 
     useEffect(()  => {
      (async () =>{

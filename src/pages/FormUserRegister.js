@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import {useContext, useState} from "react"
+import {useContext} from "react"
 import { useHistory,Link } from "react-router-dom";
 import { useFormik } from "formik"; 
 
@@ -8,7 +8,7 @@ import Appcontext from "../context/Appcontext";
 import axios from "axios";
 import * as Yup from 'yup'
 
-import "./styles/Address.css";
+import "./styles/FormUserRegister.css";
 
 
 export default function Adress() {

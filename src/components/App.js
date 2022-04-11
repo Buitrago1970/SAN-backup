@@ -8,7 +8,7 @@ import Servicios from "../pages/Servicios.js";
 import Contactos from "../pages/Contactos.js";
 import NotFound from "../pages/NotFound.js";
 import ShoppingCart from "../pages/ShoppingCart";
-import FormUserLogin from "../pages/FormUserLogin";
+import FormUserRegister from "../pages/FormUserRegister";
 import Checkout from "../pages/Checkout";
 import Payment from "../pages/PaymentPage.js";
 import Success from "../pages/Success";
@@ -35,7 +35,7 @@ function App() {
             <Route
               exact
               path="/carrocompras/{}/direccion"
-              component={FormUserLogin}
+              component={FormUserRegister}
             /> 
             <Route
               exact

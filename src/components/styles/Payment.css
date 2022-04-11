@@ -11,8 +11,10 @@
 .btn-payment {
   margin-top: 20px;
   width: 100%;
-  background: #dfc626;
-  border: 0;
+  border-style: solid;
+  border-width: 1px;
+  background: #FFD814;
+  border-color: #FCD200;
   height: 35px;
   color: #000000;
   border-radius: 5px;
@@ -21,7 +23,8 @@
 }
 
 .btn-payment:hover {
-  background: #d1ba24;
+  background: #F2C200;
+  border-color: #FCD200;
 }
 .container-payment {
   padding: 20px;
@@ -35,7 +38,7 @@
 }
 .btn-send-order{
     background: #ffffff;
-    border: 2.5px solid #d1ba24;
+    border: 1px solid #FCD200;
     font-size: 15px;
     display: flex;
     align-items: center;
@@ -51,7 +54,7 @@
   }.btn-send-order:hover{
     transition: all 0.4s ease;
     color: #ffffff;
-    background: #d1ba24;
+    background: #FFD814;
   }.btn-send-order svg{
     margin-left: 4px;
   }.btn-send-order:hover  svg{

@@ -90,13 +90,13 @@ box-shadow: 1px 0px 9px 1px #FF883B;
   width: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #eeeeee4b;
   border-radius: 3px;
   letter-spacing: 1px;
   transition: all 0.2s linear;
   cursor: pointer;
-  border: 1px solid rgb(0, 0, 0);
-  background: #f3c552;
+  border-width: 1px;
+  background: #FFD814;
+  border-color: #FCD200;
  }
  .btn-address:hover {
   box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
