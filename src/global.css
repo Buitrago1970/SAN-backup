@@ -67,8 +67,6 @@ align-items: flex-start;
   width: 40%;
   margin: auto;
 }
-
-
 @media screen and (min-width: 870px) {
   .secondary-title {
     margin-top: 25px;

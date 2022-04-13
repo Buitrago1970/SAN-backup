@@ -49,7 +49,7 @@ export default function PopUpLogin(props) {
         if(props.loginEnHeader){
           history.push('/')
         }else{
-        history.push("/carrocompras/{}/checkout");
+        history.push("/carrocompras/checkout");
         }
       } catch (error) {
         alert('Usuario o contraseña incorrectos');
@@ -101,7 +101,7 @@ export default function PopUpLogin(props) {
          
             <hr />
             <div className="form-group">
-              <Link to='/carrocompras/{}/direccion' className='link-signup'>
+              <Link to='/carrocompras/direccion' className='link-signup'>
             <button className="btn btn-primary btn-register" onClick={()=>props.closePopUp(false)}>Crear cuenta nueva</button>
               </Link>
 

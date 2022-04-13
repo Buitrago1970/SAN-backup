@@ -59,7 +59,7 @@ export default function Adress() {
      .then(response => {
        if(response.data.jwt){
           registerUser(response.data);
-          history.push("/carrocompras/{}/checkout");
+          history.push("/carrocompras/checkout");
         }else{
           alert('ha ocurrido un error intenta nueva mente')
         }

@@ -17,7 +17,6 @@ export default function ShoppingCart() {
 
   const {state:{user ,cart},setDateSend} = useContext(Appcontext)
   const [sendDateData, setSendDateData] = useState(null);
-  const PATH = 'checkout'; 
   const history = useHistory();
 
   const handleSendDate = () => {
@@ -41,7 +40,7 @@ export default function ShoppingCart() {
           <SendDate user={user[0]}  setSendDateData={setSendDateData}/>
           <ShoppingList hideButtons={hideButtons}/>
         </div>
-        <Payment data={"Proceder al pago"} PATH={PATH} handleSendDate={handleSendDate}/>
+        <Payment  PATH={'checkout'} handleSendDate={handleSendDate}/>
       </div>) :
       (<div className="empty-cart-button">
           <h3>🛒Tu carrito está vacío. </h3>{" "}

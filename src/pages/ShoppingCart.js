@@ -20,7 +20,7 @@ export default function ShoppingCart() {
           <Address user={user[0]} cart={cart}/>
           <ShoppingList />
         </div>
-        <Payment data={"Proceder al pago"} route={"/carrocompras/{}/checkout"}/>
+        <Payment route={"/carrocompras/checkout"}/>
 
       </div>) :
       (<div className="empty-cart-button">

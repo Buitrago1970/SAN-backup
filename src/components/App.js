@@ -45,7 +45,7 @@ function App() {
             /> 
             <Route
               exact
-              path="/carrocompras/{}/checkout"
+              path="/carrocompras/checkout"
               component={Checkout}
             />
             <Route

@@ -8,19 +8,15 @@ import {FaTelegramPlane} from "react-icons/fa"
 import Appcontext from "../context/Appcontext";
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({ data , route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate, hideButton ,btnAnimation}) {
+export default function Payment({  route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate, hideButton ,btnAnimation}) {
   const {
-    state: { cart, user },
+    state: { cart, user ,address_info},
   } = useContext(Appcontext);
   
   // set poUp login
   const [buttonPopUp , setButtonPopUp] = useState(false);
 
-  // hide button payment 
-  let hiden = "";
-  if(buttonSendOrder){
-    hiden += 'hidden'
-  }
+
   // declarando variables para envio gratuito
   const numEnvioGratis = 50000;
   const valorEnvio = 5000;
@@ -38,9 +34,14 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
   totalPunto = totalPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
   totalPedidoPunto = totalPedidoPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+  let hidenBtnCheckout = "";
+  let hidenBtnShoppingCart = "";
   // si path viene de checkout esconder el boton de checkout
-  if(PATH){
-    hiden += 'hidden'
+  if(PATH === 'checkout'|| PATH === 'paymentPage' ){
+    hidenBtnCheckout += 'hidden'
+  }
+  if(route === '/carrocompras/checkout' || PATH === 'checkout'){
+    hidenBtnShoppingCart += 'hidden'
   }
   return (
     <>
@@ -67,26 +68,31 @@ export default function Payment({ data , route,PATH, buttonSendOrder, handlePaym
           </div>
           {PATH === 'checkout'?
         (
-          <button className="btn-payment" onClick={handleSendDate}>{`${data} (${cart.length} productos)`}</button>
+          <button className="btn-payment" onClick={handleSendDate}>{`Proceder al pago (${cart.length} productos)`}</button>
         )  :(null)
         }
           {/* boton enviar pedido */}
-          { buttonSendOrder ?(
+          { ( address_info.length > 0  && PATH === 'paymentPage')  ?(
               <button className={ `btn-paymen btn-send-order ${btnAnimation}`} onClick={()=>handlePaymentMethod(total)}> Enviar pedido <FaTelegramPlane/></button>
-          ) : (null)}
+          ):
+          (
+            <Link to={'/carrocompras/address'} className={hidenBtnShoppingCart}>
+               <button className={ `btn-paymen btn-send-order `}> Agregar direccíon</button>
+            </Link>
+          )
+          }
           {/* boton  para pasar al checkout*/}
-          {user[0] ? (
-            <Link to={route} className={hiden}>
-              <button className="btn-payment" >{`${data} (${cart.length} productos)`}</button>
+          {(user[0]) ? (
+            <Link to={route} className={hidenBtnCheckout}>
+              <button className="btn-payment" >{`Proceder al pago (${cart.length} productos)`}</button>
             </Link>
           ) :  (
             <>
             {/* boton para logear usuario */}
             {hideButton ? null:(<>
-              <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>{data}</button>
+              <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>Continuar</button>
             <PopUpLogin trigger={buttonPopUp} closePopUp={setButtonPopUp}/>
             </>) }
-            
             </>
             )
           }
