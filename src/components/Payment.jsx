@@ -37,10 +37,10 @@ export default function Payment({  route,PATH, buttonSendOrder, handlePaymentMet
   let hidenBtnCheckout = "";
   let hidenBtnShoppingCart = "";
   // si path viene de checkout esconder el boton de checkout
-  if(PATH === 'checkout'|| PATH === 'paymentPage' ){
+  if(PATH === 'checkout' || PATH === 'paymentPage'){
     hidenBtnCheckout += 'hidden'
   }
-  if(route === '/carrocompras/checkout' || PATH === 'checkout'){
+  if(route === '/carrocompras/checkout'|| PATH === 'paymentPage' ){
     hidenBtnShoppingCart += 'hidden'
   }
   return (
@@ -66,19 +66,19 @@ export default function Payment({  route,PATH, buttonSendOrder, handlePaymentMet
               {total >= numEnvioGratis ? <p>$ {totalPunto}</p>   : <p className="costo-envio">$ {totalPedidoPunto}</p> }
             </div>
           </div>
-          {PATH === 'checkout'?
+          {(PATH === 'checkout' && address_info.length > 0)?
         (
           <button className="btn-payment" onClick={handleSendDate}>{`Proceder al pago (${cart.length} productos)`}</button>
-        )  :(null)
+        )  :( <Link to={'/carrocompras/address'} className={hidenBtnShoppingCart}>
+        <button className={ `btn-paymen btn-send-order `}> Agregar direccíon</button>
+     </Link>)
         }
           {/* boton enviar pedido */}
-          { ( address_info.length > 0  && PATH === 'paymentPage')  ?(
+          { (  PATH === 'paymentPage')  ?(
               <button className={ `btn-paymen btn-send-order ${btnAnimation}`} onClick={()=>handlePaymentMethod(total)}> Enviar pedido <FaTelegramPlane/></button>
           ):
           (
-            <Link to={'/carrocompras/address'} className={hidenBtnShoppingCart}>
-               <button className={ `btn-paymen btn-send-order `}> Agregar direccíon</button>
-            </Link>
+           null
           )
           }
           {/* boton  para pasar al checkout*/}

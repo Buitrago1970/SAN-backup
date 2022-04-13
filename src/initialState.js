@@ -1,6 +1,8 @@
 const initialState = {
   user: [],
-  address_info:[],
+  address_info:[{
+    'user':'xd'
+  }],
   idUser:[],
   cart: [],
   receipt:[{
