@@ -1,12 +1,16 @@
 .sendDate-container{
-background: white;
     margin: 12px 12px 12px 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 13px -4px #636363;
 }
-
+.p-send-date-item{
+    margin: 5px 20px;
+    font-weight: bold;
+}
 .sendDate-list-item{
-border-bottom: 1px solid #a8a8a8;
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0 1px 3px 0 rgb(158 158 158 / 65%);
+    border-radius: 4px;
+    margin-top: 10px;
 }
 .sendDate-label{
     display: flex;
@@ -15,7 +19,7 @@ border-bottom: 1px solid #a8a8a8;
     margin: 0px 10px;
     margin-right: 25px;
     padding: 10px 0 10px 0;
-    font-size: 17px;
+    font-size: 15px;
 }
 .ui-radio__text-sendDate{
     width: 100%;

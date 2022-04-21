@@ -38,11 +38,13 @@ export default function SendData( {user,setSendDateData }) {
  return (
     <>
       <div className="sendDate">
-        <p className="cart-length-title">Recibir compra</p>
         <div className="sendDate-container">
           <ul className="sendDate-list">
             {dataSendDate.map((item, index) => (
-              <li className="sendDate-list-item" key={index} onClick={()=>setSendDateData(item.date)}>
+            <>
+              <p className="p-send-date-item">Recibir compra</p>
+              <div className="sendDate-list-item">
+                    <li  key={index} onClick={()=>setSendDateData(item.date)}>
                 <label className="sendDate-label">
                   <div className="ui-radio-element">
                     <input type="radio" name="radio"/>
@@ -56,6 +58,8 @@ export default function SendData( {user,setSendDateData }) {
                          </div>
                           </label>
                           </li>
+              </div>
+            </>  
             ))}
           </ul>
         </div>
