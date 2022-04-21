@@ -1,0 +1,36 @@
+.container-address{
+    padding: 20px 0;
+    margin: 12px 12px 12px 20px;
+}
+.h2-address{
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 1.2;
+    margin-left: 22px;
+    margin-bottom: 3px;
+}
+.form-child-div-address{
+    margin: 20px;
+    border-radius: 4px;
+    position: relative;
+    padding: 20px;
+    display: block;
+    border: 1px #ddd solid;
+    background-color: #fff;
+}
+.input-form-login-reference-house{
+    height: 65px;
+}
+.input_departamento {
+    background: #d9d9d9;
+    color: #888;
+    cursor: auto;
+}
+
+.container-buttons-address{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-address{
+    width: 30%;
+}

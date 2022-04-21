@@ -84,7 +84,7 @@ box-shadow: 1px 0px 9px 1px #FF883B;
   box-shadow: 0 0 0 3px rgb(221 0 0 / 10%) inset;
 }
 
- .btn-address{
+ .btn-user-register{
   display: flex;
   height: 3em;
   width: 100%;
@@ -98,7 +98,7 @@ box-shadow: 1px 0px 9px 1px #FF883B;
   background: #FFD814;
   border-color: #FCD200;
  }
- .btn-address:hover {
+ .btn-user-register:hover {
   box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
   transform: translateY(.5px);
  }

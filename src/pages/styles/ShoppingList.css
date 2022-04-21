@@ -9,6 +9,7 @@
 .secondary-title {
   margin-bottom: 15px;
   font-size: 21px;
+  margin-left: 20px;
 }
 @media screen and (min-width: 785px) {
   .hero-shopping-cart {

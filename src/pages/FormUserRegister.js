@@ -140,7 +140,7 @@ export default function Adress() {
                 </label>
               </div>
               <div className="container-buttons">
-              <button type="submit" className="btn-address btn-address-invert">
+              <button type="submit" className="btn-register btn-address-invert">
                 Continuar
               </button>
               </div>

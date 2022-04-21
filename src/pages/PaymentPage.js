@@ -5,6 +5,8 @@ import PaymentMethods from "../components/PaymentMethods";
 import Appcontext from '../context/Appcontext';
 import Address from "../components/Address";
 import Payment from "../components/Payment";
+import ShoppingList from "../components/ShoppingList";
+
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -86,9 +88,13 @@ export default function PaymentPage() {
             <div>
               <Address user={user[0]} cart={cart} />
               <PaymentMethods title={'formas de pago'} data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
+            <ShoppingList/>
+
             </div>
               <Payment PATH={'paymentPage'} handlePaymentMethod={handlePaymentMethod} btnAnimation={btnAnimation}/>
+              
           </div>
+          
           ) : (
                  <div className="empty-cart-button">
           <h3>🛒Tu carrito está vacío. </h3>{" "}

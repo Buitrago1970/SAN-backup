@@ -4,8 +4,8 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import Address from "../components/Address";
-import ShoppingList from "../components/ShoppingList";
 import Payment from "../components/Payment";
+import FormAddress from "../components/FormAddress.jsx";
 import SendDate from "../components/SendDatePicker";
 import Appcontext from "../context/Appcontext";
 import "./styles/ShoppingList.css";
@@ -38,7 +38,7 @@ export default function ShoppingCart() {
         <div>
           <Address user={user[0] } cart={cart}  />
           <SendDate user={user[0]}  setSendDateData={setSendDateData}/>
-          <ShoppingList hideButtons={hideButtons}/>
+          <FormAddress/>
         </div>
         <Payment  PATH={'checkout'} handleSendDate={handleSendDate}/>
       </div>) :

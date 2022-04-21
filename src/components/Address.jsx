@@ -8,13 +8,12 @@ import "./styles/Address.css";
 
 export default function Address({user, cart }) {
   const {state:{address_info}} = useContext(Appcontext)
-  console.log(user);
   if(address_info.length > 0){
     return ( <>
       {
          user &&  cart.length > 0 ? <div className="container-address">
          <div className="title-container">
-           <div className="secondary-title">Opciones de envío</div>
+           <div className="secondary-title">Envío a</div>
          </div>
          <div className="address-contrainer-info">
            <div className="address">

@@ -1,8 +1,7 @@
 
 .badge-type-selection__label{
     display: flex;
-cursor: pointer;
-
+    cursor: pointer;
     align-items: center;
     margin: 15px 10px;
     padding: 15px 0 25px 0;
@@ -41,7 +40,7 @@ position: absolute;
 .ui-radio-element__control:after{
     content: '';
     position: absolute;
- display: none;
+    display: none;
 
 }
 .ui-radio-element .ui-radio-element__control:after{
@@ -65,14 +64,16 @@ margin: 0 12px;
 .ui-badge img{
     width: 45px;}
 .badge-type-selection__list-title{
-font-size: 18px;
+font-size: 15px;
     font-weight: 400;
     line-height: 1.25;
     color: #333;
     margin-bottom: 4px;
 }
 .badge-type-selection__list-description{
-font-size: 15px;
+font-size: 13px;
+color: rgb(114, 114, 114);
+
 }
 @media screen and (max-width: 767px){
     .badge-type-selection__label{

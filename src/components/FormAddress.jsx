@@ -1,14 +1,14 @@
 import * as React from "react";
 
 import {useContext} from "react"
-import { useHistory,Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useFormik } from "formik"; 
 
 import Appcontext from "../context/Appcontext";
 import axios from "axios";
 import * as Yup from 'yup'
 
- import "./styles/Address.css";
+ import "./styles/FormAddress.css";
 
 export default function Addres() {
     const history = useHistory();
@@ -60,11 +60,14 @@ export default function Addres() {
     }
     })
     return (
-        <div className="information-form">
+
+      
+        <div className="container-address">
+          <h2 className="h2-address">Direccion de envio</h2>
+
           <form onSubmit={formik.handleSubmit}>
             
-            <div className="form-child-div form-child-div-address">
-          <h2 className="h2-register">Direccion de envio</h2>
+            <div className="form-child-div-address">
 
               <div className="container-label-form">
                 <label className="andes-form-control" >
@@ -130,10 +133,10 @@ export default function Addres() {
                   {formik.touched.descriptionHouse && formik.errors.descriptionHouse && <p className="errors-form">{formik.errors.descriptionHouse}</p>}
                 </label>
               </div>
-              <div className="container-buttons">
-              <button type="submit" className="btn-address btn-address-invert">
+              <div className="container-buttons-address">
+              {/* <button type="submit" className="btn-user-register btn-address-invert btn-address">
                 Continuar
-              </button>
+              </button> */}
               </div>
             </div>
           </form>
