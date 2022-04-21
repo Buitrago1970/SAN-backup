@@ -88,11 +88,10 @@ export default function PaymentPage() {
             <div>
               <Address user={user[0]} cart={cart} />
               <PaymentMethods title={'formas de pago'} data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
-            <ShoppingList/>
+              <ShoppingList/>
 
             </div>
               <Payment PATH={'paymentPage'} handlePaymentMethod={handlePaymentMethod} btnAnimation={btnAnimation}/>
-              
           </div>
           
           ) : (

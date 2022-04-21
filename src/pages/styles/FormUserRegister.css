@@ -42,13 +42,11 @@
   display: flex;
   -webkit-align-items: center;
   align-items: center;
-  
 }
-
 .input-form-login {
   font-family: inherit;
   background-color: #fff;
-  height: 28px;
+  height: 35px;
   padding: 3px 7px;
   width: 100%;
   line-height: normal;

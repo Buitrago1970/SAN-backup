@@ -15,7 +15,6 @@ export default function ShoppingCart({hideButtons}) {
 
   return (
     <>
-          <br />
           <div className="shopping-list">
             <p className="cart-length-title">Carrito ({cart.length})</p>
             <div>

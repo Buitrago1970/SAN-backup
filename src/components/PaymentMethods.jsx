@@ -6,7 +6,6 @@ export default function PaymentMethods({data, setPaymentMethodsData}) {
 
     return (
       <>
-     <br />
    <div className="shopping-list">
         <div className="payment-methods">
              <p className="cart-length-title">Formas de pago</p>
