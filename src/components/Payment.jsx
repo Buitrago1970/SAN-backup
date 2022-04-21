@@ -70,7 +70,7 @@ export default function Payment({  route,PATH, buttonSendOrder, handlePaymentMet
         (
           <button className="btn-payment" onClick={handleSendDate}>{`Proceder al pago (${cart.length} productos)`}</button>
         )  :( <Link to={'/carrocompras/address'} className={hidenBtnShoppingCart}>
-        <button className={ `btn-paymen btn-send-order `}> Agregar direccíon</button>
+        <button className={ `btn-paymen `}> Agregar direccíon</button>
      </Link>)
         }
           {/* boton enviar pedido */}
