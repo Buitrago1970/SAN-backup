@@ -68,7 +68,18 @@
     animation: loadingAnimation 3s ease-in-out infinite;
 }
 
-
+@media screen and (max-width: 768px) {
+    .loanding-articulo{
+        width: 180px;
+    }
+    .loanding-description-container{
+        padding: 4px;
+    }
+    .loading-img{    
+        width: 180px;
+        height: 115px;
+    }
+}
 @keyframes loadingAnimation {
     0% {
       background-position: 0% 50%;

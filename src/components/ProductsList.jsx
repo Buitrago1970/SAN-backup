@@ -37,7 +37,7 @@ const qs = require('qs');
         const response = await axios(`${process.env.REACT_APP_API_ULR}/api/products?populate=image&${query}`);       
          setHasMore(response.data.meta.pagination.pageCount > page);
         setProducts(products.concat(response.data.data));
-        setLoader(false) 
+        // setLoader(false) 
   }
  fetchProducts();
   }, [page, qs]);
