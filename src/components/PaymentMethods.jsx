@@ -3,7 +3,6 @@ import React from 'react';
 import "./styles/PaymentMethods.css";
 
 export default function PaymentMethods({data, setPaymentMethodsData}) {
-
     return (
       <>
    <div className="shopping-list">

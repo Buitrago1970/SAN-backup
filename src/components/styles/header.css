@@ -12,6 +12,7 @@
 .header a {
   color: rgb(212, 212, 212);
   text-decoration: none;
+  text-align: center;
 }
 .header a:hover {
   transition: all 0.2s ease-in;
@@ -46,7 +47,7 @@
 
 }
 .name-user{
-  width: none;
+  font-size: 10px;
 }
 .shopping-cart {
   display: flex;
@@ -109,7 +110,8 @@
         width: 30%;
         flex-direction: row;
   }
-  .user-name{
+  .name-user{
     width:100%;
+    font-size: 15px;
   }
 }

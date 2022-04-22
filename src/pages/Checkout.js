@@ -37,7 +37,7 @@ export default function ShoppingCart() {
           console.log('no funciono :(');
         }
       }else{
-        history.push('/carrocompras/payment')
+        alert('Seleciono una fecha de envio')
       }
 }
 

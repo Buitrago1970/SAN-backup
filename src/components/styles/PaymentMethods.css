@@ -53,6 +53,7 @@ position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .ui-radio__text {
     display: flex;
     padding: 22px 0;
@@ -76,19 +77,22 @@ color: rgb(114, 114, 114);
 
 }
 @media screen and (max-width: 767px){
-    .badge-type-selection__label{
-margin: 0;
-padding: 15px 0 15px 0;
+    .badge-type-selection__label {
+        margin: 0;
+        padding: 12px 0 12px 0;
+    }
+    .ui-radio__text {
+        padding: 10px 0;
     }
     .badge-type-selection__list-title{
-font-size: 14px;
+    font-size: 14px;    
     }
     .badge-type-selection__list-description{
-font-size: 11px;
-color: #7e7e7e;
+    font-size: 11px;
+    color: #7e7e7e;
     }
     .ui-radio-element{
-        width: 28px;
+    width: 28px;
     height: 18px;
     margin: 0 20px;
     }

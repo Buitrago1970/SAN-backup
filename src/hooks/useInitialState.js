@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import initialState from "../initialState";
 import {removeToken} from '../utils/token'
-import {setToken} from '../utils/token'
 import {getToken} from '../utils/token'
 import axios from 'axios';
 

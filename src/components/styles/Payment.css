@@ -2,12 +2,11 @@
 .account {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0px;
+  margin: 10px 0;
 }
 .costo-envio-gratis{
   color: #32b767;
 }
-
 .btn-payment {
   margin-top: 20px;
   width: 100%;
@@ -84,15 +83,13 @@
 @media screen and (max-width: 870px) {
   .container-payment {
     padding: 20px 10px;
-    border-radius: 0;
     text-align: center;
   }
    .container-payment hr{
-     display: none;
-   }
-   .products-length{
-     display: none;
-   }
+     border: none;
+     height: 1px;
+     background-color: rgb(206, 206, 206);
+  }
    .btn-payment {
     border-radius: 5px;
     font-size: 17px;

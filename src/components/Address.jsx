@@ -22,10 +22,11 @@ export default function Address({user, cart }) {
                 <p className="cart-address-info">{address_info.address} </p>
                <p className="cart-address-subtitle-info"> Cundinamarca , Bogota D.c{address_info.descriptionHouse && ` - ${address_info.descriptionHouse}`}</p>
            </div>
-           <div className="modify-address">
-           </div>
+         
          </div>
+         <div className="modify-address">
          {user ? <Link to="/carrocompras/{}/direccion" className="modify">Modificar dirección</Link>: <Link to="/carrocompras/{}/direccion" className="modify">Agregar dirección</Link>}
+           </div>
    
        </div> 
        </div> : 

@@ -41,5 +41,10 @@ color: #32b767;
 .ui-radio-element {
 margin: 0 15px;
 }
-    
+.p-send-date-item {
+    margin: 5px 10px;
+}
+.sendDate-list-item {
+    margin: 10px;
+}
 }

@@ -14,6 +14,7 @@ const Header = () => {
   const {
     state: { cart , user },
   } = useContext(Appcontext);
+  const nombreUsuarioCorto = user[0].username.slice(0,6)
 
   const [buttonPopUp , setButtonPopUp] = useState(false);
   return (
@@ -42,7 +43,9 @@ const Header = () => {
         <div className="container-shopping-cart">
             <div className="name-user">
           {user[0] ? ( <Link to="/" title="Inicio" className="options user-name">
-            {user[0].username}    
+            {(user[0].username.length > 6)?
+            (`${nombreUsuarioCorto}...`):
+            (user[0].username)}    
             </Link> ) : <>
         <button className="btn-login-header" onClick={()=>setButtonPopUp(true)}>   <AiOutlineUser />
             Iniciar Sesión   </button>  
