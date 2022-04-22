@@ -78,7 +78,6 @@ const useInitialState = () => {
   };
   //register user
   const registerUser =  (payload)=>{
-    setToken(payload.jwt)
     setState({
       ...state,
       user: [ ...state.user, payload.user], 
@@ -113,6 +112,14 @@ const useInitialState = () => {
     });
   };
   const sendAdress = async (valuesAddress) =>{
+    setState({
+      ...state,
+      address_info:{
+        address: valuesAddress.address,
+        phone: valuesAddress.phone,
+        descriptionHouse: valuesAddress.descriptionHouse, 
+      }
+    })
     const token = getToken();
     const url = process.env.REACT_APP_API_URL_SEND_ADDRESS  
     const data ={"data": {
@@ -121,14 +128,18 @@ const useInitialState = () => {
      "descriptionHouse": valuesAddress.descriptionHouse,
      "email": state.user[0].email
     }}
-    try{
-      const respuesta = await axios.post(url,data,{
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      return respuesta
-    }catch(error){
+    if(valuesAddress.address){
+      try{
+        const respuesta = await axios.post(url,data,{
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        return respuesta
+      }catch(error){
+        return false
+      }
+    }else{
       return false
     }
   }
@@ -197,7 +208,7 @@ try {
       cart:[]
     });
   }
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder,setDateSend,saveOrder};
+  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder,setDateSend,saveOrder,sendAdress};
 };
 
 export default useInitialState;

@@ -8,7 +8,7 @@ import {FaTelegramPlane} from "react-icons/fa"
 import Appcontext from "../context/Appcontext";
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({  route,PATH, buttonSendOrder, handlePaymentMethod,handleSendDate, hideButton ,btnAnimation}) {
+export default function Payment({ PATH, handlePaymentMethod,handleSendDateAndSendAddress, hideButton ,btnAnimation, handleSendDate}) {
   const {
     state: { cart, user ,address_info},
   } = useContext(Appcontext);
@@ -40,7 +40,7 @@ export default function Payment({  route,PATH, buttonSendOrder, handlePaymentMet
   if(PATH === 'checkout' || PATH === 'paymentPage'){
     hidenBtnCheckout += 'hidden'
   }
-  if(route === '/carrocompras/checkout'|| PATH === 'paymentPage' ){
+  if(PATH === 'Shopping-cart' || PATH === 'paymentPage' ){
     hidenBtnShoppingCart += 'hidden'
   }
   return (
@@ -66,12 +66,12 @@ export default function Payment({  route,PATH, buttonSendOrder, handlePaymentMet
               {total >= numEnvioGratis ? <p>$ {totalPunto}</p>   : <p className="costo-envio">$ {totalPedidoPunto}</p> }
             </div>
           </div>
-          {(PATH === 'checkout' && address_info.length > 0)?
+          {(PATH === 'checkout' && address_info.address)?
         (
-          <button className="btn-payment" onClick={handleSendDate}>{`Proceder al pago (${cart.length} productos)`}</button>
-        )  :( <Link to={'/carrocompras/address'} className={hidenBtnShoppingCart}>
-        <button className={ `btn-paymen `}> Agregar direccíon</button>
-     </Link>)
+          <button className="btn-payment" onClick={handleSendDate}>{`Proceder al pago 1 (${cart.length} productos)`}</button>
+        )  :( 
+          <button form='my-form' type="submit" className={`btn-payment ${hidenBtnShoppingCart}`} onClick={handleSendDateAndSendAddress}>{`Proceder al pago 2 (${cart.length} productos)`}</button>
+        )
         }
           {/* boton enviar pedido */}
           { (  PATH === 'paymentPage')  ?(
@@ -83,8 +83,8 @@ export default function Payment({  route,PATH, buttonSendOrder, handlePaymentMet
           }
           {/* boton  para pasar al checkout*/}
           {(user[0]) ? (
-            <Link to={route} className={hidenBtnCheckout}>
-              <button className="btn-payment" >{`Proceder al pago (${cart.length} productos)`}</button>
+            <Link to={'/carrocompras/checkout'} className={hidenBtnCheckout}>
+              <button className="btn-payment" >{`Proceder al pago 3 (${cart.length} productos)`}</button>
             </Link>
           ) :  (
             <>

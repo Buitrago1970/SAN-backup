@@ -80,7 +80,8 @@ export default function PaymentPage() {
       image: "https://www.nequi.com.co/wp-content/themes/nequi/img/logo_nequi_header.svg"
     }
   ];
-
+ //variable ocultar botones + , - y eliminar
+ const hideButtons = true
       return (
         <div className="main-container">
           {cart.length ? (
@@ -88,7 +89,7 @@ export default function PaymentPage() {
             <div>
               <Address user={user[0]} cart={cart} />
               <PaymentMethods title={'formas de pago'} data={data_payment_methods} setPaymentMethodsData={setPaymentMethodsData}/>
-              <ShoppingList/>
+              <ShoppingList hideButtons={hideButtons}/>
 
             </div>
               <Payment PATH={'paymentPage'} handlePaymentMethod={handlePaymentMethod} btnAnimation={btnAnimation}/>

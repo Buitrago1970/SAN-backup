@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import Address from "../components/Address";
 import Payment from "../components/Payment";
 import FormAddress from "../components/FormAddress.jsx";
+import ShoppingList from "../components/ShoppingList";
+ 
 import SendDate from "../components/SendDatePicker";
 import Appcontext from "../context/Appcontext";
 
@@ -13,25 +15,31 @@ import "./styles/ShoppingList.css";
 
 
 export default function ShoppingCart() {
-  const {state:{user ,cart},setDateSend, sendAdress} = useContext(Appcontext)
+  const {state:{user ,cart, address_info},setDateSend, sendAdress} = useContext(Appcontext)
   const [sendDateData, setSendDateData] = useState(null);
   const history = useHistory();
 
-  const handleSendDate  = async (valuesAdress) => {
+  const handleSendDate = () =>{
+    if (sendDateData) {
+      setDateSend(sendDateData);
+      history.push('/carrocompras/payment')
+    }
+  }
+
+  const handleSendDateAndSendAddress  = async (valuesAdress) => {
     if (sendDateData) {
       setDateSend(sendDateData);
       // enviar valores a la base de datos
-      const respuestaPostAddress = await sendAdress(valuesAdress)
-
-      if(respuestaPostAddress.status === 200){
-        console.log('funciono :)');
-      // history.push("/carrocompras/payment");
+        const respuestaPostAddress = await sendAdress(valuesAdress)
+        if(respuestaPostAddress.status === 200){
+          history.push('/carrocompras/payment')
+        }else{
+          console.log('no funciono :(');
+        }
       }else{
-        console.log('no funciono :(');
+        history.push('/carrocompras/payment')
       }
-  }
 }
-
 
   //variable ocultar botones + , - y eliminar
   const hideButtons = true
@@ -42,9 +50,11 @@ export default function ShoppingCart() {
         <div>
           <Address user={user[0] } cart={cart}  />
           <SendDate user={user[0]}  setSendDateData={setSendDateData}/>
-          <FormAddress handleSendDate={handleSendDate}/>
+          {!address_info.address ? <FormAddress handleSendDateAndSendAddress={handleSendDateAndSendAddress}/>
+          : <ShoppingList />
+          }
         </div>
-        <Payment  PATH={'checkout'} handleSendDate={handleSendDate}/>
+        <Payment  PATH={'checkout'} handleSendDateAndSendAddress={handleSendDateAndSendAddress} handleSendDate={handleSendDate}/>
       </div>) :
       (<div className="empty-cart-button">
           <h3>🛒Tu carrito está vacío. </h3>{" "}

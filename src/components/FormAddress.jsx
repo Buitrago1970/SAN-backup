@@ -5,12 +5,10 @@ import { useHistory } from "react-router-dom";
 import { useFormik } from "formik"; 
 
 import Appcontext from "../context/Appcontext";
-import axios from "axios";
 import * as Yup from 'yup'
+import "./styles/FormAddress.css";
 
- import "./styles/FormAddress.css";
-
-export default function Addres() {
+export default function Addres({handleSendDateAndSendAddress}) {
     const history = useHistory();
     const {registerUser} = useContext(Appcontext);
     const formik  =  useFormik ({
@@ -18,7 +16,7 @@ export default function Addres() {
         department:'cundinamarca',
         address:'',
         phone:'',
-        descriptionHouse:''
+        descriptionHouse:'',
       },
       validationSchema: Yup.object({
           address: Yup.string().required(),
@@ -35,18 +33,15 @@ export default function Addres() {
         }
       return errores
       } ,
-      onSubmit: async (values)  => {
-        // enviar valores a la base de datos
-    }
+      onSubmit:  async (values)  => {
+       await handleSendDateAndSendAddress(values)
+      }
     })
     return (
-
-      
         <div className="container-address">
           <h2 className="h2-address">Direccion de envio</h2>
 
-          <form onSubmit={formik.handleSubmit}>
-            
+          <form onSubmit={formik.handleSubmit} id='my-form'>
             <div className="form-child-div-address">
 
               <div className="container-label-form">
@@ -114,9 +109,6 @@ export default function Addres() {
                 </label>
               </div>
               <div className="container-buttons-address">
-              {/* <button type="submit" className="btn-user-register btn-address-invert btn-address">
-                Continuar
-              </button> */}
               </div>
             </div>
           </form>

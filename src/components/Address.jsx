@@ -8,7 +8,7 @@ import "./styles/Address.css";
 
 export default function Address({user, cart }) {
   const {state:{address_info}} = useContext(Appcontext)
-  if(address_info.length > 0){
+  if(address_info.address){
     return ( <>
       {
          user &&  cart.length > 0 ? <div className="container-address">
@@ -19,8 +19,8 @@ export default function Address({user, cart }) {
            <div className="address">
          <GoLocation />
              <div>
-                <p className="cart-address-info">{user.direccional} </p>
-               <p className="cart-address-subtitle-info"> {user.localidad}, Bogota D.c - {user.descripcionCasa && user.descripcionCasa}</p>
+                <p className="cart-address-info">{address_info.address} </p>
+               <p className="cart-address-subtitle-info"> Cundinamarca , Bogota D.c{address_info.descriptionHouse && ` - ${address_info.descriptionHouse}`}</p>
            </div>
            <div className="modify-address">
            </div>
