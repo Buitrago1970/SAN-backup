@@ -22,7 +22,6 @@ export default function Addres() {
       },
       validationSchema: Yup.object({
           address: Yup.string().required(),
-          mail: Yup.string().required(),
           phone: Yup.number().required(),
           descriptionHouse: Yup.string()
       }),
@@ -38,25 +37,6 @@ export default function Addres() {
       } ,
       onSubmit: async (values)  => {
         // enviar valores a la base de datos
-       axios
-      //  enviar direccion 
-        .post(process.env.REACT_APP_API_URL_USER_REGISTER, {
-          direccion: values.address,
-          telefono: values.phone,
-          descripcionCasa: values.descriptionHouse,
-        })
-       .then(response => {
-         if(response.data.jwt){
-            registerUser(response.data);
-            history.push("/carrocompras/{}/checkout");
-          }else{
-            alert('ha ocurrido un error intenta nueva mente')
-          }
-       })
-       .catch(error => {
-          alert('ha ocurrido un error con el servidor revisar el correo electronico e intente nueva mente ')
-       })
-  
     }
     })
     return (

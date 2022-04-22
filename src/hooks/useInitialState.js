@@ -112,6 +112,26 @@ const useInitialState = () => {
       }
     });
   };
+  const sendAdress = async (valuesAddress) =>{
+    const token = getToken();
+    const url = process.env.REACT_APP_API_URL_SEND_ADDRESS  
+    const data ={"data": {
+     "address": valuesAddress.address,
+     "phone": valuesAddress.phone,
+     "descriptionHouse": valuesAddress.descriptionHouse,
+     "email": state.user[0].email
+    }}
+    try{
+      const respuesta = await axios.post(url,data,{
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return respuesta
+    }catch(error){
+      return false
+    }
+  }
   //send order to server
    const sendOrder =  async (toatalPedido, paymentMethod,creationDate,numero_pedido, hora) => {
      setState({
