@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import "./styles/HeroServicios.css";
+import imagen from "../images/1000_F_77371138_aaIwd02RKf65nRuUrNzReJVViPWuepI4 copia.png"
 
 function HeroServicios() {
   return (
@@ -19,7 +20,7 @@ function HeroServicios() {
         </div>
         <div className="div2">
           <div className="container-img">
-            <img src="https://san-ecommerce.s3.amazonaws.com/AdobeStock_415583574_Preview+copia.png" alt="" />
+            <img src={imagen}alt="" />
           </div>
         </div>
       </div>

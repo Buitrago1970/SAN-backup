@@ -3,7 +3,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   align-items: center;
-  padding: 100px 40px 150px 40px;
+  padding: 10px 40px 150px 40px;
   margin: 0 auto;
 }
 .div1 {
@@ -13,6 +13,7 @@
   font-weight: 300;
   font-size: 40px;
   line-height: 56px;
+  
 }
 .title-s-v h1 {
   font-weight: 300;
@@ -20,6 +21,7 @@
 .sub-title-s-v {
   font-size: 40px;
   margin: 40px 0px;
+  font-weight: bold;
 }
 .paragraph-container p {
   line-height: 30px;
@@ -36,9 +38,11 @@
 }
 .container-img {
   width: 550px;
+  display: flex;
+  justify-content: center;
 }
 .container-img img {
-  width: 100%;
+  width: 85%;
   border-radius: 5px;
 }
 .text-container-servicios {

@@ -6,6 +6,12 @@ import HeroNosotros from "../components/HeroNosotros";
 import "./styles/nosotros.css";
 
 //img
+import imagen from "../images/R.jpeg"
+
+import imagen2 from "../images/1000_F_255564376_jrP7JCENc7MfEvgtG0toxTCkJSL53QZc copia.png"
+import imagen3 from "../images/1000_F_324810272_2eyoWeAHhV1UDiXgNyEaKJxSWQ0Yxk7p copia.png"
+import imagen4 from "../images/1000_F_326992271_emdTQVlnD2NcBBKmkXWDA7DMFiGKRSlv copia.png"
+
 
 class Nosotros extends React.Component {
   
@@ -19,7 +25,7 @@ class Nosotros extends React.Component {
             <div className="n">
               <div className="nosotros-container-text">
                 <div className="sub-title-container">
-                  <span>Nosotros</span>
+                  <span className="sub-title-nosotros sub-title-nosotros-dos">Nosotros</span>
                   <span className="sub-title-nosotros">
                     Inovaciones y Calidad.
                   </span>
@@ -33,7 +39,7 @@ class Nosotros extends React.Component {
               </div>
               <div className="img-nosotros2">
                 <img
-                  src="https://dummyimage.com/570x400/ffffff/000000"
+                  src={imagen}
                   alt=""
                 />
               </div>
@@ -68,12 +74,12 @@ class Nosotros extends React.Component {
                 <div className="container-img-our-team">
                   <img
                     className="img-our-team"
-                    src="https://dummyimage.com/500x650/ffffff/000000"
+                    src={imagen2}
                     alt=""
                   />
                 </div>
                 <div className="text-container-our-team">
-                  <h3 className="name-team">lorem lorem</h3>
+                  <h3 className="name-team">Diego Chico </h3>
                   <p>Cortador Profesional</p>
                 </div>
               </div>
@@ -81,12 +87,12 @@ class Nosotros extends React.Component {
                 <div className="container-img-our-team">
                   <img
                     className="img-our-team"
-                    src="https://dummyimage.com/500x650/ffffff/000000"
+                    src={imagen3}
                     alt=""
                   />
                 </div>
                 <div className="text-container-our-team">
-                  <h3 className="name-team">lorem lorem</h3>
+                  <h3 className="name-team">Flavia Mar Pombo</h3>
                   <p>Cortador Profesional</p>
                 </div>
               </div>
@@ -94,12 +100,12 @@ class Nosotros extends React.Component {
                 <div className="container-img-our-team">
                   <img
                     className="img-our-team"
-                    src="https://dummyimage.com/500x650/ffffff/000000"
+                    src={imagen4}
                     alt=""
                   />
                 </div>
                 <div className="text-container-our-team">
-                  <h3 className="name-team">lorem lorem</h3>
+                  <h3 className="name-team">León de Saldaña</h3>
                   <p>Cortador Profesional</p>
                 </div>
               </div>

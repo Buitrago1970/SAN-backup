@@ -44,7 +44,6 @@
   margin-right: 5px;
   justify-content: space-between;
   flex-direction: column;
-
 }
 .name-user{
   font-size: 10px;
@@ -65,17 +64,7 @@
   bottom: 2px;
 }
 .btn-login-header{
-    background: none;
-    border: none;
-    color: rgb(212, 212, 212);
-    text-decoration: none;
-    padding: 0 !important;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    font-weight: 600;
-    min-width: 150px;
-    font-size: 15px;
+    display: none;
 }
 .btn-login-header:hover{
     transition: all 0.2s ease-in;
@@ -85,6 +74,7 @@
 
 
 @media screen and (min-width: 768px) {
+  
   .header{
     height: 20px;
     margin: 0;
@@ -113,5 +103,10 @@
   .name-user{
     width:100%;
     font-size: 15px;
+  }
+  .btn-login-header{
+    font-size: 15px;
+    display: block;
+
   }
 }
