@@ -36,7 +36,7 @@
     margin: 10px 0;
 }
 .btn-send-order{
-  margin-top: 30px;
+    margin-top: 30px;
     background: #ffffff;
     border: 1px solid #FCD200;
     font-size: 15px;
@@ -45,7 +45,7 @@
     justify-content: center;
     width: 100%;
     outline:none;
-    height: 35px;
+    height: 40px;
     text-align: center;
     border-radius: 5px;
     letter-spacing:1px;

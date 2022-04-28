@@ -52,8 +52,7 @@ class SuccessReceipt extends React.Component {
                   </div>
       
                   {/* <p className='p-info-end-succes-container'>❗️Le enviaremos por correo electronico una confirmacion del pedido con detalles e informacion de seguimiento.</p> */}
-                  <p className='p-info-end-succes-container'>cell +57 310-570-6238 ⎮ tel 6746457 ⎮ correo juan@hotmail.com ⎮</p>
-                  <p ></p>
+                  <p className='p-info-end-succes-container'>cell +57 310-570-6238 ⎮ tel 6746457 ⎮ correo contacto@san-diego.com.co ⎮</p>
                   </div>
       
             </div>

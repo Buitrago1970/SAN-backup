@@ -16,15 +16,15 @@ const Contactos = () => {
               <div className="info info-messages">
                 <h3 className="tittle-info">✉️ Contacto</h3>
                 <li>
-                  <ul className="mail">carniceria@carniceria.com</ul>
-                  <ul>555-889-635</ul>
-                  <ul>+98 878-985-965</ul>
+                  <ul className="mail">contacto@san-diego.com.co</ul>
+                  <ul>674 64 57</ul>
+                  <ul>+57 310 570 62 38</ul>
                 </li>
               </div>
               <div className="info info-carears">
                 <h3 className="tittle-info">Trabaja Con Nosotros</h3>
                 <li>
-                  <ul className="mail">carnicerea.carears@carniceria.com</ul>
+                  <ul className="mail">contacto@san-diego.com.co</ul>
                 </li>
               </div>
               

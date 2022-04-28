@@ -9,6 +9,7 @@ export default function SendData( {user,setSendDateData }) {
   const {
     state: { cart },
   } = useContext(Appcontext);
+  
 
   const numEnvioGratis = 50000;
   const valorEnvio = 5;

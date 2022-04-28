@@ -40,19 +40,18 @@ export default function PaymentPage() {
     const respuestaPOST = await sendOrder(toatalPedido, paymentMethodsData, creationDate,numero_pedido, hora)
     
     //redireccionar a la pagina de confirmacion
-    if(respuestaPOST){
-      const respuestaGet = await getOrder(numero_pedido)
-      saveOrder(respuestaGet.data.data[0].attributes)
-      if(respuestaGet){
-        history.push("/success")
-            }
-    }else{
-      alert("error al enviar pedido")
-    }
-  }else{
-      alert("Seleccione un metodo de pago")
-    }
-  }
+     if(respuestaPOST){
+       const respuestaGet = await getOrder(numero_pedido)
+       saveOrder(respuestaGet.data.data[0].attributes)
+       if(respuestaGet){
+         history.push("/success")
+             }
+     }else{
+       alert("error al enviar pedido")
+     }
+   }else{
+       alert("Seleccione un metodo de pago")
+     }}
   // data metodos de pago tarjeta (credito, debito) efectivo, nequi
     const data_payment_methods = [
     {

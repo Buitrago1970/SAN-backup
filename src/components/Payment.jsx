@@ -68,14 +68,14 @@ export default function Payment({ PATH, handlePaymentMethod,handleSendDateAndSen
           </div>
           {(PATH === 'checkout' && address_info.address)?
         (
-          <button className="btn-payment" onClick={handleSendDate}>{`Proceder al pago 1 (${cart.length} productos)`}</button>
+          <button className="btn-payment" onClick={handleSendDate}>{`Proceder al pago (${cart.length} productos)`}</button>
         )  :( 
-          <button form='my-form' type="submit" className={`btn-payment ${hidenBtnShoppingCart}`} onClick={handleSendDateAndSendAddress}>{`Proceder al pago 2 (${cart.length} productos)`}</button>
+          <button form='my-form' type="submit" className={`btn-payment ${hidenBtnShoppingCart}`} onClick={handleSendDateAndSendAddress}>{`Proceder al pago (${cart.length} productos)`}</button>
         )
         }
           {/* boton enviar pedido */}
           { (  PATH === 'paymentPage')  ?(
-              <button className={ `btn-paymen btn-send-order ${btnAnimation}`} onClick={()=>handlePaymentMethod(total)}> Enviar pedido <FaTelegramPlane/></button>
+              <button className={ `btn-paymen btn-send-order ${btnAnimation}`} onClick={()=>handlePaymentMethod(total)}> Confirmar Pedido <FaTelegramPlane/></button>
           ):
           (
            null
@@ -84,7 +84,7 @@ export default function Payment({ PATH, handlePaymentMethod,handleSendDateAndSen
           {/* boton  para pasar al checkout*/}
           {(user[0]) ? (
             <Link to={'/carrocompras/checkout'} className={hidenBtnCheckout}>
-              <button className="btn-payment" >{`Proceder al pago 3 (${cart.length} productos)`}</button>
+              <button className="btn-payment" >{`Proceder al pago (${cart.length} productos)`}</button>
             </Link>
           ) :  (
             <>

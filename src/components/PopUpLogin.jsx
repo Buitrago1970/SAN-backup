@@ -1,14 +1,17 @@
 import * as React from 'react';
 import { useContext } from 'react';
 
-import './styles/PopUpLogin.css';
+
+import { setToken } from '../utils/token';
+import { useHistory } from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import { setToken } from '../utils/token';
+
 import axios from 'axios';
+import * as Yup from 'yup';
 import Appcontext from '../context/Appcontext';
-import { useHistory } from 'react-router-dom';
+
+import './styles/PopUpLogin.css';
 
 export default function PopUpLogin(props) {
   const {loginUser} = useContext(Appcontext);
@@ -60,7 +63,7 @@ export default function PopUpLogin(props) {
     <div className="popup-login">
       <div className="popup-login-content">
         <div className='close-popup'>
-        <button className="close-popup-login" onClick={()=> props.closePopUp(false)}>X </button>
+        <button className="close-popup-login" onClick={()=> props.closePopUp(false)}>x</button>
         </div>
         <h3>Inicia sesión</h3>
         <hr />
@@ -69,7 +72,7 @@ export default function PopUpLogin(props) {
             <label className='label-login' htmlFor="exampleInputEmail1">Correo electrónico</label>
             <input
               type="text"
-              className="xd input-login"
+              className="input-form-login"
               name="mail"
               placeholder="Ingresa tu correo"
               onChange={formik.handleChange}
@@ -82,7 +85,7 @@ export default function PopUpLogin(props) {
             <label className='label-login' htmlFor="exampleInputPassword1">Contraseña</label>
             <input
               type="password"
-              className="xd input-login"
+              className="input-form-login"
              name="password"
               placeholder="Ingresa tu contraseña"
               onChange={formik.handleChange}
@@ -91,7 +94,7 @@ export default function PopUpLogin(props) {
             {formik.touched.password && formik.errors.password && <p className="errors-form">{formik.errors.password}</p>}
           </div>
            <div className="form-group">
-            <button type="submit" className="btn btn-primary btn-login">Inicia sesión</button>
+            <button type="submit" className=" btn-login">Inicia sesión</button>
             {/* <div className='link-reset-password'>
               <a href="#" className='reset-password'>¿Olvidaste tu contraseña?</a>
 

@@ -15,14 +15,11 @@ import Success from "../pages/Success";
 import UserProfile from "../pages/UserProfile";
 import Appcontext from "../context/Appcontext";
 import useInitialState from "../hooks/useInitialState";
+import ModifiedAddress from "../pages/ModifiedAddress"
 
 function App() {
   const initialState = useInitialState();
-  
-
-
   return (
-    
     <Appcontext.Provider value={initialState}>
       <BrowserRouter>
         <Layout>
@@ -37,6 +34,11 @@ function App() {
               path="/carrocompras/direccion"
               component={FormUserRegister}
             /> 
+            <Route
+            exact
+            path="/carrocompras/modificardireccion"
+            component={ModifiedAddress}
+            />
             <Route
               exact
               path="/carrocompras/checkout"

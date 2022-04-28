@@ -70,6 +70,7 @@
     transition: all 0.2s ease-in;
     filter: drop-shadow(rgb(255, 255, 255) 0 0 1px);
     color: rgb(255, 255, 255);
+    border: 1px solid white;
 }
 
 
@@ -105,8 +106,10 @@
     font-size: 15px;
   }
   .btn-login-header{
-    font-size: 15px;
-    display: block;
-
+    background: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    border: none;
   }
 }

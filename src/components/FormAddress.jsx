@@ -1,16 +1,12 @@
 import * as React from "react";
 
-import {useContext} from "react"
-import { useHistory } from "react-router-dom";
 import { useFormik } from "formik"; 
 
-import Appcontext from "../context/Appcontext";
+
 import * as Yup from 'yup'
 import "./styles/FormAddress.css";
 
-export default function Addres({handleSendDateAndSendAddress}) {
-    const history = useHistory();
-    const {registerUser} = useContext(Appcontext);
+export default function Addres({handleSendDateAndSendAddress, localStorageAddress,message, enviarNuevaDirrecion}) {
     const formik  =  useFormik ({
       initialValues:{
         department:'cundinamarca',
@@ -34,7 +30,11 @@ export default function Addres({handleSendDateAndSendAddress}) {
       return errores
       } ,
       onSubmit:  async (values)  => {
-       await handleSendDateAndSendAddress(values)
+        if(message){
+          enviarNuevaDirrecion(values)
+        }else{
+          await handleSendDateAndSendAddress(values)
+        }
       }
     })
     return (
@@ -50,7 +50,13 @@ export default function Addres({handleSendDateAndSendAddress}) {
                   Departamento
                   </p>
                   <div className="andes-form-control__control" >
-                    <input className="input-form-login input_departamento " type="text" name="department" onChange={formik.handleChange} onBlur={formik.handleBlur}value={'Cundinamarca'} readOnly="readonly" ></input>
+                    <input className="input-form-login input_departamento " 
+                    type="text" 
+                    name="department" 
+                    onChange={formik.handleChange} 
+                    onBlur={formik.handleBlur}
+                    value={'Cundinamarca'} 
+                    readOnly="readonly" ></input>
                   </div>
                 </label>  
                 <div className="p-password">
@@ -64,9 +70,25 @@ export default function Addres({handleSendDateAndSendAddress}) {
                   <p className="andes-form-control__label">Direccíon</p>
                   <div className="andes-form-control__control">
                     {(formik.touched.address && formik.errors.address)?
-                    <input className="input-form-login errors-form-control" type="text" name="address"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                    <input className="input-form-login errors-form-control" 
+                    type="text" 
+                    name="address"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    placeholder={localStorageAddress.address && localStorageAddress.address}
+                    >
+
+                    </input>
                     :
-                    <input className="input-form-login" type="text" name="address"onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                    <input className="input-form-login" 
+                    type="text" 
+                    name="address"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    placeholder={localStorageAddress.address && localStorageAddress.address}
+                    >
+    
+                    </input>
                     }
                   </div>
                   {(formik.touched.address && formik.errors.address) && <p className="errors-form">{formik.errors.address}</p>}
@@ -83,7 +105,14 @@ export default function Addres({handleSendDateAndSendAddress}) {
                 <p className="andes-form-control__label">Telefono de contacto</p>
                 <div className="andes-form-control__control">
                 {(formik.touched.phone && formik.errors.phone )?
-                  <input className="input-form-login errors-form-control" type="tel" name="phone" placeholder="Llamarán a este numero si hay algún problema con en el envio." onChange={formik.handleChange}onBlur={formik.handleBlur} ></input>
+                  <input className="input-form-login errors-form-control"
+                   type="tel" 
+                   name="phone"
+                   placeholder="Llamarán a este numero si hay algún problema con en el envio." 
+                   onChange={formik.handleChange}onBlur={formik.handleBlur} 
+                   >
+
+                   </input>
 
                     :
                     <input className="input-form-login" type="tel" name="phone" placeholder="Llamarán a este numero si hay algún problema con en el envio." onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
@@ -100,7 +129,11 @@ export default function Addres({handleSendDateAndSendAddress}) {
                   <p className="andes-form-control__label">Referencias adicionales para las entregas de direccion</p>
                   <div className="andes-form-control__control">
                   {(formik.touched.descriptionHouse && formik.errors.descriptionHouse)?
-                      <input className="input-form-login errors-form-control input-form-login-reference-house" type="text" name="descriptionHouse" placeholder="Descripcion de la fachada, puntos de referencia, indicaciones, etc." onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
+                      <input className="input-form-login errors-form-control input-form-login-reference-house" 
+                      type="text" 
+                      name="descriptionHouse" 
+                      placeholder="Descripcion de la fachada, puntos de referencia, indicaciones, etc." 
+                      onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
                     :
                     <input className="input-form-login input-form-login-reference-house" type="text" name="descriptionHouse" placeholder="Descripcion de la fachada, puntos de referencia, indicaciones, etc." onChange={formik.handleChange}onBlur={formik.handleBlur}></input>
                     }
@@ -109,6 +142,7 @@ export default function Addres({handleSendDateAndSendAddress}) {
                 </label>
               </div>
               <div className="container-buttons-address">
+                <button type="submit">Enviar</button>
               </div>
             </div>
           </form>

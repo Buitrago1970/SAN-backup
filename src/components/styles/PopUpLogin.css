@@ -47,22 +47,6 @@ height: 20px;
         align-items: center;
         margin: 25px 0;
     }
-    .input-login{
-        background: rgba(192, 192, 192, 0.452) !important;
-    }
-    .btn-login{
-        background: #1877f2;
-    color: #fff !important;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 104%;
-    }
-    .btn-login:hover{
-        background: rgb(19, 109, 228);}
 .link-reset-password{
    margin-top: 20px;
 }
@@ -74,12 +58,21 @@ height: 20px;
 .reset-password:hover{
        text-decoration: underline;
 }
-.btn-register:hover{
-    background: #3eaa26;
+.btn-login{
+    height: 39px;
+    width: 100%;
+    color: white;
+    border: 1px solid #3391ff;
+    background: #1977f2;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.btn-login:hover{
+    border: 1px solid #278cff;
+    background: #247bff;
 }
 .btn-register{
-        background: #42b729;
-        color: #fff !important;
+    color: #fff ;
     border: none;
     padding: 15px 20px;
     border-radius: 5px;
@@ -87,6 +80,17 @@ height: 20px;
     font-weight: bold;
     cursor: pointer;
     width: 50%;
+    background-color: #ffd712;
+}
+.btn-register:hover{
+    background-color: #F7CA00;
+}
+.btn-primary{
+    background-color: #42b729;
+}
+.btn-primary:hover{
+    background-color: #389c21;
+
 }
 .link-signup{
     width: 100%;
