@@ -32,7 +32,15 @@
     justify-content: flex-end;
 }
 .btn-address{
-    width: 30%;
+    width: 10%;
+    background: #ffd814;
+    height: 39px;
+    border: 1px solid #e7c313;
+}
+.btn-address:hover{
+    background: #F2C200;
+    border-color: #FCD200;
+
 }
 @media screen and (max-width: 768px) {
     .container-address {

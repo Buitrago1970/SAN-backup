@@ -3,6 +3,7 @@ import { useState } from "react";
 import initialState from "../initialState";
 import {removeToken} from '../utils/token'
 import {getToken} from '../utils/token'
+import { getAddress } from "../utils/address";
 import axios from 'axios';
 
 const useInitialState = () => {
@@ -111,7 +112,6 @@ const useInitialState = () => {
     });
   };
   const sendAdress = async (valuesAddress) =>{
-    debugger
     setState({
       ...state,
       address_info:{
@@ -145,6 +145,7 @@ const useInitialState = () => {
   }
   //send order to server
    const sendOrder =  async (toatalPedido, paymentMethod,creationDate,numero_pedido, hora) => {
+     const Address = getAddress()
      setState({
       ...state,
       receipt: {
@@ -167,7 +168,10 @@ const useInitialState = () => {
                 "status": "pending",
                 "numero_de_pedido": numero_pedido,
                 "hora": hora,
-                "fecha_de_envio": state.receipt.dateSend
+                "fecha_de_envio": state.receipt.dateSend,
+                "address": Address.address,
+                "descriptionHouse": Address.descriptionHouse,
+                "phone":Address.phone
    }
 }
 try {

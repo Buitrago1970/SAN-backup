@@ -56,7 +56,7 @@ export default function ShoppingCart() {
         <div>
           <Address user={user[0] } cart={cart}  />
           <SendDate user={user[0]}  setSendDateData={setSendDateData} />
-          {(!address_info.address && !localStorageAddress.address) ? <FormAddress handleSendDateAndSendAddress={handleSendDateAndSendAddress}/>
+          {(!address_info.address && !localStorageAddress.address) ? <FormAddress handleSendDateAndSendAddress={handleSendDateAndSendAddress}localStorageAddress={localStorageAddress}/>
           : <ShoppingList />
           }
         </div>

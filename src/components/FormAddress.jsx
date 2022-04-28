@@ -75,7 +75,7 @@ export default function Addres({handleSendDateAndSendAddress, localStorageAddres
                     name="address"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    placeholder={localStorageAddress.address && localStorageAddress.address}
+                    placeholder={localStorageAddress.address ? localStorageAddress.address:null}
                     >
 
                     </input>
@@ -85,7 +85,7 @@ export default function Addres({handleSendDateAndSendAddress, localStorageAddres
                     name="address"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    placeholder={localStorageAddress.address && localStorageAddress.address}
+                    placeholder={localStorageAddress.address ? localStorageAddress.address :null}
                     >
     
                     </input>
@@ -141,9 +141,12 @@ export default function Addres({handleSendDateAndSendAddress, localStorageAddres
                   {formik.touched.descriptionHouse && formik.errors.descriptionHouse && <p className="errors-form">{formik.errors.descriptionHouse}</p>}
                 </label>
               </div>
-              <div className="container-buttons-address">
-                <button type="submit">Enviar</button>
-              </div>
+              {message ?
+              (<div className="container-buttons-address">
+              <button className="btn-address" type="submit">Enviar</button>
+            </div>):(null)
+              }
+              
             </div>
           </form>
         </div>

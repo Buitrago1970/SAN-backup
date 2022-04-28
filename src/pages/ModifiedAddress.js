@@ -17,6 +17,7 @@ export default function ModifiedAddress() {
         const respuestaPostAddress = await sendAdress(valuesAdress)
         if(respuestaPostAddress.status === 200){
           setAddress(valuesAdress)
+          // deleteOldAddress()
           history.push('/carrocompras/payment')
         }else{
             alert('no funciono')
