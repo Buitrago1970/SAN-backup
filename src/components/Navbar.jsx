@@ -29,7 +29,7 @@ function Navbar() {
       </nav>
       <div className="title">
         <h1 className="principal-title">Carniceria Online</h1>
-        <h3 className="title-secondary">San Diego</h3>
+        <h3 className="title-secondary">San-Diego</h3>
       </div>
 
       <ProductsList search={search} />
