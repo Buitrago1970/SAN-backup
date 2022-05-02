@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Appcontext from "../context/Appcontext";
 import Address from "../components/Address";
@@ -12,6 +12,10 @@ export default function ShoppingCart() {
   const {
     state: { cart, user },
   } = useContext(Appcontext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <div className="main-container">
       {cart.length > 0 ? (<div className="hero-shopping-cart">

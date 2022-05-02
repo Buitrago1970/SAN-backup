@@ -3,11 +3,17 @@ import { useState } from "react";
 import initialState from "../initialState";
 import {removeToken} from '../utils/token'
 import {getToken} from '../utils/token'
-import { getAddress } from "../utils/address";
+import {setAddress, getAddress} from "../utils/address"
+import { useHistory } from "react-router-dom";
+import Swal from 'sweetalert2'
+
+
 import axios from 'axios';
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
+  const history = useHistory();  
+
 
   const addToCart = (product, count) => {
     const productExists = state.cart.find((item) => item.Slug === product.Slug);
@@ -108,39 +114,57 @@ const useInitialState = () => {
       receipt:{
         ...state.receipt,
         dateSend: date
-      }
+      },
+      
     });
   };
   const sendAdress = async (valuesAddress) =>{
-    setState({
-      ...state,
-      address_info:{
-        address: valuesAddress.address,
-        phone: valuesAddress.phone,
-        descriptionHouse: valuesAddress.descriptionHouse, 
-      }
-    })
-    const token = getToken();
-    const url = process.env.REACT_APP_API_URL_SEND_ADDRESS  
-    const data ={"data": {
-     "address": valuesAddress.address,
-     "phone": valuesAddress.phone,
-     "descriptionHouse": valuesAddress.descriptionHouse,
-     "email": state.user[0].email
-    }}
-    if(valuesAddress.address){
-      try{
-        const respuesta = await axios.post(url,data,{
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        return respuesta
-      }catch(error){
-        return false
-      }
+
+  const localStorageAddress = getAddress()
+
+    if(localStorageAddress.address !== null){
+      history.push('/carrocompras/payment')
     }else{
-      return false
+      setState({
+        ...state,
+        address_info:{
+          address: valuesAddress.address,
+          phone: valuesAddress.phone,
+          descriptionHouse: valuesAddress.descriptionHouse, 
+        }
+      })
+      const token = getToken();
+      const url = process.env.REACT_APP_API_URL_SEND_ADDRESS  
+      const data ={"data": {
+       "address": valuesAddress.address,
+       "phone": valuesAddress.phone,
+       "descriptionHouse": valuesAddress.descriptionHouse,
+       "email": state.user[0].email
+      }}
+        try{
+          const respuesta = await axios.post(url,data,{
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          })
+          if(respuesta.status === 200){
+            setAddress(valuesAddress)
+            history.push('/carrocompras/payment')
+          }else{
+            Swal.fire(
+              'Parece que hubo un error intente nueva mente',
+              '',
+              'error'
+            )
+          }
+        }catch(error){
+          Swal.fire(
+            `Parece que hubo un error intente nueva mente`,
+            'o escribenos al +57 310 570 62 38',
+            'error'
+          )
+        }
+     
     }
   }
   //send order to server

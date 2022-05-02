@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { setToken } from '../utils/token';
 import { useHistory } from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import Swal from 'sweetalert2'
 import { useFormik } from 'formik';
 
 import axios from 'axios';
@@ -55,11 +56,16 @@ export default function PopUpLogin(props) {
         history.push("/carrocompras/checkout");
         }
       } catch (error) {
-        alert('Usuario o contraseña incorrectos');
+        Swal.fire(
+          '',
+          'Correo o contraseña incorrectos',
+          'error'
+        )
       }
     }
   });
   return (props.trigger)?(
+
     <div className="popup-login">
       <div className="popup-login-content">
         <div className='close-popup'>
@@ -94,7 +100,7 @@ export default function PopUpLogin(props) {
             {formik.touched.password && formik.errors.password && <p className="errors-form">{formik.errors.password}</p>}
           </div>
            <div className="form-group">
-            <button type="submit" className=" btn-login">Inicia sesión</button>
+            <button type="submit" className=" btn-login" data-swal-toast-template='#my-template'>Inicia sesión</button>
             {/* <div className='link-reset-password'>
               <a href="#" className='reset-password'>¿Olvidaste tu contraseña?</a>
 

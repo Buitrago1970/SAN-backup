@@ -1,4 +1,4 @@
-import React, { useRef, useContext } from "react";
+import React, { useContext } from "react";
 // import ReactToPrint from "react-to-print";
 import Appcontext from '../context/Appcontext';
 import { useHistory } from "react-router-dom";
@@ -10,7 +10,6 @@ export default function PrintComponent() {
   const history = useHistory();
 
   const { state: { receipt } } = useContext(Appcontext);
-  console.log(receipt);
   // let componentRef = useRef();
   // const doSomething = () => {
 

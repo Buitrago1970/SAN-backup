@@ -8,11 +8,10 @@ import {FaTelegramPlane} from "react-icons/fa"
 import Appcontext from "../context/Appcontext";
 import PopUpLogin from "../components/PopUpLogin";
 
-export default function Payment({ PATH, handlePaymentMethod,handleSendDateAndSendAddress, hideButton ,btnAnimation, handleSendDate}) {
+export default function Payment({ PATH, handlePaymentMethod,handleSendDateAndSendAddress, hideButton ,btnAnimation}) {
   const {
     state: { cart, user ,address_info},
   } = useContext(Appcontext);
-  
   // set poUp login
   const [buttonPopUp , setButtonPopUp] = useState(false);
 
@@ -43,6 +42,7 @@ export default function Payment({ PATH, handlePaymentMethod,handleSendDateAndSen
   if(PATH === 'Shopping-cart' || PATH === 'paymentPage' ){
     hidenBtnShoppingCart += 'hidden'
   }
+
   return (
     <>
       <div className="payment">
@@ -68,7 +68,7 @@ export default function Payment({ PATH, handlePaymentMethod,handleSendDateAndSen
           </div>
           {(PATH === 'checkout' && address_info.address)?
         (
-          <button className="btn-payment" onClick={handleSendDate}>{`Proceder al pago (${cart.length} productos)`}</button>
+          <button className="btn-payment" onClick={handleSendDateAndSendAddress}>{`Proceder al pago (${cart.length} productos)`}</button>
         )  :( 
           <button form='my-form' type="submit" className={`btn-payment ${hidenBtnShoppingCart}`} onClick={handleSendDateAndSendAddress}>{`Proceder al pago (${cart.length} productos)`}</button>
         )

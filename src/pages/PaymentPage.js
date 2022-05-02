@@ -6,6 +6,8 @@ import Appcontext from '../context/Appcontext';
 import Address from "../components/Address";
 import Payment from "../components/Payment";
 import ShoppingList from "../components/ShoppingList";
+import Swal from 'sweetalert2'
+
 
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
@@ -21,7 +23,7 @@ export default function PaymentPage() {
 
   let date = new Date();
   const creationDate = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-  const numero_pedido = date.getFullYear() +''+ date.getDate() + '' + (date.getMonth()+1) + '' + date.getHours()+''+date.getMinutes() + 'EC' +`${Math.floor(Math.random() * (9999 - 1000) + 1000)}`;
+  const numero_pedido = date.getFullYear() +''+ date.getDate() + '' + (date.getMonth()+1) + '' + date.getHours()+''+date.getMinutes() + 'EC' + `${Math.floor(Math.random() * (9999 - 1000) + 1000)}`;
   const hora = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
   const {state:{user, cart,},sendOrder,getOrder, saveOrder} = useContext(Appcontext)
@@ -50,7 +52,11 @@ export default function PaymentPage() {
        alert("error al enviar pedido")
      }
    }else{
-       alert("Seleccione un metodo de pago")
+    Swal.fire(
+      '',
+      'Seleciona una metodo de pago',
+      'info'
+    )
      }}
   // data metodos de pago tarjeta (credito, debito) efectivo, nequi
     const data_payment_methods = [

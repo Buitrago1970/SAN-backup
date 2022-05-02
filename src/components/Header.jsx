@@ -16,7 +16,7 @@ const Header = () => {
   } = useContext(Appcontext);
  let nombreUsuarioCorto =''
   if(user[0]){
-    nombreUsuarioCorto = user[0].username.slice(0,6)
+    nombreUsuarioCorto = user[0].username.slice(0,8)
   }
 
   const [buttonPopUp , setButtonPopUp] = useState(false);

@@ -3,6 +3,8 @@ import * as React from "react";
 import {useContext} from "react"
 import { useHistory,Link } from "react-router-dom";
 import { useFormik } from "formik"; 
+import Swal from 'sweetalert2'
+
 
 import Appcontext from "../context/Appcontext";
 import axios from "axios";
@@ -61,11 +63,19 @@ export default function Adress() {
           registerUser(response.data);
           history.push("/carrocompras/checkout");
         }else{
-          alert('ha ocurrido un error intenta nueva mente')
+          Swal.fire(
+            '',
+            'hha ocurrido un error revise el correo o contraseña e intenta nueva mente',
+            'warning'
+          )
         }
      })
      .catch(error => {
-        alert('ha ocurrido un error con el servidor revisar el correo electronico e intente nueva mente ')
+      Swal.fire(
+        '',
+        'ha ocurrido un error revise el correo o contraseña e intenta nueva mente',
+        'warning'
+      )
      })
 
   }
