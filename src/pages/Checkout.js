@@ -1,6 +1,7 @@
 import * as React from "react";
 import {  useState,useContext,useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Swal from 'sweetalert2'
 
 import Address from "../components/Address";
@@ -18,7 +19,7 @@ export default function ShoppingCart() {
   const {state:{user ,cart, address_info},setDateSend, sendAdress} = useContext(Appcontext)
   const [sendDateData, setSendDateData] = useState(null);
   const localStorageAddress = getAddress()
-  
+  const history = useHistory()
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [])
@@ -27,7 +28,8 @@ export default function ShoppingCart() {
     if (sendDateData) {
       setDateSend(sendDateData);
       // enviar valores a la base de datos
-      await sendAdress(valuesAdress)
+     const path = await sendAdress(valuesAdress)
+     history.push(path)
       }else{
         Swal.fire(
           'Seleciona una fecha de envio',

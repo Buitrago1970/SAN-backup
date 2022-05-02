@@ -4,7 +4,6 @@ import initialState from "../initialState";
 import {removeToken} from '../utils/token'
 import {getToken} from '../utils/token'
 import {setAddress, getAddress} from "../utils/address"
-import { useHistory } from "react-router-dom";
 import Swal from 'sweetalert2'
 
 
@@ -12,8 +11,6 @@ import axios from 'axios';
 
 const useInitialState = () => {
   const [state, setState] = useState(initialState);
-  const history = useHistory();  
-
 
   const addToCart = (product, count) => {
     const productExists = state.cart.find((item) => item.Slug === product.Slug);
@@ -119,11 +116,10 @@ const useInitialState = () => {
     });
   };
   const sendAdress = async (valuesAddress) =>{
-
   const localStorageAddress = getAddress()
 
     if(localStorageAddress.address !== null){
-      history.push('/carrocompras/payment')
+      return('/carrocompras/payment')
     }else{
       setState({
         ...state,
@@ -149,7 +145,7 @@ const useInitialState = () => {
           })
           if(respuesta.status === 200){
             setAddress(valuesAddress)
-            history.push('/carrocompras/payment')
+            return('/carrocompras/payment')
           }else{
             Swal.fire(
               'Parece que hubo un error intente nueva mente',
