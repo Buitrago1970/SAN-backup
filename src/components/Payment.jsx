@@ -90,7 +90,7 @@ export default function Payment({ PATH, handlePaymentMethod,handleSendDateAndSen
             <>
             {/* boton para logear usuario */}
             {hideButton ? null:(<>
-              <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>Continuar</button>
+                    <button className="button btn-payment" onClick={()=>setButtonPopUp(true)}>Continuar</button>
             <PopUpLogin trigger={buttonPopUp} closePopUp={setButtonPopUp}/>
             </>) }
             </>

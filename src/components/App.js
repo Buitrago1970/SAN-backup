@@ -33,11 +33,11 @@ function App() {
               exact
               path="/carrocompras/direccion"
               component={FormUserRegister}
-            /> 
+            />
             <Route
-            exact
-            path="/carrocompras/modificardireccion"
-            component={ModifiedAddress}
+              exact
+              path="/carrocompras/modificardireccion"
+              component={ModifiedAddress}
             />
             <Route
               exact
@@ -50,10 +50,10 @@ function App() {
               component={Payment}
             />
             <Route exact path="/success" component={Success} />
-            <Route 
-            exact
-            path="/userprofile"
-            component={UserProfile} />
+            <Route
+              exact
+              path="/userprofile"
+              component={UserProfile} />
 
             <Route component={NotFound} />
           </Switch>

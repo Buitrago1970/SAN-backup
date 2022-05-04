@@ -1,9 +1,10 @@
 import { useState } from "react";
 
 import initialState from "../initialState";
-import {removeToken} from '../utils/token'
-import {getToken} from '../utils/token'
-import {setAddress, getAddress} from "../utils/address"
+import { removeToken } from '../utils/token'
+import { getToken } from '../utils/token'
+import { setAddress, getAddress } from "../utils/address"
+// import {animatioAddToCart} from "../utils/animations"
 import Swal from 'sweetalert2'
 
 
@@ -13,9 +14,9 @@ const useInitialState = () => {
   const [state, setState] = useState(initialState);
 
   const addToCart = (product, count) => {
+    // animatioAddToCart()
     const productExists = state.cart.find((item) => item.Slug === product.Slug);
     if (productExists) {
-    
       setState({
         ...state,
         cart: state.cart.map((item) =>
@@ -25,12 +26,12 @@ const useInitialState = () => {
         ),
       });
     } else {
-  
+
       setState({
         ...state,
         cart: [
           ...state.cart,
-          { ...product, total_anadidos_de_productos: product.total_anadidos_de_productos + count  },
+          { ...product, total_anadidos_de_productos: product.total_anadidos_de_productos + count },
         ],
       });
     }
@@ -80,93 +81,121 @@ const useInitialState = () => {
     });
   };
   //register user
-  const registerUser =  (payload)=>{
+  const registerUser = (payload) => {
     setState({
       ...state,
-      user: [ ...state.user, payload.user], 
+      user: [...state.user, payload.user],
     })
   }
   //login user
 
- const loginUser =  (payload, idUSer)=>{
-   setState({
-    ...state,
-    user: [ ...state.user, payload],
-    idUser:[ ...state.idUser, idUSer]  
-   })
- }
+  const loginUser = (payload, idUSer) => {
+    setState({
+      ...state,
+      user: [...state.user, payload],
+      idUser: [...state.idUser, idUSer]
+    })
+  }
   //logout user
-  const logoutUser = ( ) => {
+  const logoutUser = () => {
     removeToken();
-     setState({
-       ...state,
-       user: [],
-       idUser:[]
-     });
-      };
+    setState({
+      ...state,
+      user: [],
+      idUser: []
+    });
+  };
   //set date send
   const setDateSend = (date) => {
     setState({
       ...state,
-      receipt:{
+      receipt: {
         ...state.receipt,
         dateSend: date
       },
-      
+
     });
   };
-  const sendAdress = async (valuesAddress) =>{
-  const localStorageAddress = getAddress()
-
-    if(localStorageAddress.address !== null){
-      return('/carrocompras/payment')
-    }else{
+  const sendAdress = async (valuesAddress) => {
+    const localStorageAddress = getAddress()
+    if (localStorageAddress.address !== null) {
+      return ('/carrocompras/payment')
+    } else {
       setState({
         ...state,
-        address_info:{
+        address_info: {
           address: valuesAddress.address,
           phone: valuesAddress.phone,
-          descriptionHouse: valuesAddress.descriptionHouse, 
+          descriptionHouse: valuesAddress.descriptionHouse,
         }
       })
       const token = getToken();
-      const url = process.env.REACT_APP_API_URL_SEND_ADDRESS  
-      const data ={"data": {
-       "address": valuesAddress.address,
-       "phone": valuesAddress.phone,
-       "descriptionHouse": valuesAddress.descriptionHouse,
-       "email": state.user[0].email
-      }}
-        try{
-          const respuesta = await axios.post(url,data,{
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
-          if(respuesta.status === 200){
-            setAddress(valuesAddress)
-            return('/carrocompras/payment')
-          }else{
-            Swal.fire(
-              'Parece que hubo un error intente nueva mente',
-              '',
-              'error'
-            )
-          }
-        }catch(error){
+      const url = process.env.REACT_APP_API_URL_SEND_ADDRESS
+      const data = {
+        "data": {
+          "address": valuesAddress.address,
+          "phone": valuesAddress.phone,
+          "descriptionHouse": valuesAddress.descriptionHouse,
+          "email": state.user[0].email
+        }
+      }
+      try {
+        const respuesta = await axios.post(url, data, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        if (respuesta.status === 200) {
+          setAddress(valuesAddress)
+          return ('/carrocompras/payment')
+        } else {
           Swal.fire(
-            `Parece que hubo un error intente nueva mente`,
-            'o escribenos al +57 310 570 62 38',
+            'Parece que hubo un error intente nueva mente',
+            '',
             'error'
           )
         }
-     
+      } catch (error) {
+        Swal.fire(
+          `Parece que hubo un error intente nueva mente`,
+          'o escribenos al +57 310 570 62 38',
+          'error'
+        )
+      }
+
     }
   }
+  const modifiedApiAddress = async (valuesAddress) => {
+    setState({
+      ...state,
+      address_info: {
+        address: valuesAddress.address,
+        phone: valuesAddress.phone,
+        descriptionHouse: valuesAddress.descriptionHouse,
+      }
+    })
+    const token = getToken();
+    const url = process.env.REACT_APP_API_URL_SEND_ADDRESS
+    const data = {
+      "data": {
+        "address": valuesAddress.address,
+        "phone": valuesAddress.phone,
+        "descriptionHouse": valuesAddress.descriptionHouse,
+        "email": state.user[0].email
+      }
+    }
+    const respuesta = await axios.post(url, data, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+    )
+    return respuesta
+  }
   //send order to server
-   const sendOrder =  async (toatalPedido, paymentMethod,creationDate,numero_pedido, hora) => {
-     const Address = getAddress()
-     setState({
+  const sendOrder = async (toatalPedido, paymentMethod, creationDate, numero_pedido, hora) => {
+    const Address = getAddress()
+    setState({
       ...state,
       receipt: {
         ...state.receipt,
@@ -177,45 +206,46 @@ const useInitialState = () => {
         hora: hora,
       },
     });
-      const token = getToken();
-      const url = process.env.REACT_APP_API_URL_SEND_ORDER
-      const data = { "data": {
-                 "user": state.user[0],
-                 "products": state.cart.map(item => item.Slug ),
-                 "total": toatalPedido,
-                 "metodo_de_pago": paymentMethod,
-                "fecha_de_creacion": creationDate,
-                "status": "pending",
-                "numero_de_pedido": numero_pedido,
-                "hora": hora,
-                "fecha_de_envio": state.receipt.dateSend,
-                "address": Address.address,
-                "descriptionHouse": Address.descriptionHouse,
-                "phone":Address.phone
-   }
-}
-try {
-   const respuesta = await axios.post(url, data, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-    return respuesta;
-} catch (error) {
-  return false;
-}
-   }
+    const token = getToken();
+    const url = process.env.REACT_APP_API_URL_SEND_ORDER
+    const data = {
+      "data": {
+        "user": state.user[0],
+        "products": state.cart.map(item => item.Slug),
+        "total": toatalPedido,
+        "metodo_de_pago": paymentMethod,
+        "fecha_de_creacion": creationDate,
+        "status": "pending",
+        "numero_de_pedido": numero_pedido,
+        "hora": hora,
+        "fecha_de_envio": state.receipt.dateSend,
+        "address": Address.address,
+        "descriptionHouse": Address.descriptionHouse,
+        "phone": Address.phone
+      }
+    }
+    try {
+      const respuesta = await axios.post(url, data, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return respuesta;
+    } catch (error) {
+      return false;
+    }
+  }
   //get order from server
   const getOrder = async (numero_pedido) => {
     const token = getToken();
     const url = `${process.env.REACT_APP_API_URL_SEND_ORDER}[numero_de_pedido]=${numero_pedido}`
     try {
-        const respuesta = await axios.get(url, {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
-          return respuesta;
+      const respuesta = await axios.get(url, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return respuesta;
     } catch (error) {
       return false;
     }
@@ -227,12 +257,12 @@ try {
       receipt: {
         data: data,
       },
-      user: [ ...state.user],
-      idUser:[ ...state.idUser],
-      cart:[]
+      user: [...state.user],
+      idUser: [...state.idUser],
+      cart: []
     });
   }
-  return { state, addToCart,addOneProductCart,removeOneProuctCart , removeFromCart, registerUser, loginUser, logoutUser,sendOrder ,getOrder,setDateSend,saveOrder,sendAdress};
+  return { state, addToCart, addOneProductCart, removeOneProuctCart, removeFromCart, registerUser, loginUser, logoutUser, sendOrder, getOrder, setDateSend, saveOrder, sendAdress, modifiedApiAddress };
 };
 
 export default useInitialState;

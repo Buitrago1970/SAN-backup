@@ -1,12 +1,13 @@
-
 .account {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
 }
-.costo-envio-gratis{
+
+.costo-envio-gratis {
   color: #32b767;
 }
+
 .btn-payment {
   margin-top: 20px;
   width: 100%;
@@ -25,83 +26,96 @@
   background: #F2C200;
   border-color: #FCD200;
 }
+
 .container-payment {
   padding: 20px;
   border-radius: 4px;
   background: #ffffff;
   position: sticky;
   position: -webkit-sticky;
-    top: 0;
-    z-index: 9;
-    margin: 10px 0;
+  top: 0;
+  z-index: 9;
+  margin: 10px 0;
 }
-.btn-send-order{
-    margin-top: 30px;
-    background: #ffffff;
-    border: 1px solid #FCD200;
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    outline:none;
-    height: 40px;
-    text-align: center;
-    border-radius: 5px;
-    letter-spacing:1px;
-    cursor: pointer;
-    transition: all 0.25s ease;  
-  }.btn-send-order:hover{
-    transition: all 0.4s ease;
-    color: #ffffff;
-    background: #FFD814;
-  }.btn-send-order svg{
-    margin-left: 4px;
-  }.btn-send-order:hover  svg{
-    color: #ffffff;
-    transform: translateX(5px);
-     transition: all 0.5s ease;
-  }
-  .onclic {
-    width: 40px;
-    border-color:#bbbbbb;
-    border-width:3px;
-    font-size:0;
-    border-left-color:#1ECD97 ;
-    animation: rotating 2s 0.25s linear infinite;
-    border-radius: 40px;
-    margin: 0 auto;
-  
-  }
-  .onclic:after {
-    content:"";
-  }
-  .onclic:hover {
-    color:#1ECD97;
-    background: white;
-  }
+
+.btn-send-order {
+  margin-top: 30px;
+  background: #ffffff;
+  border: 1px solid #FCD200;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  outline: none;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-send-order:hover {
+  transition: all 0.4s ease;
+  color: #ffffff;
+  background: #FFD814;
+}
+
+.btn-send-order svg {
+  margin-left: 4px;
+}
+
+.btn-send-order:hover svg {
+  color: #ffffff;
+  transform: translateX(5px);
+  transition: all 0.5s ease;
+}
+
+.onclic {
+  width: 40px;
+  border-color: #bbbbbb;
+  border-width: 3px;
+  font-size: 0;
+  border-left-color: #1ECD97;
+  animation: rotating 2s 0.25s linear infinite;
+  border-radius: 40px;
+  margin: 0 auto;
+}
+
+.onclic:after {
+  content: "";
+}
+
+.onclic:hover {
+  color: #1ECD97;
+  background: white;
+}
+
 @media screen and (max-width: 870px) {
   .container-payment {
     padding: 20px 10px;
     text-align: center;
   }
-   .container-payment hr{
-     border: none;
-     height: 1px;
-     background-color: rgb(206, 206, 206);
+
+  .container-payment hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(206, 206, 206);
   }
-   .btn-payment {
+
+  .btn-payment {
     border-radius: 5px;
     font-size: 17px;
   }
 }
+
 @keyframes rotating {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-
-

@@ -14,10 +14,10 @@ export default function PrintComponent() {
   // const doSomething = () => {
 
   // }
-  if(receipt.toatalPedido){
+  if (receipt.toatalPedido) {
     history.push("/")
-    
-  }else{
+
+  } else {
     return (
       <>
         <div>
@@ -26,11 +26,11 @@ export default function PrintComponent() {
             trigger={() => <button>Print this out!</button>}
             content={() => componentRef}
           /> */}
-  
+
           {/* component to be printed */}
 
           {/* <SuccessReceipt ref={(el) => (componentRef = el)} receipt={receipt} doSomething={doSomething} /> */}
-           <SuccessReceipt receipt={receipt}  />  
+          <SuccessReceipt receipt={receipt} />
 
         </div>
       </>

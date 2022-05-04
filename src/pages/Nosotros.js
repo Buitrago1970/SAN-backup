@@ -14,7 +14,7 @@ import imagen4 from "../images/1000_F_326992271_emdTQVlnD2NcBBKmkXWDA7DMFiGKRSlv
 
 
 class Nosotros extends React.Component {
-  
+
   render() {
     window.scrollTo(0, 0)
     return (
@@ -59,16 +59,16 @@ class Nosotros extends React.Component {
               </p>
             </div>
           </div>
-  
+
 
           <div className="container-nosotros ">
             <div className="sub-title-container">
               <span className="sub-title">Nuestro Equipo</span>
-              <span className="p-our-team-nosotros">Para alimentar un mundo cambiante se necesita un equipo increible. Desde la tabala de cortar hasta la sala de juntas, 
+              <span className="p-our-team-nosotros">Para alimentar un mundo cambiante se necesita un equipo increible. Desde la tabala de cortar hasta la sala de juntas,
                 cada miembro del equipo carnes online colombia juega un papel importante en nuestro exito.
               </span>
             </div>
-          
+
             <div className=" our-team ">
               <div className="out-team-container">
                 <div className="container-img-our-team">

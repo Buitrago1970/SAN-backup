@@ -3,10 +3,10 @@ import axios from 'axios';
 const API_URL = process.env.API_ULR;
 const qs = require('qs');
 const query = qs.stringify({
-  pagination: {
-    page: 1,
-    pageSize: 10,
-  },
+    pagination: {
+        page: 1,
+        pageSize: 10,
+    },
 });
 
 export default async function getProducts({
@@ -17,10 +17,10 @@ export default async function getProducts({
     try {
         const response = await axios(`${apiUrl}`
         );
-    ;
+        ;
         return response.data;
     } catch (error) {
-    ;
+        ;
         return error;
     }
 }

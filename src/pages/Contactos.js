@@ -27,7 +27,7 @@ const Contactos = () => {
                   <ul className="mail">contacto@san-diego.com.co</ul>
                 </li>
               </div>
-              
+
             </div>
           </div>
         </div>

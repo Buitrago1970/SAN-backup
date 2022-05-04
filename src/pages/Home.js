@@ -1,5 +1,5 @@
 import * as React from "react";
-import {useContext ,useEffect} from "react";
+import { useContext, useEffect } from "react";
 import { getMeApi } from '../api/user';
 import Appcontext from "../context/Appcontext";
 
@@ -11,19 +11,19 @@ export default function Home() {
 
   const { loginUser, logoutUser } = useContext(Appcontext);
 
-    useEffect(()  => {
-     (async () =>{
-       const response = await getMeApi();
-       loginUser(response);
-     })()
-     window.scrollTo(0, 0)  
-     },[]);
+  useEffect(() => {
+    (async () => {
+      const response = await getMeApi();
+      loginUser(response);
+    })()
+    window.scrollTo(0, 0)
+  }, []);
 
-    return (
-      <>
-        <div className="container-home">
-          <Navbar />
-        </div>
-      </>
-    );
+  return (
+    <>
+      <div className="container-home">
+        <Navbar />
+      </div>
+    </>
+  );
 }

@@ -1,32 +1,33 @@
-import {getToken, hasTokenExpired} from './token';
+import { getToken, hasTokenExpired } from './token';
 
 
-export async function authFetch(url, params, logoutUser){
+export async function authFetch(url, params, logoutUser) {
     const token = getToken();
-    if(!token){
+    if (!token) {
         //usuario no logeado 
         logoutUser()
-    }else{
-        if(hasTokenExpired(token)){
+    } else {
+        if (hasTokenExpired(token)) {
             //token expirado
             logoutUser()
-        }else{
-            const paramsTemp ={
+        } else {
+            const paramsTemp = {
                 ...params,
-                headers:{
+                headers: {
                     ...params?.headers,
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`
                 }
             }
-            try{
+            try {
                 const response = await fetch(url, paramsTemp);
                 const result = await response.json();
                 return result;
             }
-            catch(error){
-                return error;}
+            catch (error) {
+                return error;
+            }
         }
     }
-        
+
 }

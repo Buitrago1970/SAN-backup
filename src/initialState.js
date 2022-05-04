@@ -1,12 +1,12 @@
 const initialState = {
   user: [],
-  address_info:[],
-  idUser:[],
+  address_info: [],
+  idUser: [],
   cart: [],
-  receipt:[{
-    toatalPedido:{},
-    paymentMethod:{},
-    creationDate:{}
+  receipt: [{
+    toatalPedido: {},
+    paymentMethod: {},
+    creationDate: {}
   },
   ],
 };
