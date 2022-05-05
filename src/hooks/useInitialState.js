@@ -239,16 +239,16 @@ const useInitialState = () => {
   //get order show recipe from server
   const getOrderRecipe = async (numero_pedido) => {
     const token = getToken();
-    const url = `${process.env.REACT_APP_API_URL_SEND_ORDER}[numero_de_pedido]=${numero_pedido}}`
-    const respuesta = await axios.get(url, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    })
-    if (respuesta.status !== 200) {
-      return null
-    } else {
-      return respuesta
+    const url = `${process.env.REACT_APP_API_URL_SEND_ORDER}[numero_de_pedido]=${numero_pedido}`
+    try {
+      const respuesta = await axios.get(url, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      return respuesta.data.data;
+    } catch (error) {
+      return false;
     }
   }
   //get orders to show ordes page
