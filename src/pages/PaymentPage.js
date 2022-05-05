@@ -26,7 +26,7 @@ export default function PaymentPage() {
   const numero_pedido = date.getFullYear() + '' + date.getDate() + '' + (date.getMonth() + 1) + '' + date.getHours() + '' + date.getMinutes() + 'EC' + `${Math.floor(Math.random() * (9999 - 1000) + 1000)}`;
   const hora = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
 
-  const { state: { user, cart, }, sendOrder, getOrder, saveOrder } = useContext(Appcontext)
+  const { state: { user, cart, }, sendOrder, getOrderRecipe, saveOrder } = useContext(Appcontext)
   // esconder en boton de payment para mostar en boton de enviar pedido
   //estado de los metodos de pago
   const [paymentMethodsData, setPaymentMethodsData] = useState(null)
@@ -43,14 +43,17 @@ export default function PaymentPage() {
 
       //redireccionar a la pagina de confirmacion
       if (respuestaPOST) {
-        const respuestaGet = await getOrder(numero_pedido)
-        debugger
+        const respuestaGet = await getOrderRecipe(numero_pedido)
         saveOrder(respuestaGet[0].attributes)
         if (respuestaGet) {
           history.push("/success")
         }
       } else {
-        alert("error al enviar pedido")
+        Swal.fire(
+          '',
+          'Parece que hubo un error, revisa tu conexion e intenta nueva mente ',
+          'info'
+        )
       }
     } else {
       Swal.fire(

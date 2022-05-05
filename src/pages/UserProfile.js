@@ -10,11 +10,11 @@ import Appcontext from '../context/Appcontext';
 export default function UserProfile() {
   const history = useHistory();
   const [orders, setOrder] = useState()
-  const { getOrder, logoutUser } = useContext(Appcontext);
+  const { getOrders, logoutUser } = useContext(Appcontext);
 
   useEffect(() => {
     async function fetchData() {
-      const data = await getOrder()
+      const data = await getOrders()
       if (data) {
         setOrder(data)
       } else {

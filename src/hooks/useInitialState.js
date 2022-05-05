@@ -236,8 +236,23 @@ const useInitialState = () => {
       return false;
     }
   }
-  //get order from server
-  const getOrder = async () => {
+  //get order show recipe from server
+  const getOrderRecipe = async (numero_pedido) => {
+    const token = getToken();
+    const url = `${process.env.REACT_APP_API_URL_SEND_ORDER}[numero_de_pedido]=${numero_pedido}}`
+    const respuesta = await axios.get(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    if (respuesta.status !== 200) {
+      return null
+    } else {
+      return respuesta
+    }
+  }
+  //get orders to show ordes page
+  const getOrders = async () => {
     const token = getToken();
     const url = `${process.env.REACT_APP_API_URL_SEND_ORDER}[email][$eq]=${state.user[0].email}`
     const respuesta = await axios.get(url, {
@@ -250,7 +265,9 @@ const useInitialState = () => {
     } else {
       return respuesta.data.data
     }
+
   }
+
   //save order response data
   const saveOrder = (data) => {
     setState({
@@ -263,7 +280,7 @@ const useInitialState = () => {
       cart: []
     });
   }
-  return { state, addToCart, addOneProductCart, removeOneProuctCart, removeFromCart, registerUser, loginUser, logoutUser, sendOrder, getOrder, setDateSend, saveOrder, sendAdress, modifiedApiAddress };
+  return { state, addToCart, addOneProductCart, removeOneProuctCart, removeFromCart, registerUser, loginUser, logoutUser, sendOrder, getOrderRecipe, setDateSend, saveOrder, sendAdress, modifiedApiAddress, getOrders };
 };
 
 export default useInitialState;
