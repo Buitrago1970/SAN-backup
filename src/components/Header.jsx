@@ -25,7 +25,8 @@ const Header = () => {
       <div className="header">
         <div className="container-logo">
           <Link className="header__brand-logo" title="" to="">
-            <img className="logo" src={logo} alt="Logo San Diego" />          </Link>
+            <img className="logo" src={logo} alt="Logo San Diego" />     
+          </Link>
         </div>
 
         <div className="container-options menu">
@@ -45,7 +46,7 @@ const Header = () => {
       
         <div className="container-shopping-cart">
             <div className="name-user">
-          {user[0] ? ( <Link to="/" title="Inicio" className="options user-name">
+          {user[0] ? ( <Link to="/userprofile" title="Inicio" className="options user-name">
             {nombreUsuarioCorto}    
             </Link> ) : <>
         <button className="btn-login-header" onClick={()=>setButtonPopUp(true)}>   <AiOutlineUser />

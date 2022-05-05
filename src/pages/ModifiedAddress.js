@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { useContext } from "react";
+import Swal from 'sweetalert2'
+
 
 import { setAddress, getAddress } from "../utils/address"
 import { useHistory } from "react-router-dom";
@@ -20,7 +22,11 @@ export default function ModifiedAddress() {
       // deleteOldAddress()
       history.push('/carrocompras/payment')
     } else {
-      alert('no funciono')
+      Swal.fire(
+        '',
+        'Error, recarga e intenta nueva mente',
+        'warning'
+      )
     }
   }
 

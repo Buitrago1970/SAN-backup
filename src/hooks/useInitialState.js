@@ -221,7 +221,8 @@ const useInitialState = () => {
         "fecha_de_envio": state.receipt.dateSend,
         "address": Address.address,
         "descriptionHouse": Address.descriptionHouse,
-        "phone": Address.phone
+        "phone": Address.phone,
+        "email": state.user[0].email
       }
     }
     try {
@@ -236,18 +237,18 @@ const useInitialState = () => {
     }
   }
   //get order from server
-  const getOrder = async (numero_pedido) => {
+  const getOrder = async () => {
     const token = getToken();
-    const url = `${process.env.REACT_APP_API_URL_SEND_ORDER}[numero_de_pedido]=${numero_pedido}`
-    try {
-      const respuesta = await axios.get(url, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      return respuesta;
-    } catch (error) {
-      return false;
+    const url = `${process.env.REACT_APP_API_URL_SEND_ORDER}[email][$eq]=${state.user[0].email}`
+    const respuesta = await axios.get(url, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+    if (respuesta.status !== 200) {
+      return respuesta.data.message
+    } else {
+      return respuesta.data.data
     }
   }
   //save order response data

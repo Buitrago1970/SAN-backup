@@ -65,7 +65,7 @@ export default function Adress() {
           } else {
             Swal.fire(
               '',
-              'hha ocurrido un error revise el correo o contraseña e intenta nueva mente',
+              'Revisa el correo o contraseña e intenta nueva mente',
               'warning'
             )
           }
@@ -73,7 +73,7 @@ export default function Adress() {
         .catch(error => {
           Swal.fire(
             '',
-            'ha ocurrido un error revise el correo o contraseña e intenta nueva mente',
+            'Revisa el correo o contraseña e intenta nueva mente',
             'warning'
           )
         })
