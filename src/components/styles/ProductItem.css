@@ -212,3 +212,10 @@
       font-size: 10px;
   }
   }
+  @media screen and (max-width: 370px) {
+    .articulo {
+      max-width: 170px;
+      margin: 18px 3px;
+      color: #d0d0d0;           
+  }
+  }
