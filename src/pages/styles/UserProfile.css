@@ -14,7 +14,8 @@ padding: 0 20px;
     margin: 12px 0;
     padding: 40px 92px;
     margin-top: 0;
-    padding-top: 0;}
+    padding-top: 0;
+}
 .container-p-date-order{
     padding-left: 20px;
     border-bottom: 1px solid rgba(0,0,0,.1);
@@ -56,8 +57,8 @@ margin: 12px 0;
     max-width: none;
 }
 .delivery-order-date{
-font-weight: 600;
-margin: 0;
+    font-weight: 600;
+    margin: 0;
 }
 .total-order{
     margin: 0;
@@ -70,7 +71,42 @@ margin: 0;
 }
 .secondary-info-order{
     text-align: end;
+    
 }
 .btn-close-session{
 
+}
+@media screen and (max-width: 768px) {
+    .orders{
+        padding: 0;
+        }
+    .info-order{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 0.6fr 1fr;
+        font-size: 11px;
+        grid-template-areas: 
+        ". ."
+        "numeroPedido numeroPedido"; 
+    }
+    .text-info-order{
+        padding-left: 10px;
+    }
+    .products-order{
+        font-size: 10px;
+    }
+    .item-order{
+        border-radius: 0px;
+    }
+    .container-order{
+        margin: 12px 0;
+        padding: 20px 0px;
+    }
+    .secondary-info-order{
+        grid-area: numeroPedido; 
+        text-align: center;
+    }
+    .orders-secondary-title{
+    text-align: center;
+    margin: 0;
+    }
 }
