@@ -32,7 +32,6 @@ class SuccessReceipt extends React.Component {
                   <div className='buttons-mail-info'>
                       <div className='buttons-success'>
                       <Link  to='/userprofile'>
-
                       <button className='btn-success' >
                               Ver mis pedidos
                           </button>

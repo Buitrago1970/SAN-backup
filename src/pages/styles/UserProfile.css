@@ -8,27 +8,33 @@ padding: 0 20px;
 .orders-secondary-title{
     COLOR: #525252;
     font-weight: 500;
+    margin-right: 25px;
 }
 .container-order{
-        margin: 12px 0;
-}
+    margin: 12px 0;
+    padding: 40px 92px;
+    margin-top: 0;
+    padding-top: 0;}
 .container-p-date-order{
-    font-size: 15px;
-    padding-left: 10px;
-    border-bottom: 1px solid #707070;
+    padding-left: 20px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    font-weight: 600;
+    font-size: 12px;
 }
 .p-date-item-order{
-margin: 10px 0;
+margin: 12px 0;
 }
 .img-container-shopping-car img{
     width: 100%;
 }
 
 .item-order{
-    box-shadow: 2px 2px 11px 0 rgb(207 207 207);
-    background: white;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    filter: drop-shadow(0 0 1px rgba(0,0,0,.12));
     border: 0.5px solid #ffff;
     border-radius: 8px;
+    margin: 20px 0;
 }
 .info-order{
     padding: 15px;
@@ -41,22 +47,26 @@ margin: 10px 0;
     padding-left: 20px;
 }
 .text-info-order p{
-    margin: 10px 0;
+    text-transform: capitalize;
 }
 .status-order{
-color: #32b767;
-font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 6px;
+    display: grid;
+    max-width: none;
 }
 .delivery-order-date{
 font-weight: 600;
+margin: 0;
 }
 .total-order{
-
+    margin: 0;
+    margin-top: 6px;
 }
 .products-order{
     color: #7a7a7a;
     font-size: 12px;
-
+    margin: 16px 0 0;
 }
 .secondary-info-order{
     text-align: end;

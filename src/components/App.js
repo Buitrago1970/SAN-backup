@@ -6,7 +6,6 @@ import Home from "../pages/Home";
 import Nosotros from "../pages/Nosotros.js";
 import Servicios from "../pages/Servicios.js";
 import Contactos from "../pages/Contactos.js";
-import NotFound from "../pages/NotFound.js";
 import ShoppingCart from "../pages/ShoppingCart";
 import FormUserRegister from "../pages/FormUserRegister";
 import Checkout from "../pages/Checkout";
@@ -55,7 +54,7 @@ function App() {
               path="/userprofile"
               component={UserProfile} />
 
-            <Route component={NotFound} />
+            <Route component={Home} />
           </Switch>
         </Layout>
       </BrowserRouter>

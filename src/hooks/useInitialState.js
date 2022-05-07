@@ -211,7 +211,7 @@ const useInitialState = () => {
     const data = {
       "data": {
         "user": state.user[0],
-        "products": state.cart.map(item => item.Slug),
+        "products": state.cart,
         "total": toatalPedido,
         "metodo_de_pago": paymentMethod,
         "fecha_de_creacion": creationDate,
