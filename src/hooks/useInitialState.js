@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 import initialState from "../initialState";
-import { removeToken } from '../utils/token'
-import { getToken } from '../utils/token'
+import { getToken, setToken, removeToken } from '../utils/token'
 import { setAddress, getAddress } from "../utils/address"
 // import {animatioAddToCart} from "../utils/animations"
 import Swal from 'sweetalert2'
@@ -82,6 +81,7 @@ const useInitialState = () => {
   };
   //register user
   const registerUser = (payload) => {
+    setToken(payload.jwt)
     setState({
       ...state,
       user: [...state.user, payload.user],
@@ -139,26 +139,20 @@ const useInitialState = () => {
           "email": state.user[0].email
         }
       }
-      try {
-        const respuesta = await axios.post(url, data, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        if (respuesta.status === 200) {
-          setAddress(valuesAddress)
-          return ('/carrocompras/payment')
-        } else {
-          Swal.fire(
-            'Parece que hubo un error intente nueva mente',
-            '',
-            'error'
-          )
-        }
-      } catch (error) {
+
+      const respuesta = await axios.post(url, data, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      debugger
+      if (respuesta.status === 200) {
+        setAddress(valuesAddress)
+        return ('/carrocompras/payment')
+      } else {
         Swal.fire(
-          `Parece que hubo un error intente nueva mente`,
-          'o escribenos al +57 310 570 62 38',
+          'Parece que hubo un error intente nueva mente',
+          '',
           'error'
         )
       }
