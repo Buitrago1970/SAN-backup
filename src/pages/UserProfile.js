@@ -71,7 +71,7 @@ export default function UserProfile() {
   } else {
     return (
       <div className="empty-cart-button">
-        <h3>Parece que no has </h3>{" "}
+        <h3>Parece que no has realizado ningún pedido durante los últimos 3 meses.</h3>{" "}
         <Link className="link-home" to="/">
           Ir al Home
         </Link>

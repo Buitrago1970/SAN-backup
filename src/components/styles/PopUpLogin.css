@@ -64,31 +64,51 @@ height: 20px;
     color: white;
     border: 1px solid #3391ff;
     background: #1977f2;
-    border-radius: 4px;
+    border-radius: 3px;
     font-weight: bold;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
 }
 .btn-login:hover{
     border: 1px solid #278cff;
-    background: #247bff;
+    background: #206cde;
 }
 .btn-register{
-    color: #fff ;
+    color: #323232;
     border: none;
     padding: 15px 20px;
-    border-radius: 5px;
+    height: 35px;
+    border-radius: 3px;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
     cursor: pointer;
-    width: 50%;
+    width: 40%;
+    display: flex;
     background-color: #ffd712;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
 }
 .btn-register:hover{
+    transition: all 0.1s;
     background-color: #F7CA00;
 }
-.btn-primary{
+.btn-new-acount{
     background-color: #42b729;
+    color: #fff8f8;
+    border: none;
+    padding: 15px 20px;
+    height: 40px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
 }
-.btn-primary:hover{
+.btn-new-acount:hover{
     background-color: #389c21;
 
 }
@@ -97,3 +117,37 @@ height: 20px;
     display: flex;
     justify-content: center;
 }
+@media screen and (max-width: 870px) {
+    .popup-login-content{
+            max-width: 320px;
+            padding: 32px 20px;
+        }
+        .btn-login{
+            font-size: 17px;
+            height: 40px;
+            line-height: 40px;
+            width: 90%;
+        }
+        .btn-new-acount{
+            width: 60%;
+            text-shadow: 0 -1px rgb(0 0 0 / 25%);
+        }
+        .title-popUp{
+            font-size: 20px;
+        }
+
+  }
+  @media screen and (max-width: 440px) {
+    .popup-login-content{
+        max-width: 270px;
+        padding: 10px 10px;
+        border-radius: 3px;
+    }
+    .btn-new-acount{
+        width: 70%;
+    }
+    .title-popUp{
+        margin: 10px 0;
+    }
+  }
+  

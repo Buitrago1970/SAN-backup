@@ -145,7 +145,6 @@ const useInitialState = () => {
           Authorization: `Bearer ${token}`,
         },
       })
-      debugger
       if (respuesta.status === 200) {
         setAddress(valuesAddress)
         return ('/carrocompras/payment')

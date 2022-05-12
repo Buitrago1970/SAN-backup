@@ -15,11 +15,13 @@
   border-width: 1px;
   background: #FFD814;
   border-color: #FCD200;
-  height: 35px;
+  height: 30px;
   color: #000000;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 16px;
   cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+
 }
 
 .btn-payment:hover {
@@ -40,7 +42,7 @@
 
 .btn-send-order {
   margin-top: 30px;
-  background: #ffffff;
+  background: #FFD814;
   border: 1px solid #FCD200;
   font-size: 15px;
   display: flex;
@@ -48,12 +50,14 @@
   justify-content: center;
   width: 100%;
   outline: none;
-  height: 40px;
+  height: 35px;
   text-align: center;
   border-radius: 5px;
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.25s ease;
+  box-shadow: 0 2px 5px 0 rgb(213 217 217 / 50%);
+
 }
 
 .btn-send-order:hover {

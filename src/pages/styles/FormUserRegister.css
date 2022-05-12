@@ -45,14 +45,16 @@
 }
 .input-form-login {
   font-family: inherit;
-  background-color: #fff;
+  background: #f5f6f7;
   height: 35px;
   padding: 3px 7px;
   width: 100%;
   line-height: normal;
-  /* border: 1px #ddd solid; */
-   border: 1px solid #a6a6a6; 
-  border-top-color: #949494;
+  border-color: rgba(0, 0, 0, .07) rgba(0, 0, 0, .11) rgba(0, 0, 0, .18);
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+
   border-radius: 3px;
   box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
   outline: 0;}
@@ -122,6 +124,10 @@ box-shadow: 1px 0px 9px 1px #FF883B;
   font-size: 12px;
   }
  @media screen and (max-width: 600px) {
+  .input-form-login {
+    border-radius: 4px;
+    width: 84%;   
+  }
   .information-form{
     padding: 10px 0;
   }
@@ -141,3 +147,7 @@ box-shadow: 1px 0px 9px 1px #FF883B;
     height: 36px; 
   }
  }
+ @media screen and (max-width: 870px) {
+ 
+
+}

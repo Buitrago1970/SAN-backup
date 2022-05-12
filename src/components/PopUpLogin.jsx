@@ -71,7 +71,7 @@ export default function PopUpLogin(props) {
         <div className='close-popup'>
         <button className="close-popup-login" onClick={()=> props.closePopUp(false)}>x</button>
         </div>
-        <h3>Inicia sesión</h3>
+        <h3 className='title-popUp'>Inicia sesión</h3>
         <hr />
         <form onSubmit={formik.handleSubmit}>
           <div className="form-group">
@@ -111,7 +111,7 @@ export default function PopUpLogin(props) {
             <hr />
             <div className="form-group">
               <Link to='/carrocompras/direccion' className='link-signup'>
-            <button className="btn btn-primary btn-register" onClick={()=>props.closePopUp(false)}>Crear cuenta nueva</button>
+            <button className="btn-new-acount" onClick={()=>props.closePopUp(false)}>Crear cuenta nueva</button>
               </Link>
 
             </div>

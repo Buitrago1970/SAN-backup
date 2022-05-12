@@ -28,4 +28,9 @@
   .container-products {
   margin: 0px;
 }
+
+}@media screen and (max-width: 370px) {
+  .container-search-not-found{
+    text-align: center;
+  }
 }

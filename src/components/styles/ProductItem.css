@@ -85,6 +85,7 @@
     font-size: 23px;
     font-weight: 400;
     margin: 16px 0;
+    color: rgb(255, 252, 252);
   }
   .preparation-container {
     color: white;
@@ -93,6 +94,8 @@
   }
   .container-buttons {
     display: flex;
+    justify-content: flex-end;
+
   }
   .container-counter {
    width: 30px;
@@ -107,6 +110,8 @@
   }
   .counter-quantity-products {
     margin: 0;
+    font-weight: 600;
+
   }
   .bt-menos:active{
     transition: all 0.1s ease-in;
@@ -134,6 +139,8 @@
     cursor: pointer;
     font-size: 17px;
     color: rgb(255, 255, 255);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.654);
+
   }
   .bt-menos:hover {
   transition: all 0.2s ease-in;
@@ -158,9 +165,13 @@
     border: none;
     font-size: 17px;
     color: rgb(255, 255, 255);
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.654);
+
   }
   .btn-shop {
     margin: 6px 0px 2px 2px;
+    text-shadow: 0 -1px rgb(0 0 0 / 25%);
+
   }
   @media screen and (max-width: 768px) {
    .bt-shopping-cart{
@@ -179,43 +190,45 @@
     padding: 10px 5px;
   }
   .name-product_ {
-    font-size: 14px;
+    font-size: 16px;
     min-height: 35px;}
 .product-weight {
-  font-size: 8.5px;
+  font-size: 10.5px;
 }
 .container-valor-kilo{
   display: flex;
-  font-size: 8px;
+  font-size: 10px;
 }
 .preparation-container {
-  font-size: 8px;
+  font-size: 10px;
 }
 .price {
-  font-size: 15px;
+  font-size: 20px;
 }
   .container-buttons{
     margin: 7px 0px;
   }
   .container-counter {
-    width: 13px;
+    width: 17px;
     text-align: center;
     border-style: groove;
     border: 1px groove #bebebe;
     margin: 4px 0px;
     padding: 5px;
-    font-size: 10px;
+    font-size: 13px;
 }
   .btn-shop{
         margin: 10px 0px 5px 0px;
-
       font-size: 10px;
   }
   }
   @media screen and (max-width: 370px) {
     .articulo {
-      max-width: 170px;
+      max-width: 210px;
       margin: 18px 3px;
       color: #d0d0d0;           
+  }
+  .price {
+    font-size: 23px;
   }
   }

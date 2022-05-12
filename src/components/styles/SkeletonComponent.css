@@ -82,7 +82,10 @@
 }
 @media screen and (max-width: 370px) {
     .loanding-articulo{
-        width: 170px;
+        width: 210px;
+    }
+    .loading-img{    
+        width: 210px;
     }
 }
 @keyframes loadingAnimation {
